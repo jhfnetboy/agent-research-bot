@@ -1,0 +1,14 @@
+# 构建产物与临时文件
+site/dist/
+work/
+__pycache__/
+*.pyc
+.wrangler/
+node_modules/
+# 绝不提交任何凭证
+.env
+.env.*
+.dev.vars
+*.pem
+*.key
+secrets*

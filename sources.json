@@ -1,0 +1,506 @@
+{
+  "updated": "2026-11-11",
+  "count": 50,
+  "sources": [
+    {
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/rss.xml",
+      "type": "官方博客",
+      "area": "模型发布",
+      "purpose": "OpenAI 模型、产品、安全与研究发布",
+      "priority": "P0",
+      "fetch": "RSS",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/news",
+      "type": "官方博客",
+      "area": "模型发布",
+      "purpose": "Claude 模型发布、政策、产品",
+      "priority": "P0",
+      "fetch": "HTML 列表页抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Anthropic Engineering",
+      "url": "https://www.anthropic.com/engineering",
+      "type": "官方博客",
+      "area": "Agent 框架",
+      "purpose": "Claude Code、Agent SDK、工具调用的工程实践",
+      "priority": "P0",
+      "fetch": "HTML 列表页抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Google DeepMind Blog",
+      "url": "https://deepmind.google/blog/",
+      "type": "官方博客",
+      "area": "前沿实验室研究",
+      "purpose": "Gemini、AlphaProof 等研究与模型发布",
+      "priority": "P0",
+      "fetch": "HTML 列表页抓取（RSS 当前解析失败）",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Google AI Blog (The Keyword)",
+      "url": "https://blog.google/technology/ai/rss/",
+      "type": "官方博客",
+      "area": "模型发布",
+      "purpose": "Gemini 产品与大厂 Super Agent（Gemini agent、Antigravity）",
+      "priority": "P0",
+      "fetch": "RSS",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Meta AI / Meta Superintelligence Labs",
+      "url": "https://ai.meta.com/blog/",
+      "type": "官方博客",
+      "area": "模型发布",
+      "purpose": "Muse 系列模型、Llama、研究发布",
+      "priority": "P1",
+      "fetch": "HTML 列表页抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "xAI News",
+      "url": "https://x.ai/news",
+      "type": "官方博客",
+      "area": "模型发布",
+      "purpose": "Grok 模型与产品更新",
+      "priority": "P1",
+      "fetch": "HTML 列表页抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Mistral AI News",
+      "url": "https://mistral.ai/news",
+      "type": "官方博客",
+      "area": "模型发布",
+      "purpose": "Mistral 模型、Agents API 与企业产品",
+      "priority": "P1",
+      "fetch": "HTML 列表页抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Qwen Blog",
+      "url": "https://qwenlm.github.io/blog/index.xml",
+      "type": "官方博客",
+      "area": "模型发布",
+      "purpose": "Qwen 开源模型发布与技术报告",
+      "priority": "P0",
+      "fetch": "RSS",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "DeepSeek API News",
+      "url": "https://api-docs.deepseek.com/news/news",
+      "type": "官方博客",
+      "area": "模型发布",
+      "purpose": "DeepSeek 模型与 API 更新",
+      "priority": "P0",
+      "fetch": "HTML 列表页抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "type": "官方博客",
+      "area": "后训练",
+      "purpose": "开源模型、微调、TRL、数据集",
+      "priority": "P1",
+      "fetch": "RSS",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "arXiv API（cs.AI + agent）",
+      "url": "https://export.arxiv.org/api/query?search_query=cat:cs.AI+AND+abs:agent&sortBy=submittedDate&max_results=50",
+      "type": "论文源",
+      "area": "前沿实验室研究",
+      "purpose": "Agent 相关新论文",
+      "priority": "P1",
+      "fetch": "Atom API",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "arXiv cs.CL RSS",
+      "url": "https://rss.arxiv.org/rss/cs.CL",
+      "type": "论文源",
+      "area": "后训练",
+      "purpose": "LLM、RL、RAG 方向每日新论文",
+      "priority": "P2",
+      "fetch": "RSS，按关键词过滤",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Hugging Face Daily Papers",
+      "url": "https://huggingface.co/api/daily_papers",
+      "type": "论文源",
+      "area": "RSI",
+      "purpose": "社区投票的每日论文，含 RSI、RL、Agent",
+      "priority": "P0",
+      "fetch": "JSON API",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Epoch AI",
+      "url": "https://epoch.ai/blog",
+      "type": "论文源",
+      "area": "评测与基准",
+      "purpose": "算力、能力指数（ECI）、AI 研发自动化（RSI）趋势数据",
+      "priority": "P1",
+      "fetch": "HTML 列表页抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Import AI（Jack Clark）",
+      "url": "https://jack-clark.net/feed/",
+      "type": "Newsletter",
+      "area": "RSI",
+      "purpose": "每周研究精选，常涉及 AI 自我改进与安全",
+      "priority": "P1",
+      "fetch": "RSS",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "METR",
+      "url": "https://metr.org/blog",
+      "type": "官方博客",
+      "area": "评测与基准",
+      "purpose": "Agent 长任务能力、时间跨度评测、模型发布前测试",
+      "priority": "P0",
+      "fetch": "HTML 列表页抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "SWE-bench",
+      "url": "https://www.swebench.com/",
+      "type": "GitHub",
+      "area": "评测与基准",
+      "purpose": "编码 Agent 主榜单",
+      "priority": "P1",
+      "fetch": "HTML 抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Artificial Analysis",
+      "url": "https://artificialanalysis.ai/",
+      "type": "聚合源",
+      "area": "评测与基准",
+      "purpose": "独立的智能指数、价格、速度对比",
+      "priority": "P0",
+      "fetch": "HTML 抓取 + X @ArtificialAnlys",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "LangGraph Releases",
+      "url": "https://github.com/langchain-ai/langgraph/releases.atom",
+      "type": "GitHub",
+      "area": "Agent 框架",
+      "purpose": "LangGraph 版本更新",
+      "priority": "P1",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "LangChain Blog",
+      "url": "https://blog.langchain.com/",
+      "type": "官方博客",
+      "area": "Agent 框架",
+      "purpose": "Agent 工程实践、评测、LangSmith",
+      "priority": "P1",
+      "fetch": "HTML 抓取（RSS 解析失败）",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "OpenAI Agents SDK Releases",
+      "url": "https://github.com/openai/openai-agents-python/releases.atom",
+      "type": "GitHub",
+      "area": "Agent 框架",
+      "purpose": "OpenAI Agents SDK 版本更新",
+      "priority": "P0",
+      "fetch": "Atom / gh api",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Claude Agent SDK Releases",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/releases.atom",
+      "type": "GitHub",
+      "area": "Agent 框架",
+      "purpose": "Claude Agent SDK 版本更新",
+      "priority": "P0",
+      "fetch": "Atom / gh api",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Claude Code Releases",
+      "url": "https://github.com/anthropics/claude-code/releases.atom",
+      "type": "GitHub",
+      "area": "Agent 框架",
+      "purpose": "Claude Code 版本与新能力",
+      "priority": "P1",
+      "fetch": "Atom / gh api",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "OpenAI Codex Releases",
+      "url": "https://github.com/openai/codex/releases.atom",
+      "type": "GitHub",
+      "area": "Agent 框架",
+      "purpose": "Codex CLI 版本更新",
+      "priority": "P1",
+      "fetch": "Atom / gh api",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "CrewAI Releases",
+      "url": "https://github.com/crewAIInc/crewAI/releases.atom",
+      "type": "GitHub",
+      "area": "Agent 框架",
+      "purpose": "CrewAI 版本更新",
+      "priority": "P2",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "AutoGen Releases",
+      "url": "https://github.com/microsoft/autogen/releases.atom",
+      "type": "GitHub",
+      "area": "Agent 框架",
+      "purpose": "AutoGen 版本更新",
+      "priority": "P2",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Microsoft Agent Framework Releases",
+      "url": "https://github.com/microsoft/agent-framework/releases.atom",
+      "type": "GitHub",
+      "area": "Agent 框架",
+      "purpose": "AutoGen 与 Semantic Kernel 的继任框架",
+      "priority": "P1",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Google ADK Releases",
+      "url": "https://github.com/google/adk-python/releases.atom",
+      "type": "GitHub",
+      "area": "Agent 框架",
+      "purpose": "Google Agent Development Kit 版本更新",
+      "priority": "P1",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Cursor Blog",
+      "url": "https://cursor.com/blog",
+      "type": "官方博客",
+      "area": "大厂 Super Agent",
+      "purpose": "编码 Agent 产品形态（Projects、多 Agent）",
+      "priority": "P1",
+      "fetch": "HTML 列表页抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "MCP Blog",
+      "url": "https://blog.modelcontextprotocol.io/",
+      "type": "官方博客",
+      "area": "Agent 协议与工具",
+      "purpose": "MCP 规范与生态公告",
+      "priority": "P0",
+      "fetch": "HTML 抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "MCP 规范 Releases",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
+      "type": "GitHub",
+      "area": "Agent 协议与工具",
+      "purpose": "MCP 规范版本",
+      "priority": "P0",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "A2A Releases",
+      "url": "https://github.com/a2aproject/A2A/releases.atom",
+      "type": "GitHub",
+      "area": "Agent 协议与工具",
+      "purpose": "Agent2Agent 协议版本",
+      "priority": "P1",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "LlamaIndex Releases",
+      "url": "https://github.com/run-llama/llama_index/releases.atom",
+      "type": "GitHub",
+      "area": "RAG 与向量数据库",
+      "purpose": "RAG 框架版本更新",
+      "priority": "P2",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Qdrant Releases",
+      "url": "https://github.com/qdrant/qdrant/releases.atom",
+      "type": "GitHub",
+      "area": "RAG 与向量数据库",
+      "purpose": "向量库版本更新",
+      "priority": "P2",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Milvus Releases",
+      "url": "https://github.com/milvus-io/milvus/releases.atom",
+      "type": "GitHub",
+      "area": "RAG 与向量数据库",
+      "purpose": "向量库版本更新",
+      "priority": "P2",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Pinecone Blog",
+      "url": "https://www.pinecone.io/blog/",
+      "type": "官方博客",
+      "area": "RAG 与向量数据库",
+      "purpose": "检索、RAG 实践与产品",
+      "priority": "P2",
+      "fetch": "HTML 抓取",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "TRL Releases",
+      "url": "https://github.com/huggingface/trl/releases.atom",
+      "type": "GitHub",
+      "area": "后训练",
+      "purpose": "GRPO、DPO 等 RL 与微调实现",
+      "priority": "P1",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "verl Releases",
+      "url": "https://github.com/verl-project/verl/releases.atom",
+      "type": "GitHub",
+      "area": "后训练",
+      "purpose": "大规模 RL 训练框架",
+      "priority": "P2",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Interconnects（Nathan Lambert）",
+      "url": "https://www.interconnects.ai/feed",
+      "type": "Newsletter",
+      "area": "后训练",
+      "purpose": "RLHF、RLVR、开源模型后训练分析",
+      "priority": "P0",
+      "fetch": "RSS",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Latent Space + AINews",
+      "url": "https://www.latent.space/feed",
+      "type": "Newsletter",
+      "area": "聚合源",
+      "purpose": "每日 AINews（X、Reddit、Discord 汇总）与访谈",
+      "priority": "P0",
+      "fetch": "RSS",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/",
+      "type": "Newsletter",
+      "area": "Agent 框架",
+      "purpose": "LLM 工具、Agent 实践、提示与安全",
+      "priority": "P0",
+      "fetch": "Atom",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Hacker News（Algolia API）",
+      "url": "https://hn.algolia.com/api/v1/search?query=agent&tags=story",
+      "type": "社区",
+      "area": "社区",
+      "purpose": "按关键词与分数筛选热门讨论",
+      "priority": "P0",
+      "fetch": "JSON API，按 points 和时间过滤",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "Reddit r/LocalLLaMA",
+      "url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day",
+      "type": "社区",
+      "area": "社区",
+      "purpose": "开源模型、本地推理、Agent 实测",
+      "priority": "P1",
+      "fetch": "RSS（有频率限制，429 时改用 AINews 的 Reddit 汇总）",
+      "http_status_2026_11_11": "200首次/429限流"
+    },
+    {
+      "name": "Reddit r/ClaudeAI",
+      "url": "https://www.reddit.com/r/ClaudeAI/top/.rss?t=day",
+      "type": "社区",
+      "area": "社区",
+      "purpose": "Claude Code 与 Claude 用户反馈",
+      "priority": "P2",
+      "fetch": "RSS（有频率限制）",
+      "http_status_2026_11_11": "200"
+    },
+    {
+      "name": "X：@OpenAI / @OpenAIDevs",
+      "url": "https://x.com/OpenAIDevs",
+      "type": "X 账号",
+      "area": "模型发布",
+      "purpose": "OpenAI 开发者发布",
+      "priority": "P0",
+      "fetch": "X API 用户时间线",
+      "http_status_2026_11_11": "X-API已核验"
+    },
+    {
+      "name": "X：@AnthropicAI / @claudeai / @ClaudeDevs",
+      "url": "https://x.com/ClaudeDevs",
+      "type": "X 账号",
+      "area": "模型发布",
+      "purpose": "Claude 发布与开发者公告",
+      "priority": "P0",
+      "fetch": "X API 用户时间线",
+      "http_status_2026_11_11": "X-API已核验"
+    },
+    {
+      "name": "X：@GoogleDeepMind / @GoogleAIStudio",
+      "url": "https://x.com/GoogleDeepMind",
+      "type": "X 账号",
+      "area": "模型发布",
+      "purpose": "Gemini 发布",
+      "priority": "P0",
+      "fetch": "X API 用户时间线",
+      "http_status_2026_11_11": "X-API已核验"
+    },
+    {
+      "name": "X：@Alibaba_Qwen / @deepseek_ai / @MistralAI / @AIatMeta",
+      "url": "https://x.com/Alibaba_Qwen",
+      "type": "X 账号",
+      "area": "模型发布",
+      "purpose": "开源与海外模型发布",
+      "priority": "P1",
+      "fetch": "X API 用户时间线",
+      "http_status_2026_11_11": "X-API已核验"
+    },
+    {
+      "name": "X：研究者与评测（@karpathy @swyx @simonw @natolambert @omarsar0 @METR_Evals @ArtificialAnlys）",
+      "url": "https://x.com/ArtificialAnlys",
+      "type": "X 账号",
+      "area": "社区",
+      "purpose": "第一手评测、实测与观点",
+      "priority": "P1",
+      "fetch": "X API 用户时间线 + 关键词搜索",
+      "http_status_2026_11_11": "X-API已核验"
+    }
+  ]
+}

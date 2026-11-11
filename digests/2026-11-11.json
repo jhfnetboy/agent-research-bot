@@ -1,0 +1,360 @@
+{
+  "date": "2026-11-11",
+  "coverage": "约 2026-11-09 至 2026-11-11（Asia/Bangkok UTC+7）",
+  "keywords": [
+    "Claude Fable 5.2",
+    "Gemini 4 Carbon",
+    "多 Agent 编排",
+    "RSI 能力限制",
+    "Agent 安全"
+  ],
+  "summary": "Anthropic 发布 Fable 5.2，主打协调上千子 Agent 的长时程任务，并主动限制 AI 研发加速能力；Google 让 Gemini 4 Carbon 可用并预览 Antigravity /swarm。OpenAI Control Room、Microsoft Lazarus 与 Fireworks AI 事件让 Agent 安全成为另一条主线。",
+  "image": {
+    "local_path": "assets/2026-11-11.jpg",
+    "source_url": "https://www.anthropic.com/news/claude-fable-and-mythos-5-2",
+    "credit": "Anthropic"
+  },
+  "items": [
+    {
+      "topic": "重点：Claude Fable 5.2 与多 Agent 编排",
+      "title": "Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2",
+      "summary": "同一底座模型，$8/$40 每百万 token，输出快 30%，另有 fast mode。1000 个 Agent 30 小时完成费马大定理 Lean 形式化，1000+ 子 Agent 8 天写出可启动的操作系统；官方推荐 Fable 当 Orchestrator 或 Advisor。",
+      "note": "同一底座模型，$8/$40 每百万 token，输出快 30%，另有 fast mode。1000 个 Agent 30 小时完成费马大定理 Lean 形式化，1000+ 子 Agent 8 天写出可启动的操作系统；官方推荐 Fable 当 Orchestrator 或 Advisor。",
+      "url": "https://www.anthropic.com/news/claude-fable-and-mythos-5-2",
+      "date": "2026-11-09",
+      "keywords": [
+        "Claude Fable 5.2",
+        "Mythos 5.2",
+        "多 Agent 编排"
+      ]
+    },
+    {
+      "topic": "重点：Claude Fable 5.2 与多 Agent 编排",
+      "title": "Fable 5.2 在训练中限制了 AI 研发加速能力（RSI）",
+      "summary": "Anthropic 写明在 kernel 优化、改进 LLM 架构等方面只与 Opus 5.5 持平，并对少量话题回退到 Opus 5；Agent 编码与可解释性研究不受影响。",
+      "note": "Anthropic 写明在 kernel 优化、改进 LLM 架构等方面只与 Opus 5.5 持平，并对少量话题回退到 Opus 5；Agent 编码与可解释性研究不受影响。",
+      "url": "https://www.anthropic.com/news/claude-fable-and-mythos-5-2",
+      "date": "2026-11-09",
+      "keywords": [
+        "RSI",
+        "AI R&D",
+        "安全"
+      ]
+    },
+    {
+      "topic": "重点：Claude Fable 5.2 与多 Agent 编排",
+      "title": "独立评测：AA 指数 65 居首，但每任务成本上升",
+      "summary": "Artificial Analysis 65 分第一、Epoch ECI 174 创纪录、GDPx 16.4% 第一；每任务成本从 $67.16 升到 $88.15，Max/Xhigh 档多项评测不如 High。",
+      "note": "Artificial Analysis 65 分第一、Epoch ECI 174 创纪录、GDPx 16.4% 第一；每任务成本从 $67.16 升到 $88.15，Max/Xhigh 档多项评测不如 High。",
+      "url": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
+      "date": "2026-11-10",
+      "keywords": [
+        "评测",
+        "Artificial Analysis",
+        "effort"
+      ]
+    },
+    {
+      "topic": "重点：Gemini 4 Carbon 与 /swarm",
+      "title": "Gemini 4 Carbon 全面可用，Antigravity 预览 /swarm",
+      "summary": "Carbon 定位长时程 Agent 与网络安全，11-30 前 $2/$10，之后 $4/$20；/swarm 用一个提示词拉起可追踪的 Agent 团队，配对抗式验证者。",
+      "note": "Carbon 定位长时程 Agent 与网络安全，11-30 前 $2/$10，之后 $4/$20；/swarm 用一个提示词拉起可追踪的 Agent 团队，配对抗式验证者。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "date": "2026-11-10",
+      "keywords": [
+        "Gemini 4 Carbon",
+        "Antigravity",
+        "/swarm"
+      ]
+    },
+    {
+      "topic": "重点：Gemini 4 Carbon 与 /swarm",
+      "title": "DeepMind AlphaProof Code 形式化验证 Signal 协议实现",
+      "summary": "多 LLM Agent 框架生成 600 多万行 Lean，4 周证明 Signal 实现代码的关键安全属性，约 1% 需人工复查，产物将开源。",
+      "note": "多 LLM Agent 框架生成 600 多万行 Lean，4 周证明 Signal 实现代码的关键安全属性，约 1% 需人工复查，产物将开源。",
+      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+      "date": "2026-11-10",
+      "keywords": [
+        "AlphaProof Code",
+        "Lean",
+        "形式化验证"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全基础设施",
+      "title": "OpenAI Control Room：35 秒内叫停任意研究推理任务",
+      "summary": "研究任务需登记 job_id 并关联 safety case，推理引擎每次请求都向 Control Room 校验，故障即关闭。",
+      "note": "研究任务需登记 job_id 并关联 safety case，推理引擎每次请求都向 Control Room 校验，故障即关闭。",
+      "url": "https://openai.com/index/control-room",
+      "date": "2026-11-09",
+      "keywords": [
+        "Control Room",
+        "OpenAI",
+        "Agent 安全"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全基础设施",
+      "title": "Microsoft Lazarus：改不到 10 个休眠神经元即可给 Agent 植入后门",
+      "summary": "无需训练，触发串可来自工具输出，危害取决于 Agent 权限；可靠检测需要与原始权重 diff。",
+      "note": "无需训练，触发串可来自工具输出，危害取决于 Agent 权限；可靠检测需要与原始权重 diff。",
+      "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+      "date": "2026-11-10",
+      "keywords": [
+        "Lazarus",
+        "后门",
+        "模型供应链"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全基础设施",
+      "title": "Notion 披露 Fireworks AI 事件：ZDR 承诺未被遵守",
+      "summary": "影响不到 1% 工作区，Fireworks 端点保留了数据；Notion 已断开并建议轮换曾粘贴进 Notion AI 的凭证。",
+      "note": "影响不到 1% 工作区，Fireworks 端点保留了数据；Notion 已断开并建议轮换曾粘贴进 Notion AI 的凭证。",
+      "url": "https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor",
+      "date": "2026-11-10",
+      "keywords": [
+        "Fireworks AI",
+        "ZDR",
+        "数据安全"
+      ]
+    },
+    {
+      "topic": "模型发布",
+      "title": "Meta Muse Ember：面向高频 Agent 步骤的低价模型",
+      "summary": "$0.10/$0.50 每百万 token，1M 上下文，支持 Responses API，上架 Google Cloud。",
+      "note": "$0.10/$0.50 每百万 token，1M 上下文，支持 Responses API，上架 Google Cloud。",
+      "url": "https://research.meta.ai/blog/muse-ember",
+      "date": "2026-11-09",
+      "keywords": [
+        "Muse Ember",
+        "Meta"
+      ]
+    },
+    {
+      "topic": "大厂 Super Agent",
+      "title": "OpenAI 推出 Businesses in ChatGPT 与 Business Agents",
+      "summary": "企业认领资料、上传商品，美国电商可搭建 Business Agent 与用户对话。",
+      "note": "企业认领资料、上传商品，美国电商可搭建 Business Agent 与用户对话。",
+      "url": "https://openai.com/index/introducing-businesses-chatgpt",
+      "date": "2026-11-10",
+      "keywords": [
+        "Business Agents",
+        "ChatGPT"
+      ]
+    },
+    {
+      "topic": "Agent 产品",
+      "title": "Cursor Projects 支持多人协作",
+      "summary": "团队共享上下文、记忆和任务板，队友的 Agent 可互相协调。",
+      "note": "团队共享上下文、记忆和任务板，队友的 Agent 可互相协调。",
+      "url": "https://cursor.com/blog/projects-multiplayer",
+      "date": "2026-11-10",
+      "keywords": [
+        "Cursor",
+        "多 Agent"
+      ]
+    },
+    {
+      "topic": "Agent 产品",
+      "title": "Claude Whiteboards、Sheets 与 Claude Data",
+      "summary": "白板与表格 beta，Dashboards 更名 Claude Data 并 GA；Enterprise 的 Claude Data 将于 11-19 默认开启。",
+      "note": "白板与表格 beta，Dashboards 更名 Claude Data 并 GA；Enterprise 的 Claude Data 将于 11-19 默认开启。",
+      "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "date": "2026-11-10",
+      "keywords": [
+        "Claude",
+        "Sheets"
+      ]
+    },
+    {
+      "topic": "大厂 Super Agent",
+      "title": "IBM 与 Microsoft 发布 Imagine Enterprise Agent 平台",
+      "summary": "面向受监管行业的 Agent 构建与治理，含 6000 多个预置 Agent 和资产。",
+      "note": "面向受监管行业的 Agent 构建与治理，含 6000 多个预置 Agent 和资产。",
+      "url": "https://newsroom.ibm.com/2026-11-10-ibm-and-microsoft-announce-a-new-ai-agent-platform-designed-for-industry-specific-transformation",
+      "date": "2026-11-10",
+      "keywords": [
+        "IBM",
+        "Microsoft",
+        "企业 Agent"
+      ]
+    },
+    {
+      "topic": "大厂 Super Agent",
+      "title": "Google Cloud 发布 Gemini for healthcare",
+      "summary": "基于通用 Gemini agent 的医疗方案，Agent 有独立身份并继承用户权限，美国预览。",
+      "note": "基于通用 Gemini agent 的医疗方案，Agent 有独立身份并继承用户权限，美国预览。",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-healthcare",
+      "date": "2026-11-10",
+      "keywords": [
+        "Gemini agent",
+        "医疗"
+      ]
+    },
+    {
+      "topic": "前沿研究",
+      "title": "用 Opus 5.5 把 CPython 形式化为约 61 万行 Lean",
+      "summary": "逐行镜像 Python 内部实现，并发现真实 CPython 崩溃 bug。",
+      "note": "逐行镜像 Python 内部实现，并发现真实 CPython 崩溃 bug。",
+      "url": "https://broyojo.com/python-formalization/",
+      "date": "2026-11-10",
+      "keywords": [
+        "Lean",
+        "CPython"
+      ]
+    },
+    {
+      "topic": "Agent 协议与工具",
+      "title": "Palo Alto Networks Data Security MCP Server",
+      "summary": "本地部署的 DLP MCP Server，连接 Claude Code、Cursor 等。",
+      "note": "本地部署的 DLP MCP Server，连接 Claude Code、Cursor 等。",
+      "url": "https://www.paloaltonetworks.com/blog/sase/introducing-the-palo-alto-networks-data-security-mcp-server/",
+      "date": "2026-11-10",
+      "keywords": [
+        "MCP"
+      ]
+    },
+    {
+      "topic": "Agent 协议与工具",
+      "title": "AISLE MCP Server（只读）",
+      "summary": "把代码安全发现直接提供给编码 Agent，只读设计。",
+      "note": "把代码安全发现直接提供给编码 Agent，只读设计。",
+      "url": "https://aisle.com/blog/announcing-the-aisle-mcp-server",
+      "date": "2026-11-09",
+      "keywords": [
+        "MCP",
+        "只读"
+      ]
+    },
+    {
+      "topic": "Agent 协议与工具",
+      "title": "CastPilot MCP GA（只读）",
+      "summary": "Agent 只读访问 Cast AI 成本、建议和集群策略。",
+      "note": "Agent 只读访问 Cast AI 成本、建议和集群策略。",
+      "url": "https://cast.ai/blog/castpilot-mcp/",
+      "date": "2026-11-10",
+      "keywords": [
+        "MCP"
+      ]
+    },
+    {
+      "topic": "Agent 协议与工具",
+      "title": "GoogleChrome/modern-web-guidance",
+      "summary": "Chrome 团队给编码 Agent 的现代 Web 平台指南。",
+      "note": "Chrome 团队给编码 Agent 的现代 Web 平台指南。",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance",
+      "date": "2026-11-11",
+      "keywords": [
+        "编码 Agent",
+        "Web"
+      ]
+    },
+    {
+      "topic": "框架与版本",
+      "title": "Claude Code v2.1.322：Vertex 上支持 fast mode",
+      "summary": "在 Vertex global、us、eu 区域加入 fast mode。",
+      "note": "在 Vertex global、us、eu 区域加入 fast mode。",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322",
+      "date": "2026-11-10",
+      "keywords": [
+        "Claude Code"
+      ]
+    },
+    {
+      "topic": "框架与版本",
+      "title": "Claude Agent SDK Python v0.2.180",
+      "summary": "例行版本发布。",
+      "note": "例行版本发布。",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.180",
+      "date": "2026-11-10",
+      "keywords": [
+        "Claude Agent SDK"
+      ]
+    },
+    {
+      "topic": "框架与版本",
+      "title": "OpenAI Codex rust-v0.167.1",
+      "summary": "例行版本发布。",
+      "note": "例行版本发布。",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.1",
+      "date": "2026-11-11",
+      "keywords": [
+        "Codex"
+      ]
+    },
+    {
+      "topic": "政策",
+      "title": "巴黎 AI 安全倡议（Paris Call）",
+      "summary": "OpenAI、Anthropic、Microsoft、Mistral 等签署，涵盖前沿 AI 评估、透明度与预警。",
+      "note": "OpenAI、Anthropic、Microsoft、Mistral 等签署，涵盖前沿 AI 评估、透明度与预警。",
+      "url": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
+      "date": "2026-11-10",
+      "keywords": [
+        "AI 安全",
+        "政策"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：Fable 5.2 发布帖",
+      "summary": "881 分、1007 条评论。",
+      "note": "881 分、1007 条评论。",
+      "url": "https://news.ycombinator.com/item?id=50429068",
+      "date": "2026-11-10",
+      "keywords": [
+        "HN",
+        "Fable 5.2"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：AI usage generates a fragile codebase",
+      "summary": "407 分、422 条评论，讨论 AI 代码可维护性。",
+      "note": "407 分、422 条评论，讨论 AI 代码可维护性。",
+      "url": "https://news.ycombinator.com/item?id=50438318",
+      "date": "2026-11-10",
+      "keywords": [
+        "HN",
+        "代码质量"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：A year after the 100% AI mandate nobody understands our code",
+      "summary": "153 分、193 条评论。",
+      "note": "153 分、193 条评论。",
+      "url": "https://news.ycombinator.com/item?id=50433079",
+      "date": "2026-11-10",
+      "keywords": [
+        "HN",
+        "代码质量"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：有人声称 Gemini 把个人 Drive 文件和邮件交给人工标注员",
+      "summary": "715 分，用户自述，尚无官方回应。",
+      "note": "715 分，用户自述，尚无官方回应。",
+      "url": "https://news.ycombinator.com/item?id=50429426",
+      "date": "2026-11-10",
+      "keywords": [
+        "HN",
+        "隐私"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "X 与 Reddit：effort 档位反常、编排降本实验、OpenRouter ZDR 例外",
+      "summary": "Max 档不如 High；Fable 规划 + 本地 Qwen 执行，单次费用 $15.77 降到 $2.98；OpenRouter CSAM 筛查可覆盖 ZDR。",
+      "note": "Max 档不如 High；Fable 规划 + 本地 Qwen 执行，单次费用 $15.77 降到 $2.98；OpenRouter CSAM 筛查可覆盖 ZDR。",
+      "url": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
+      "date": "2026-11-10",
+      "keywords": [
+        "X",
+        "Reddit",
+        "成本"
+      ]
+    }
+  ]
+}

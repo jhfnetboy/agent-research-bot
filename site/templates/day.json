@@ -1,0 +1,21 @@
+{
+  "date": "YYYY-MM-DD",
+  "coverage": "约 YYYY-MM-DD 至 YYYY-MM-DD（Asia/Bangkok UTC+7）",
+  "keywords": ["关键词一", "关键词二", "关键词三"],
+  "summary": "两三句关键信息，显示在首页卡片上。",
+  "image": {
+    "local_path": "assets/YYYY-MM-DD.jpg",
+    "source_url": "https://真实新闻来源的原文链接",
+    "credit": "来源媒体或作者"
+  },
+  "items": [
+    {
+      "topic": "话题名称",
+      "title": "条目标题",
+      "summary": "一两句概述。",
+      "url": "https://原文链接",
+      "date": "YYYY-MM-DD",
+      "keywords": ["关键词"]
+    }
+  ]
+}
