@@ -507,7 +507,7 @@ def load_overviews(data_dir: Path) -> list[dict]:
 def weekly_promo_html(root: str, weeklies: list[dict], overviews: list[dict]) -> str:
     if not weeklies and not overviews:
         return ""
-    parts = ['<section class="weekly-promo">', "<h2>周报</h2>", "<p>"]
+    parts = ['<section class="about-intro">', "<h2>周报</h2>", "<p>"]
     parts.append("按自然周汇总 AI 相关的重大技术变化。")
     if weeklies:
         latest = weeklies[0]
@@ -528,6 +528,14 @@ def weekly_promo_html(root: str, weeklies: list[dict], overviews: list[dict]) ->
     return "".join(parts)
 
 
+def week_start_iso(key: str) -> str:
+    try:
+        year, week = key.split("-W")
+        return datetime.fromisocalendar(int(year), int(week), 1).strftime("%Y-%m-%d")
+    except Exception:
+        return ""
+
+
 def item_sources_html(links: list) -> str:
     rows = []
     for link in links or []:
@@ -542,15 +550,27 @@ def item_sources_html(links: list) -> str:
         else:
             label_html = esc(label)
         date_html = f'<time datetime="{esc(date)}">{esc(date)}</time>' if date else ""
-        note_html = f'<span class="src-note">（{esc(note)}）</span>' if note else ""
-        rows.append(f"<li>{label_html}{date_html}{note_html}</li>")
-    return f'<ul class="sources" aria-label="来源">{"".join(rows)}</ul>' if rows else ""
+        note_html = f"（{esc(note)}）" if note else ""
+        rows.append(f'<p class="meta">{label_html}{date_html}{note_html}</p>')
+    return "".join(rows)
 
 
 def render_weekly_item(item: dict) -> str:
     title = (item.get("title") or "").strip() or "未命名条目"
     topic = (item.get("topic") or "").strip()
-    topic_html = f'<p class="item-topic">{esc(topic)}</p>' if topic else ""
+    topic_html = f'<ul class="tags"><li>{esc(topic)}</li></ul>' if topic else ""
+    first_url = ""
+    for link in item.get("links") or []:
+        if isinstance(link, dict) and (link.get("url") or "").strip():
+            first_url = link["url"].strip()
+            break
+    if not first_url:
+        first_url = (item.get("url") or "").strip()
+    title_html = (
+        f'<h3><a href="{esc(first_url)}" rel="noopener noreferrer">{esc(title)}</a></h3>'
+        if first_url
+        else f"<h3>{esc(title)}</h3>"
+    )
     what = (item.get("what") or "").strip()
     why = (item.get("why") or "").strip()
     summary = (item.get("summary") or "").strip()
@@ -561,14 +581,11 @@ def render_weekly_item(item: dict) -> str:
         if why:
             notes.append(f'<p class="note"><strong>为什么重要：</strong>{esc(why)}</p>')
     elif summary:
-        notes.append(f'<p class="note"><strong>概述：</strong>{esc(summary)}</p>')
+        notes.append(f'<p class="note">{esc(summary)}</p>')
     links = item.get("links") or []
     if not links and item.get("url"):
         links = [{"label": "来源", "url": item.get("url"), "date": item.get("date") or ""}]
-    return (
-        f'<article class="item">{topic_html}<h3>{esc(title)}</h3>'
-        f'{"".join(notes)}{item_sources_html(links)}</article>'
-    )
+    return f'<article class="item">{topic_html}{title_html}{"".join(notes)}{item_sources_html(links)}</article>'
 
 
 def weekly_report_pager_html(root: str, weeks: list[str], key: str) -> str:
@@ -598,9 +615,38 @@ def week_keywords(week: dict) -> list[str]:
             if key and key not in seen:
                 seen.add(key)
                 out.append(key)
-            if len(out) >= 8:
+            if len(out) >= 5:
                 return out
     return out
+
+
+def placeholder_media(label: str) -> str:
+    return (
+        f'<div class="media placeholder" aria-hidden="true">'
+        f'<div class="placeholder-mark"></div>'
+        f'<div class="placeholder-date">{esc(label)}</div>'
+        f"</div>"
+    )
+
+
+def render_weekly_card(title: str, href: str, summary: str, tags: list[str], badge: str, placeholder: str, datetime_value: str = "") -> str:
+    tag_html = "".join(f"<li>{esc(k)}</li>" for k in tags if str(k).strip())
+    tags_block = f'<ul class="tags">{tag_html}</ul>' if tag_html else ""
+    badge_html = f'<p class="badge">{esc(badge)}</p>' if badge else ""
+    dt_attr = f' datetime="{esc(datetime_value)}"' if datetime_value else ""
+    return f"""
+<article class="card">
+  <a class="card-link" href="{esc(href)}">
+    {placeholder_media(placeholder)}
+    <div class="card-body">
+      {badge_html}
+      <time{dt_attr}>{esc(title)}</time>
+      {tags_block}
+      <p class="summary">{esc(summary)}</p>
+    </div>
+  </a>
+</article>
+"""
 
 
 def render_weekly_report(week: dict, root: str, week_keys: list[str], overviews: list[dict]) -> str:
@@ -637,18 +683,20 @@ def render_weekly_report(week: dict, root: str, week_keys: list[str], overviews:
     if overviews:
         ov = overviews[0]
         ov_html = (
-            f'<p class="page-status">也可阅读<a href="{esc(root)}weekly/{esc(ov["_slug"])}/">'
+            f'<p>也可阅读<a href="{esc(root)}weekly/{esc(ov["_slug"])}/">'
             f'{esc(ov.get("title") or "四周总览")}</a>。</p>'
         )
+    monday = week_start_iso(key)
+    time_attr = f' datetime="{esc(monday)}"' if monday else ""
     title = f"{key} 周报 · {SITE_TITLE}"
     return f"""{head_html(root, title, theme or status)}
 <body>
-  <header class="day-header week-header">
+  <header class="day-header">
     {nav_html(root, "weekly")}
     <a class="back" href="{esc(root)}weekly/">返回周报</a>
     {badge}
     <p class="eyebrow">Weekly Report</p>
-    <p class="week-id">{esc(key)}</p>
+    <time{time_attr}>{esc(key)}</time>
     <h1>AI 重大技术变化周报</h1>
     {tags_html}
     <p class="lede">{esc(status)}</p>
@@ -675,17 +723,24 @@ def overview_week_block(entry: dict, root: str) -> str:
     else:
         heading_html = f"<h2>{esc(heading)}</h2>"
     theme = (entry.get("theme") or "").strip()
-    theme_html = f'<p class="summary"><strong>主线：</strong>{esc(theme)}</p>' if theme else ""
+    theme_html = f'<p class="note"><strong>主线：</strong>{esc(theme)}</p>' if theme else ""
     rows = []
     for major in entry.get("majors") or []:
         if not isinstance(major, dict):
             continue
         title = (major.get("title") or "").strip() or "未命名条目"
-        rows.append(
-            f"<li><strong>{esc(title)}</strong>{item_sources_html(major.get('links') or [])}</li>"
+        first_url = ""
+        for link in major.get("links") or []:
+            if isinstance(link, dict) and (link.get("url") or "").strip():
+                first_url = link["url"].strip()
+                break
+        title_html = (
+            f'<h3><a href="{esc(first_url)}" rel="noopener noreferrer">{esc(title)}</a></h3>'
+            if first_url
+            else f"<h3>{esc(title)}</h3>"
         )
-    list_html = f'<ul class="overview-majors">{"".join(rows)}</ul>' if rows else ""
-    return f'<section class="topic overview-week">{heading_html}{theme_html}{list_html}</section>'
+        rows.append(f'<article class="item">{title_html}{item_sources_html(major.get("links") or [])}</article>')
+    return f'<section class="topic">{heading_html}{theme_html}{"".join(rows)}</section>'
 
 
 def render_overview(overview: dict, root: str) -> str:
@@ -719,13 +774,19 @@ def render_overview(overview: dict, root: str) -> str:
         if gaps
         else ""
     )
+    start = ""
+    if coverage:
+        maybe = coverage.split("至")[0].strip()
+        if len(maybe) >= 10 and maybe[:10].count("-") == 2:
+            start = maybe[:10]
+    time_attr = f' datetime="{esc(start)}"' if start else ""
     return f"""{head_html(root, f"{title} · {SITE_TITLE}", lede or title)}
 <body>
-  <header class="day-header week-header">
+  <header class="day-header">
     {nav_html(root, "weekly")}
     <a class="back" href="{esc(root)}weekly/">返回周报</a>
     <p class="eyebrow">Weekly Report</p>
-    <p class="week-id">四周总览</p>
+    <time{time_attr}>四周总览</time>
     <h1>{esc(title)}</h1>
     <p class="lede">{esc(lede)}</p>
   </header>
@@ -753,30 +814,44 @@ def render_weekly_index(weeklies: list[dict], overviews: list[dict], root: str) 
         summary = "，".join(summary_bits)
         if summary and not summary.endswith("。"):
             summary += "。"
+        start = ""
+        if ov.get("range"):
+            maybe = str(ov["range"]).split("至")[0].strip()
+            if len(maybe) >= 10 and maybe[:10].count("-") == 2:
+                start = maybe[:10]
         cards.append(
-            f'<article class="weekly-card overview">'
-            f'<p class="eyebrow">总览</p>'
-            f'<h2><a href="{esc(root)}weekly/{esc(slug)}/">{esc(title)}</a></h2>'
-            f'<p class="summary">{esc(summary)}</p>'
-            f"</article>"
+            render_weekly_card(
+                title="四周总览",
+                href=f"{root}weekly/{slug}/",
+                summary=summary or title,
+                tags=[],
+                badge="总览",
+                placeholder="四周总览",
+                datetime_value=start,
+            )
         )
-    for week in weeklies:
+    for i, week in enumerate(weeklies):
         key = week["week"]
         theme = (week.get("theme") or "").strip()
         coverage = (week.get("range") or "").strip()
         n = len(week.get("items") or [])
-        badge = '<p class="badge">进行中</p>' if not week.get("complete", True) else ""
+        summary = theme
+        if coverage:
+            extra = f"覆盖 {coverage}，共 {n} 条。"
+            summary = f"{theme} {extra}" if theme else extra
         cards.append(
-            f'<article class="weekly-card">'
-            f"{badge}"
-            f'<p class="eyebrow">{esc(key)}</p>'
-            f'<h2><a href="{esc(root)}weekly/{esc(key)}/">{esc(key)}</a></h2>'
-            f'<p class="summary">{esc(theme)}</p>'
-            f'<p class="meta">覆盖 {esc(coverage)} · {n} 条</p>'
-            f"</article>"
+            render_weekly_card(
+                title=key,
+                href=f"{root}weekly/{key}/",
+                summary=summary,
+                tags=week_keywords(week),
+                badge="进行中" if not week.get("complete", True) else "",
+                placeholder=key,
+                datetime_value=week_start_iso(key),
+            )
         )
     if cards:
-        main = f'<section class="weekly-list" aria-label="周报列表">{"".join(cards)}</section>'
+        main = f'<section class="card-list" aria-label="周报列表">{"".join(cards)}</section>'
     else:
         main = (
             '<section class="empty">'
@@ -1083,57 +1158,6 @@ img { max-width: 100%; display: block; }
 .day-nav { display: flex; justify-content: space-between; gap: 1rem; padding: 0 0 2rem; font-size: 0.95rem; }
 @media (max-width: 600px) { .archive-list li { grid-template-columns: 1fr; gap: 0.1rem; } }
 
-.weekly-promo {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.25rem 1.4rem 1.35rem;
-  margin: 0 0 1.8rem;
-}
-.weekly-promo h2 { font-family: var(--serif); font-size: 1.3rem; margin: 0 0 0.7rem; }
-.weekly-promo p { margin: 0; max-width: 46rem; }
-.week-header .week-id {
-  display: block;
-  font-family: var(--serif);
-  font-weight: 650;
-  letter-spacing: 0.02em;
-  line-height: 1.25;
-  margin: 0.2rem 0 0.4rem;
-  font-size: clamp(2rem, 5vw, 3rem);
-}
-.weekly-list {
-  display: grid;
-  gap: 1.1rem;
-  padding: 0.4rem 0 3rem;
-}
-.weekly-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.2rem 1.35rem 1.3rem;
-}
-.weekly-card.overview { border-color: var(--accent); }
-.weekly-card .eyebrow { margin-bottom: 0.35rem; }
-.weekly-card h2 {
-  font-family: var(--serif);
-  font-size: 1.45rem;
-  margin: 0.15rem 0 0.55rem;
-}
-.weekly-card .summary { margin: 0; }
-.weekly-card .meta { margin: 0.6rem 0 0; color: var(--muted); font-size: 0.9rem; }
-.item-topic {
-  margin: 0 0 0.2rem;
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-.item .sources { list-style: none; margin: 0.15rem 0 0; padding: 0; }
-.item .sources li { color: var(--muted); font-size: 0.88rem; word-break: break-all; margin: 0.15rem 0 0; }
-.item .sources time { margin-left: 0.8rem; }
-.item .sources .src-note { margin-left: 0.4rem; }
-.overview-majors { list-style: none; margin: 0.7rem 0 0; padding: 0; display: grid; gap: 0.85rem; }
-.overview-majors .sources { margin-top: 0.2rem; }
 """
 
 
