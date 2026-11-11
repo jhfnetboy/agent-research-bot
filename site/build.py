@@ -32,7 +32,7 @@ SITE_INTRO = (
     "本页每天早上根据当天日报自动生成。系统从日报中提取关键词、要点、配图和每条来源链接，"
     "建成卡片并部署到 Cloudflare Pages。每天一张卡片，首页每页一周，点开卡片是当天的详情页，"
     "按话题列出每条信息的标题、概述和链接。重点话题深入写，其他动态简要说明。"
-    "另有按自然周汇总的周报，可从导航进入。"
+    "周报卡片也列在首页，点开可看当周详情，也可以从导航进入周报栏目。"
     "内容覆盖自上一期以来的变化，每条都附来源和日期，不编造数据。"
 )
 SITE_INTRO_SUGGEST_TEXT = "想建议增加来源，请在 GitHub 仓库提 issue："
@@ -272,7 +272,7 @@ def pager_html(root: str, weeks: list[str], key: str) -> str:
     return f'<nav class="pager" aria-label="按周翻页">{left}{mid}{right}</nav>'
 
 
-def render_index_page(days: list[dict], weeks: list[str], key: str, root: str, existing: set[str], total_days: int, promo_html: str = "") -> str:
+def render_index_page(days: list[dict], weeks: list[str], key: str, root: str, existing: set[str], total_days: int, weekly_html: str = "") -> str:
     latest = key == weeks[0]
     if days:
         cards = [render_card(d, root, image_name(d) in existing, eager=(latest and i == 0)) for i, d in enumerate(days)]
@@ -288,6 +288,7 @@ def render_index_page(days: list[dict], weeks: list[str], key: str, root: str, e
         f'<p class="page-status">{esc(key)} · {esc(week_range_label(key))} · 本周 {len(days)} 天'
         f' · 共 {total_days} 天、{len(weeks)} 周，更早的见“上一周”或<a href="{esc(root)}archive/">按月归档</a>。</p>'
     )
+    daily_heading = '<h2 class="section-title">日报</h2>' if weekly_html else ""
     if latest:
         intro = intro_block_html(include_sources=False, about_url=f"{root}about/")
         title = SITE_TITLE
@@ -302,9 +303,10 @@ def render_index_page(days: list[dict], weeks: list[str], key: str, root: str, e
     <h1>{esc(SITE_TITLE)}</h1>
     <p class="lede">{esc(SITE_LEDE)}</p>
   </header>
-  {promo_html}
   {intro}
   <main>
+    {weekly_html}
+    {daily_heading}
     {status}
     {pager_html(root, weeks, key)}
     {main}
@@ -504,28 +506,71 @@ def load_overviews(data_dir: Path) -> list[dict]:
     return overviews
 
 
-def weekly_promo_html(root: str, weeklies: list[dict], overviews: list[dict]) -> str:
-    if not weeklies and not overviews:
-        return ""
-    parts = ['<section class="about-intro">', "<h2>周报</h2>", "<p>"]
-    parts.append("按自然周汇总 AI 相关的重大技术变化。")
-    if weeklies:
-        latest = weeklies[0]
-        parts.append(
-            f'最新一期是<a href="{esc(root)}weekly/{esc(latest["week"])}/">{esc(latest["week"])}</a>'
-            f'，覆盖 {esc(latest.get("range") or "")}。'
-        )
-        theme = (latest.get("theme") or "").strip()
-        if theme:
-            parts.append(esc(theme))
-    if overviews:
-        ov = overviews[0]
+def weekly_card_items(weeklies: list[dict], overviews: list[dict], root: str) -> list[str]:
+    cards: list[str] = []
+    for ov in overviews:
         slug = ov.get("_slug") or "overview"
         title = ov.get("title") or "四周总览"
-        parts.append(f'也可先读<a href="{esc(root)}weekly/{esc(slug)}/">{esc(title)}</a>。')
-    parts.append(f'<a href="{esc(root)}weekly/">进入周报栏目</a>。')
-    parts.append("</p></section>")
-    return "".join(parts)
+        summary_bits = []
+        if ov.get("range"):
+            summary_bits.append(f"覆盖 {ov['range']}")
+        if ov.get("note"):
+            summary_bits.append(ov["note"])
+        summary = "，".join(summary_bits)
+        if summary and not summary.endswith("。"):
+            summary += "。"
+        start = ""
+        if ov.get("range"):
+            maybe = str(ov["range"]).split("至")[0].strip()
+            if len(maybe) >= 10 and maybe[:10].count("-") == 2:
+                start = maybe[:10]
+        cards.append(
+            render_weekly_card(
+                title="四周总览",
+                href=f"{root}weekly/{slug}/",
+                summary=summary or title,
+                tags=[],
+                badge="总览",
+                placeholder="四周总览",
+                datetime_value=start,
+            )
+        )
+    for week in weeklies:
+        key = week["week"]
+        theme = (week.get("theme") or "").strip()
+        coverage = (week.get("range") or "").strip()
+        n = len(week.get("items") or [])
+        summary = theme
+        if coverage:
+            extra = f"覆盖 {coverage}，共 {n} 条。"
+            summary = f"{theme} {extra}" if theme else extra
+        cards.append(
+            render_weekly_card(
+                title=key,
+                href=f"{root}weekly/{key}/",
+                summary=summary,
+                tags=week_keywords(week),
+                badge="进行中" if not week.get("complete", True) else "",
+                placeholder=key,
+                datetime_value=week_start_iso(key),
+            )
+        )
+    return cards
+
+
+def weekly_home_section_html(root: str, weeklies: list[dict], overviews: list[dict]) -> str:
+    cards = weekly_card_items(weeklies, overviews, root)
+    if not cards:
+        return ""
+    status = f'<p class="page-status">共 {len(weeklies)} 期周报'
+    if overviews:
+        status += f'、{len(overviews)} 篇总览'
+    status += f'。完整列表也可在<a href="{esc(root)}weekly/">周报栏目</a>查看。</p>'
+    return (
+        f'<h2 class="section-title">周报</h2>'
+        f"{status}"
+        f'<section class="card-list" aria-label="周报列表">{"".join(cards)}</section>'
+    )
 
 
 def week_start_iso(key: str) -> str:
@@ -802,54 +847,7 @@ def render_overview(overview: dict, root: str) -> str:
 
 
 def render_weekly_index(weeklies: list[dict], overviews: list[dict], root: str) -> str:
-    cards = []
-    for ov in overviews:
-        slug = ov.get("_slug") or "overview"
-        title = ov.get("title") or "四周总览"
-        summary_bits = []
-        if ov.get("range"):
-            summary_bits.append(f"覆盖 {ov['range']}")
-        if ov.get("note"):
-            summary_bits.append(ov["note"])
-        summary = "，".join(summary_bits)
-        if summary and not summary.endswith("。"):
-            summary += "。"
-        start = ""
-        if ov.get("range"):
-            maybe = str(ov["range"]).split("至")[0].strip()
-            if len(maybe) >= 10 and maybe[:10].count("-") == 2:
-                start = maybe[:10]
-        cards.append(
-            render_weekly_card(
-                title="四周总览",
-                href=f"{root}weekly/{slug}/",
-                summary=summary or title,
-                tags=[],
-                badge="总览",
-                placeholder="四周总览",
-                datetime_value=start,
-            )
-        )
-    for i, week in enumerate(weeklies):
-        key = week["week"]
-        theme = (week.get("theme") or "").strip()
-        coverage = (week.get("range") or "").strip()
-        n = len(week.get("items") or [])
-        summary = theme
-        if coverage:
-            extra = f"覆盖 {coverage}，共 {n} 条。"
-            summary = f"{theme} {extra}" if theme else extra
-        cards.append(
-            render_weekly_card(
-                title=key,
-                href=f"{root}weekly/{key}/",
-                summary=summary,
-                tags=week_keywords(week),
-                badge="进行中" if not week.get("complete", True) else "",
-                placeholder=key,
-                datetime_value=week_start_iso(key),
-            )
-        )
+    cards = weekly_card_items(weeklies, overviews, root)
     if cards:
         main = f'<section class="card-list" aria-label="周报列表">{"".join(cards)}</section>'
     else:
@@ -913,10 +911,18 @@ body {
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 a:hover { color: #0b2b22; }
 img { max-width: 100%; display: block; }
-.site-header, .day-header, .day-main, .site-footer, .empty, .card-list, .about-intro, .about-page, .page-status, .archive-main {
+.site-header, .day-header, .day-main, .site-footer, .empty, .card-list, .about-intro, .about-page, .page-status, .archive-main, .section-title {
   width: min(1080px, calc(100% - 2rem));
   margin-left: auto;
   margin-right: auto;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--line);
 }
 .site-nav {
   display: flex;
@@ -1225,8 +1231,8 @@ def main() -> int:
     for key in weeks:
         chunk = by_week.get(key, [])
         if key == weeks[0]:
-            promo = weekly_promo_html(root_for(base, 0), weeklies, overviews)
-            write(out_dir / "index.html", render_index_page(chunk, weeks, key, root_for(base, 0), existing, len(days), promo))
+            weekly_html = weekly_home_section_html(root_for(base, 0), weeklies, overviews)
+            write(out_dir / "index.html", render_index_page(chunk, weeks, key, root_for(base, 0), existing, len(days), weekly_html))
         write(
             out_dir / "weeks" / key / "index.html",
             render_index_page(chunk, weeks, key, root_for(base, 2), existing, len(days)),
