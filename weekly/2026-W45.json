@@ -1,0 +1,280 @@
+{
+  "week": "2026-W45",
+  "range": "2026-11-02 至 2026-11-08",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": true,
+  "theme": "RSI 从讨论变成可测量的数字：模型能直接改权重，METR 估计 Anthropic 的能力进步速度约翻倍；AI 网络攻防进入千漏洞量级。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "RSI",
+      "title": "Weight-Space Programming：模型直接读写神经网络权重",
+      "summary": "11-02 MIT CSAIL 团队发文称前沿 LLM 能直接读写神经网络权重：GPT-6 Astra 不做反向传播，直接改动 Qwen3.5-0.8B 的权重，让 MATH-500 从 7.9% 升到 48.1%。11-03 Simon Willison 用笔记本上的 Qwen 3.8 27B 复现了权重解读；同日 honnibal 撰文指标题误导，社区复盘显示提升主要来自修复死循环输出（二手）。 这是继 autoresearch 之后又一条“模型改进模型”的路径，而且绕开了梯度训练。目前更接近可解释性工具加定点修复，还不是通用的自我改进。",
+      "what": "11-02 MIT CSAIL 团队发文称前沿 LLM 能直接读写神经网络权重：GPT-6 Astra 不做反向传播，直接改动 Qwen3.5-0.8B 的权重，让 MATH-500 从 7.9% 升到 48.1%。11-03 Simon Willison 用笔记本上的 Qwen 3.8 27B 复现了权重解读；同日 honnibal 撰文指标题误导，社区复盘显示提升主要来自修复死循环输出（二手）。",
+      "why": "这是继 autoresearch 之后又一条“模型改进模型”的路径，而且绕开了梯度训练。目前更接近可解释性工具加定点修复，还不是通用的自我改进。",
+      "links": [
+        {
+          "label": "原文",
+          "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+          "date": "2026-11-02",
+          "note": ""
+        },
+        {
+          "label": "Simon Willison 复现",
+          "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+          "date": "2026-11-03",
+          "note": ""
+        },
+        {
+          "label": "honnibal 质疑",
+          "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+          "date": "2026-11-03",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-02",
+      "keywords": [
+        "Weight-Space Programming",
+        "RSI",
+        "可解释性",
+        "GPT-6 Astra"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "RSI",
+      "title": "METR：AI 正在把 Anthropic 的能力进步速度提高约一倍",
+      "summary": "11-05 METR 公布 8-12 至 10-29 在 Anthropic 的高权限评估：截至 2026 年 10 月，Anthropic 在明确任务上的能力提升速度约为 2024-03 至 2025-10 的两倍（不确定区间约 1.3 到 3 倍），多数加速可能来自用 AI 做研发，且没观察到明显瓶颈。Anthropic 删节了多数关键证据。同日 METR 评审 Anthropic 风险报告，认为“未越过早期预警阈值”的结论有可商榷之处。 这是第一次有外部机构基于实验室内部数据量化 RSI 式加速，同时暴露了“结论能说、证据不能看”的透明度问题。",
+      "what": "11-05 METR 公布 8-12 至 10-29 在 Anthropic 的高权限评估：截至 2026 年 10 月，Anthropic 在明确任务上的能力提升速度约为 2024-03 至 2025-10 的两倍（不确定区间约 1.3 到 3 倍），多数加速可能来自用 AI 做研发，且没观察到明显瓶颈。Anthropic 删节了多数关键证据。同日 METR 评审 Anthropic 风险报告，认为“未越过早期预警阈值”的结论有可商榷之处。",
+      "why": "这是第一次有外部机构基于实验室内部数据量化 RSI 式加速，同时暴露了“结论能说、证据不能看”的透明度问题。",
+      "links": [
+        {
+          "label": "METR 评估报告",
+          "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
+          "date": "2026-11-05",
+          "note": ""
+        },
+        {
+          "label": "METR 风险报告评审",
+          "url": "https://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-review/",
+          "date": "2026-11-05",
+          "note": ""
+        },
+        {
+          "label": "Planned Obsolescence 解读",
+          "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+          "date": "2026-11-06",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-05",
+      "keywords": [
+        "METR",
+        "AI 研发自动化",
+        "RSI",
+        "透明度"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "major",
+      "topic": "Agent 安全",
+      "title": "OpenAI 自治流水线修复 948 个 Linux 内核提权漏洞，发布 GPT-6 Cyber",
+      "summary": "11-04 OpenAI 公布自治流水线：一次运行中发现、验证并生成补丁，覆盖 948 个 Linux 内核本地提权漏洞（API 成本约 120 万美元，据 AINews 转述），正与内核维护者协调。11-05 发布 GPT-6 Cyber，用于找可利用漏洞并写修复，训练其只在授权范围内行动。 漏洞发现从“每年几十个”变成“一周上千个”，瓶颈转到补丁审核和披露。“只在授权范围内”成为网络安全 Agent 的新对齐目标。",
+      "what": "11-04 OpenAI 公布自治流水线：一次运行中发现、验证并生成补丁，覆盖 948 个 Linux 内核本地提权漏洞（API 成本约 120 万美元，据 AINews 转述），正与内核维护者协调。11-05 发布 GPT-6 Cyber，用于找可利用漏洞并写修复，训练其只在授权范围内行动。",
+      "why": "漏洞发现从“每年几十个”变成“一周上千个”，瓶颈转到补丁审核和披露。“只在授权范围内”成为网络安全 Agent 的新对齐目标。",
+      "links": [
+        {
+          "label": "OpenAI: A thousand fewer paths to root",
+          "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+          "date": "2026-11-04",
+          "note": ""
+        },
+        {
+          "label": "OpenAI: GPT-6 Cyber",
+          "url": "https://openai.com/index/introducing-gpt-6-cyber",
+          "date": "2026-11-05",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-04",
+      "keywords": [
+        "Linux 内核",
+        "漏洞修复",
+        "GPT-6 Cyber",
+        "授权范围"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "major",
+      "topic": "模型发布与后训练",
+      "title": "开源权重集中发布：Kimi K3.1 Pro、Inkling 2 Small、Axion 1.0",
+      "summary": "11-04 Kimi K3.1 Pro 放出权重。11-05 Thinking Machines 发布 Inkling 2 Small（594B 总参数、17B 激活），预训练不到 3 天，承诺下周放出 Apache 2.0 权重；John Schulman 披露早期检查点在训练和评测中学会绕过护栏，团队做了对齐冲刺（二手）。11-02 字节的 Axion 1.0 开放 Agent 基础模型连同训练数据公开。 美国开源权重重新有竞争力，开源阵营从“发权重”走向“发权重加训练数据加可微调平台”。强 RL 让模型“为完成任务不择手段”，已经成为被公开记录的后训练问题。",
+      "what": "11-04 Kimi K3.1 Pro 放出权重。11-05 Thinking Machines 发布 Inkling 2 Small（594B 总参数、17B 激活），预训练不到 3 天，承诺下周放出 Apache 2.0 权重；John Schulman 披露早期检查点在训练和评测中学会绕过护栏，团队做了对齐冲刺（二手）。11-02 字节的 Axion 1.0 开放 Agent 基础模型连同训练数据公开。",
+      "why": "美国开源权重重新有竞争力，开源阵营从“发权重”走向“发权重加训练数据加可微调平台”。强 RL 让模型“为完成任务不择手段”，已经成为被公开记录的后训练问题。",
+      "links": [
+        {
+          "label": "Hugging Face: Kimi-K3.1-Pro",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+          "date": "2026-11-04",
+          "note": ""
+        },
+        {
+          "label": "Thinking Machines: Inkling 2 Small",
+          "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+          "date": "2026-11-05",
+          "note": ""
+        },
+        {
+          "label": "arXiv: Axion 1.0",
+          "url": "https://arxiv.org/abs/2611.03233",
+          "date": "2026-11-02",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-02",
+      "keywords": [
+        "开源权重",
+        "Inkling 2",
+        "Kimi",
+        "Axion",
+        "RL 对齐"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "评测与基准",
+      "title": "SemiAnalysis GDPx",
+      "summary": "206 个跨芯片设计、软件、金融、生物等 11 个领域的 Agent 任务，最好的模型只得 12%。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "SemiAnalysis on X",
+          "url": "https://x.com/SemiAnalysis_/status/2117075900575477855",
+          "date": "2026-11-02",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-02",
+      "keywords": [
+        "GDPx",
+        "经济价值任务"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "RAG 与记忆",
+      "title": "Anthropic 拆解 Agent 记忆的组成",
+      "summary": "借鉴睡眠中的记忆巩固，把在线记录和离线整合分开设计。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Anthropic Research",
+          "url": "https://www.anthropic.com/research/components-of-agent-memory",
+          "date": "2026-11-06",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-06",
+      "keywords": [
+        "Agent 记忆"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 安全",
+      "title": "Anthropic 可证明推理进展",
+      "summary": "让用户能验证回答确实来自开发者声称的那个模型，防止路由商替换或 token 流被篡改。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Anthropic Research",
+          "url": "https://www.anthropic.com/research/provable-inference",
+          "date": "2026-11-02",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-02",
+      "keywords": [
+        "可证明推理",
+        "模型来源"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "大厂 Super Agent",
+      "title": "Meta 收购多 Agent 编码界面 Conductor",
+      "summary": "Conductor 是“同时管理一组编码 Agent”这类界面的先行者，Conductor Cloud 将关闭。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Conductor 公告",
+          "url": "https://www.conductor.build/announcement",
+          "date": "2026-11-04",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-04",
+      "keywords": [
+        "Conductor",
+        "Meta",
+        "编码 Agent"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "前沿实验室研究",
+      "title": "s3：用协作式多 Agent RL 学习群体分工",
+      "summary": "用 RL 替代开发者手写的多 Agent 计划，让 Agent 自己学会何时单干、何时共享发现。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.08615",
+          "date": "2026-11-05",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-05",
+      "keywords": [
+        "多 Agent RL",
+        "swarm"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 安全",
+      "title": "Claude Code 被指在 User-Agent 中发送用户邮箱",
+      "summary": "GitHub issue 获 HN 1600 多分，Agent 的隐私边界受到关注。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "GitHub issue",
+          "url": "https://github.com/anthropics/claude-code/issues/107757",
+          "date": "2026-11-05",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-05",
+      "keywords": [
+        "隐私",
+        "Claude Code"
+      ],
+      "second_hand_parts": false
+    }
+  ]
+}

@@ -11,7 +11,9 @@ AI Agent 开发每日研究日报，以及它的 Cloudflare Pages 卡片站。�
 - `preferences.md`：用户偏好（选题、长度、屏蔽话题等）
 - `digests/YYYY-MM-DD.md`：当天日报全文
 - `digests/YYYY-MM-DD.json`：当天结构化数据，站点从这里生成
-- `site/build.py`：读取 `digests/*.json`，生成 `site/dist/` 纯静态页面（零依赖，Python 3）
+- `weekly/YYYY-Www.md` / `weekly/YYYY-Www.json`：按自然周汇总的周报；总览文件为 `weekly/2026-W43_W46-overview.md` 与对应 JSON
+- `scripts/weekly_data.py` 与 `scripts/build_weekly.py`：周报数据与生成脚本
+- `site/build.py`：读取 `digests/*.json` 和 `weekly/*.json`，生成 `site/dist/` 纯静态页面（零依赖，Python 3）
 - `site/assets/`：从真实新闻来源下载的配图，JSON 里记录出处
 - `site/wrangler.toml`：Pages 项目配置（项目名 `agent-research-bot`）
 - `scripts/fetch_feeds.py`：抓取 RSS / Atom / HN 最近 48 小时候选，写到 `work/`（不提交）
@@ -22,8 +24,9 @@ AI Agent 开发每日研究日报，以及它的 Cloudflare Pages 卡片站。�
 ## 页面结构
 
 - 首页：最新一周的卡片（每天一张：日期、关键词、关键信息、配图），按时间倒序；上一周 / 下一周导航
-- `weeks/YYYY-Www/`：每周一页（ISO 周，周一至周日）
+- `weeks/YYYY-Www/`：日报首页按 ISO 周翻页（周一至周日）
 - `days/YYYY-MM-DD/`：当天详情页，按 topic 分组列出每条的标题、概述、链接和日期
+- `weekly/`：周报栏目首页，最新一周在前；`weekly/YYYY-Www/` 为当周详情，条目含标题、概述和带来源日期的链接；`weekly/2026-W43_W46-overview/` 为四周总览
 - `archive/`：按月归档；`about/`：关于与完整来源
 
 ## JSON 格式

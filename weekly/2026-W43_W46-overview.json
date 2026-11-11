@@ -1,0 +1,449 @@
+{
+  "id": "2026-W43_W46-overview",
+  "title": "AI 重大技术变化：2026-W43 至 W46 总览",
+  "range": "2026-10-19 至 2026-11-11",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "note": "W46 为本周至今。",
+  "weeks": [
+    {
+      "week": "2026-W43",
+      "range": "2026-10-19 至 2026-10-25",
+      "theme": "AI 找漏洞的能力集中兑现，防守方开始用 AI 做形式化证明；开源推理栈和开源大模型同时向前沿逼近。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "PHP2Shell 与 AI 漏洞披露潮，LiteLLM 被投毒",
+          "links": [
+            {
+              "label": "PHP 安全公告",
+              "url": "https://www.php.net/archive/2026.php#2026-10-21-5",
+              "date": "2026-10-21",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: Patch the Planet",
+              "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+              "date": "2026-10-21",
+              "note": ""
+            },
+            {
+              "label": "Wiz: PHP2Shell",
+              "url": "https://www.wiz.io/blog/php2shell-php-rce",
+              "date": "2026-10-21",
+              "note": ""
+            },
+            {
+              "label": "SafeDep: LiteLLM 1.107.0 投毒",
+              "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+              "date": "2026-10-21",
+              "note": ""
+            },
+            {
+              "label": "AINews: Black October",
+              "url": "https://latent.space/p/ainews-black-october/",
+              "date": "2026-10-23",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Anthropic 用 Claude 做大规模形式化验证",
+          "links": [
+            {
+              "label": "Anthropic Research",
+              "url": "https://www.anthropic.com/research/formal-verification",
+              "date": "2026-10-22",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "DeepSeek 开源生产推理框架 DeepInfer",
+          "links": [
+            {
+              "label": "GitHub: deepseek-ai/DeepInfer",
+              "url": "https://github.com/deepseek-ai/DeepInfer",
+              "date": "2026-10-20",
+              "note": ""
+            },
+            {
+              "label": "HN 讨论（2355 分）",
+              "url": "https://news.ycombinator.com/item?id=50163277",
+              "date": "2026-10-20",
+              "note": ""
+            },
+            {
+              "label": "AINews: DeepInfer",
+              "url": "https://latent.space/p/ainews-deepseek-deepinfer-open-source/",
+              "date": "2026-10-21",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Kimi K3.1 Pro：开源权重逼近 Fable 级",
+          "links": [
+            {
+              "label": "Kimi 官方博客",
+              "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+              "date": "2026-10-23",
+              "note": ""
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=50212065",
+              "date": "2026-10-23",
+              "note": ""
+            },
+            {
+              "label": "AINews: Kimi K3.1",
+              "url": "https://latent.space/p/ainews-kimi-31/",
+              "date": "2026-10-24",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Claude Duet 主动式 Agent，Agent Skills 捐给 AAIF",
+          "links": [
+            {
+              "label": "Claude: Claude Duet",
+              "url": "https://claude.com/resources/articles/claude-duet",
+              "date": "2026-10-21",
+              "note": ""
+            },
+            {
+              "label": "Anthropic: 捐赠 Agent Skills",
+              "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+              "date": "2026-10-22",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W44",
+      "range": "2026-10-26 至 2026-11-01",
+      "theme": "前沿模型与评测体系同时换代，Agent 群体做数学证明成为新的能力展示方式，训练期监控和 Agent 供应链安全跟进。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Gemini 4 Carbon 发布，先给网络防御者",
+          "links": [
+            {
+              "label": "DeepMind Blog",
+              "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+              "date": "2026-10-28",
+              "note": ""
+            },
+            {
+              "label": "Google Blog",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+              "date": "2026-10-28",
+              "note": ""
+            },
+            {
+              "label": "AINews: Gemini 4 Carbon",
+              "url": "https://latent.space/p/ainews-gemini-4-carbon/",
+              "date": "2026-10-29",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Agent 群体做数学：CFSG 完成 Lean 形式化，OpenAI 公布 ETH 等结果",
+          "links": [
+            {
+              "label": "OpenAI",
+              "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+              "date": "2026-10-26",
+              "note": ""
+            },
+            {
+              "label": "Axiom on X",
+              "url": "https://x.com/axiommathai/status/2115089794867040584",
+              "date": "2026-10-27",
+              "note": ""
+            },
+            {
+              "label": "Axiom CFSG 项目页",
+              "url": "https://cfsg.axiommath.ai/",
+              "date": "2026-10-27",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "评测换代：AA Index v5 与 FrontierCode 2.0",
+          "links": [
+            {
+              "label": "Artificial Analysis on X",
+              "url": "https://x.com/ArtificialAnlys/status/2115265133467635877",
+              "date": "2026-10-28",
+              "note": ""
+            },
+            {
+              "label": "Cognition on X",
+              "url": "https://x.com/cognition/status/2115132488775524793",
+              "date": "2026-10-28",
+              "note": ""
+            },
+            {
+              "label": "Interconnects",
+              "url": "https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
+              "date": "2026-10-28",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "Mistral Large 4 开放权重",
+          "links": [
+            {
+              "label": "Mistral",
+              "url": "https://mistral.ai/news/mistral-large-4-oss/",
+              "date": "2026-10-29",
+              "note": ""
+            },
+            {
+              "label": "Hugging Face Blog",
+              "url": "https://huggingface.co/blog/mistral-large4",
+              "date": "2026-10-29",
+              "note": ""
+            },
+            {
+              "label": "HN 讨论（1732 分）",
+              "url": "https://news.ycombinator.com/item?id=50289418",
+              "date": "2026-10-29",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "训练期监控上线，Agent 分发渠道出现后门",
+          "links": [
+            {
+              "label": "OpenAI",
+              "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+              "date": "2026-10-29",
+              "note": ""
+            },
+            {
+              "label": "Phorion",
+              "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+              "date": "2026-10-30",
+              "note": ""
+            },
+            {
+              "label": "The Register",
+              "url": "https://www.theregister.com/ai-and-ml/2026/10/26/alibabas-qwen-ai-caught-trying-to-contact-server-in-china/5305561",
+              "date": "2026-10-26",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W45",
+      "range": "2026-11-02 至 2026-11-08",
+      "theme": "RSI 从讨论变成可测量的数字：模型能直接改权重，METR 估计 Anthropic 的能力进步速度约翻倍；AI 网络攻防进入千漏洞量级。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Weight-Space Programming：模型直接读写神经网络权重",
+          "links": [
+            {
+              "label": "原文",
+              "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+              "date": "2026-11-02",
+              "note": ""
+            },
+            {
+              "label": "Simon Willison 复现",
+              "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+              "date": "2026-11-03",
+              "note": ""
+            },
+            {
+              "label": "honnibal 质疑",
+              "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+              "date": "2026-11-03",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "METR：AI 正在把 Anthropic 的能力进步速度提高约一倍",
+          "links": [
+            {
+              "label": "METR 评估报告",
+              "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
+              "date": "2026-11-05",
+              "note": ""
+            },
+            {
+              "label": "METR 风险报告评审",
+              "url": "https://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-review/",
+              "date": "2026-11-05",
+              "note": ""
+            },
+            {
+              "label": "Planned Obsolescence 解读",
+              "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+              "date": "2026-11-06",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 自治流水线修复 948 个 Linux 内核提权漏洞，发布 GPT-6 Cyber",
+          "links": [
+            {
+              "label": "OpenAI: A thousand fewer paths to root",
+              "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+              "date": "2026-11-04",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: GPT-6 Cyber",
+              "url": "https://openai.com/index/introducing-gpt-6-cyber",
+              "date": "2026-11-05",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "开源权重集中发布：Kimi K3.1 Pro、Inkling 2 Small、Axion 1.0",
+          "links": [
+            {
+              "label": "Hugging Face: Kimi-K3.1-Pro",
+              "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+              "date": "2026-11-04",
+              "note": ""
+            },
+            {
+              "label": "Thinking Machines: Inkling 2 Small",
+              "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+              "date": "2026-11-05",
+              "note": ""
+            },
+            {
+              "label": "arXiv: Axion 1.0",
+              "url": "https://arxiv.org/abs/2611.03233",
+              "date": "2026-11-02",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W46",
+      "range": "2026-11-09 至 2026-11-11（本周至今，未完）",
+      "theme": "多 Agent 编排成为旗舰模型的官方卖点，Anthropic 首次公开在训练中压低 RSI 相关能力。",
+      "complete": false,
+      "majors": [
+        {
+          "title": "Claude Fable 5.2 / Mythos 5.2",
+          "links": [
+            {
+              "label": "Anthropic",
+              "url": "https://www.anthropic.com/news/claude-fable-and-mythos-5-2",
+              "date": "2026-11-09",
+              "note": ""
+            },
+            {
+              "label": "AINews: Fable 5.2",
+              "url": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
+              "date": "2026-11-10",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Gemini 4 Carbon 全面可用，Antigravity 推出 /swarm",
+          "links": [
+            {
+              "label": "DeepMind Blog",
+              "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+              "date": "2026-11-10",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+              "date": "2026-11-11",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "AlphaProof Code：用 Agent 形式化验证真实软件",
+          "links": [
+            {
+              "label": "DeepMind Blog",
+              "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+              "date": "2026-11-10",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "紧急停止、权重后门、推理商数据保留",
+          "links": [
+            {
+              "label": "OpenAI: Control Room",
+              "url": "https://openai.com/index/control-room",
+              "date": "2026-11-09",
+              "note": ""
+            },
+            {
+              "label": "Microsoft Research: Lazarus",
+              "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+              "date": "2026-11-10",
+              "note": ""
+            },
+            {
+              "label": "Notion 安全事件说明",
+              "url": "https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor",
+              "date": "2026-11-10",
+              "note": "页面无日期，按 HN 讨论日"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "trends": [
+    {
+      "title": "多 Agent 编排从实验走向产品默认形态",
+      "text": "Kimi Hosted Agents（W43），Axiom 用 Agent 群体完成 CFSG、DeepSeek 开源 Super-agent harness（W44），Meta 收购 Conductor、s3 用 RL 学分工（W45），Fable 5.2 千 Agent 案例和 Antigravity /swarm（W46）。四周里“协调者加多个执行者加验证者”从研究演示变成官方推荐用法和产品功能。"
+    },
+    {
+      "title": "可机器检查的证明成为长时程 Agent 的验收标准",
+      "text": "Anthropic 用 Claude 写出约 1.8 亿行 Rocq 证明（W43），CFSG 的 5000 万行 Lean（W44），AlphaProof Code 验证 Signal 实现、CPython Lean 形式化（W46）。Lean、Rocq 这类环境让 Agent 的长任务可以自动判对错，也是 RL 和群体协作最好用的训练场。"
+    },
+    {
+      "title": "RSI 从讨论变成测量和主动限制",
+      "text": "Weight-Space Programming 展示模型直接改权重（W45），METR 估计 Anthropic 能力进步速度约为过去两倍（W45），Fable 5.2 发布时写明在训练中压低了 AI 研发相关能力（W46）。实验室开始把 RSI 当作需要度量和设闸的具体能力。"
+    },
+    {
+      "title": "网络安全同时是能力主战场和最大风险面",
+      "text": "PHP2Shell（W43），Carbon 先给防御者（W44），948 个 Linux 漏洞和 GPT-6 Cyber（W45），Mythos 5.2 只给审核机构（W46）。同时 Agent 自身的供应链接连出事：LiteLLM 投毒（W43）、Claude Code 扩展后门（W44）、Lazarus 权重后门和 Fireworks 数据保留（W46）。"
+    },
+    {
+      "title": "评测转向私有集和单任务成本，开源权重持续逼近",
+      "text": "AA Index v5 与 FrontierCode 2.0（W44）、GDPx（W45）都把私有任务和每任务成本放到核心位置；Fable 5.2 单价降而每任务成本升（W46）。开源侧 Kimi K3.1 Pro、Mistral Large 4、Inkling 2 Small 四周内接连放出权重，后训练工具链首日即可支持。"
+    }
+  ],
+  "gaps": [
+    "RAG 与向量数据库的重大变化较少，只在 W43 收录了 Qdrant v1.20 和 Cohere Rerank 5，W45 收录了 Anthropic 的 Agent 记忆文章；其他周没有找到够得上“重大”的检索类发布。",
+    "OpenAI 官网对 curl 返回 403（反爬），OpenAI 条目的存在和日期以官方 RSS（openai.com/news/rss.xml）核实。Microsoft Research 对 curl 返回 403，Lazarus 页面已用另一种抓取方式打开核实（2026-11-10 发布）。",
+    "部分条目（Axiom CFSG、AA Index v5、FrontierCode 2.0、GDPx、DeepSeek harness、Cohere Rerank 5）官方首发在 X，所以链接用 X 帖子，日期按帖子 ID 换算为 UTC+7。",
+    "参数、跑分、成本等细节有一部分来自 Latent Space AINews 汇总，文中已标注“二手”或“据 AINews 转述”。Reddit 没有直接抓取。",
+    "W46 只覆盖到 11-11，本周还没结束。",
+    "未收录：腾讯 Hy4（官方页面返回 567 无法核验）、Recursive Flint 和 Google Harness²（发布日期在 W42）、Anthropic S-1 等纯商业事件。"
+  ]
+}

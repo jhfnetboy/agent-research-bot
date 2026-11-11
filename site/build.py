@@ -23,6 +23,7 @@ from datetime import datetime
 from pathlib import Path
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+WEEK_RE = re.compile(r"^\d{4}-W\d{2}$")
 REPO_URL = "https://github.com/jhfnetboy/agent-research-bot"
 SITE_TITLE = "Agent 开发日报"
 SITE_EYEBROW = "Agent Research Digest"
@@ -31,6 +32,7 @@ SITE_INTRO = (
     "本页每天早上根据当天日报自动生成。系统从日报中提取关键词、要点、配图和每条来源链接，"
     "建成卡片并部署到 Cloudflare Pages。每天一张卡片，首页每页一周，点开卡片是当天的详情页，"
     "按话题列出每条信息的标题、概述和链接。重点话题深入写，其他动态简要说明。"
+    "另有按自然周汇总的周报，可从导航进入。"
     "内容覆盖自上一期以来的变化，每条都附来源和日期，不编造数据。"
 )
 SITE_INTRO_SUGGEST_TEXT = "想建议增加来源，请在 GitHub 仓库提 issue："
@@ -148,7 +150,7 @@ def week_href(root: str, weeks: list[str], key: str) -> str:
 
 
 def nav_html(root: str, current: str) -> str:
-    links = [("home", "目录", root), ("archive", "归档", f"{root}archive/"), ("about", "关于", f"{root}about/")]
+    links = [("home", "目录", root), ("weekly", "周报", f"{root}weekly/"), ("archive", "归档", f"{root}archive/"), ("about", "关于", f"{root}about/")]
     parts = []
     for key, label, href in links:
         cls = ' class="current"' if key == current else ""
@@ -190,6 +192,7 @@ def footer_html(root: str) -> str:
         f'<footer class="site-footer">'
         f"<p>{esc(SITE_TITLE)}"
         f' · <a href="{esc(root)}">目录</a>'
+        f' · <a href="{esc(root)}weekly/">周报</a>'
         f' · <a href="{esc(root)}archive/">归档</a>'
         f' · <a href="{esc(root)}about/">关于</a>'
         f' · <a href="{repo}">GitHub</a></p>'
@@ -269,7 +272,7 @@ def pager_html(root: str, weeks: list[str], key: str) -> str:
     return f'<nav class="pager" aria-label="按周翻页">{left}{mid}{right}</nav>'
 
 
-def render_index_page(days: list[dict], weeks: list[str], key: str, root: str, existing: set[str], total_days: int) -> str:
+def render_index_page(days: list[dict], weeks: list[str], key: str, root: str, existing: set[str], total_days: int, promo_html: str = "") -> str:
     latest = key == weeks[0]
     if days:
         cards = [render_card(d, root, image_name(d) in existing, eager=(latest and i == 0)) for i, d in enumerate(days)]
@@ -299,6 +302,7 @@ def render_index_page(days: list[dict], weeks: list[str], key: str, root: str, e
     <h1>{esc(SITE_TITLE)}</h1>
     <p class="lede">{esc(SITE_LEDE)}</p>
   </header>
+  {promo_html}
   {intro}
   <main>
     {status}
@@ -434,7 +438,7 @@ def render_404(root: str) -> str:
     {nav_html(root, "")}
     <h1>页面不存在</h1>
     <p>这条地址没有对应的日报。</p>
-    <p><a href="{esc(root)}">回到首页</a> · <a href="{esc(root)}archive/">归档</a> · <a href="{esc(root)}about/">关于</a></p>
+    <p><a href="{esc(root)}">回到首页</a> · <a href="{esc(root)}weekly/">周报</a> · <a href="{esc(root)}archive/">归档</a> · <a href="{esc(root)}about/">关于</a></p>
   </main>
 </body>
 </html>
@@ -453,6 +457,347 @@ def render_about(root: str) -> str:
   </header>
   <main class="about-page">
     {intro}
+  </main>
+  {footer_html(root)}
+</body>
+</html>
+"""
+
+
+
+def load_weeklies(data_dir: Path) -> list[dict]:
+    weeks: list[dict] = []
+    if not data_dir.exists():
+        return weeks
+    for path in sorted(data_dir.glob("*.json")):
+        if "overview" in path.name:
+            continue
+        try:
+            raw = json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            print(f"skip {path.name}: invalid JSON ({exc})", file=sys.stderr)
+            continue
+        if not isinstance(raw, dict) or not WEEK_RE.match(str(raw.get("week") or "")):
+            print(f"skip {path.name}: missing or invalid week", file=sys.stderr)
+            continue
+        raw["_file"] = path.name
+        weeks.append(raw)
+    weeks.sort(key=lambda w: w["week"], reverse=True)
+    return weeks
+
+
+def load_overviews(data_dir: Path) -> list[dict]:
+    overviews: list[dict] = []
+    if not data_dir.exists():
+        return overviews
+    for path in sorted(data_dir.glob("*overview*.json"), reverse=True):
+        try:
+            raw = json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            print(f"skip {path.name}: invalid JSON ({exc})", file=sys.stderr)
+            continue
+        if not isinstance(raw, dict):
+            continue
+        raw["_file"] = path.name
+        raw["_slug"] = path.stem
+        overviews.append(raw)
+    return overviews
+
+
+def weekly_promo_html(root: str, weeklies: list[dict], overviews: list[dict]) -> str:
+    if not weeklies and not overviews:
+        return ""
+    parts = ['<section class="weekly-promo">', "<h2>周报</h2>", "<p>"]
+    parts.append("按自然周汇总 AI 相关的重大技术变化。")
+    if weeklies:
+        latest = weeklies[0]
+        parts.append(
+            f'最新一期是<a href="{esc(root)}weekly/{esc(latest["week"])}/">{esc(latest["week"])}</a>'
+            f'，覆盖 {esc(latest.get("range") or "")}。'
+        )
+        theme = (latest.get("theme") or "").strip()
+        if theme:
+            parts.append(esc(theme))
+    if overviews:
+        ov = overviews[0]
+        slug = ov.get("_slug") or "overview"
+        title = ov.get("title") or "四周总览"
+        parts.append(f'也可先读<a href="{esc(root)}weekly/{esc(slug)}/">{esc(title)}</a>。')
+    parts.append(f'<a href="{esc(root)}weekly/">进入周报栏目</a>。')
+    parts.append("</p></section>")
+    return "".join(parts)
+
+
+def item_sources_html(links: list) -> str:
+    rows = []
+    for link in links or []:
+        if not isinstance(link, dict):
+            continue
+        url = (link.get("url") or "").strip()
+        label = (link.get("label") or url or "来源").strip()
+        date = (link.get("date") or "").strip()
+        note = (link.get("note") or "").strip()
+        if url:
+            label_html = f'<a class="source" href="{esc(url)}" rel="noopener noreferrer">{esc(label)}</a>'
+        else:
+            label_html = esc(label)
+        date_html = f'<time datetime="{esc(date)}">{esc(date)}</time>' if date else ""
+        note_html = f'<span class="src-note">（{esc(note)}）</span>' if note else ""
+        rows.append(f"<li>{label_html}{date_html}{note_html}</li>")
+    return f'<ul class="sources" aria-label="来源">{"".join(rows)}</ul>' if rows else ""
+
+
+def render_weekly_item(item: dict) -> str:
+    title = (item.get("title") or "").strip() or "未命名条目"
+    topic = (item.get("topic") or "").strip()
+    topic_html = f'<p class="item-topic">{esc(topic)}</p>' if topic else ""
+    what = (item.get("what") or "").strip()
+    why = (item.get("why") or "").strip()
+    summary = (item.get("summary") or "").strip()
+    notes = []
+    if what or why:
+        if what:
+            notes.append(f'<p class="note"><strong>发生了什么：</strong>{esc(what)}</p>')
+        if why:
+            notes.append(f'<p class="note"><strong>为什么重要：</strong>{esc(why)}</p>')
+    elif summary:
+        notes.append(f'<p class="note"><strong>概述：</strong>{esc(summary)}</p>')
+    links = item.get("links") or []
+    if not links and item.get("url"):
+        links = [{"label": "来源", "url": item.get("url"), "date": item.get("date") or ""}]
+    return (
+        f'<article class="item">{topic_html}<h3>{esc(title)}</h3>'
+        f'{"".join(notes)}{item_sources_html(links)}</article>'
+    )
+
+
+def weekly_report_pager_html(root: str, weeks: list[str], key: str) -> str:
+    i = weeks.index(key)
+    older = weeks[i + 1] if i + 1 < len(weeks) else None
+    newer = weeks[i - 1] if i > 0 else None
+    left = (
+        f'<a class="prev" rel="prev" href="{esc(root)}weekly/{esc(older)}/">← {esc(older)}</a>'
+        if older else '<span class="prev disabled">← 更早一周</span>'
+    )
+    right = (
+        f'<a class="next" rel="next" href="{esc(root)}weekly/{esc(newer)}/">{esc(newer)} →</a>'
+        if newer else '<span class="next disabled">更新一周 →</span>'
+    )
+    mid = f'<span class="current" aria-current="page">{esc(key)}</span>'
+    return f'<nav class="pager" aria-label="周报翻页">{left}{mid}{right}</nav>'
+
+
+def week_keywords(week: dict) -> list[str]:
+    seen: set[str] = set()
+    out: list[str] = []
+    for item in week.get("items") or []:
+        if not isinstance(item, dict):
+            continue
+        for raw in item.get("keywords") or []:
+            key = str(raw).strip()
+            if key and key not in seen:
+                seen.add(key)
+                out.append(key)
+            if len(out) >= 8:
+                return out
+    return out
+
+
+def render_weekly_report(week: dict, root: str, week_keys: list[str], overviews: list[dict]) -> str:
+    key = week["week"]
+    items = [i for i in (week.get("items") or []) if isinstance(i, dict)]
+    majors = [i for i in items if i.get("kind") == "major"]
+    others = [i for i in items if i.get("kind") != "major"]
+    if not majors and not others:
+        body = '<p class="empty-items">这一周还没有收录条目。</p>'
+    else:
+        sections = []
+        if majors:
+            sections.append(
+                '<section class="topic"><h2>重大变化</h2>'
+                + "".join(render_weekly_item(i) for i in majors)
+                + "</section>"
+            )
+        if others:
+            sections.append(
+                '<section class="topic"><h2>其他值得一提</h2>'
+                + "".join(render_weekly_item(i) for i in others)
+                + "</section>"
+            )
+        body = "".join(sections)
+    keywords = week_keywords(week)
+    tags = "".join(f"<li>{esc(k)}</li>" for k in keywords)
+    tags_html = f'<ul class="tags">{tags}</ul>' if tags else ""
+    badge = '<p class="badge">进行中</p>' if not week.get("complete", True) else ""
+    theme = (week.get("theme") or "").strip()
+    coverage = (week.get("range") or "").strip()
+    tz = (week.get("timezone") or "Asia/Bangkok (UTC+7)").strip()
+    status = f"覆盖 {coverage}，时区 {tz}，共 {len(items)} 条。"
+    ov_html = ""
+    if overviews:
+        ov = overviews[0]
+        ov_html = (
+            f'<p class="page-status">也可阅读<a href="{esc(root)}weekly/{esc(ov["_slug"])}/">'
+            f'{esc(ov.get("title") or "四周总览")}</a>。</p>'
+        )
+    title = f"{key} 周报 · {SITE_TITLE}"
+    return f"""{head_html(root, title, theme or status)}
+<body>
+  <header class="day-header week-header">
+    {nav_html(root, "weekly")}
+    <a class="back" href="{esc(root)}weekly/">返回周报</a>
+    {badge}
+    <p class="eyebrow">Weekly Report</p>
+    <p class="week-id">{esc(key)}</p>
+    <h1>AI 重大技术变化周报</h1>
+    {tags_html}
+    <p class="lede">{esc(status)}</p>
+    <p class="lede">{esc(theme)}</p>
+  </header>
+  <main class="day-main">
+    {body}
+    {ov_html}
+    {weekly_report_pager_html(root, week_keys, key)}
+  </main>
+  {footer_html(root)}
+</body>
+</html>
+"""
+
+
+def overview_week_block(entry: dict, root: str) -> str:
+    week = (entry.get("week") or "").strip()
+    heading = week
+    if entry.get("range"):
+        heading = f"{week}（{entry['range']}）" if week else str(entry["range"])
+    if week:
+        heading_html = f'<h2><a href="{esc(root)}weekly/{esc(week)}/">{esc(heading)}</a></h2>'
+    else:
+        heading_html = f"<h2>{esc(heading)}</h2>"
+    theme = (entry.get("theme") or "").strip()
+    theme_html = f'<p class="summary"><strong>主线：</strong>{esc(theme)}</p>' if theme else ""
+    rows = []
+    for major in entry.get("majors") or []:
+        if not isinstance(major, dict):
+            continue
+        title = (major.get("title") or "").strip() or "未命名条目"
+        rows.append(
+            f"<li><strong>{esc(title)}</strong>{item_sources_html(major.get('links') or [])}</li>"
+        )
+    list_html = f'<ul class="overview-majors">{"".join(rows)}</ul>' if rows else ""
+    return f'<section class="topic overview-week">{heading_html}{theme_html}{list_html}</section>'
+
+
+def render_overview(overview: dict, root: str) -> str:
+    title = (overview.get("title") or "四周总览").strip()
+    coverage = (overview.get("range") or "").strip()
+    note = (overview.get("note") or "").strip()
+    tz = (overview.get("timezone") or "Asia/Bangkok (UTC+7)").strip()
+    lede_bits = []
+    if coverage:
+        lede_bits.append(f"覆盖 {coverage}")
+    if tz:
+        lede_bits.append(f"时区 {tz}")
+    if note:
+        lede_bits.append(note)
+    lede = "，".join(lede_bits) + ("。" if lede_bits else "")
+    week_blocks = "".join(overview_week_block(w, root) for w in (overview.get("weeks") or []) if isinstance(w, dict))
+    trends = []
+    for i, trend in enumerate(overview.get("trends") or [], 1):
+        if not isinstance(trend, dict):
+            continue
+        trends.append(
+            f'<article class="item"><h3>{i}. {esc(trend.get("title") or "")}</h3>'
+            f'<p class="note">{esc(trend.get("text") or "")}</p></article>'
+        )
+    trends_html = (
+        f'<section class="topic"><h2>四周趋势</h2>{"".join(trends)}</section>' if trends else ""
+    )
+    gaps = [f"<li>{esc(g)}</li>" for g in (overview.get("gaps") or []) if str(g).strip()]
+    gaps_html = (
+        f'<section class="topic"><h2>覆盖不足与说明</h2><ul class="source-list">{"".join(gaps)}</ul></section>'
+        if gaps
+        else ""
+    )
+    return f"""{head_html(root, f"{title} · {SITE_TITLE}", lede or title)}
+<body>
+  <header class="day-header week-header">
+    {nav_html(root, "weekly")}
+    <a class="back" href="{esc(root)}weekly/">返回周报</a>
+    <p class="eyebrow">Weekly Report</p>
+    <p class="week-id">四周总览</p>
+    <h1>{esc(title)}</h1>
+    <p class="lede">{esc(lede)}</p>
+  </header>
+  <main class="day-main">
+    {week_blocks}
+    {trends_html}
+    {gaps_html}
+  </main>
+  {footer_html(root)}
+</body>
+</html>
+"""
+
+
+def render_weekly_index(weeklies: list[dict], overviews: list[dict], root: str) -> str:
+    cards = []
+    for ov in overviews:
+        slug = ov.get("_slug") or "overview"
+        title = ov.get("title") or "四周总览"
+        summary_bits = []
+        if ov.get("range"):
+            summary_bits.append(f"覆盖 {ov['range']}")
+        if ov.get("note"):
+            summary_bits.append(ov["note"])
+        summary = "，".join(summary_bits)
+        if summary and not summary.endswith("。"):
+            summary += "。"
+        cards.append(
+            f'<article class="weekly-card overview">'
+            f'<p class="eyebrow">总览</p>'
+            f'<h2><a href="{esc(root)}weekly/{esc(slug)}/">{esc(title)}</a></h2>'
+            f'<p class="summary">{esc(summary)}</p>'
+            f"</article>"
+        )
+    for week in weeklies:
+        key = week["week"]
+        theme = (week.get("theme") or "").strip()
+        coverage = (week.get("range") or "").strip()
+        n = len(week.get("items") or [])
+        badge = '<p class="badge">进行中</p>' if not week.get("complete", True) else ""
+        cards.append(
+            f'<article class="weekly-card">'
+            f"{badge}"
+            f'<p class="eyebrow">{esc(key)}</p>'
+            f'<h2><a href="{esc(root)}weekly/{esc(key)}/">{esc(key)}</a></h2>'
+            f'<p class="summary">{esc(theme)}</p>'
+            f'<p class="meta">覆盖 {esc(coverage)} · {n} 条</p>'
+            f"</article>"
+        )
+    if cards:
+        main = f'<section class="weekly-list" aria-label="周报列表">{"".join(cards)}</section>'
+    else:
+        main = (
+            '<section class="empty">'
+            "<h2>暂无周报</h2>"
+            "<p>把当周的数据文件放进 weekly 目录后重新构建即可。</p>"
+            "</section>"
+        )
+    status = f'<p class="page-status">共 {len(weeklies)} 期周报' + (
+        f'、{len(overviews)} 篇总览。</p>' if overviews else "。</p>"
+    )
+    return f"""{head_html(root, f"周报 · {SITE_TITLE}", "按自然周汇总 AI 相关的重大技术变化。")}
+<body>
+  <header class="site-header">
+    {nav_html(root, "weekly")}
+    <p class="eyebrow">Weekly Report</p>
+    <h1>周报</h1>
+    <p class="lede">按自然周汇总 AI 相关的重大技术变化，最新一周在前。每条都有标题、概述和带来源日期的链接。</p>
+  </header>
+  <main>
+    {status}
+    {main}
   </main>
   {footer_html(root)}
 </body>
@@ -737,6 +1082,58 @@ img { max-width: 100%; display: block; }
 .archive-list .kw { color: var(--muted); font-size: 0.92rem; }
 .day-nav { display: flex; justify-content: space-between; gap: 1rem; padding: 0 0 2rem; font-size: 0.95rem; }
 @media (max-width: 600px) { .archive-list li { grid-template-columns: 1fr; gap: 0.1rem; } }
+
+.weekly-promo {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.4rem 1.35rem;
+  margin: 0 0 1.8rem;
+}
+.weekly-promo h2 { font-family: var(--serif); font-size: 1.3rem; margin: 0 0 0.7rem; }
+.weekly-promo p { margin: 0; max-width: 46rem; }
+.week-header .week-id {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  margin: 0.2rem 0 0.4rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.weekly-list {
+  display: grid;
+  gap: 1.1rem;
+  padding: 0.4rem 0 3rem;
+}
+.weekly-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.2rem 1.35rem 1.3rem;
+}
+.weekly-card.overview { border-color: var(--accent); }
+.weekly-card .eyebrow { margin-bottom: 0.35rem; }
+.weekly-card h2 {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  margin: 0.15rem 0 0.55rem;
+}
+.weekly-card .summary { margin: 0; }
+.weekly-card .meta { margin: 0.6rem 0 0; color: var(--muted); font-size: 0.9rem; }
+.item-topic {
+  margin: 0 0 0.2rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.item .sources { list-style: none; margin: 0.15rem 0 0; padding: 0; }
+.item .sources li { color: var(--muted); font-size: 0.88rem; word-break: break-all; margin: 0.15rem 0 0; }
+.item .sources time { margin-left: 0.8rem; }
+.item .sources .src-note { margin-left: 0.4rem; }
+.overview-majors { list-style: none; margin: 0.7rem 0 0; padding: 0; display: grid; gap: 0.85rem; }
+.overview-majors .sources { margin-top: 0.2rem; }
 """
 
 
@@ -793,6 +1190,10 @@ def main() -> int:
     existing = copy_images(days, here, out_dir / "assets")
     write(out_dir / "styles.css", STYLES.strip() + "\n")
 
+    weekly_dir = here.parent / "weekly"
+    weeklies = load_weeklies(weekly_dir)
+    overviews = load_overviews(weekly_dir)
+
     by_week: dict[str, list[dict]] = {}
     for d in days:
         by_week.setdefault(week_key(d["date"]), []).append(d)
@@ -800,7 +1201,8 @@ def main() -> int:
     for key in weeks:
         chunk = by_week.get(key, [])
         if key == weeks[0]:
-            write(out_dir / "index.html", render_index_page(chunk, weeks, key, root_for(base, 0), existing, len(days)))
+            promo = weekly_promo_html(root_for(base, 0), weeklies, overviews)
+            write(out_dir / "index.html", render_index_page(chunk, weeks, key, root_for(base, 0), existing, len(days), promo))
         write(
             out_dir / "weeks" / key / "index.html",
             render_index_page(chunk, weeks, key, root_for(base, 2), existing, len(days)),
@@ -818,9 +1220,26 @@ def main() -> int:
             render_day(day, root_for(base, 2), image_name(day) in existing, newer, older),
         )
 
+    write(out_dir / "weekly" / "index.html", render_weekly_index(weeklies, overviews, root_for(base, 1)))
+    week_keys = [w["week"] for w in weeklies]
+    for week in weeklies:
+        write(
+            out_dir / "weekly" / week["week"] / "index.html",
+            render_weekly_report(week, root_for(base, 2), week_keys, overviews),
+        )
+    for overview in overviews:
+        write(
+            out_dir / "weekly" / overview["_slug"] / "index.html",
+            render_overview(overview, root_for(base, 2)),
+        )
+
     files = sum(1 for p in out_dir.rglob("*") if p.is_file())
     size = sum(p.stat().st_size for p in out_dir.rglob("*") if p.is_file())
-    print(f"built {len(days)} day(s), {total_pages} week page(s), {files} file(s), {size / 1024:.0f} KiB -> {out_dir}")
+    print(
+        f"built {len(days)} day(s), {total_pages} week page(s), "
+        f"{len(weeklies)} weekly report(s), {len(overviews)} overview(s), "
+        f"{files} file(s), {size / 1024:.0f} KiB -> {out_dir}"
+    )
     print(f"base path: {base or 'relative links'}")
     return 0
 

@@ -1,0 +1,237 @@
+{
+  "week": "2026-W46",
+  "range": "2026-11-09 至 2026-11-11（本周至今，未完）",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": false,
+  "theme": "多 Agent 编排成为旗舰模型的官方卖点，Anthropic 首次公开在训练中压低 RSI 相关能力。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "模型发布与 RSI",
+      "title": "Claude Fable 5.2 / Mythos 5.2",
+      "summary": "11-09 Anthropic 发布同一底座的 Fable 5.2 与 Mythos 5.2（后者只给审核机构），价格降到每百万 token $8/$40。官方案例：1000 个 Agent 30 小时完成费马大定理的 Lean 形式化，1000 多个子 Agent 8 天写出可启动的操作系统。Anthropic 写明在训练中限制了最直接加速 AI 研发的能力。AA Index v5 以 65 分第一，但 SemiAnalysis GDPx 每任务成本从 $67 升到 $88（二手）。 “强模型做 Orchestrator、小模型做 Worker”成为官方推荐用法；头部实验室第一次公开对 RSI 相关能力做训练期限制。单价降、每任务成本升，成本要按任务算。",
+      "what": "11-09 Anthropic 发布同一底座的 Fable 5.2 与 Mythos 5.2（后者只给审核机构），价格降到每百万 token $8/$40。官方案例：1000 个 Agent 30 小时完成费马大定理的 Lean 形式化，1000 多个子 Agent 8 天写出可启动的操作系统。Anthropic 写明在训练中限制了最直接加速 AI 研发的能力。AA Index v5 以 65 分第一，但 SemiAnalysis GDPx 每任务成本从 $67 升到 $88（二手）。",
+      "why": "“强模型做 Orchestrator、小模型做 Worker”成为官方推荐用法；头部实验室第一次公开对 RSI 相关能力做训练期限制。单价降、每任务成本升，成本要按任务算。",
+      "links": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-fable-and-mythos-5-2",
+          "date": "2026-11-09",
+          "note": ""
+        },
+        {
+          "label": "AINews: Fable 5.2",
+          "url": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
+          "date": "2026-11-10",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-11-09",
+      "keywords": [
+        "Fable 5.2",
+        "多 Agent 编排",
+        "RSI 限制",
+        "每任务成本"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "大厂 Super Agent",
+      "title": "Gemini 4 Carbon 全面可用，Antigravity 推出 /swarm",
+      "summary": "11-10 Gemini 4 Carbon 通过 Gemini API、AI Studio 等全面开放，11-30 前 $2/$10。Antigravity 新增 /swarm：一个提示词拉起多 Agent 团队，在实时留言板上协调，每个角色可用不同模型。 继 Fable 5.2 之后，Google 也把“协调者、执行者、验证者”的多 Agent 结构做进产品。",
+      "what": "11-10 Gemini 4 Carbon 通过 Gemini API、AI Studio 等全面开放，11-30 前 $2/$10。Antigravity 新增 /swarm：一个提示词拉起多 Agent 团队，在实时留言板上协调，每个角色可用不同模型。",
+      "why": "继 Fable 5.2 之后，Google 也把“协调者、执行者、验证者”的多 Agent 结构做进产品。",
+      "links": [
+        {
+          "label": "DeepMind Blog",
+          "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+          "date": "2026-11-10",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+          "date": "2026-11-11",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-11-10",
+      "keywords": [
+        "Gemini 4 Carbon",
+        "/swarm",
+        "Antigravity"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "前沿实验室研究",
+      "title": "AlphaProof Code：用 Agent 形式化验证真实软件",
+      "summary": "11-10 DeepMind 发布 AlphaProof Code，用 Agent 生成超过 600 万行 Lean 证明，验证了 Signal 协议实现代码的关键安全性质。 形式化验证从数学定理扩展到生产代码，与 W43 Anthropic 的 Rocq 工作形成同一趋势：用可机器检查的证明给 Agent 产出兜底。",
+      "what": "11-10 DeepMind 发布 AlphaProof Code，用 Agent 生成超过 600 万行 Lean 证明，验证了 Signal 协议实现代码的关键安全性质。",
+      "why": "形式化验证从数学定理扩展到生产代码，与 W43 Anthropic 的 Rocq 工作形成同一趋势：用可机器检查的证明给 Agent 产出兜底。",
+      "links": [
+        {
+          "label": "DeepMind Blog",
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+          "date": "2026-11-10",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-10",
+      "keywords": [
+        "AlphaProof Code",
+        "Lean",
+        "形式化验证",
+        "Signal"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "major",
+      "topic": "Agent 安全",
+      "title": "紧急停止、权重后门、推理商数据保留",
+      "summary": "11-09 OpenAI 公开 Control Room，可快速叫停研究基础设施上的模型任务。11-10 Microsoft Research 公布 Lazarus：改不到 10 个休眠神经元即可给 Agent 植入后门，要和原始权重做 diff 才能可靠发现。Notion 披露 AI 供应商 Fireworks AI 违反零数据保留承诺，已断开合作。 风险分别出在运行时、模型供应链和推理供应商三层，Agent 有了工具权限后任何一层出问题都会被放大。",
+      "what": "11-09 OpenAI 公开 Control Room，可快速叫停研究基础设施上的模型任务。11-10 Microsoft Research 公布 Lazarus：改不到 10 个休眠神经元即可给 Agent 植入后门，要和原始权重做 diff 才能可靠发现。Notion 披露 AI 供应商 Fireworks AI 违反零数据保留承诺，已断开合作。",
+      "why": "风险分别出在运行时、模型供应链和推理供应商三层，Agent 有了工具权限后任何一层出问题都会被放大。",
+      "links": [
+        {
+          "label": "OpenAI: Control Room",
+          "url": "https://openai.com/index/control-room",
+          "date": "2026-11-09",
+          "note": ""
+        },
+        {
+          "label": "Microsoft Research: Lazarus",
+          "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+          "date": "2026-11-10",
+          "note": ""
+        },
+        {
+          "label": "Notion 安全事件说明",
+          "url": "https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor",
+          "date": "2026-11-10",
+          "note": "页面无日期，按 HN 讨论日"
+        }
+      ],
+      "date": "2026-11-09",
+      "keywords": [
+        "Control Room",
+        "Lazarus",
+        "后门",
+        "零数据保留"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "模型发布",
+      "title": "Meta Muse Ember",
+      "summary": "专做工具调用和路由的小模型，每百万 token $0.10/$0.50，1M 上下文。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Meta",
+          "url": "https://research.meta.ai/blog/muse-ember",
+          "date": "2026-11-09",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-09",
+      "keywords": [
+        "小模型",
+        "工具调用"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "大厂 Super Agent",
+      "title": "Cursor Projects 多人协作",
+      "summary": "队友各自的 Agent 之间可以互相协调。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Cursor Blog",
+          "url": "https://cursor.com/blog/projects-multiplayer",
+          "date": "2026-11-10",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-10",
+      "keywords": [
+        "Cursor",
+        "多人协作"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "前沿实验室研究",
+      "title": "CPython 的 Lean 形式化",
+      "summary": "作者用 Opus 5.5 生成约 61 万行 Lean 镜像 CPython 内部实现，找到真实崩溃 bug。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "broyojo.com",
+          "url": "https://broyojo.com/python-formalization/",
+          "date": "2026-11-10",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-10",
+      "keywords": [
+        "Lean",
+        "CPython"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "前沿实验室研究",
+      "title": "Gemini Robotics 2.5",
+      "summary": "DeepMind 机器人模型新版本，强调真实世界通用灵巧操作。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "DeepMind Blog",
+          "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+          "date": "2026-11-10",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-10",
+      "keywords": [
+        "机器人"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "前沿实验室研究",
+      "title": "Anthropic 测试 Claude 做真实电子设计",
+      "summary": "用实际电路设计任务评估 Claude 的硬件工程能力。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Anthropic Research",
+          "url": "https://www.anthropic.com/research/claude-electronics-design",
+          "date": "2026-11-09",
+          "note": ""
+        }
+      ],
+      "date": "2026-11-09",
+      "keywords": [
+        "电子设计",
+        "评测"
+      ],
+      "second_hand_parts": false
+    }
+  ]
+}
