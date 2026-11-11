@@ -32,7 +32,7 @@ SITE_INTRO = (
     "本页每天早上根据当天日报自动生成。系统从日报中提取关键词、要点、配图和每条来源链接，"
     "建成卡片并部署到 Cloudflare Pages。每天一张卡片，首页每页一周，点开卡片是当天的详情页，"
     "按话题列出每条信息的标题、概述和链接。重点话题深入写，其他动态简要说明。"
-    "周报卡片也列在首页，点开可看当周详情，也可以从导航进入周报栏目。"
+    "周报和日报卡片按时间顺序列在同一条时间线里，周报卡片标有“周报”。也可以从导航进入周报栏目。"
     "内容覆盖自上一期以来的变化，每条都附来源和日期，不编造数据。"
 )
 SITE_INTRO_SUGGEST_TEXT = "想建议增加来源，请在 GitHub 仓库提 issue："
@@ -272,23 +272,27 @@ def pager_html(root: str, weeks: list[str], key: str) -> str:
     return f'<nav class="pager" aria-label="按周翻页">{left}{mid}{right}</nav>'
 
 
-def render_index_page(days: list[dict], weeks: list[str], key: str, root: str, existing: set[str], total_days: int, weekly_html: str = "") -> str:
+def render_index_page(entries: list[dict], weeks: list[str], key: str, root: str, total_days: int) -> str:
     latest = key == weeks[0]
-    if days:
-        cards = [render_card(d, root, image_name(d) in existing, eager=(latest and i == 0)) for i, d in enumerate(days)]
-        main = f'<section class="card-list" aria-label="日报列表">{"".join(cards)}</section>'
+    if entries:
+        main = f'<section class="card-list" aria-label="本周卡片">{"".join(e["html"] for e in entries)}</section>'
     else:
         main = (
             '<section class="empty">'
-            "<h2>暂无日报</h2>"
-            "<p>把当天的数据文件放进 digests 目录后重新构建即可。</p>"
+            "<h2>暂无内容</h2>"
+            "<p>把日报放到 digests 目录、或把周报放到 weekly 目录后重新构建即可。</p>"
             "</section>"
         )
+    n_days = sum(1 for e in entries if e.get("kind") == "daily")
+    n_weekly = sum(1 for e in entries if e.get("kind") != "daily")
     status = (
-        f'<p class="page-status">{esc(key)} · {esc(week_range_label(key))} · 本周 {len(days)} 天'
+        f'<p class="page-status">{esc(key)} · {esc(week_range_label(key))} · 本周 {n_days} 天日报'
+    )
+    if n_weekly:
+        status += f'、{n_weekly} 篇周报'
+    status += (
         f' · 共 {total_days} 天、{len(weeks)} 周，更早的见“上一周”或<a href="{esc(root)}archive/">按月归档</a>。</p>'
     )
-    daily_heading = '<h2 class="section-title">日报</h2>' if weekly_html else ""
     if latest:
         intro = intro_block_html(include_sources=False, about_url=f"{root}about/")
         title = SITE_TITLE
@@ -305,8 +309,6 @@ def render_index_page(days: list[dict], weeks: list[str], key: str, root: str, e
   </header>
   {intro}
   <main>
-    {weekly_html}
-    {daily_heading}
     {status}
     {pager_html(root, weeks, key)}
     {main}
@@ -506,9 +508,44 @@ def load_overviews(data_dir: Path) -> list[dict]:
     return overviews
 
 
-def weekly_card_items(weeklies: list[dict], overviews: list[dict], root: str) -> list[str]:
-    cards: list[str] = []
+def range_end_date(text: str) -> str:
+    """Last YYYY-MM-DD in a coverage string, used as the card's sort date."""
+    found = re.findall(r"\d{4}-\d{2}-\d{2}", text or "")
+    return found[-1] if found else ""
+
+
+def weekly_sort_date(week: dict) -> str:
+    end = range_end_date(week.get("range") or "")
+    if end:
+        return end
+    key = week.get("week") or ""
+    if WEEK_RE.match(str(key)):
+        try:
+            year, num = str(key).split("-W")
+            return datetime.fromisocalendar(int(year), int(num), 7).strftime("%Y-%m-%d")
+        except Exception:
+            return ""
+    return ""
+
+
+def overview_sort_date(overview: dict) -> str:
+    return range_end_date(overview.get("range") or "")
+
+
+def stream_sort_key(entry: dict) -> tuple:
+    # Newest date first; on the same date, overview then weekly report then daily.
+    rank = {"overview": 0, "weekly": 1, "daily": 2}
+    return (entry.get("date") or "", -rank.get(entry.get("kind") or "", 9))
+
+
+def sort_stream(entries: list[dict]) -> list[dict]:
+    return sorted(entries, key=stream_sort_key, reverse=True)
+
+
+def weekly_stream_entries(weeklies: list[dict], overviews: list[dict]) -> list[dict]:
+    entries: list[dict] = []
     for ov in overviews:
+        date = overview_sort_date(ov)
         slug = ov.get("_slug") or "overview"
         title = ov.get("title") or "四周总览"
         summary_bits = []
@@ -519,24 +556,25 @@ def weekly_card_items(weeklies: list[dict], overviews: list[dict], root: str) ->
         summary = "，".join(summary_bits)
         if summary and not summary.endswith("。"):
             summary += "。"
-        start = ""
-        if ov.get("range"):
-            maybe = str(ov["range"]).split("至")[0].strip()
-            if len(maybe) >= 10 and maybe[:10].count("-") == 2:
-                start = maybe[:10]
-        cards.append(
-            render_weekly_card(
-                title="四周总览",
-                href=f"{root}weekly/{slug}/",
-                summary=summary or title,
-                tags=[],
-                badge="总览",
-                placeholder="四周总览",
-                datetime_value=start,
-            )
+        entries.append(
+            {
+                "kind": "overview",
+                "date": date,
+                "week": week_key(date) if date else "",
+                "card": {
+                    "title": "四周总览",
+                    "slug_href": f"weekly/{slug}/",
+                    "summary": summary or title,
+                    "tags": [],
+                    "badges": ["周报", "总览"],
+                    "placeholder": "四周总览",
+                    "datetime_value": date,
+                },
+            }
         )
     for week in weeklies:
         key = week["week"]
+        date = weekly_sort_date(week)
         theme = (week.get("theme") or "").strip()
         coverage = (week.get("range") or "").strip()
         n = len(week.get("items") or [])
@@ -544,33 +582,63 @@ def weekly_card_items(weeklies: list[dict], overviews: list[dict], root: str) ->
         if coverage:
             extra = f"覆盖 {coverage}，共 {n} 条。"
             summary = f"{theme} {extra}" if theme else extra
-        cards.append(
-            render_weekly_card(
-                title=key,
-                href=f"{root}weekly/{key}/",
-                summary=summary,
-                tags=week_keywords(week),
-                badge="进行中" if not week.get("complete", True) else "",
-                placeholder=key,
-                datetime_value=week_start_iso(key),
-            )
+        badges = ["周报"]
+        if not week.get("complete", True):
+            badges.append("进行中")
+        entries.append(
+            {
+                "kind": "weekly",
+                "date": date,
+                "week": key,
+                "card": {
+                    "title": key,
+                    "slug_href": f"weekly/{key}/",
+                    "summary": summary,
+                    "tags": week_keywords(week),
+                    "badges": badges,
+                    "placeholder": key,
+                    "datetime_value": date,
+                },
+            }
         )
-    return cards
+    return entries
 
 
-def weekly_home_section_html(root: str, weeklies: list[dict], overviews: list[dict]) -> str:
-    cards = weekly_card_items(weeklies, overviews, root)
-    if not cards:
-        return ""
-    status = f'<p class="page-status">共 {len(weeklies)} 期周报'
-    if overviews:
-        status += f'、{len(overviews)} 篇总览'
-    status += f'。完整列表也可在<a href="{esc(root)}weekly/">周报栏目</a>查看。</p>'
-    return (
-        f'<h2 class="section-title">周报</h2>'
-        f"{status}"
-        f'<section class="card-list" aria-label="周报列表">{"".join(cards)}</section>'
+def daily_stream_entries(days: list[dict]) -> list[dict]:
+    return [
+        {"kind": "daily", "date": day["date"], "week": week_key(day["date"]), "day": day}
+        for day in days
+    ]
+
+
+def render_stream_card(entry: dict, root: str, existing: set[str], eager: bool = False) -> str:
+    if entry.get("kind") == "daily":
+        day = entry["day"]
+        return render_card(day, root, image_name(day) in existing, eager)
+    card = entry["card"]
+    return render_weekly_card(
+        title=card["title"],
+        href=f"{root}{card['slug_href']}",
+        summary=card["summary"],
+        tags=card["tags"],
+        badges=card["badges"],
+        placeholder=card["placeholder"],
+        datetime_value=card.get("datetime_value") or "",
     )
+
+
+def render_stream_entries(entries: list[dict], root: str, existing: set[str], eager_first_daily: bool = False) -> list[dict]:
+    out = []
+    saw_daily = False
+    for entry in entries:
+        eager = False
+        if eager_first_daily and entry.get("kind") == "daily" and not saw_daily:
+            eager = True
+            saw_daily = True
+        item = dict(entry)
+        item["html"] = render_stream_card(entry, root, existing, eager)
+        out.append(item)
+    return out
 
 
 def week_start_iso(key: str) -> str:
@@ -674,10 +742,17 @@ def placeholder_media(label: str) -> str:
     )
 
 
-def render_weekly_card(title: str, href: str, summary: str, tags: list[str], badge: str, placeholder: str, datetime_value: str = "") -> str:
+def render_weekly_card(title: str, href: str, summary: str, tags: list[str], placeholder: str, datetime_value: str = "", badges: list[str] | None = None, badge: str = "") -> str:
     tag_html = "".join(f"<li>{esc(k)}</li>" for k in tags if str(k).strip())
     tags_block = f'<ul class="tags">{tag_html}</ul>' if tag_html else ""
-    badge_html = f'<p class="badge">{esc(badge)}</p>' if badge else ""
+    labels = [str(b).strip() for b in (badges or []) if str(b).strip()]
+    if badge and badge.strip() and badge.strip() not in labels:
+        labels.append(badge.strip())
+    if labels:
+        pills = "".join(f'<p class="badge">{esc(b)}</p>' for b in labels)
+        badge_html = f'<div class="badges">{pills}</div>'
+    else:
+        badge_html = ""
     dt_attr = f' datetime="{esc(datetime_value)}"' if datetime_value else ""
     return f"""
 <article class="card">
@@ -847,7 +922,10 @@ def render_overview(overview: dict, root: str) -> str:
 
 
 def render_weekly_index(weeklies: list[dict], overviews: list[dict], root: str) -> str:
-    cards = weekly_card_items(weeklies, overviews, root)
+    cards = [
+        render_stream_card(entry, root, set())
+        for entry in sort_stream(weekly_stream_entries(weeklies, overviews))
+    ]
     if cards:
         main = f'<section class="card-list" aria-label="周报列表">{"".join(cards)}</section>'
     else:
@@ -911,18 +989,10 @@ body {
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 a:hover { color: #0b2b22; }
 img { max-width: 100%; display: block; }
-.site-header, .day-header, .day-main, .site-footer, .empty, .card-list, .about-intro, .about-page, .page-status, .archive-main, .section-title {
+.site-header, .day-header, .day-main, .site-footer, .empty, .card-list, .about-intro, .about-page, .page-status, .archive-main {
   width: min(1080px, calc(100% - 2rem));
   margin-left: auto;
   margin-right: auto;
-}
-.section-title {
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 0.7rem;
-  padding-bottom: 0.45rem;
-  border-bottom: 1px solid var(--line);
 }
 .site-nav {
   display: flex;
@@ -1067,6 +1137,12 @@ img { max-width: 100%; display: block; }
   font-size: 0.82rem;
 }
 .summary { margin: 0; color: var(--muted); }
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-self: flex-start;
+}
 .badge {
   align-self: flex-start;
   margin: 0;
@@ -1224,18 +1300,37 @@ def main() -> int:
     weeklies = load_weeklies(weekly_dir)
     overviews = load_overviews(weekly_dir)
 
+    raw_entries = daily_stream_entries(days) + weekly_stream_entries(weeklies, overviews)
     by_week: dict[str, list[dict]] = {}
-    for d in days:
-        by_week.setdefault(week_key(d["date"]), []).append(d)
+    for entry in raw_entries:
+        key = entry.get("week") or (week_key(entry["date"]) if entry.get("date") else "")
+        if not key:
+            print(f"skip stream entry without week: {entry.get('kind')}", file=sys.stderr)
+            continue
+        by_week.setdefault(key, []).append(entry)
     weeks = sorted(by_week, reverse=True) or [week_key(datetime.now().strftime("%Y-%m-%d"))]
     for key in weeks:
-        chunk = by_week.get(key, [])
+        chunk = sort_stream(by_week.get(key, []))
         if key == weeks[0]:
-            weekly_html = weekly_home_section_html(root_for(base, 0), weeklies, overviews)
-            write(out_dir / "index.html", render_index_page(chunk, weeks, key, root_for(base, 0), existing, len(days), weekly_html))
+            write(
+                out_dir / "index.html",
+                render_index_page(
+                    render_stream_entries(chunk, root_for(base, 0), existing, eager_first_daily=True),
+                    weeks,
+                    key,
+                    root_for(base, 0),
+                    len(days),
+                ),
+            )
         write(
             out_dir / "weeks" / key / "index.html",
-            render_index_page(chunk, weeks, key, root_for(base, 2), existing, len(days)),
+            render_index_page(
+                render_stream_entries(chunk, root_for(base, 2), existing),
+                weeks,
+                key,
+                root_for(base, 2),
+                len(days),
+            ),
         )
     total_pages = len(weeks)
     write(out_dir / "archive" / "index.html", render_archive(days, root_for(base, 1)))
