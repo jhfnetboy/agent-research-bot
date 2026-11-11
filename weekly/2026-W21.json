@@ -1,0 +1,269 @@
+{
+  "week": "2026-W21",
+  "range": "2026-05-18 至 2026-05-24",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": true,
+  "theme": "Google I/O 把 Gemini 3.5 定位为“能行动的模型”，MCP 走向无状态，METR 首份跨实验室风险报告聚焦内部 Agent 失控；“模型实验室都在做 Agent”成为共识。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "模型发布",
+      "title": "Google I/O 2026：Gemini 3.5 Flash 正式可用，Gemini Omni 亮相",
+      "summary": "05-20 Google 发布 Gemini 3.5（官方标题为 frontier intelligence with action），Gemini 3.5 Flash 当天正式可用，3.5 Pro 预告下月推出，同时有 Gemini 3.5 Flash 的 computer use 能力。Gemini Omni 作为新家族把 Gemini 推理与生成式媒体合并，首个产品 Gemini Omni Flash 以视频生成和编辑为主。 Google 把“行动能力”写进主线模型的定位，computer use 和 Agent 能力成为旗舰发布的核心卖点，而不是附加功能。",
+      "what": "05-20 Google 发布 Gemini 3.5（官方标题为 frontier intelligence with action），Gemini 3.5 Flash 当天正式可用，3.5 Pro 预告下月推出，同时有 Gemini 3.5 Flash 的 computer use 能力。Gemini Omni 作为新家族把 Gemini 推理与生成式媒体合并，首个产品 Gemini Omni Flash 以视频生成和编辑为主。",
+      "why": "Google 把“行动能力”写进主线模型的定位，computer use 和 Agent 能力成为旗舰发布的核心卖点，而不是附加功能。",
+      "links": [
+        {
+          "label": "Google: Gemini 3.5",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+          "date": "2026-05-20",
+          "note": ""
+        },
+        {
+          "label": "Google: I/O 2026 全部发布",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+          "date": "2026-05-20",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-google-io-2026-gemini-35-flash/",
+          "date": "2026-05-20",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-20",
+      "keywords": [
+        "Gemini 3.5 Flash",
+        "Gemini Omni",
+        "computer use",
+        "Google I/O"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "MCP 与协议",
+      "title": "MCP 2026-07-28 规范候选版：协议改为无状态",
+      "summary": "05-21 MCP 发布 2026-07-28 规范的候选版本。据 AINews 转述，核心变化是去掉握手和 session ID，任意请求可以打到任意服务实例；MCP Apps、Tasks 成为一等扩展，并加强鉴权、明确弃用策略。 无状态让 MCP 服务可以像普通 HTTP 服务一样横向扩展和负载均衡，不再需要粘性会话，这是 MCP 从桌面插件走向生产基础设施的关键一步。",
+      "what": "05-21 MCP 发布 2026-07-28 规范的候选版本。据 AINews 转述，核心变化是去掉握手和 session ID，任意请求可以打到任意服务实例；MCP Apps、Tasks 成为一等扩展，并加强鉴权、明确弃用策略。",
+      "why": "无状态让 MCP 服务可以像普通 HTTP 服务一样横向扩展和负载均衡，不再需要粘性会话，这是 MCP 从桌面插件走向生产基础设施的关键一步。",
+      "links": [
+        {
+          "label": "MCP Blog: 2026-07-28 规范候选版",
+          "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+          "date": "2026-05-21",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-all-model-labs-are-now-agent/",
+          "date": "2026-05-23",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-21",
+      "keywords": [
+        "MCP",
+        "无状态",
+        "MCP Apps",
+        "Tasks"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "Agent 安全",
+      "title": "METR 首份 Frontier Risk Report：实验室会不会失控于自己的内部 Agent",
+      "summary": "05-20 METR 发布 Frontier Risk Report（覆盖 2026 年 2 至 3 月），基于对 Anthropic、Google、Meta、OpenAI 的深度访问，包括模型思维链和未公开的能力、对齐与控制信息，核心问题是实验室是否可能失去对内部部署 Agent 的控制。METR 研究员还在 Anthropic 驻场一个月压力测试内部 Agent 监控系统（二手）。 内部 Agent 监控从理念变成被外部机构检验的实践。这份报告也是后来 METR 量化 AI 研发加速（W45）的前身。",
+      "what": "05-20 METR 发布 Frontier Risk Report（覆盖 2026 年 2 至 3 月），基于对 Anthropic、Google、Meta、OpenAI 的深度访问，包括模型思维链和未公开的能力、对齐与控制信息，核心问题是实验室是否可能失去对内部部署 Agent 的控制。METR 研究员还在 Anthropic 驻场一个月压力测试内部 Agent 监控系统（二手）。",
+      "why": "内部 Agent 监控从理念变成被外部机构检验的实践。这份报告也是后来 METR 量化 AI 研发加速（W45）的前身。",
+      "links": [
+        {
+          "label": "METR: Frontier Risk Report",
+          "url": "https://metr.org/blog/2026-05-19-frontier-risk-report/",
+          "date": "2026-05-20",
+          "note": ""
+        },
+        {
+          "label": "METR on X",
+          "url": "https://x.com/METR_Evals/status/2056800023149760666",
+          "date": "2026-05-20",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-google-io-2026-gemini-35-flash/",
+          "date": "2026-05-20",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-20",
+      "keywords": [
+        "METR",
+        "内部 Agent",
+        "失控风险",
+        "监控"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "前沿实验室研究",
+      "title": "OpenAI 通用推理模型推翻离散几何中的单位距离猜想",
+      "summary": "05-20 OpenAI 宣布内部模型在 Erdős 1946 年提出的平面单位距离问题上找到新的构造族，推翻了一个长期被认为成立的看法。OpenAI 强调这是通用模型而不是专门的数学系统，Timothy Gowers 等数学家给予了较高评价（二手）。 长时程推理开始在真实研究问题上产生新结果，后续几个月 OpenAI 和 DeepMind 接连发布数学成果，这是起点之一。",
+      "what": "05-20 OpenAI 宣布内部模型在 Erdős 1946 年提出的平面单位距离问题上找到新的构造族，推翻了一个长期被认为成立的看法。OpenAI 强调这是通用模型而不是专门的数学系统，Timothy Gowers 等数学家给予了较高评价（二手）。",
+      "why": "长时程推理开始在真实研究问题上产生新结果，后续几个月 OpenAI 和 DeepMind 接连发布数学成果，这是起点之一。",
+      "links": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
+          "date": "2026-05-20",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-openai-gpt-next-disproves/",
+          "date": "2026-05-21",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-20",
+      "keywords": [
+        "AI for Math",
+        "Erdős",
+        "长时程推理"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "大厂 Super Agent",
+      "title": "“所有模型实验室都在做 Agent”",
+      "summary": "AINews 05-23 汇总：Greg Brockman 表态模型实验室越来越把 Agent 本身当产品，AI21 关闭模型团队转做 Agent，DeepSeek 首次组建 Harness 团队（二手）。同周 Cursor 发布 Composer 2.5，并透露正与 SpaceXAI 合作从头训练更大的模型。 模型和 harness 联合训练成为趋势，也意味着最好的能力可能只在厂商自家 Agent 里才能完整发挥，开放 API 与自有 Agent 的竞合关系变得更紧张。",
+      "what": "AINews 05-23 汇总：Greg Brockman 表态模型实验室越来越把 Agent 本身当产品，AI21 关闭模型团队转做 Agent，DeepSeek 首次组建 Harness 团队（二手）。同周 Cursor 发布 Composer 2.5，并透露正与 SpaceXAI 合作从头训练更大的模型。",
+      "why": "模型和 harness 联合训练成为趋势，也意味着最好的能力可能只在厂商自家 Agent 里才能完整发挥，开放 API 与自有 Agent 的竞合关系变得更紧张。",
+      "links": [
+        {
+          "label": "AINews: All Model Labs are now Agent Labs",
+          "url": "https://latent.space/p/ainews-all-model-labs-are-now-agent/",
+          "date": "2026-05-23",
+          "note": "二手汇总"
+        },
+        {
+          "label": "Cursor: Composer 2.5",
+          "url": "https://x.com/cursor_ai/status/2056415413077233983",
+          "date": "2026-05-18",
+          "note": ""
+        }
+      ],
+      "date": "2026-05-18",
+      "keywords": [
+        "harness",
+        "Agent 实验室",
+        "Composer 2.5",
+        "DeepSeek"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "模型发布",
+      "title": "Cohere Command A+ 以 Apache 2.0 开放权重",
+      "summary": "约 218B MoE、25B 激活，多模态，48 种语言，vLLM 首日支持（参数据 AINews 转述）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Cohere Blog",
+          "url": "https://cohere.com/blog/command-a-plus",
+          "date": "2026-05-20",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-openai-gpt-next-disproves/",
+          "date": "2026-05-21",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-20",
+      "keywords": [
+        "开源权重",
+        "Cohere"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "评测与基准",
+      "title": "InferenceBench 与 MINTEval",
+      "summary": "InferenceBench 测 AI 研发自动化中的推理优化，前沿 Agent 不如简单调参基线；MINTEval 测长上下文记忆，7 个系统平均只有 27.9%（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "InferenceBench on X",
+          "url": "https://x.com/maksym_andr/status/2057106398228439148",
+          "date": "2026-05-20",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-openai-gpt-next-disproves/",
+          "date": "2026-05-21",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-20",
+      "keywords": [
+        "AI 研发评测",
+        "记忆评测"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 框架",
+      "title": "托管沙箱成为一等原语",
+      "summary": "Gemini Managed Agents 加 Interactions API 提供托管 Linux 沙箱，CoreWeave Sandboxes 公测，面向 RL、工具调用和评测（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-all-model-labs-are-now-agent/",
+          "date": "2026-05-23",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-23",
+      "keywords": [
+        "沙箱",
+        "Managed Agents"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "前沿实验室研究",
+      "title": "Karpathy 加入 Anthropic",
+      "summary": "人才流动消息，本周互动量最高的推文之一。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Karpathy on X",
+          "url": "https://x.com/karpathy/status/2056753169888334312",
+          "date": "2026-05-19",
+          "note": ""
+        }
+      ],
+      "date": "2026-05-19",
+      "keywords": [
+        "人才"
+      ],
+      "second_hand_parts": false
+    }
+  ]
+}

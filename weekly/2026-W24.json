@@ -1,0 +1,234 @@
+{
+  "week": "2026-W24",
+  "range": "2026-06-08 至 2026-06-14",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": true,
+  "theme": "Claude Fable 5 / Mythos 5 发布三天后因美国政府指令被暂停，“模型主权”成为 Agent 依赖风险；编码评测从“过测试”转向“能合并”。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "模型发布",
+      "title": "Claude Fable 5 与 Mythos 5：首个普遍可用的 Mythos 级模型",
+      "summary": "06-09 Anthropic 发布 Claude Fable 5（普遍可用）与 Mythos 5（受限访问），两者底座相同，Fable 5 加了防护：网络、生物、化学和蒸馏相关的少量请求会透明回落到 Opus 4.8。系统卡写明，用于前沿 LLM 开发时 Anthropic 可能通过改写提示、steering vector 和 PEFT 限制模型效果且不通知用户，估计影响约 0.03% 流量（二手）。在新基准 FrontierCode Diamond 上从 13.4% 提到 29.3%（据 AINews）。 这是“按用途悄悄降能力”第一次写进主力模型的发布条款，直接针对用模型做 AI 研发的场景，引发信任争议，也是后来 Fable 5.2 明确压低 RSI 能力（W46）的前身。",
+      "what": "06-09 Anthropic 发布 Claude Fable 5（普遍可用）与 Mythos 5（受限访问），两者底座相同，Fable 5 加了防护：网络、生物、化学和蒸馏相关的少量请求会透明回落到 Opus 4.8。系统卡写明，用于前沿 LLM 开发时 Anthropic 可能通过改写提示、steering vector 和 PEFT 限制模型效果且不通知用户，估计影响约 0.03% 流量（二手）。在新基准 FrontierCode Diamond 上从 13.4% 提到 29.3%（据 AINews）。",
+      "why": "这是“按用途悄悄降能力”第一次写进主力模型的发布条款，直接针对用模型做 AI 研发的场景，引发信任争议，也是后来 Fable 5.2 明确压低 RSI 能力（W46）的前身。",
+      "links": [
+        {
+          "label": "Anthropic: Fable 5 与 Mythos 5",
+          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "date": "2026-06-09",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-anthropic-claude-fable-5-mythos/",
+          "date": "2026-06-10",
+          "note": "二手汇总"
+        },
+        {
+          "label": "AINews: 能力限制争议",
+          "url": "https://latent.space/p/ainews-open-models-model-labs-vs/",
+          "date": "2026-06-11",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-06-09",
+      "keywords": [
+        "Fable 5",
+        "Mythos 5",
+        "能力回落",
+        "RSI 限制"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "Agent 安全",
+      "title": "美国政府指令下 Fable 5 / Mythos 5 被暂停访问",
+      "summary": "Anthropic 发表声明称，依据美国政府指令暂停 Fable 5 访问（官方页面日期 06-12，官方推文为曼谷时间 06-13）。Anthropic 表示该指令基于一份它不认同的能力报告，类似能力在 GPT-5.5 等模型中也广泛存在。Cognition 的 Devin、Agent Arena 等下游产品和榜单随即撤下该模型（二手）。 对 Agent 开发者来说，这把“供应商政策风险”变成了真实的停服事件。多模型路由和可替换的 harness 从优化选项变成可用性要求。",
+      "what": "Anthropic 发表声明称，依据美国政府指令暂停 Fable 5 访问（官方页面日期 06-12，官方推文为曼谷时间 06-13）。Anthropic 表示该指令基于一份它不认同的能力报告，类似能力在 GPT-5.5 等模型中也广泛存在。Cognition 的 Devin、Agent Arena 等下游产品和榜单随即撤下该模型（二手）。",
+      "why": "对 Agent 开发者来说，这把“供应商政策风险”变成了真实的停服事件。多模型路由和可替换的 harness 从优化选项变成可用性要求。",
+      "links": [
+        {
+          "label": "Anthropic 声明",
+          "url": "https://www.anthropic.com/news/fable-mythos-access",
+          "date": "2026-06-12",
+          "note": "美国时间"
+        },
+        {
+          "label": "Anthropic on X",
+          "url": "https://x.com/AnthropicAI/status/2065597531644743999",
+          "date": "2026-06-13",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-fable-and-mythos-officially/",
+          "date": "2026-06-13",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-06-12",
+      "keywords": [
+        "出口管制",
+        "模型主权",
+        "停服",
+        "多模型路由"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "评测与基准",
+      "title": "FrontierCode 与 Agent Arena：评测转向可合并代码和真实会话",
+      "summary": "06-09 Cognition 发布 FrontierCode，任务与开源维护者共建，每个耗时 40 小时以上，按回归安全、整洁度、范围、测试正确性和可维护性评分，最强的 Opus 4.8 在最难子集只有约 13%。06-08 Arena 推出 Agent Arena，基于 100 多万次真实会话，用因果追踪而不是投票来估计不同 harness 的效果（二手）。 SWE-Bench 类基准动辄 50% 以上，而“能被维护者合并”的标准下分数骤降，说明编码 Agent 远未饱和。真实遥测数据开始成为评测 harness 的主要依据。W44 的 FrontierCode 2.0 正是这一版的延续。",
+      "what": "06-09 Cognition 发布 FrontierCode，任务与开源维护者共建，每个耗时 40 小时以上，按回归安全、整洁度、范围、测试正确性和可维护性评分，最强的 Opus 4.8 在最难子集只有约 13%。06-08 Arena 推出 Agent Arena，基于 100 多万次真实会话，用因果追踪而不是投票来估计不同 harness 的效果（二手）。",
+      "why": "SWE-Bench 类基准动辄 50% 以上，而“能被维护者合并”的标准下分数骤降，说明编码 Agent 远未饱和。真实遥测数据开始成为评测 harness 的主要依据。W44 的 FrontierCode 2.0 正是这一版的延续。",
+      "links": [
+        {
+          "label": "Cognition: FrontierCode",
+          "url": "https://x.com/cognition/status/2064061031912288715",
+          "date": "2026-06-09",
+          "note": ""
+        },
+        {
+          "label": "Arena: Agent Arena",
+          "url": "https://x.com/arena/status/2064021507681276234",
+          "date": "2026-06-08",
+          "note": ""
+        },
+        {
+          "label": "AINews: FrontierCode",
+          "url": "https://latent.space/p/ainews-frontiercode-benchmarking/",
+          "date": "2026-06-09",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-06-08",
+      "keywords": [
+        "FrontierCode",
+        "Agent Arena",
+        "可合并代码",
+        "真实遥测"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "后训练",
+      "title": "OpenEnv 获开源社区支持，成为 Agent RL 环境标准候选",
+      "summary": "06-08 Hugging Face 发文称开源社区正在集体支持 OpenEnv，用统一接口描述和运行 Agent RL 训练环境。 Agent RL 的瓶颈正从算法转到环境。统一的环境接口能让训练框架、环境作者和评测方复用同一套环境。",
+      "what": "06-08 Hugging Face 发文称开源社区正在集体支持 OpenEnv，用统一接口描述和运行 Agent RL 训练环境。",
+      "why": "Agent RL 的瓶颈正从算法转到环境。统一的环境接口能让训练框架、环境作者和评测方复用同一套环境。",
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/openenv-agentic-rl",
+          "date": "2026-06-08",
+          "note": ""
+        }
+      ],
+      "date": "2026-06-08",
+      "keywords": [
+        "OpenEnv",
+        "Agent RL",
+        "训练环境"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "模型发布",
+      "title": "Google DiffusionGemma 以 Apache 2.0 开源",
+      "summary": "基于 Gemma 4 的 26B MoE 扩散文本模型，按块并行生成，称输出最多快 4 倍（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Google on X",
+          "url": "https://x.com/Google/status/2064741293163418032",
+          "date": "2026-06-10",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-open-models-model-labs-vs/",
+          "date": "2026-06-11",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-06-10",
+      "keywords": [
+        "扩散语言模型",
+        "Gemma"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "模型发布",
+      "title": "Kimi K2.7-Code 开放权重",
+      "summary": "Moonshot 发布编码向开源模型（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-fable-and-mythos-officially/",
+          "date": "2026-06-13",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-06-13",
+      "keywords": [
+        "Kimi",
+        "编码模型"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "大厂 Super Agent",
+      "title": "OpenAI 收购 Ona",
+      "summary": "OpenAI 宣布收购 Ona（原 Gitpod，云端开发环境）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/openai-to-acquire-ona",
+          "date": "2026-06-11",
+          "note": ""
+        }
+      ],
+      "date": "2026-06-11",
+      "keywords": [
+        "收购",
+        "云开发环境"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "大厂 Super Agent",
+      "title": "Apple WWDC 宣布由 Gemini 驱动的 Siri",
+      "summary": "消费端 Agent 平台竞争的信号（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-frontiercode-benchmarking/",
+          "date": "2026-06-09",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-06-09",
+      "keywords": [
+        "Siri",
+        "Gemini"
+      ],
+      "second_hand_parts": true
+    }
+  ]
+}

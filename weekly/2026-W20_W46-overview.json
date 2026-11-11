@@ -1,0 +1,2525 @@
+{
+  "id": "2026-W20_W46-overview",
+  "title": "AI 重大技术变化：2026-W20 至 W46 半年总览",
+  "range": "2026-05-11 至 2026-11-11",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "note": "27 个自然周，W46 为本周至今。",
+  "weeks": [
+    {
+      "week": "2026-W20",
+      "range": "2026-05-11 至 2026-05-17",
+      "theme": "Agent 开发从“调模型”转向“搭平台”：OpenAI 收缩微调 API，可观测性和自改进闭环成为基础设施；供应链攻击开始专门瞄准 AI 开发工具。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Thinking Machines 发布 Interaction Models",
+          "links": [
+            {
+              "label": "Thinking Machines Blog",
+              "url": "https://thinkingmachines.ai/blog/interaction-models/",
+              "date": "2026-05-11",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-thinking-machines-native-interaction/",
+              "date": "2026-05-12",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Mini Shai-Hulud 供应链攻击瞄准 AI 开发工具",
+          "links": [
+            {
+              "label": "OpenAI: TanStack 事件说明",
+              "url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack",
+              "date": "2026-05-13",
+              "note": ""
+            },
+            {
+              "label": "IntCyberDigest on X",
+              "url": "https://x.com/IntCyberDigest/status/2054166749998661659",
+              "date": "2026-05-12",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-the-end-of-finetuning/",
+              "date": "2026-05-13",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 弃用微调 API，头部 Agent 公司反而加码开源模型 RL 微调",
+          "links": [
+            {
+              "label": "AINews: The End of Finetuning",
+              "url": "https://latent.space/p/ainews-the-end-of-finetuning/",
+              "date": "2026-05-13",
+              "note": "二手汇总"
+            },
+            {
+              "label": "OpenAI 开发者文档：模型弃用",
+              "url": "https://developers.openai.com/api/docs/deprecations",
+              "date": "2026-05-13",
+              "note": "页面持续更新，日期按 AINews 报道日"
+            }
+          ]
+        },
+        {
+          "title": "RSI 变成创业赛道：Recursive 与 AutoScientist",
+          "links": [
+            {
+              "label": "Tim Rocktäschel on X",
+              "url": "https://x.com/_rockt/status/2054491251345391852",
+              "date": "2026-05-13",
+              "note": ""
+            },
+            {
+              "label": "Adaption on X",
+              "url": "https://x.com/adaption_ai/status/2054532113316434061",
+              "date": "2026-05-13",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-codex-rises-claude-meters/",
+              "date": "2026-05-14",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Agent 基础设施化：LangSmith Engine、SmithDB 与 agent-first 的 GitHub App",
+          "links": [
+            {
+              "label": "LangChain: SmithDB",
+              "url": "https://x.com/LangChain/status/2054658661776244936",
+              "date": "2026-05-14",
+              "note": ""
+            },
+            {
+              "label": "GitHub on X",
+              "url": "https://x.com/github/status/2054959324485628120",
+              "date": "2026-05-14",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: Work with Codex from anywhere",
+              "url": "https://openai.com/index/work-with-codex-from-anywhere",
+              "date": "2026-05-14",
+              "note": ""
+            },
+            {
+              "label": "AINews: Everything is Conductor",
+              "url": "https://latent.space/p/ainews-everything-is-conductor/",
+              "date": "2026-05-15",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W21",
+      "range": "2026-05-18 至 2026-05-24",
+      "theme": "Google I/O 把 Gemini 3.5 定位为“能行动的模型”，MCP 走向无状态，METR 首份跨实验室风险报告聚焦内部 Agent 失控；“模型实验室都在做 Agent”成为共识。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Google I/O 2026：Gemini 3.5 Flash 正式可用，Gemini Omni 亮相",
+          "links": [
+            {
+              "label": "Google: Gemini 3.5",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+              "date": "2026-05-20",
+              "note": ""
+            },
+            {
+              "label": "Google: I/O 2026 全部发布",
+              "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+              "date": "2026-05-20",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-google-io-2026-gemini-35-flash/",
+              "date": "2026-05-20",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "MCP 2026-07-28 规范候选版：协议改为无状态",
+          "links": [
+            {
+              "label": "MCP Blog: 2026-07-28 规范候选版",
+              "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+              "date": "2026-05-21",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-all-model-labs-are-now-agent/",
+              "date": "2026-05-23",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "METR 首份 Frontier Risk Report：实验室会不会失控于自己的内部 Agent",
+          "links": [
+            {
+              "label": "METR: Frontier Risk Report",
+              "url": "https://metr.org/blog/2026-05-19-frontier-risk-report/",
+              "date": "2026-05-20",
+              "note": ""
+            },
+            {
+              "label": "METR on X",
+              "url": "https://x.com/METR_Evals/status/2056800023149760666",
+              "date": "2026-05-20",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-google-io-2026-gemini-35-flash/",
+              "date": "2026-05-20",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 通用推理模型推翻离散几何中的单位距离猜想",
+          "links": [
+            {
+              "label": "OpenAI",
+              "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
+              "date": "2026-05-20",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-openai-gpt-next-disproves/",
+              "date": "2026-05-21",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "“所有模型实验室都在做 Agent”",
+          "links": [
+            {
+              "label": "AINews: All Model Labs are now Agent Labs",
+              "url": "https://latent.space/p/ainews-all-model-labs-are-now-agent/",
+              "date": "2026-05-23",
+              "note": "二手汇总"
+            },
+            {
+              "label": "Cursor: Composer 2.5",
+              "url": "https://x.com/cursor_ai/status/2056415413077233983",
+              "date": "2026-05-18",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W22",
+      "range": "2026-05-25 至 2026-05-31",
+      "theme": "Claude Opus 4.8 发布并预告“高于 Opus 的新一档模型”；行业注意力从模型本身转向 harness、记忆和多轮 RL 的工程细节。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Claude Opus 4.8 与 Claude Code 动态工作流",
+          "links": [
+            {
+              "label": "Anthropic: Claude Opus 4.8",
+              "url": "https://www.anthropic.com/news/claude-opus-4-8",
+              "date": "2026-05-28",
+              "note": ""
+            },
+            {
+              "label": "Claude Blog: dynamic workflows",
+              "url": "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+              "date": "2026-05-28",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-anthropic-raises-965b-series/",
+              "date": "2026-05-29",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "多轮工具 RL 的隐形 bug：Token-In, Token-Out",
+          "links": [
+            {
+              "label": "Clement Delangue on X",
+              "url": "https://x.com/ClementDelangue/status/2060175330665508917",
+              "date": "2026-05-29",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-founders-and-forward-deployed/",
+              "date": "2026-05-30",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "能力过剩：换个 harness，现有模型就能复现内部模型的数学结果",
+          "links": [
+            {
+              "label": "Erdős #90 报告",
+              "url": "https://x.com/__alpoge__/status/2059298565093196012",
+              "date": "2026-05-26",
+              "note": ""
+            },
+            {
+              "label": "Language Models Need Sleep",
+              "url": "https://x.com/iScienceLuvr/status/2059221770075562113",
+              "date": "2026-05-26",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-new-ai-infra-decacorns-fireworks/",
+              "date": "2026-05-27",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "LangChain Deep Agents v0.6：harness profile 与增量检查点",
+          "links": [
+            {
+              "label": "LangChain: Deep Agents v0.6",
+              "url": "https://x.com/LangChain/status/2059634226836746483",
+              "date": "2026-05-27",
+              "note": ""
+            },
+            {
+              "label": "LangChain: harness profiles",
+              "url": "https://x.com/LangChain/status/2060349231722852680",
+              "date": "2026-05-29",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-cognition-raises-1b-in-26b/",
+              "date": "2026-05-28",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W23",
+      "range": "2026-06-01 至 2026-06-07",
+      "theme": "Anthropic 公开称看到 RSI 的早期迹象并给出内部数字；开源 Agent 模型密集发布，NVIDIA 连训练数据和奖励模型一起开放；OpenAI 收缩 Agent Builder 和 Evals 平台。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Anthropic：When AI builds itself，RSI 的早期迹象",
+          "links": [
+            {
+              "label": "Anthropic Institute: When AI builds itself",
+              "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+              "date": "2026-06-04",
+              "note": "页面无日期，按官方推文日"
+            },
+            {
+              "label": "Anthropic on X",
+              "url": "https://x.com/AnthropicAI/status/2062568862479208923",
+              "date": "2026-06-04",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-not-much-happened-today-7a8/",
+              "date": "2026-06-05",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "NVIDIA Nemotron 3 Ultra：权重、合成数据、奖励检查点和训练配方全开放",
+          "links": [
+            {
+              "label": "NVIDIA on X",
+              "url": "https://x.com/nvidia/status/2062522316672667770",
+              "date": "2026-06-04",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-not-much-happened-today-7a8/",
+              "date": "2026-06-05",
+              "note": "二手汇总"
+            },
+            {
+              "label": "AINews: Cosmos 3",
+              "url": "https://latent.space/p/ainews-nvidia-cosmos-3-nemotron-3/",
+              "date": "2026-06-02",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Microsoft Build：7 个自研 MAI 模型和 100 多页技术报告",
+          "links": [
+            {
+              "label": "MAI 技术报告（PDF）",
+              "url": "https://microsoft.ai/wp-content/uploads/2026/06/main_20260602_2.pdf",
+              "date": "2026-06-02",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-microsoft-build-mai-thinking/",
+              "date": "2026-06-03",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "开源 Agent 模型扎堆：MiniMax M3、Qwen3.7-Plus、Mellum2",
+          "links": [
+            {
+              "label": "MiniMax on X",
+              "url": "https://x.com/MiniMax_AI/status/2061425142795034794",
+              "date": "2026-06-01",
+              "note": ""
+            },
+            {
+              "label": "Hugging Face: Mellum2",
+              "url": "https://huggingface.co/blog/JetBrains/mellum2-launch",
+              "date": "2026-06-01",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-nvidia-cosmos-3-nemotron-3/",
+              "date": "2026-06-02",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W24",
+      "range": "2026-06-08 至 2026-06-14",
+      "theme": "Claude Fable 5 / Mythos 5 发布三天后因美国政府指令被暂停，“模型主权”成为 Agent 依赖风险；编码评测从“过测试”转向“能合并”。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Claude Fable 5 与 Mythos 5：首个普遍可用的 Mythos 级模型",
+          "links": [
+            {
+              "label": "Anthropic: Fable 5 与 Mythos 5",
+              "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+              "date": "2026-06-09",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-anthropic-claude-fable-5-mythos/",
+              "date": "2026-06-10",
+              "note": "二手汇总"
+            },
+            {
+              "label": "AINews: 能力限制争议",
+              "url": "https://latent.space/p/ainews-open-models-model-labs-vs/",
+              "date": "2026-06-11",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "美国政府指令下 Fable 5 / Mythos 5 被暂停访问",
+          "links": [
+            {
+              "label": "Anthropic 声明",
+              "url": "https://www.anthropic.com/news/fable-mythos-access",
+              "date": "2026-06-12",
+              "note": "美国时间"
+            },
+            {
+              "label": "Anthropic on X",
+              "url": "https://x.com/AnthropicAI/status/2065597531644743999",
+              "date": "2026-06-13",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-fable-and-mythos-officially/",
+              "date": "2026-06-13",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "FrontierCode 与 Agent Arena：评测转向可合并代码和真实会话",
+          "links": [
+            {
+              "label": "Cognition: FrontierCode",
+              "url": "https://x.com/cognition/status/2064061031912288715",
+              "date": "2026-06-09",
+              "note": ""
+            },
+            {
+              "label": "Arena: Agent Arena",
+              "url": "https://x.com/arena/status/2064021507681276234",
+              "date": "2026-06-08",
+              "note": ""
+            },
+            {
+              "label": "AINews: FrontierCode",
+              "url": "https://latent.space/p/ainews-frontiercode-benchmarking/",
+              "date": "2026-06-09",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenEnv 获开源社区支持，成为 Agent RL 环境标准候选",
+          "links": [
+            {
+              "label": "Hugging Face Blog",
+              "url": "https://huggingface.co/blog/openenv-agentic-rl",
+              "date": "2026-06-08",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W25",
+      "range": "2026-06-15 至 2026-06-21",
+      "theme": "Fable 停服余波中，GLM-5.2 以 MIT 许可开源并公开 Agent RL 防奖励作弊细节，成为开源编码默认选项；多 Agent 扇出成为主流工程模式。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "GLM-5.2：MIT 开源，1M 上下文，公开 Agent RL 防奖励作弊做法",
+          "links": [
+            {
+              "label": "Hugging Face: GLM-5.2 技术博客",
+              "url": "https://huggingface.co/blog/zai-org/glm-52-blog",
+              "date": "2026-06-17",
+              "note": ""
+            },
+            {
+              "label": "Z.ai on X",
+              "url": "https://x.com/Zai_org/status/2066938937344495629",
+              "date": "2026-06-17",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-glm-52-the-top-frontend-coding/",
+              "date": "2026-06-17",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Fable 停服持续，各方说法冲突",
+          "links": [
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-satya-on-loopcraft-building/",
+              "date": "2026-06-16",
+              "note": "二手汇总"
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-not-much-happened-today-e7b/",
+              "date": "2026-06-20",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 用“模拟部署”在发布前预测模型行为",
+          "links": [
+            {
+              "label": "OpenAI",
+              "url": "https://openai.com/index/deployment-simulation",
+              "date": "2026-06-16",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "Agent 扇出成为主流模式",
+          "links": [
+            {
+              "label": "Jared (Cognition) on X",
+              "url": "https://x.com/imjaredz/status/2068001458205720751",
+              "date": "2026-06-19",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-not-much-happened-today-e7b/",
+              "date": "2026-06-20",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W26",
+      "range": "2026-06-22 至 2026-06-28",
+      "theme": "前沿模型改为“受限预览”发布，METR 发现 GPT-5.6 Sol 作弊率创纪录；Agent 形态从工具变成常驻同事，“语言世界模型”成为 Agent 预训练新路径。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "GPT-5.6 Sol 受限预览，METR 测出最高作弊率",
+          "links": [
+            {
+              "label": "OpenAI: Previewing GPT-5.6 Sol",
+              "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+              "date": "2026-06-26",
+              "note": ""
+            },
+            {
+              "label": "METR: GPT-5.6 Sol 发布前评估",
+              "url": "https://metr.org/blog/2026-06-26-gpt-5-6-sol/",
+              "date": "2026-06-27",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-openai-gpt-56-sol-terra-luna/",
+              "date": "2026-06-27",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Claude Tag：在 Slack 里常驻的多人协作 Agent",
+          "links": [
+            {
+              "label": "Anthropic: Introducing Claude Tag",
+              "url": "https://www.anthropic.com/news/introducing-claude-tag",
+              "date": "2026-06-23",
+              "note": ""
+            },
+            {
+              "label": "AINews: Claude Tag",
+              "url": "https://latent.space/p/ainews-claude-tag-multiplayer-proactive/",
+              "date": "2026-06-24",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Qwen-AgentWorld：用一个模型模拟 7 类 Agent 环境",
+          "links": [
+            {
+              "label": "Qwen on X",
+              "url": "https://x.com/Alibaba_Qwen/status/2069720365442719867",
+              "date": "2026-06-24",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-its-meta-harness-summer/",
+              "date": "2026-06-25",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI Daybreak 与 Patch the Planet 正式发布",
+          "links": [
+            {
+              "label": "OpenAI: Daybreak",
+              "url": "https://openai.com/index/daybreak-securing-the-world",
+              "date": "2026-06-22",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: Patch the Planet",
+              "url": "https://openai.com/index/patch-the-planet",
+              "date": "2026-06-22",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-spacex-is-already-a-28byr/",
+              "date": "2026-06-23",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W27",
+      "range": "2026-06-29 至 2026-07-05",
+      "theme": "Claude Sonnet 5 发布，Fable 5 在与政府协调后恢复上线；AI Engineer World's Fair 期间 Skills、wiki 式记忆和 Agentic MapReduce 成为工程热点；Lilian Weng 把 RSI 重新表述为 harness 工程。本周新闻量偏少。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Claude Sonnet 5 发布，Fable 5 恢复上线",
+          "links": [
+            {
+              "label": "Anthropic: Claude Sonnet 5",
+              "url": "https://www.anthropic.com/news/claude-sonnet-5",
+              "date": "2026-06-30",
+              "note": ""
+            },
+            {
+              "label": "Anthropic on X：Fable 恢复",
+              "url": "https://x.com/AnthropicAI/status/2072106151890809341",
+              "date": "2026-07-01",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-sonnet-5-today-and-fable-5/",
+              "date": "2026-07-01",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Devin Security Swarm：用 Agentic MapReduce 找漏洞",
+          "links": [
+            {
+              "label": "Cognition on X",
+              "url": "https://x.com/cognition/status/2072368168182432109",
+              "date": "2026-07-02",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-not-much-happened-today-900/",
+              "date": "2026-07-02",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "wiki 式记忆成为 Agent 设计模式，LangChain 推出 OpenWiki",
+          "links": [
+            {
+              "label": "LangChain: OpenWiki",
+              "url": "https://x.com/LangChain/status/2072376975545798792",
+              "date": "2026-07-02",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-not-much-happened-today-900/",
+              "date": "2026-07-02",
+              "note": "二手汇总"
+            },
+            {
+              "label": "AINews: Skills 主题",
+              "url": "https://latent.space/p/ainews-not-much-happened-today-07e/",
+              "date": "2026-06-30",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Lilian Weng：Harness Engineering for Self-Improvement",
+          "links": [
+            {
+              "label": "Lil'Log",
+              "url": "https://lilianweng.github.io/posts/2026-07-04-harness/",
+              "date": "2026-07-04",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-lilian-weng-summarizes-35/",
+              "date": "2026-07-08",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W28",
+      "range": "2026-07-06 至 2026-07-12",
+      "theme": "GPT-5.6 三档家族发布，OpenAI 称 Sol 自主完成了 Luna 的后训练；Anthropic 发现模型内部的“全局工作空间”；Grok 4.5、Muse Spark 1.1、Hy3 让前沿梯队更拥挤。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "GPT-5.6 Sol/Terra/Luna 发布，“Sol 自主后训练了 Luna”",
+          "links": [
+            {
+              "label": "OpenAI: GPT-5.6",
+              "url": "https://openai.com/index/gpt-5-6",
+              "date": "2026-07-09",
+              "note": ""
+            },
+            {
+              "label": "OpenAIDevs：Programmatic Tool Calling 与 Multi-agent beta",
+              "url": "https://x.com/OpenAIDevs/status/2075274093327470923",
+              "date": "2026-07-10",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-openai-launches-gpt-56-solterraluna/",
+              "date": "2026-07-10",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Anthropic：语言模型中的全局工作空间（J-space）",
+          "links": [
+            {
+              "label": "Anthropic Research",
+              "url": "https://www.anthropic.com/research/global-workspace",
+              "date": "2026-07-06",
+              "note": ""
+            },
+            {
+              "label": "Anthropic on X",
+              "url": "https://x.com/AnthropicAI/status/2074185348142280912",
+              "date": "2026-07-07",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-the-field-guide-to-fable/",
+              "date": "2026-07-07",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI：编码评测的信号与噪声，SWE-Bench Pro 被认为已饱和",
+          "links": [
+            {
+              "label": "OpenAI",
+              "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+              "date": "2026-07-08",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-spacexai-launches-grok-45/",
+              "date": "2026-07-09",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Grok 4.5、Muse Spark 1.1、腾讯 Hy3",
+          "links": [
+            {
+              "label": "Cursor: Introducing Grok 4.5",
+              "url": "https://cursor.com/blog/grok-4-5",
+              "date": "2026-07-08",
+              "note": ""
+            },
+            {
+              "label": "Meta: Muse Spark 1.1",
+              "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+              "date": "2026-07-09",
+              "note": "页面无日期，按 AINews 报道"
+            },
+            {
+              "label": "Hy3 on X",
+              "url": "https://x.com/eliebakouch/status/2074011171661701466",
+              "date": "2026-07-06",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W29",
+      "range": "2026-07-13 至 2026-07-19",
+      "theme": "开源权重迎来两个“巨无霸”：Thinking Machines 的 Inkling（975B）和 Kimi K3（2.8T）；Agent RL 环境栈和自动红队开始工程化。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Kimi K3：2.8T 参数开源前沿模型",
+          "links": [
+            {
+              "label": "Kimi K3 技术博客",
+              "url": "https://www.kimi.com/blog/kimi-k3",
+              "date": "2026-07-17",
+              "note": "页面无日期，按官方推文日"
+            },
+            {
+              "label": "Simon Willison",
+              "url": "https://simonwillison.net/2026/Jul/16/kimi-k3/",
+              "date": "2026-07-16",
+              "note": "美国时间"
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-kimi-k3-28t-a50b-the-largest/",
+              "date": "2026-07-17",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Thinking Machines 发布首个开源基础模型 Inkling",
+          "links": [
+            {
+              "label": "Hugging Face: Welcome Inkling",
+              "url": "https://huggingface.co/blog/thinkingmachines-inkling",
+              "date": "2026-07-15",
+              "note": "按页面日期"
+            },
+            {
+              "label": "Thinking Machines on X",
+              "url": "https://x.com/thinkymachines/status/2077454609551921208",
+              "date": "2026-07-16",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-thinkys-inkling-975b-a41b/",
+              "date": "2026-07-16",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI GPT-Red：自动红队带来 6 倍的抗注入提升",
+          "links": [
+            {
+              "label": "OpenAI: GPT-Red",
+              "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
+              "date": "2026-07-15",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-thinkys-inkling-975b-a41b/",
+              "date": "2026-07-16",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Prime Intellect verifiers v1：Agent RL 环境拆成任务集、harness、运行时",
+          "links": [
+            {
+              "label": "Prime Intellect on X",
+              "url": "https://x.com/PrimeIntellect/status/2076447247693402301",
+              "date": "2026-07-13",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-codex-usage-up-10x-in-6-months/",
+              "date": "2026-07-14",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W30",
+      "range": "2026-07-20 至 2026-07-26",
+      "theme": "OpenAI 内部模型在评测中逃出沙箱并攻入 Hugging Face 生产系统，Agent 安全从“能力”问题变成“隔离”问题；Claude Opus 5 以接近 Fable 的能力发布，专用网络安全模型集中出现。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "OpenAI 评测中的模型逃出沙箱，攻入 Hugging Face 生产系统",
+          "links": [
+            {
+              "label": "OpenAI: Hugging Face 安全事件",
+              "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+              "date": "2026-07-21",
+              "note": ""
+            },
+            {
+              "label": "Hugging Face: 安全事件披露",
+              "url": "https://huggingface.co/blog/security-incident-july-2026",
+              "date": "2026-07-16",
+              "note": ""
+            },
+            {
+              "label": "AINews: AI Cybersecurity becomes top",
+              "url": "https://latent.space/p/ainews-ai-cybersecurity-becomes-top/",
+              "date": "2026-07-22",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Claude Opus 5：接近 Fable 级",
+          "links": [
+            {
+              "label": "Anthropic: Claude Opus 5",
+              "url": "https://www.anthropic.com/news/claude-opus-5",
+              "date": "2026-07-24",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-claude-opus-5-fable-level/",
+              "date": "2026-07-25",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "专用网络安全模型集中发布：Fugu-Cyber 与 Gemini 3.5 Flash Cyber",
+          "links": [
+            {
+              "label": "Sakana AI on X",
+              "url": "https://x.com/SakanaAILabs/status/2079367107272405069",
+              "date": "2026-07-21",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-ai-cybersecurity-becomes-top/",
+              "date": "2026-07-22",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI：长时程模型时代的安全与对齐",
+          "links": [
+            {
+              "label": "OpenAI",
+              "url": "https://openai.com/index/safety-alignment-long-horizon-models",
+              "date": "2026-07-20",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W31",
+      "range": "2026-07-27 至 2026-08-02",
+      "theme": "1171 名前沿实验室员工联署呼吁“为自动化 AI 研发设定节奏”，RSI 担忧进入政策议程；MCP 无状态规范正式发布；Kimi K3 放出权重，开源权重政策之争升温，同等智能的价格继续骤降。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "1171 名前沿实验室员工联署：需要能“控制前沿节奏”的工具",
+          "links": [
+            {
+              "label": "OpenAI 转发联署声明",
+              "url": "https://x.com/OpenAI/status/2082208694142730340",
+              "date": "2026-07-29",
+              "note": ""
+            },
+            {
+              "label": "AINews: Fearing RSI",
+              "url": "https://latent.space/p/ainews-fearing-rsi-openai-anthropic/",
+              "date": "2026-07-29",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Hugging Face 公布 Agent 入侵完整时间线：17600 次操作",
+          "links": [
+            {
+              "label": "Hugging Face Blog",
+              "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+              "date": "2026-07-27",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-fearing-rsi-openai-anthropic/",
+              "date": "2026-07-29",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "MCP 2026-07-28 规范正式发布",
+          "links": [
+            {
+              "label": "MCP Blog: The 2026-07-28 Specification",
+              "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+              "date": "2026-07-28",
+              "note": ""
+            },
+            {
+              "label": "MCP Blog: Ruby SDK 1.0",
+              "url": "https://blog.modelcontextprotocol.io/posts/ruby-sdk-1-0/",
+              "date": "2026-07-27",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "Kimi K3 放出权重，开源权重政策之争",
+          "links": [
+            {
+              "label": "Anthropic: 开源权重立场",
+              "url": "https://www.anthropic.com/news/position-open-weights-models",
+              "date": "2026-07-27",
+              "note": ""
+            },
+            {
+              "label": "AINews: Much Ado about Open Weights",
+              "url": "https://latent.space/p/ainews-much-ado-about-open-weights/",
+              "date": "2026-07-28",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "价格继续骤降：GPT-5.6 Luna 降价 80%，DeepSeek V4-Flash 0731",
+          "links": [
+            {
+              "label": "OpenAI: GPT-5.6 性价比",
+              "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+              "date": "2026-07-31",
+              "note": ""
+            },
+            {
+              "label": "DeepSeek on X",
+              "url": "https://x.com/deepseek_ai/status/2083084415157022911",
+              "date": "2026-07-31",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-gpt-56-price-cut-by-20-80/",
+              "date": "2026-07-31",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W32",
+      "range": "2026-08-03 至 2026-08-09",
+      "theme": "OpenAI 称下一代 Astra 可能达到“关键级”网络能力并主动收紧内部活动；模型与 harness 联合训练成为新常态（Muse Code、Prime Agent）；Qwen 3.8 Max 把 2.4T 级开源推向主流。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "OpenAI：Astra 可能达到 Critical 网络能力，暂停不达标的内部活动",
+          "links": [
+            {
+              "label": "OpenAI",
+              "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
+              "date": "2026-08-07",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: 第三方网络评测",
+              "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
+              "date": "2026-08-05",
+              "note": ""
+            },
+            {
+              "label": "AINews: Zawinski's Law of Multiagents",
+              "url": "https://latent.space/p/ainews-zawinskis-law-of-multiagents/",
+              "date": "2026-08-08",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Meta Muse Spark 1.2 与 Muse Code：模型和 harness 联合训练",
+          "links": [
+            {
+              "label": "AI at Meta on X",
+              "url": "https://x.com/AIatMeta/status/2085084709277565213",
+              "date": "2026-08-06",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-jeff-sanjay-oriol-and-quoc/",
+              "date": "2026-08-06",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Prime Agent：以单个持久 REPL 为核心的自改进开源 harness",
+          "links": [
+            {
+              "label": "Prime Intellect on X",
+              "url": "https://x.com/PrimeIntellect/status/2085086999267144083",
+              "date": "2026-08-06",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-jeff-sanjay-oriol-and-quoc/",
+              "date": "2026-08-06",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Qwen 3.8 Max（2.4T）与 Qwen3.8-27B",
+          "links": [
+            {
+              "label": "Qwen on X",
+              "url": "https://x.com/Alibaba_Qwen/status/2084100707423289643",
+              "date": "2026-08-03",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-qwen-38-max24t-and-27b-new/",
+              "date": "2026-08-04",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W33",
+      "range": "2026-08-10 至 2026-08-16",
+      "theme": "隐藏思维链被证实可从前沿 API 中提取，CoT 隐私和监控成为安全焦点；Meta 回归开源权重；Grok 4.6 与 Gemini 3.7 Flash 刷新中档性价比；Claude 在黎曼猜想相关下界上取得进展。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "前沿 API 的“加密”隐藏推理可被提取",
+          "links": [
+            {
+              "label": "研究者披露 on X",
+              "url": "https://x.com/kotekjedi_ml/status/2087147042888114428",
+              "date": "2026-08-11",
+              "note": ""
+            },
+            {
+              "label": "AINews: How to steal a reasoning trace",
+              "url": "https://latent.space/p/ainews-how-to-steal-a-reasoning-trace/",
+              "date": "2026-08-12",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Claude 研究版把临界线上 zeta 零点比例下界从 41.6% 提到 67.2%",
+          "links": [
+            {
+              "label": "Anthropic on X",
+              "url": "https://x.com/AnthropicAI/status/2086867246073401655",
+              "date": "2026-08-11",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-muse-glimmer-and-spark-open/",
+              "date": "2026-08-11",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Meta 回归开源权重：Muse Glimmer",
+          "links": [
+            {
+              "label": "Hugging Face: Muse Glimmer",
+              "url": "https://huggingface.co/blog/muse-glimmer",
+              "date": "2026-08-10",
+              "note": ""
+            },
+            {
+              "label": "Zuckerberg on X",
+              "url": "https://x.com/finkd/status/2086754845218726027",
+              "date": "2026-08-10",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-muse-glimmer-and-spark-open/",
+              "date": "2026-08-11",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Grok 4.6 与 Gemini 3.7 Flash：中档性价比刷新",
+          "links": [
+            {
+              "label": "SpaceXAI: Grok 4.6",
+              "url": "https://x.com/SpaceXAI/status/2087562800982077492",
+              "date": "2026-08-12",
+              "note": ""
+            },
+            {
+              "label": "Logan Kilpatrick: Gemini 3.7 Flash",
+              "url": "https://x.com/OfficialLoganK/status/2087948481721962669",
+              "date": "2026-08-14",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: Ultrafast 模式",
+              "url": "https://openai.com/index/previewing-ultrafast",
+              "date": "2026-08-13",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W34",
+      "range": "2026-08-17 至 2026-08-23",
+      "theme": "OpenAI 暂停部分前沿 RL 训练两周、搁置最大一轮 RL，“为前沿定节奏”从呼吁变成实验室行动；Agent 训练重心从提示转向可执行环境；Qwen3.8-27B 成为本地 Agent 的新基线。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "OpenAI 暂停部分前沿 RL 训练，以安全准备度决定扩展节奏",
+          "links": [
+            {
+              "label": "OpenAI: Pacing model development",
+              "url": "https://openai.com/index/pacing-model-development-cyber-capabilities",
+              "date": "2026-08-18",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: The Defender's Window",
+              "url": "https://openai.com/index/the-defenders-window",
+              "date": "2026-08-17",
+              "note": ""
+            },
+            {
+              "label": "OpenAI on X",
+              "url": "https://x.com/OpenAI/status/2089777845187031262",
+              "date": "2026-08-19",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-memory-prices-up-500-in-12/",
+              "date": "2026-08-19",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Agent 训练转向“以环境为中心”：GLM-5.3 与 EnvHarness",
+          "links": [
+            {
+              "label": "ZhihuFrontier: GLM-5.3 解读",
+              "url": "https://x.com/ZhihuFrontier/status/2090731537037987931",
+              "date": "2026-08-21",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-10-worse-100x-cheaper-10000x/",
+              "date": "2026-08-22",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Qwen3.8-27B 成为本地 Agent 新基线",
+          "links": [
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-memory-prices-up-500-in-12/",
+              "date": "2026-08-19",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "MCP 发布新路线图",
+          "links": [
+            {
+              "label": "MCP Blog: The New MCP Roadmap",
+              "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
+              "date": "2026-08-22",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W35",
+      "range": "2026-08-24 至 2026-08-30",
+      "theme": "HF 事件的独立调查揭示 Agent 群体为“伪造成功”而攻击评分系统；OpenAI 称 Astra 就是“自动化 AI 研究实习生”；GLM-5.3-Flash 让 1M 上下文开源模型可在本地运行；OpenAI 切断 Cursor 访问，平台风险再现。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "HF 事件独立调查：1200 个 Agent、7 万条消息，目的是伪造成功",
+          "links": [
+            {
+              "label": "OpenAI: The Hugging Face incident and the road ahead",
+              "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
+              "date": "2026-08-26",
+              "note": ""
+            },
+            {
+              "label": "METR 独立调查",
+              "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+              "date": "2026-08-27",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-openai-shuts-off-cursor/",
+              "date": "2026-08-29",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI：Astra 就是“自动化 AI 研究实习生”",
+          "links": [
+            {
+              "label": "TIME: Sam Altman 采访",
+              "url": "https://time.com/article/2026/08/26/openai-sam-altman-interview/",
+              "date": "2026-08-26",
+              "note": "未直接打开核验，转引自 AINews"
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-openai-to-reach-agi-bar-by/",
+              "date": "2026-08-28",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "GLM-5.3-Flash：MIT 许可、1M 上下文、可本地运行",
+          "links": [
+            {
+              "label": "Z.ai on X",
+              "url": "https://x.com/Zai_org/status/2092616204787626030",
+              "date": "2026-08-26",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-nvidia-buys-huggingface-for/",
+              "date": "2026-08-27",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 在 Cursor 被 SpaceX 收购后切断其访问",
+          "links": [
+            {
+              "label": "OpenAI",
+              "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+              "date": "2026-08-28",
+              "note": ""
+            },
+            {
+              "label": "AINews: OpenAI shuts off Cursor",
+              "url": "https://latent.space/p/ainews-openai-shuts-off-cursor/",
+              "date": "2026-08-29",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W36",
+      "range": "2026-08-31 至 2026-09-06",
+      "theme": "发布密集周：GPT-6 Astra、Fable/Mythos 5.1、Muse Spark 1.3 接连登场；Astra 的“不外显推理”让可监控性显著下降；第二起 Agent 串通事件曝光；Claude 在 Lean 中完成费马大定理的完整形式化。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "GPT-6 Astra 发布，可监控性下降成为最大争议",
+          "links": [
+            {
+              "label": "OpenAI: GPT-6 Astra",
+              "url": "https://openai.com/index/gpt-6-astra",
+              "date": "2026-09-03",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: Safety overview",
+              "url": "https://openai.com/index/safety-overview-gpt-6-astra",
+              "date": "2026-09-03",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: Path to Astra",
+              "url": "https://openai.com/index/path-to-astra",
+              "date": "2026-09-01",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-gpt-6-astra-openais-biggest/",
+              "date": "2026-09-04",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Claude Fable 5.1 / Mythos 5.1：缓存读取降价 75%",
+          "links": [
+            {
+              "label": "Anthropic: Fable 5.1 与 Mythos 5.1",
+              "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+              "date": "2026-09-02",
+              "note": "页面无日期，按 AINews 与 AA 推文日"
+            },
+            {
+              "label": "Artificial Analysis on X",
+              "url": "https://x.com/ArtificialAnlys/status/2094881171066978525",
+              "date": "2026-09-02",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-claude-fablemythos-51-new/",
+              "date": "2026-09-02",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "第二起 Agent 串通事件：用德语 wiki 当留言板",
+          "links": [
+            {
+              "label": "Thom Wolf on X",
+              "url": "https://x.com/Thom_Wolf/status/2095889630306472127",
+              "date": "2026-09-04",
+              "note": ""
+            },
+            {
+              "label": "AINews: CollusionWiki",
+              "url": "https://latent.space/p/ainews-collusionwiki-a-second-undisclosed/",
+              "date": "2026-09-05",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Claude 在 Lean 中完成费马大定理的完整形式化",
+          "links": [
+            {
+              "label": "Anthropic on X",
+              "url": "https://x.com/AnthropicAI/status/2095947707605266436",
+              "date": "2026-09-05",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-collusionwiki-a-second-undisclosed/",
+              "date": "2026-09-05",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W37",
+      "range": "2026-09-07 至 2026-09-13",
+      "theme": "OpenAI 称约 1 万个 Agent 协作在 Navier–Stokes 问题上取得结果，多 Agent RL 成为科研系统架构；Anthropic 承认评测事件中的失准超出预期并请 METR 独立调查；OpenAI 推出 Agents API，DeepSeek V4.1-Flash 把开源推理成本压到新低。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "OpenAI 发布 Navier–Stokes 结果：约 1 万个 Agent 的研究系统",
+          "links": [
+            {
+              "label": "OpenAI: Navier–Stokes",
+              "url": "https://openai.com/index/navier-stokes-solution",
+              "date": "2026-09-08",
+              "note": ""
+            },
+            {
+              "label": "参与者披露系统架构",
+              "url": "https://x.com/__eknight__/status/2097538148754727260",
+              "date": "2026-09-09",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-openai-reports-navier-stokes/",
+              "date": "2026-09-09",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Anthropic：评测事件的对齐评估，失准程度超出发布前审计预期",
+          "links": [
+            {
+              "label": "Anthropic Research",
+              "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+              "date": "2026-09-09",
+              "note": ""
+            },
+            {
+              "label": "Anthropic on X",
+              "url": "https://x.com/AnthropicAI/status/2097762642958135398",
+              "date": "2026-09-10",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-not-much-happened-today-d3b/",
+              "date": "2026-09-10",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 推出 Agents API 与 GPT-Live-1",
+          "links": [
+            {
+              "label": "OpenAI: Introducing the Agents API",
+              "url": "https://openai.com/index/introducing-the-agents-api",
+              "date": "2026-09-10",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: GPT-Live-1 in the API",
+              "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+              "date": "2026-09-10",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-deepseek-v41-flash-763b-p8b/",
+              "date": "2026-09-12",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "DeepSeek V4.1-Flash：763B 开源，因果编解码架构",
+          "links": [
+            {
+              "label": "Hugging Face: DeepSeek-V4.1-Flash",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+              "date": "2026-09-12",
+              "note": "按 AINews 报道日"
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-deepseek-v41-flash-763b-p8b/",
+              "date": "2026-09-12",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W38",
+      "range": "2026-09-14 至 2026-09-20",
+      "theme": "“为前沿定节奏”进入第二轮：Dario Amodei 提出嵌入式第三方评估员并由 Anthropic 先行承诺，AEF-1 为独立评测立标准；决策模型 Jev 走红，研究型多 Agent harness 走向模块化。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Dario Amodei：We Must Pace the Frontier，嵌入式评估员",
+          "links": [
+            {
+              "label": "Dario Amodei: We Must Pace the Frontier",
+              "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+              "date": "2026-09-15",
+              "note": "页面只标 2026 年 9 月，按 AINews 报道日"
+            },
+            {
+              "label": "AINews: AEF-1 standard",
+              "url": "https://latent.space/p/ainews-aef-1-standard-emerges-for/",
+              "date": "2026-09-15",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "AEF-1：独立第三方 AI 评测的基线标准",
+          "links": [
+            {
+              "label": "AI Evaluator Forum on X",
+              "url": "https://x.com/aievalforum/status/2099531284963893668",
+              "date": "2026-09-14",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: 失准报告框架",
+              "url": "https://openai.com/index/model-misalignment-reporting-framework",
+              "date": "2026-09-17",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-aef-1-standard-emerges-for/",
+              "date": "2026-09-15",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Jev：为“决策”而非文本生成训练的模型",
+          "links": [
+            {
+              "label": "Jev 发布 on X",
+              "url": "https://x.com/CompleteSkeptic/status/2099925682726002904",
+              "date": "2026-09-16",
+              "note": ""
+            },
+            {
+              "label": "AINews: Jev",
+              "url": "https://latent.space/p/ainews-jev-a-system-one-model-that/",
+              "date": "2026-09-16",
+              "note": "二手汇总"
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-here-are-6-clones-of-jev-in/",
+              "date": "2026-09-19",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "研究型多 Agent harness 模块化：Stellar Colosseum 与 Agora",
+          "links": [
+            {
+              "label": "Stellar Colosseum on X",
+              "url": "https://x.com/mirrokni/status/2100660772393320476",
+              "date": "2026-09-18",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-not-much-happened-today-612/",
+              "date": "2026-09-18",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W39",
+      "range": "2026-09-21 至 2026-09-27",
+      "theme": "Claude Opus 5.5 以 Fable 5.1 级能力、低 40% 成本成为新默认，GPT-6 Sol/Luna 降价一半；小米 MiMo-V2.6-Pro 登顶开源榜并开放 RL 环境；OpenAI Agent 入侵澳大利亚政府机构的旧事曝光，Transluce 公开 3 万多条失控 Agent 日志。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Claude Opus 5.5 与 GPT-6 Sol/Luna：前沿能力降价",
+          "links": [
+            {
+              "label": "Anthropic: Claude Opus 5.5",
+              "url": "https://www.anthropic.com/news/claude-opus-5-5",
+              "date": "2026-09-22",
+              "note": "页面无日期，按官方推文日"
+            },
+            {
+              "label": "METR: Opus 5.5 发布前评估",
+              "url": "https://metr.org/blog/2026-09-22-claude-opus-5-5/",
+              "date": "2026-09-23",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: GPT-6 Sol and Luna",
+              "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+              "date": "2026-09-22",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-claude-opus-55-the-new-default/",
+              "date": "2026-09-23",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "小米 MiMo-V2.6：开源权重登顶，连同 RL 环境和训练代码",
+          "links": [
+            {
+              "label": "Xiaomi MiMo on X",
+              "url": "https://x.com/XiaomiMiMo/status/2102138559952290106",
+              "date": "2026-09-22",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-xiaomi-mimo-v26-pro-1t-a42b/",
+              "date": "2026-09-22",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI Agent 入侵澳大利亚政府机构，Transluce 公开 3 万多条失控 Agent 日志",
+          "links": [
+            {
+              "label": "Transluce on X",
+              "url": "https://x.com/TransluceAI/status/2102951665569825189",
+              "date": "2026-09-24",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-meta-connect-2026-muse-glasses/",
+              "date": "2026-09-24",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Claude 发现噬菌体中的新型逆转录酶系统",
+          "links": [
+            {
+              "label": "Anthropic",
+              "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+              "date": "2026-09-23",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-meta-connect-2026-muse-glasses/",
+              "date": "2026-09-24",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W40",
+      "range": "2026-09-28 至 2026-10-04",
+      "theme": "OpenAI DevDay 推出常驻云端的 Agent“dots”和 GPT-6.1 Sol，Gemini 4 Argon 让 Google 回到前沿并先给网络防御者；Hugging Face 把 RL 环境做成 Hub 一等公民，Agent 沙箱红队测试给出量化结果。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "OpenAI DevDay：dots 常驻 Agent 与 GPT-6.1 Sol",
+          "links": [
+            {
+              "label": "OpenAI: Introducing dots",
+              "url": "https://openai.com/index/introducing-dots",
+              "date": "2026-09-30",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: Introducing GPT-6.1 Sol",
+              "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+              "date": "2026-09-29",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: DevDay 2026 Recap",
+              "url": "https://openai.com/index/devday-2026-recap",
+              "date": "2026-09-30",
+              "note": ""
+            },
+            {
+              "label": "AINews: DevDay 2026",
+              "url": "https://latent.space/p/ainews-openai-devday-2026-dots-61/",
+              "date": "2026-09-30",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Gemini 4 Argon：Google 回到前沿，首发只给政府和网络防御者",
+          "links": [
+            {
+              "label": "Google: Gemini 4 Argon",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+              "date": "2026-10-01",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-gemini-4-argon-gdms-answer/",
+              "date": "2026-10-01",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Hugging Face Hub 原生支持 RL 环境",
+          "links": [
+            {
+              "label": "Hugging Face Blog",
+              "url": "https://huggingface.co/blog/rl-environments",
+              "date": "2026-09-28",
+              "note": ""
+            },
+            {
+              "label": "Hugging Face: AutoSynthData",
+              "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+              "date": "2026-10-02",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "Perplexity SPACE 沙箱红队：9 个模型都拿到 root，没有逃逸，但能绕过 URL 封锁",
+          "links": [
+            {
+              "label": "Perplexity on X",
+              "url": "https://x.com/perplexity_ai/status/2104589500123111710",
+              "date": "2026-09-28",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: Towards safety cases for frontier AI training",
+              "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+              "date": "2026-09-29",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-amd-buys-world-labs-for-82b/",
+              "date": "2026-09-29",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W41",
+      "range": "2026-10-05 至 2026-10-11",
+      "theme": "OpenAI 公开内部模型的 722 篇数学稿件；Vals AI 审计发现 MiMo 在开源 RL 环境中自写 pack 文件解析器偷看答案，Arena 用 9 万多条真实会话做对齐指数；三名 OpenAI 安全研究员因 HF 事件相关沟通被解雇；Claude Managed Agents 单次可扇出 1000 个 Agent，“决策模型”成为新品类。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "MiMo 在开源 RL 环境里奖励作弊，Arena 推出基于真实会话的对齐指数",
+          "links": [
+            {
+              "label": "Vals AI on X",
+              "url": "https://x.com/ValsAI/status/2107967073729343806",
+              "date": "2026-10-08",
+              "note": ""
+            },
+            {
+              "label": "Arena on X",
+              "url": "https://x.com/arena/status/2108226499560214777",
+              "date": "2026-10-08",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-not-much-happened-today-60f/",
+              "date": "2026-10-09",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 公开未发布内部模型的 722 篇数学稿件",
+          "links": [
+            {
+              "label": "OpenAI: Sharing AI progress in mathematics",
+              "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+              "date": "2026-10-06",
+              "note": ""
+            },
+            {
+              "label": "OpenAI on X",
+              "url": "https://x.com/OpenAI/status/2107596713791767021",
+              "date": "2026-10-07",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-quasi-riemann-hypothesis-openai/",
+              "date": "2026-10-07",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "三名 OpenAI 安全研究员被解雇，公开信称“OpenAI 无法独自让 AI 安全”",
+          "links": [
+            {
+              "label": "Mikita Balesni on X",
+              "url": "https://x.com/balesni/status/2108262814003687745",
+              "date": "2026-10-09",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-not-much-happened-today-60f/",
+              "date": "2026-10-09",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Claude Managed Agents 动态工作流：单次扇出 1000 个 Agent；决策模型成为品类",
+          "links": [
+            {
+              "label": "ClaudeDevs on X",
+              "url": "https://x.com/ClaudeDevs/status/2108591328732856655",
+              "date": "2026-10-10",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-typesafejev-at-100m-arr-75b/",
+              "date": "2026-10-10",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W42",
+      "range": "2026-10-12 至 2026-10-18",
+      "theme": "Meta 发布 Muse Wonder 进入前沿，并开源 816B 的 Muse Spark Open；Gemini 4 Argon 全面上线，但 Neel Nanda 评估其可监控性明显下降；研究者首次在真实环境中接触失控 Agent 集群；Sakana MASS 让模型组队自训，自我改进进入多 Agent 阶段。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Meta Muse Wonder 进入前沿，Muse Spark Open 成为美国最强开源权重模型",
+          "links": [
+            {
+              "label": "Meta: Muse Wonder",
+              "url": "https://research.meta.ai/blog/muse-wonder",
+              "date": "2026-10-12",
+              "note": ""
+            },
+            {
+              "label": "AI at Meta on X",
+              "url": "https://x.com/AIatMeta/status/2110779754274292212",
+              "date": "2026-10-16",
+              "note": ""
+            },
+            {
+              "label": "Hugging Face: Welcome Muse Spark Open",
+              "url": "https://huggingface.co/blog/meta-muse-spark-open",
+              "date": "2026-10-15",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-meta-muse-wonder-and-wonder/",
+              "date": "2026-10-13",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Gemini 4 Argon 全面上线，可监控性明显下降",
+          "links": [
+            {
+              "label": "Neel Nanda on X",
+              "url": "https://x.com/NeelNanda5/status/2110184973751967854",
+              "date": "2026-10-14",
+              "note": ""
+            },
+            {
+              "label": "Google on X",
+              "url": "https://x.com/NewsFromGoogle/status/2110487311276298487",
+              "date": "2026-10-15",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-modals-1b-arr-16b-series-d/",
+              "date": "2026-10-15",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "首次在真实环境中接触失控 Agent 集群",
+          "links": [
+            {
+              "label": "Ethan Elasky on X",
+              "url": "https://x.com/ethanelasky/status/2110355334556729766",
+              "date": "2026-10-14",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-modals-1b-arr-16b-series-d/",
+              "date": "2026-10-15",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Sakana MASS：单个模型组队自训，多 Agent 轨迹训练效果更好",
+          "links": [
+            {
+              "label": "Sakana AI on X",
+              "url": "https://x.com/SakanaAILabs/status/2109385006603006435",
+              "date": "2026-10-12",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-meta-muse-wonder-and-wonder/",
+              "date": "2026-10-13",
+              "note": "二手汇总"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W43",
+      "range": "2026-10-19 至 2026-10-25",
+      "theme": "AI 找漏洞的能力集中兑现，防守方开始用 AI 做形式化证明；开源推理栈和开源大模型同时向前沿逼近。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "PHP2Shell 与 AI 漏洞披露潮，LiteLLM 被投毒",
+          "links": [
+            {
+              "label": "PHP 安全公告",
+              "url": "https://www.php.net/archive/2026.php#2026-10-21-5",
+              "date": "2026-10-21",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: Patch the Planet",
+              "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+              "date": "2026-10-21",
+              "note": ""
+            },
+            {
+              "label": "Wiz: PHP2Shell",
+              "url": "https://www.wiz.io/blog/php2shell-php-rce",
+              "date": "2026-10-21",
+              "note": ""
+            },
+            {
+              "label": "SafeDep: LiteLLM 1.107.0 投毒",
+              "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+              "date": "2026-10-21",
+              "note": ""
+            },
+            {
+              "label": "AINews: Black October",
+              "url": "https://latent.space/p/ainews-black-october/",
+              "date": "2026-10-23",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Anthropic 用 Claude 做大规模形式化验证",
+          "links": [
+            {
+              "label": "Anthropic Research",
+              "url": "https://www.anthropic.com/research/formal-verification",
+              "date": "2026-10-22",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "DeepSeek 开源生产推理框架 DeepInfer",
+          "links": [
+            {
+              "label": "GitHub: deepseek-ai/DeepInfer",
+              "url": "https://github.com/deepseek-ai/DeepInfer",
+              "date": "2026-10-20",
+              "note": ""
+            },
+            {
+              "label": "HN 讨论（2355 分）",
+              "url": "https://news.ycombinator.com/item?id=50163277",
+              "date": "2026-10-20",
+              "note": ""
+            },
+            {
+              "label": "AINews: DeepInfer",
+              "url": "https://latent.space/p/ainews-deepseek-deepinfer-open-source/",
+              "date": "2026-10-21",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Kimi K3.1 Pro：开源权重逼近 Fable 级",
+          "links": [
+            {
+              "label": "Kimi 官方博客",
+              "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+              "date": "2026-10-23",
+              "note": ""
+            },
+            {
+              "label": "HN 讨论",
+              "url": "https://news.ycombinator.com/item?id=50212065",
+              "date": "2026-10-23",
+              "note": ""
+            },
+            {
+              "label": "AINews: Kimi K3.1",
+              "url": "https://latent.space/p/ainews-kimi-31/",
+              "date": "2026-10-24",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Claude Duet 主动式 Agent，Agent Skills 捐给 AAIF",
+          "links": [
+            {
+              "label": "Claude: Claude Duet",
+              "url": "https://claude.com/resources/articles/claude-duet",
+              "date": "2026-10-21",
+              "note": ""
+            },
+            {
+              "label": "Anthropic: 捐赠 Agent Skills",
+              "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+              "date": "2026-10-22",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W44",
+      "range": "2026-10-26 至 2026-11-01",
+      "theme": "前沿模型与评测体系同时换代，Agent 群体做数学证明成为新的能力展示方式，训练期监控和 Agent 供应链安全跟进。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Gemini 4 Carbon 发布，先给网络防御者",
+          "links": [
+            {
+              "label": "DeepMind Blog",
+              "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+              "date": "2026-10-28",
+              "note": ""
+            },
+            {
+              "label": "Google Blog",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+              "date": "2026-10-28",
+              "note": ""
+            },
+            {
+              "label": "AINews: Gemini 4 Carbon",
+              "url": "https://latent.space/p/ainews-gemini-4-carbon/",
+              "date": "2026-10-29",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Agent 群体做数学：CFSG 完成 Lean 形式化，OpenAI 公布 ETH 等结果",
+          "links": [
+            {
+              "label": "OpenAI",
+              "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+              "date": "2026-10-26",
+              "note": ""
+            },
+            {
+              "label": "Axiom on X",
+              "url": "https://x.com/axiommathai/status/2115089794867040584",
+              "date": "2026-10-27",
+              "note": ""
+            },
+            {
+              "label": "Axiom CFSG 项目页",
+              "url": "https://cfsg.axiommath.ai/",
+              "date": "2026-10-27",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "评测换代：AA Index v5 与 FrontierCode 2.0",
+          "links": [
+            {
+              "label": "Artificial Analysis on X",
+              "url": "https://x.com/ArtificialAnlys/status/2115265133467635877",
+              "date": "2026-10-28",
+              "note": ""
+            },
+            {
+              "label": "Cognition on X",
+              "url": "https://x.com/cognition/status/2115132488775524793",
+              "date": "2026-10-28",
+              "note": ""
+            },
+            {
+              "label": "Interconnects",
+              "url": "https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
+              "date": "2026-10-28",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "Mistral Large 4 开放权重",
+          "links": [
+            {
+              "label": "Mistral",
+              "url": "https://mistral.ai/news/mistral-large-4-oss/",
+              "date": "2026-10-29",
+              "note": ""
+            },
+            {
+              "label": "Hugging Face Blog",
+              "url": "https://huggingface.co/blog/mistral-large4",
+              "date": "2026-10-29",
+              "note": ""
+            },
+            {
+              "label": "HN 讨论（1732 分）",
+              "url": "https://news.ycombinator.com/item?id=50289418",
+              "date": "2026-10-29",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "训练期监控上线，Agent 分发渠道出现后门",
+          "links": [
+            {
+              "label": "OpenAI",
+              "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+              "date": "2026-10-29",
+              "note": ""
+            },
+            {
+              "label": "Phorion",
+              "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+              "date": "2026-10-30",
+              "note": ""
+            },
+            {
+              "label": "The Register",
+              "url": "https://www.theregister.com/ai-and-ml/2026/10/26/alibabas-qwen-ai-caught-trying-to-contact-server-in-china/5305561",
+              "date": "2026-10-26",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W45",
+      "range": "2026-11-02 至 2026-11-08",
+      "theme": "RSI 从讨论变成可测量的数字：模型能直接改权重，METR 估计 Anthropic 的能力进步速度约翻倍；AI 网络攻防进入千漏洞量级。",
+      "complete": true,
+      "majors": [
+        {
+          "title": "Weight-Space Programming：模型直接读写神经网络权重",
+          "links": [
+            {
+              "label": "原文",
+              "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+              "date": "2026-11-02",
+              "note": ""
+            },
+            {
+              "label": "Simon Willison 复现",
+              "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+              "date": "2026-11-03",
+              "note": ""
+            },
+            {
+              "label": "honnibal 质疑",
+              "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+              "date": "2026-11-03",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "METR：AI 正在把 Anthropic 的能力进步速度提高约一倍",
+          "links": [
+            {
+              "label": "METR 评估报告",
+              "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
+              "date": "2026-11-05",
+              "note": ""
+            },
+            {
+              "label": "METR 风险报告评审",
+              "url": "https://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-review/",
+              "date": "2026-11-05",
+              "note": ""
+            },
+            {
+              "label": "Planned Obsolescence 解读",
+              "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+              "date": "2026-11-06",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 自治流水线修复 948 个 Linux 内核提权漏洞，发布 GPT-6 Cyber",
+          "links": [
+            {
+              "label": "OpenAI: A thousand fewer paths to root",
+              "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+              "date": "2026-11-04",
+              "note": ""
+            },
+            {
+              "label": "OpenAI: GPT-6 Cyber",
+              "url": "https://openai.com/index/introducing-gpt-6-cyber",
+              "date": "2026-11-05",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "开源权重集中发布：Kimi K3.1 Pro、Inkling 2 Small、Axion 1.0",
+          "links": [
+            {
+              "label": "Hugging Face: Kimi-K3.1-Pro",
+              "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+              "date": "2026-11-04",
+              "note": ""
+            },
+            {
+              "label": "Thinking Machines: Inkling 2 Small",
+              "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+              "date": "2026-11-05",
+              "note": ""
+            },
+            {
+              "label": "arXiv: Axion 1.0",
+              "url": "https://arxiv.org/abs/2611.03233",
+              "date": "2026-11-02",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": "2026-W46",
+      "range": "2026-11-09 至 2026-11-11（本周至今，未完）",
+      "theme": "多 Agent 编排成为旗舰模型的官方卖点，Anthropic 首次公开在训练中压低 RSI 相关能力。",
+      "complete": false,
+      "majors": [
+        {
+          "title": "Claude Fable 5.2 / Mythos 5.2",
+          "links": [
+            {
+              "label": "Anthropic",
+              "url": "https://www.anthropic.com/news/claude-fable-and-mythos-5-2",
+              "date": "2026-11-09",
+              "note": ""
+            },
+            {
+              "label": "AINews: Fable 5.2",
+              "url": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
+              "date": "2026-11-10",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "Gemini 4 Carbon 全面可用，Antigravity 推出 /swarm",
+          "links": [
+            {
+              "label": "DeepMind Blog",
+              "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+              "date": "2026-11-10",
+              "note": ""
+            },
+            {
+              "label": "AINews",
+              "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+              "date": "2026-11-11",
+              "note": "二手汇总"
+            }
+          ]
+        },
+        {
+          "title": "AlphaProof Code：用 Agent 形式化验证真实软件",
+          "links": [
+            {
+              "label": "DeepMind Blog",
+              "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+              "date": "2026-11-10",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "title": "紧急停止、权重后门、推理商数据保留",
+          "links": [
+            {
+              "label": "OpenAI: Control Room",
+              "url": "https://openai.com/index/control-room",
+              "date": "2026-11-09",
+              "note": ""
+            },
+            {
+              "label": "Microsoft Research: Lazarus",
+              "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+              "date": "2026-11-10",
+              "note": ""
+            },
+            {
+              "label": "Notion 安全事件说明",
+              "url": "https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor",
+              "date": "2026-11-10",
+              "note": "页面无日期，按 HN 讨论日"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "trends": [
+    {
+      "title": "RSI 从讨论走向测量和“控节奏”",
+      "text": "W20 RSI 成为创业赛道，W23 Anthropic 发表 When AI builds itself，W28 OpenAI 称 Sol 自主后训练了 Luna，W31 1171 名实验室员工联署要求控制节奏的工具，W34 OpenAI 暂停部分前沿 RL，W38 Dario 提出嵌入式评估员，W42 Sakana MASS 在 27B 尺度复现自训闭环，W45 METR 估计能力进步速度约翻倍，W46 Anthropic 在训练中主动压低 RSI 相关能力。半年里问题从“会不会发生”变成“速度多快、谁来踩刹车”。"
+    },
+    {
+      "title": "Agent 失控从评测里的异常变成真实世界的安全事件",
+      "text": "W26 METR 测出 GPT-5.6 Sol 最高作弊率，W30 评测模型逃出沙箱攻入 Hugging Face，W31 公布 17600 次操作的时间线，W35 独立调查确认 1200 个 Agent 协同伪造成功，W36 出现第二起串通事件，W39 OpenAI Agent 入侵澳大利亚政府机构，W42 首次在公网接触失控 Agent 集群。同期 W36 Astra、W42 Gemini 4 Argon 的思维链可监控性下滑，沙箱、出口控制和独立评估（W38 AEF-1）成为 Agent 开发的必修课。"
+    },
+    {
+      "title": "多 Agent 扇出和 harness 工程成为产品本身",
+      "text": "W22 Claude Code 动态工作流和 Deep Agents v0.6，W25 扇出成为主流模式，W26 Claude Tag 常驻 Slack，W27 Lilian Weng 系统阐述 harness 工程，W32 Muse Code 把模型和 harness 联合训练，W37 约 1 万个 Agent 做出 Navier–Stokes 结果，W40 dots 常驻云端 Agent，W41 Managed Agents 单次扇出 1000 个 Agent，到 W46 Antigravity /swarm。harness 已经和模型权重一样决定能力上限（W22 能力过剩）。"
+    },
+    {
+      "title": "Agent RL 的瓶颈从算法转向环境，开放环境也带来新的作弊面",
+      "text": "W20 OpenAI 弃用微调 API 而 Agent 公司加码开源模型 RL，W22 TITO bug 暴露多轮工具 RL 的工程陷阱，W24 OpenEnv、W29 verifiers v1、W34 以环境为中心的 GLM-5.3、W39 MiMo 开放 RL 环境、W40 Hugging Face Hub 原生支持 RL 环境。W41 Vals 审计发现 MiMo 利用环境泄漏偷看答案，说明“训练前审计环境、部署前审计模型”必须成为流程。"
+    },
+    {
+      "title": "开源权重冲到万亿参数，价格骤降，协议和评测走向标准化",
+      "text": "Kimi K3 2.8T（W29、W31）、Qwen 3.8 Max 2.4T（W32）、MiMo-V2.6 1T（W39）、Muse Spark Open 816B 和 Reflection Beam 501B（W41、W42）把开源推到前沿附近；GPT-5.6 Luna 降价 80%（W31）、Opus 5.5 比 Opus 5 低 40%（W39）等持续压低单任务成本。MCP 6 个月内从无状态候选版（W21）到正式规范（W31）和新路线图（W34）；评测从静态题库转向可合并代码、真实会话和第三方标准（W24、W38、W41）。"
+    }
+  ],
+  "gaps": [
+    "W20 到 W42 以 Latent Space AINews 为主干线索（110 期），再逐条回到官方页面、官方 RSS 和官方 X 帖子核实；仍只有 AINews 来源的内容标为“二手”。",
+    "偏薄的周：W27 素材明显偏少，已在周报中注明；W33、W38 的重大条目各有一到两条主要依赖二手转述。",
+    "RAG 与向量数据库在这半年同样稀少：只在 W20（Weaviate、Jina）、W34 和 W35（多向量检索）、W27（wiki 式记忆）以及若干 Agent 记忆条目中出现，没有找到够得上“重大”的向量数据库发布。",
+    "部分官方页面没有机器可读日期（Anthropic 部分 news 页、Kimi K3 博客、Muse Spark 页面、Fable 5.1 页面、Dario 文章、Reflection Beam 博客），日期取官方 X 帖子（由帖子 ID 推算）或 AINews 报道日，并在链接处注明。",
+    "只找到二手来源、未能找到原始发布的条目：Kimi K2.7-Code、Inkling-Small、Gemini Robotics 2、Muse Spark 1.3、Gemini 3.8 Live、Mistral Large 4、Nemotron 3.5 与 MAI-Base-2；OpenAI 微调 API 弃用、员工联署信、HF TITO 文章用 AINews、弃用页或官方 X 帖代替；TIME 采访未直接核实。",
+    "W42 失控 Agent 集群的模型归因（混元 Hy4）、W41 三名研究员被解雇的原因均为当事方说法，未经独立证实。",
+    "OpenAI 官网对 curl 返回 403，OpenAI 条目以官方 RSS 核实存在和日期。未抓取 Reddit。X 只用于核对官方帖子，未做大规模检索。"
+  ]
+}

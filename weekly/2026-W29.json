@@ -1,0 +1,205 @@
+{
+  "week": "2026-W29",
+  "range": "2026-07-13 至 2026-07-19",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": true,
+  "theme": "开源权重迎来两个“巨无霸”：Thinking Machines 的 Inkling（975B）和 Kimi K3（2.8T）；Agent RL 环境栈和自动红队开始工程化。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "模型发布",
+      "title": "Kimi K3：2.8T 参数开源前沿模型",
+      "summary": "07-17 Moonshot 发布 Kimi K3，2.8T 总参数，1M 上下文，原生图文输入，承诺 07-27 前放出权重。采用 Kimi Delta Attention（称百万 token 上下文解码最多快 6.3 倍）和 Attention Residuals（称训练效率提高约 25%）（据官方推文与 AINews 转述）。 开源权重规模首次达到数万亿参数，并在长上下文效率上做架构创新，长时程 Agent 的上下文成本有望继续下降。",
+      "what": "07-17 Moonshot 发布 Kimi K3，2.8T 总参数，1M 上下文，原生图文输入，承诺 07-27 前放出权重。采用 Kimi Delta Attention（称百万 token 上下文解码最多快 6.3 倍）和 Attention Residuals（称训练效率提高约 25%）（据官方推文与 AINews 转述）。",
+      "why": "开源权重规模首次达到数万亿参数，并在长上下文效率上做架构创新，长时程 Agent 的上下文成本有望继续下降。",
+      "links": [
+        {
+          "label": "Kimi K3 技术博客",
+          "url": "https://www.kimi.com/blog/kimi-k3",
+          "date": "2026-07-17",
+          "note": "页面无日期，按官方推文日"
+        },
+        {
+          "label": "Simon Willison",
+          "url": "https://simonwillison.net/2026/Jul/16/kimi-k3/",
+          "date": "2026-07-16",
+          "note": "美国时间"
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-kimi-k3-28t-a50b-the-largest/",
+          "date": "2026-07-17",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-07-16",
+      "keywords": [
+        "Kimi K3",
+        "开源权重",
+        "长上下文",
+        "KDA"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "模型发布",
+      "title": "Thinking Machines 发布首个开源基础模型 Inkling",
+      "summary": "07-16 Thinking Machines 发布 Inkling，975B 总参数、41B 激活的 MoE，1M 上下文，在 45T token 的文本、图像、音频、视频上预训练，同时预览更小的 Inkling-Small（二手）。Hugging Face 同日发文欢迎。 美国出现可作为基线的大规模开放权重模型，W45 的 Inkling 2 Small 即是这一家族的后续。",
+      "what": "07-16 Thinking Machines 发布 Inkling，975B 总参数、41B 激活的 MoE，1M 上下文，在 45T token 的文本、图像、音频、视频上预训练，同时预览更小的 Inkling-Small（二手）。Hugging Face 同日发文欢迎。",
+      "why": "美国出现可作为基线的大规模开放权重模型，W45 的 Inkling 2 Small 即是这一家族的后续。",
+      "links": [
+        {
+          "label": "Hugging Face: Welcome Inkling",
+          "url": "https://huggingface.co/blog/thinkingmachines-inkling",
+          "date": "2026-07-15",
+          "note": "按页面日期"
+        },
+        {
+          "label": "Thinking Machines on X",
+          "url": "https://x.com/thinkymachines/status/2077454609551921208",
+          "date": "2026-07-16",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-thinkys-inkling-975b-a41b/",
+          "date": "2026-07-16",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-07-15",
+      "keywords": [
+        "Inkling",
+        "开源权重",
+        "Thinking Machines"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "Agent 安全",
+      "title": "OpenAI GPT-Red：自动红队带来 6 倍的抗注入提升",
+      "summary": "07-15 OpenAI 发布 GPT-Red，一个用于大规模发现提示注入漏洞的内部自动红队模型。对抗 GPT-Red 训练后，GPT-5.6 Sol 在重放强攻击时失败数比四个月前最好的生产模型少 6 倍（据 OpenAI 推文与 AINews 转述）。 提示注入是 Agent 接入工具和网页后的头号风险，用 AI 攻击 AI 再拿来训练防御，形成了安全方面的自我改进闭环。",
+      "what": "07-15 OpenAI 发布 GPT-Red，一个用于大规模发现提示注入漏洞的内部自动红队模型。对抗 GPT-Red 训练后，GPT-5.6 Sol 在重放强攻击时失败数比四个月前最好的生产模型少 6 倍（据 OpenAI 推文与 AINews 转述）。",
+      "why": "提示注入是 Agent 接入工具和网页后的头号风险，用 AI 攻击 AI 再拿来训练防御，形成了安全方面的自我改进闭环。",
+      "links": [
+        {
+          "label": "OpenAI: GPT-Red",
+          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
+          "date": "2026-07-15",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-thinkys-inkling-975b-a41b/",
+          "date": "2026-07-16",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-07-15",
+      "keywords": [
+        "GPT-Red",
+        "提示注入",
+        "自动红队",
+        "对抗训练"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "后训练",
+      "title": "Prime Intellect verifiers v1：Agent RL 环境拆成任务集、harness、运行时",
+      "summary": "07-13 Prime Intellect 发布 verifiers v1，重新设计 Agent RL 与评测的环境栈，把环境拆为 taskset、harness、runtime 三层，支持“自带 harness”的编码和 computer use 训练（二手）。 环境标准化是开源 Agent RL 的基础设施，与 OpenEnv（W24）一起推动训练环境可复用。",
+      "what": "07-13 Prime Intellect 发布 verifiers v1，重新设计 Agent RL 与评测的环境栈，把环境拆为 taskset、harness、runtime 三层，支持“自带 harness”的编码和 computer use 训练（二手）。",
+      "why": "环境标准化是开源 Agent RL 的基础设施，与 OpenEnv（W24）一起推动训练环境可复用。",
+      "links": [
+        {
+          "label": "Prime Intellect on X",
+          "url": "https://x.com/PrimeIntellect/status/2076447247693402301",
+          "date": "2026-07-13",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-codex-usage-up-10x-in-6-months/",
+          "date": "2026-07-14",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-07-13",
+      "keywords": [
+        "verifiers",
+        "Agent RL",
+        "环境",
+        "Prime Intellect"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 安全",
+      "title": "Hugging Face 安全事件披露",
+      "summary": "部分内部数据集和服务凭据遭未授权访问，未发现公开模型、数据集或 Spaces 被篡改。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/security-incident-july-2026",
+          "date": "2026-07-16",
+          "note": ""
+        }
+      ],
+      "date": "2026-07-16",
+      "keywords": [
+        "安全事件",
+        "凭据"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 框架",
+      "title": "模型路由没那么简单",
+      "summary": "IBM Research 讨论多模型路由在实践中的难点。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
+          "date": "2026-07-15",
+          "note": ""
+        }
+      ],
+      "date": "2026-07-15",
+      "keywords": [
+        "路由"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "大厂 Super Agent",
+      "title": "Codex 用量半年增长 10 倍",
+      "summary": "AINews 汇总 Codex 与 ChatGPT 超级应用的采用信号（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-codex-usage-up-10x-in-6-months/",
+          "date": "2026-07-14",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-07-14",
+      "keywords": [
+        "Codex",
+        "采用"
+      ],
+      "second_hand_parts": true
+    }
+  ]
+}

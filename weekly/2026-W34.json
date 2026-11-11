@@ -1,0 +1,235 @@
+{
+  "week": "2026-W34",
+  "range": "2026-08-17 至 2026-08-23",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": true,
+  "theme": "OpenAI 暂停部分前沿 RL 训练两周、搁置最大一轮 RL，“为前沿定节奏”从呼吁变成实验室行动；Agent 训练重心从提示转向可执行环境；Qwen3.8-27B 成为本地 Agent 的新基线。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "RSI 与安全",
+      "title": "OpenAI 暂停部分前沿 RL 训练，以安全准备度决定扩展节奏",
+      "summary": "08-18 OpenAI 发布 Pacing model development in an era of cyber-critical capabilities：暂停部分前沿 RL 训练两周，并继续搁置计划中规模最大的一轮前沿 RL，期间加强监控、隔离和红队。Sam Altman 称这是能力跑在安全与对齐准备之前的情形，Greg Brockman 表示安全信心将越来越多地决定前沿扩展的节奏（二手）。前一日 OpenAI 发布 The Defender's Window。 这是 W31 员工联署“为前沿定节奏”之后，第一次有实验室公开放慢自家训练。对 Agent 生态的直接影响是：更强模型的发布时间表开始受安全评估约束。",
+      "what": "08-18 OpenAI 发布 Pacing model development in an era of cyber-critical capabilities：暂停部分前沿 RL 训练两周，并继续搁置计划中规模最大的一轮前沿 RL，期间加强监控、隔离和红队。Sam Altman 称这是能力跑在安全与对齐准备之前的情形，Greg Brockman 表示安全信心将越来越多地决定前沿扩展的节奏（二手）。前一日 OpenAI 发布 The Defender's Window。",
+      "why": "这是 W31 员工联署“为前沿定节奏”之后，第一次有实验室公开放慢自家训练。对 Agent 生态的直接影响是：更强模型的发布时间表开始受安全评估约束。",
+      "links": [
+        {
+          "label": "OpenAI: Pacing model development",
+          "url": "https://openai.com/index/pacing-model-development-cyber-capabilities",
+          "date": "2026-08-18",
+          "note": ""
+        },
+        {
+          "label": "OpenAI: The Defender's Window",
+          "url": "https://openai.com/index/the-defenders-window",
+          "date": "2026-08-17",
+          "note": ""
+        },
+        {
+          "label": "OpenAI on X",
+          "url": "https://x.com/OpenAI/status/2089777845187031262",
+          "date": "2026-08-19",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-memory-prices-up-500-in-12/",
+          "date": "2026-08-19",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-08-17",
+      "keywords": [
+        "RL 暂停",
+        "节奏控制",
+        "网络能力",
+        "监控"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "后训练",
+      "title": "Agent 训练转向“以环境为中心”：GLM-5.3 与 EnvHarness",
+      "summary": "社区对 GLM-5.3 的解读是：同一个基座模型，靠更丰富的可执行环境和 SAO 式反事实信用分配获得更好的长时程表现；Google 的 EnvHarness / EnvRigger 用插件层改造静态环境（二手）。AINews 08-22 提出“每年都有一个机器智能生产环节从人工变成模型生成”的框架。 后训练的竞争从数据和算法转向环境规模和质量，与 OpenEnv、verifiers、Qwen-AgentWorld 是同一趋势。",
+      "what": "社区对 GLM-5.3 的解读是：同一个基座模型，靠更丰富的可执行环境和 SAO 式反事实信用分配获得更好的长时程表现；Google 的 EnvHarness / EnvRigger 用插件层改造静态环境（二手）。AINews 08-22 提出“每年都有一个机器智能生产环节从人工变成模型生成”的框架。",
+      "why": "后训练的竞争从数据和算法转向环境规模和质量，与 OpenEnv、verifiers、Qwen-AgentWorld 是同一趋势。",
+      "links": [
+        {
+          "label": "ZhihuFrontier: GLM-5.3 解读",
+          "url": "https://x.com/ZhihuFrontier/status/2090731537037987931",
+          "date": "2026-08-21",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-10-worse-100x-cheaper-10000x/",
+          "date": "2026-08-22",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-08-21",
+      "keywords": [
+        "GLM-5.3",
+        "环境扩展",
+        "信用分配",
+        "Agent RL"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "模型发布",
+      "title": "Qwen3.8-27B 成为本地 Agent 新基线",
+      "summary": "Qwen3.8-27B 发布后四天内成为 Cline 中排名第一的本地模型，在 Artificial Analysis Agentic Index 上以 27B 规模排第 7（二手）。 本地可跑、Agent 能力接近前沿的中小模型出现，敏感代码和数据可以不出本机就交给 Agent 处理。",
+      "what": "Qwen3.8-27B 发布后四天内成为 Cline 中排名第一的本地模型，在 Artificial Analysis Agentic Index 上以 27B 规模排第 7（二手）。",
+      "why": "本地可跑、Agent 能力接近前沿的中小模型出现，敏感代码和数据可以不出本机就交给 Agent 处理。",
+      "links": [
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-memory-prices-up-500-in-12/",
+          "date": "2026-08-19",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-08-19",
+      "keywords": [
+        "Qwen3.8-27B",
+        "本地模型",
+        "Cline"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "MCP 与协议",
+      "title": "MCP 发布新路线图",
+      "summary": "08-22 MCP 官方博客发布 The New MCP Roadmap，在 2026-07-28 规范落地后规划下一阶段方向。 无状态规范完成后，协议重心转向企业授权、文件传输等生产需求，后续 11 月的文件上传下载探索即在此列。",
+      "what": "08-22 MCP 官方博客发布 The New MCP Roadmap，在 2026-07-28 规范落地后规划下一阶段方向。",
+      "why": "无状态规范完成后，协议重心转向企业授权、文件传输等生产需求，后续 11 月的文件上传下载探索即在此列。",
+      "links": [
+        {
+          "label": "MCP Blog: The New MCP Roadmap",
+          "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
+          "date": "2026-08-22",
+          "note": ""
+        }
+      ],
+      "date": "2026-08-22",
+      "keywords": [
+        "MCP",
+        "路线图"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 安全",
+      "title": "OpenAI 为前沿模型提供零数据保留",
+      "summary": "企业可对前沿模型启用 ZDR。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+          "date": "2026-08-19",
+          "note": ""
+        }
+      ],
+      "date": "2026-08-19",
+      "keywords": [
+        "零数据保留"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "RAG 与向量数据库",
+      "title": "Sentence Transformers 支持多向量（late interaction）嵌入",
+      "summary": "ColBERT 式多向量检索进入主流嵌入库。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/multi-vector-encoder",
+          "date": "2026-08-18",
+          "note": ""
+        }
+      ],
+      "date": "2026-08-18",
+      "keywords": [
+        "多向量",
+        "late interaction",
+        "检索"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "RAG 与记忆",
+      "title": "Agent 到底需要多少记忆",
+      "summary": "IBM Research 实验分析 Agent 记忆规模与效果。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+          "date": "2026-08-18",
+          "note": ""
+        }
+      ],
+      "date": "2026-08-18",
+      "keywords": [
+        "Agent 记忆"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "大厂 Super Agent",
+      "title": "Stripe 以约 70 亿美元收购 OpenRouter",
+      "summary": "模型路由平台被支付公司收购（商业信号，二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-stripe-buys-openrouter-for/",
+          "date": "2026-08-18",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-08-18",
+      "keywords": [
+        "OpenRouter",
+        "路由"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "大厂 Super Agent",
+      "title": "ChatGPT Work 桌面插件与 Sites 协作编辑",
+      "summary": "Apple Messages 插件、Codex 管理 git/CI 的多人编辑（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-poolside-gets-12b-reverse/",
+          "date": "2026-08-21",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-08-21",
+      "keywords": [
+        "ChatGPT Work",
+        "Codex"
+      ],
+      "second_hand_parts": true
+    }
+  ]
+}

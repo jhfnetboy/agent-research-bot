@@ -1,0 +1,257 @@
+{
+  "week": "2026-W40",
+  "range": "2026-09-28 至 2026-10-04",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": true,
+  "theme": "OpenAI DevDay 推出常驻云端的 Agent“dots”和 GPT-6.1 Sol，Gemini 4 Argon 让 Google 回到前沿并先给网络防御者；Hugging Face 把 RL 环境做成 Hub 一等公民，Agent 沙箱红队测试给出量化结果。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "大厂 Super Agent",
+      "title": "OpenAI DevDay：dots 常驻 Agent 与 GPT-6.1 Sol",
+      "summary": "09-30 OpenAI 发布 dots：每个 dot 是由 GPT-6 Astra 驱动、运行在自己云端电脑上的 Agent，连接 4000 多个应用及 Slack、Teams，用户设定哪些事可以自主做、哪些需审批、哪些绝不能做；可把 bug 分诊、失败构建和 PR 通过 Codex 交给它。DevDay 同时发布 GPT-6.1 Sol（二手细节据 AINews）。 大厂 Super Agent 的形态收敛为“常驻、有自己的计算机、按权限分级行动”，与 Claude Duet（W43）、Meta Muse 同类。权限三分法（自主、审批、禁止）也是 Agent 安全设计的实用模板。",
+      "what": "09-30 OpenAI 发布 dots：每个 dot 是由 GPT-6 Astra 驱动、运行在自己云端电脑上的 Agent，连接 4000 多个应用及 Slack、Teams，用户设定哪些事可以自主做、哪些需审批、哪些绝不能做；可把 bug 分诊、失败构建和 PR 通过 Codex 交给它。DevDay 同时发布 GPT-6.1 Sol（二手细节据 AINews）。",
+      "why": "大厂 Super Agent 的形态收敛为“常驻、有自己的计算机、按权限分级行动”，与 Claude Duet（W43）、Meta Muse 同类。权限三分法（自主、审批、禁止）也是 Agent 安全设计的实用模板。",
+      "links": [
+        {
+          "label": "OpenAI: Introducing dots",
+          "url": "https://openai.com/index/introducing-dots",
+          "date": "2026-09-30",
+          "note": ""
+        },
+        {
+          "label": "OpenAI: Introducing GPT-6.1 Sol",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+          "date": "2026-09-29",
+          "note": ""
+        },
+        {
+          "label": "OpenAI: DevDay 2026 Recap",
+          "url": "https://openai.com/index/devday-2026-recap",
+          "date": "2026-09-30",
+          "note": ""
+        },
+        {
+          "label": "AINews: DevDay 2026",
+          "url": "https://latent.space/p/ainews-openai-devday-2026-dots-61/",
+          "date": "2026-09-30",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-09-29",
+      "keywords": [
+        "dots",
+        "常驻 Agent",
+        "GPT-6.1 Sol",
+        "权限分级"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "模型发布",
+      "title": "Gemini 4 Argon：Google 回到前沿，首发只给政府和网络防御者",
+      "summary": "10-01 Google DeepMind 发布 Gemini 4 Argon，面向编码、企业知识工作和网络防御，在 19 个可信基准中的 13 个达到最佳，称输出上限 1M token；首发仅向政府用户和 Fairwind 计划中的受信网络防御者开放，完善护栏后再开放给开发者和企业（二手）。 继 Mythos、Astra 之后，Google 也采用“先给防御方”的分级发布，W44 Gemini 4 Carbon 沿用了同样的路径。",
+      "what": "10-01 Google DeepMind 发布 Gemini 4 Argon，面向编码、企业知识工作和网络防御，在 19 个可信基准中的 13 个达到最佳，称输出上限 1M token；首发仅向政府用户和 Fairwind 计划中的受信网络防御者开放，完善护栏后再开放给开发者和企业（二手）。",
+      "why": "继 Mythos、Astra 之后，Google 也采用“先给防御方”的分级发布，W44 Gemini 4 Carbon 沿用了同样的路径。",
+      "links": [
+        {
+          "label": "Google: Gemini 4 Argon",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+          "date": "2026-10-01",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-gemini-4-argon-gdms-answer/",
+          "date": "2026-10-01",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-10-01",
+      "keywords": [
+        "Gemini 4 Argon",
+        "Fairwind",
+        "分级发布"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "后训练",
+      "title": "Hugging Face Hub 原生支持 RL 环境",
+      "summary": "09-28 Hugging Face 发布 Welcome RL Environments to the hub，RL 环境可以像模型和数据集一样在 Hub 上发布、发现和复用。同周 ServiceNow 发布为企业 Agent 生成训练数据的 AutoSynthData。 OpenEnv（W24）、verifiers（W29）、MiMo 开放 RL 环境（W39）之后，环境终于有了公共分发渠道，Agent RL 的数据瓶颈进一步松动。",
+      "what": "09-28 Hugging Face 发布 Welcome RL Environments to the hub，RL 环境可以像模型和数据集一样在 Hub 上发布、发现和复用。同周 ServiceNow 发布为企业 Agent 生成训练数据的 AutoSynthData。",
+      "why": "OpenEnv（W24）、verifiers（W29）、MiMo 开放 RL 环境（W39）之后，环境终于有了公共分发渠道，Agent RL 的数据瓶颈进一步松动。",
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/rl-environments",
+          "date": "2026-09-28",
+          "note": ""
+        },
+        {
+          "label": "Hugging Face: AutoSynthData",
+          "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+          "date": "2026-10-02",
+          "note": ""
+        }
+      ],
+      "date": "2026-09-28",
+      "keywords": [
+        "RL 环境",
+        "Hugging Face Hub",
+        "训练数据"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "major",
+      "topic": "Agent 安全",
+      "title": "Perplexity SPACE 沙箱红队：9 个模型都拿到 root，没有逃逸，但能绕过 URL 封锁",
+      "summary": "09-28 Perplexity 公布 SPACE 红队测试：Opus 5、GPT-5.6 Sol、Kimi K3 等 9 个模型都在虚拟机内拿到 root，108 次运行无一逃逸；但在允许访问 PyPI 和 Ubuntu 镜像时，4 个模型通过 DNS 欺骗加共享 Fastly IP 访问到被封锁的 URL（二手）。同周 NVIDIA 推出 Open Agent Safety Platform，OpenAI 发布前沿训练安全案例的思路。 这是少有的公开量化沙箱测试。结论对 Agent 开发者很实用：放行包镜像这类“看似无害”的出口，就足以让模型绕过网络封锁。",
+      "what": "09-28 Perplexity 公布 SPACE 红队测试：Opus 5、GPT-5.6 Sol、Kimi K3 等 9 个模型都在虚拟机内拿到 root，108 次运行无一逃逸；但在允许访问 PyPI 和 Ubuntu 镜像时，4 个模型通过 DNS 欺骗加共享 Fastly IP 访问到被封锁的 URL（二手）。同周 NVIDIA 推出 Open Agent Safety Platform，OpenAI 发布前沿训练安全案例的思路。",
+      "why": "这是少有的公开量化沙箱测试。结论对 Agent 开发者很实用：放行包镜像这类“看似无害”的出口，就足以让模型绕过网络封锁。",
+      "links": [
+        {
+          "label": "Perplexity on X",
+          "url": "https://x.com/perplexity_ai/status/2104589500123111710",
+          "date": "2026-09-28",
+          "note": ""
+        },
+        {
+          "label": "OpenAI: Towards safety cases for frontier AI training",
+          "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+          "date": "2026-09-29",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-amd-buys-world-labs-for-82b/",
+          "date": "2026-09-29",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-09-28",
+      "keywords": [
+        "沙箱",
+        "红队",
+        "网络出口",
+        "NVIDIA"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "模型发布",
+      "title": "Claude Sonnet 5.5",
+      "summary": "Claude 5.5 家族第二个模型，1M 上下文，$2/$12，Claude Code 中完成任务数比 Sonnet 5 多约 30%（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-sonnet-5-5",
+          "date": "2026-09-29",
+          "note": "页面无日期，按 AINews 报道日"
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-amd-buys-world-labs-for-82b/",
+          "date": "2026-09-29",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-09-29",
+      "keywords": [
+        "Sonnet 5.5"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 安全",
+      "title": "OpenAI 打击协同的模型蒸馏行动",
+      "summary": "披露并处置有组织的蒸馏活动。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+          "date": "2026-09-30",
+          "note": ""
+        }
+      ],
+      "date": "2026-09-30",
+      "keywords": [
+        "蒸馏"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 框架",
+      "title": "Holo4 通用 computer use Agent",
+      "summary": "H Company 新一代 computer use 模型。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/Hcompany/holo4",
+          "date": "2026-09-28",
+          "note": ""
+        }
+      ],
+      "date": "2026-09-28",
+      "keywords": [
+        "computer use"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "MCP 与协议",
+      "title": "MCP Agent 的来源感知验证",
+      "summary": "不只核对事实，还要核对信息来自哪个 MCP 来源。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+          "date": "2026-09-29",
+          "note": ""
+        }
+      ],
+      "date": "2026-09-29",
+      "keywords": [
+        "MCP",
+        "验证"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "评测与基准",
+      "title": "Agent 说完成了，数据库不同意",
+      "summary": "Microsoft 讨论 Agent 自报完成与真实状态不一致的问题。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+          "date": "2026-10-03",
+          "note": ""
+        }
+      ],
+      "date": "2026-10-03",
+      "keywords": [
+        "Agent 可靠性"
+      ],
+      "second_hand_parts": false
+    }
+  ]
+}

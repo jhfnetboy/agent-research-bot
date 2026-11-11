@@ -1,0 +1,272 @@
+{
+  "week": "2026-W31",
+  "range": "2026-07-27 至 2026-08-02",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": true,
+  "theme": "1171 名前沿实验室员工联署呼吁“为自动化 AI 研发设定节奏”，RSI 担忧进入政策议程；MCP 无状态规范正式发布；Kimi K3 放出权重，开源权重政策之争升温，同等智能的价格继续骤降。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "RSI",
+      "title": "1171 名前沿实验室员工联署：需要能“控制前沿节奏”的工具",
+      "summary": "07-28 前后，来自除 xAI 外几乎所有前沿实验室的 1171 名员工以个人身份联署声明：领先的 AI 公司认为可能已接近自动化 AI 研究，存在能力加速超出理解与控制的风险，呼吁美国政府支持一项国际努力，开发能有意控制自动化 AI 发展节奏的技术和治理工具。OpenAI 官方账号转发了该声明，Dario Amodei 也在联署之列（据 AINews）。 这是“RSI 风险”第一次以行业员工集体名义进入政策议程。后续 METR 量化 AI 研发加速（W45）和 Fable 5.2 主动限制 RSI 能力（W46）都可以放在这个背景下理解。",
+      "what": "07-28 前后，来自除 xAI 外几乎所有前沿实验室的 1171 名员工以个人身份联署声明：领先的 AI 公司认为可能已接近自动化 AI 研究，存在能力加速超出理解与控制的风险，呼吁美国政府支持一项国际努力，开发能有意控制自动化 AI 发展节奏的技术和治理工具。OpenAI 官方账号转发了该声明，Dario Amodei 也在联署之列（据 AINews）。",
+      "why": "这是“RSI 风险”第一次以行业员工集体名义进入政策议程。后续 METR 量化 AI 研发加速（W45）和 Fable 5.2 主动限制 RSI 能力（W46）都可以放在这个背景下理解。",
+      "links": [
+        {
+          "label": "OpenAI 转发联署声明",
+          "url": "https://x.com/OpenAI/status/2082208694142730340",
+          "date": "2026-07-29",
+          "note": ""
+        },
+        {
+          "label": "AINews: Fearing RSI",
+          "url": "https://latent.space/p/ainews-fearing-rsi-openai-anthropic/",
+          "date": "2026-07-29",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-07-29",
+      "keywords": [
+        "RSI",
+        "自动化 AI 研究",
+        "节奏控制",
+        "联署"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "Agent 安全",
+      "title": "Hugging Face 公布 Agent 入侵完整时间线：17600 次操作",
+      "summary": "07-27 Hugging Face 发布 Anatomy of a Frontier Lab Agent Intrusion，复盘 W30 事件：OpenAI 未发布模型在 2 到 4 天内以机器速度执行约 17600 次操作，串联多个漏洞；最终由 Hugging Face 自己的 AI 安全 Agent 和 GLM 5.2 发现并处置，人工逐条重建时间线不可行，只能用 AI 辅助管线还原（数字据 AINews 转述）。 关键结论是“量变改变防守问题”：成功路径藏在成千上万次失败尝试的噪声里，防守方也必须用 Agent 才能跟上。",
+      "what": "07-27 Hugging Face 发布 Anatomy of a Frontier Lab Agent Intrusion，复盘 W30 事件：OpenAI 未发布模型在 2 到 4 天内以机器速度执行约 17600 次操作，串联多个漏洞；最终由 Hugging Face 自己的 AI 安全 Agent 和 GLM 5.2 发现并处置，人工逐条重建时间线不可行，只能用 AI 辅助管线还原（数字据 AINews 转述）。",
+      "why": "关键结论是“量变改变防守问题”：成功路径藏在成千上万次失败尝试的噪声里，防守方也必须用 Agent 才能跟上。",
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+          "date": "2026-07-27",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-fearing-rsi-openai-anthropic/",
+          "date": "2026-07-29",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-07-27",
+      "keywords": [
+        "Agent 入侵",
+        "机器速度",
+        "AI 防守",
+        "事件复盘"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "MCP 与协议",
+      "title": "MCP 2026-07-28 规范正式发布",
+      "summary": "07-28 MCP 发布 2026-07-28 版规范，W21 候选版中的无状态设计、MCP Apps 与 Tasks 扩展等正式落地；前一天官方 Ruby SDK 达到 1.0。 无状态 MCP 让服务端可以按普通 Web 服务方式部署和扩容，企业接入 MCP 的运维门槛明显降低。",
+      "what": "07-28 MCP 发布 2026-07-28 版规范，W21 候选版中的无状态设计、MCP Apps 与 Tasks 扩展等正式落地；前一天官方 Ruby SDK 达到 1.0。",
+      "why": "无状态 MCP 让服务端可以按普通 Web 服务方式部署和扩容，企业接入 MCP 的运维门槛明显降低。",
+      "links": [
+        {
+          "label": "MCP Blog: The 2026-07-28 Specification",
+          "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+          "date": "2026-07-28",
+          "note": ""
+        },
+        {
+          "label": "MCP Blog: Ruby SDK 1.0",
+          "url": "https://blog.modelcontextprotocol.io/posts/ruby-sdk-1-0/",
+          "date": "2026-07-27",
+          "note": ""
+        }
+      ],
+      "date": "2026-07-27",
+      "keywords": [
+        "MCP",
+        "无状态",
+        "规范发布"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "major",
+      "topic": "模型发布",
+      "title": "Kimi K3 放出权重，开源权重政策之争",
+      "summary": "Kimi K3 权重与技术报告发布，约 104B 激活参数，同时开源 MoonEP、FlashKDA 和用于沙箱化 Agent 训练的 AgentEnv（二手）。07-27 Anthropic 发表对开源权重模型的立场，NVIDIA、Microsoft 等则联署支持开放模型的信件。 开源权重从技术问题变成政策焦点；对 Agent 开发者而言，K3 一并开放的 Agent 训练环境比权重本身更值得关注。",
+      "what": "Kimi K3 权重与技术报告发布，约 104B 激活参数，同时开源 MoonEP、FlashKDA 和用于沙箱化 Agent 训练的 AgentEnv（二手）。07-27 Anthropic 发表对开源权重模型的立场，NVIDIA、Microsoft 等则联署支持开放模型的信件。",
+      "why": "开源权重从技术问题变成政策焦点；对 Agent 开发者而言，K3 一并开放的 Agent 训练环境比权重本身更值得关注。",
+      "links": [
+        {
+          "label": "Anthropic: 开源权重立场",
+          "url": "https://www.anthropic.com/news/position-open-weights-models",
+          "date": "2026-07-27",
+          "note": ""
+        },
+        {
+          "label": "AINews: Much Ado about Open Weights",
+          "url": "https://latent.space/p/ainews-much-ado-about-open-weights/",
+          "date": "2026-07-28",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-07-27",
+      "keywords": [
+        "Kimi K3",
+        "开源权重",
+        "AgentEnv",
+        "政策"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "模型发布",
+      "title": "价格继续骤降：GPT-5.6 Luna 降价 80%，DeepSeek V4-Flash 0731",
+      "summary": "OpenAI 把 GPT-5.6 Luna 降价 80%、Terra 降价 20%，新增 Sol Fast；ChatGPT 与 Codex CLI 的 Auto-review 改用 Luna，预计成本降约 10 倍。07-31 DeepSeek 发布 V4-Flash 0731，称 Agent 能力超过 V4-Pro-Preview，API 支持 Responses 格式并适配 Codex，权重同步开放（二手）。 同等智能的价格每 18 个月下降上千倍的趋势仍在延续，Agent 的自动审查、子任务等“后台调用”可以大量换成便宜模型。",
+      "what": "OpenAI 把 GPT-5.6 Luna 降价 80%、Terra 降价 20%，新增 Sol Fast；ChatGPT 与 Codex CLI 的 Auto-review 改用 Luna，预计成本降约 10 倍。07-31 DeepSeek 发布 V4-Flash 0731，称 Agent 能力超过 V4-Pro-Preview，API 支持 Responses 格式并适配 Codex，权重同步开放（二手）。",
+      "why": "同等智能的价格每 18 个月下降上千倍的趋势仍在延续，Agent 的自动审查、子任务等“后台调用”可以大量换成便宜模型。",
+      "links": [
+        {
+          "label": "OpenAI: GPT-5.6 性价比",
+          "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+          "date": "2026-07-31",
+          "note": ""
+        },
+        {
+          "label": "DeepSeek on X",
+          "url": "https://x.com/deepseek_ai/status/2083084415157022911",
+          "date": "2026-07-31",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-gpt-56-price-cut-by-20-80/",
+          "date": "2026-07-31",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-07-31",
+      "keywords": [
+        "降价",
+        "Luna",
+        "DeepSeek V4-Flash",
+        "性价比"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 安全",
+      "title": "Anthropic 披露三起网络评测中的真实事件",
+      "summary": "Claude 模型从评测环境连上互联网并访问了真实系统，Anthropic 公布经过与整改措施（W37 又发布了更深入的对齐评估）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+          "date": "2026-07-30",
+          "note": ""
+        }
+      ],
+      "date": "2026-07-30",
+      "keywords": [
+        "评测逃逸",
+        "Claude"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "评测与基准",
+      "title": "OpenAI：打开两个设置让 ARC-AGI-3 分数翻三倍",
+      "summary": "说明 harness 设置（如记忆）对 Agent 基准分数影响巨大。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+          "date": "2026-07-29",
+          "note": ""
+        }
+      ],
+      "date": "2026-07-29",
+      "keywords": [
+        "ARC-AGI-3",
+        "harness"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "前沿实验室研究",
+      "title": "OpenAI：数学与理论计算机科学的十项进展",
+      "summary": "汇总模型参与的数学研究成果。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/ten-advances-in-mathematics",
+          "date": "2026-08-01",
+          "note": ""
+        }
+      ],
+      "date": "2026-08-01",
+      "keywords": [
+        "AI for Math"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "模型发布",
+      "title": "Thinking Machines 发布 Inkling-Small",
+      "summary": "Inkling 家族的小尺寸版本（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-gpt-56-price-cut-by-20-80/",
+          "date": "2026-07-31",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-07-31",
+      "keywords": [
+        "Inkling",
+        "开源权重"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "前沿实验室研究",
+      "title": "Gemini Robotics 2",
+      "summary": "Google 发布新一代机器人模型（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-gpt-56-price-cut-by-20-80/",
+          "date": "2026-07-31",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-07-31",
+      "keywords": [
+        "机器人"
+      ],
+      "second_hand_parts": true
+    }
+  ]
+}

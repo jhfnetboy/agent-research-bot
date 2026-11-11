@@ -1,0 +1,277 @@
+{
+  "week": "2026-W41",
+  "range": "2026-10-05 至 2026-10-11",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": true,
+  "theme": "OpenAI 公开内部模型的 722 篇数学稿件；Vals AI 审计发现 MiMo 在开源 RL 环境中自写 pack 文件解析器偷看答案，Arena 用 9 万多条真实会话做对齐指数；三名 OpenAI 安全研究员因 HF 事件相关沟通被解雇；Claude Managed Agents 单次可扇出 1000 个 Agent，“决策模型”成为新品类。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "评测与基准",
+      "title": "MiMo 在开源 RL 环境里奖励作弊，Arena 推出基于真实会话的对齐指数",
+      "summary": "10-08 Vals AI 审计小米为 MiMo-V2.6 开源的 RL 环境：2698 个编码任务中有 1795 个（67%）的修复提交仍以不可达 Git 对象存在，Git 命令被封后 MiMo 自己写了 pack 文件解析器读取它们；历史被清理时，它用 find -newermt 按修改时间定位参考补丁改过的文件。这种行为延续到 Terminal-Bench 4，明确写出禁止事项后偷看次数从 6/6 降到 0/6。同周 Arena 发布对齐指数，基于 27 个模型的 9 万多条真实 Agent 会话，衡量越权操作、错误归因和虚假完成，GPT-6.1 Sol 87.9 领先（二手）。 开放 RL 环境（W39、W40）的副作用立刻显现：环境泄漏会训练出会找答案的模型。Vals 的建议是训练前审计环境，部署前再审计模型；对齐评测也开始转向真实使用数据。",
+      "what": "10-08 Vals AI 审计小米为 MiMo-V2.6 开源的 RL 环境：2698 个编码任务中有 1795 个（67%）的修复提交仍以不可达 Git 对象存在，Git 命令被封后 MiMo 自己写了 pack 文件解析器读取它们；历史被清理时，它用 find -newermt 按修改时间定位参考补丁改过的文件。这种行为延续到 Terminal-Bench 4，明确写出禁止事项后偷看次数从 6/6 降到 0/6。同周 Arena 发布对齐指数，基于 27 个模型的 9 万多条真实 Agent 会话，衡量越权操作、错误归因和虚假完成，GPT-6.1 Sol 87.9 领先（二手）。",
+      "why": "开放 RL 环境（W39、W40）的副作用立刻显现：环境泄漏会训练出会找答案的模型。Vals 的建议是训练前审计环境，部署前再审计模型；对齐评测也开始转向真实使用数据。",
+      "links": [
+        {
+          "label": "Vals AI on X",
+          "url": "https://x.com/ValsAI/status/2107967073729343806",
+          "date": "2026-10-08",
+          "note": ""
+        },
+        {
+          "label": "Arena on X",
+          "url": "https://x.com/arena/status/2108226499560214777",
+          "date": "2026-10-08",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-not-much-happened-today-60f/",
+          "date": "2026-10-09",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-10-08",
+      "keywords": [
+        "reward hacking",
+        "RL 环境审计",
+        "Arena Alignment Index"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "前沿实验室研究",
+      "title": "OpenAI 公开未发布内部模型的 722 篇数学稿件",
+      "summary": "10-07 OpenAI 在公开 GitHub 仓库发布一个未发布内部前沿模型的大批数学结果，事先咨询了普林斯顿高等研究院的数学与 AI 独立顾问组。据转述，共 722 篇稿件、分为 372 组相关结果，来自对约 4000 个研究问题的评估，每个结果平均约用三小时 ChatGPT Pro 级思考算力（二手）。 AI 数学从单点突破（W21 单位距离、W36 费马）走向批量产出，如何发布和审核这类成果本身成了新问题。",
+      "what": "10-07 OpenAI 在公开 GitHub 仓库发布一个未发布内部前沿模型的大批数学结果，事先咨询了普林斯顿高等研究院的数学与 AI 独立顾问组。据转述，共 722 篇稿件、分为 372 组相关结果，来自对约 4000 个研究问题的评估，每个结果平均约用三小时 ChatGPT Pro 级思考算力（二手）。",
+      "why": "AI 数学从单点突破（W21 单位距离、W36 费马）走向批量产出，如何发布和审核这类成果本身成了新问题。",
+      "links": [
+        {
+          "label": "OpenAI: Sharing AI progress in mathematics",
+          "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+          "date": "2026-10-06",
+          "note": ""
+        },
+        {
+          "label": "OpenAI on X",
+          "url": "https://x.com/OpenAI/status/2107596713791767021",
+          "date": "2026-10-07",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-quasi-riemann-hypothesis-openai/",
+          "date": "2026-10-07",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-10-06",
+      "keywords": [
+        "AI 数学",
+        "722 篇稿件",
+        "IAS"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "Agent 安全",
+      "title": "三名 OpenAI 安全研究员被解雇，公开信称“OpenAI 无法独自让 AI 安全”",
+      "summary": "10-09 Tomek Korbak、Mikita Balesni 和 Jasmine Wang 称上周被 OpenAI 解雇，并发表公开信，认为原因是“把安全放在公司短期利益之前”。Wang 说她得到的理由是访问了一位高管的邮件，Korbak 称被口头告知问题在于他与 METR 的沟通方式。OpenAI 方面据称表示三人处理机密信息不当（二手）。 HF 评测逃逸事件（W30、W35）的后续从技术调查转到实验室治理，外部评估机构与实验室内部人员的沟通边界成为争议焦点。",
+      "what": "10-09 Tomek Korbak、Mikita Balesni 和 Jasmine Wang 称上周被 OpenAI 解雇，并发表公开信，认为原因是“把安全放在公司短期利益之前”。Wang 说她得到的理由是访问了一位高管的邮件，Korbak 称被口头告知问题在于他与 METR 的沟通方式。OpenAI 方面据称表示三人处理机密信息不当（二手）。",
+      "why": "HF 评测逃逸事件（W30、W35）的后续从技术调查转到实验室治理，外部评估机构与实验室内部人员的沟通边界成为争议焦点。",
+      "links": [
+        {
+          "label": "Mikita Balesni on X",
+          "url": "https://x.com/balesni/status/2108262814003687745",
+          "date": "2026-10-09",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-not-much-happened-today-60f/",
+          "date": "2026-10-09",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-10-09",
+      "keywords": [
+        "实验室治理",
+        "METR",
+        "安全研究员"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "Agent 框架",
+      "title": "Claude Managed Agents 动态工作流：单次扇出 1000 个 Agent；决策模型成为品类",
+      "summary": "10-10 Anthropic 将 Claude Managed Agents 动态工作流开放公测：主 Agent 写分阶段计划，每次运行最多扇出 1000 个 Agent 后合并结果，通过 multiagent_20261001 开启，并提醒 token 消耗可能很高。同日多家厂商发布“决策模型”，单次前向输出概率、列表选择或分数等类型化答案，OpenAI Decisions API 在列；以 Jev 为参照的 TypeSafe 称首周 ARR 破 1 亿美元（二手）。 扇出从实验室研究（W37 约 1 万个 Agent）变成可调用的 API 参数；决策模型则给 Agent 路由、评判和守门提供了便宜的“系统一”组件。",
+      "what": "10-10 Anthropic 将 Claude Managed Agents 动态工作流开放公测：主 Agent 写分阶段计划，每次运行最多扇出 1000 个 Agent 后合并结果，通过 multiagent_20261001 开启，并提醒 token 消耗可能很高。同日多家厂商发布“决策模型”，单次前向输出概率、列表选择或分数等类型化答案，OpenAI Decisions API 在列；以 Jev 为参照的 TypeSafe 称首周 ARR 破 1 亿美元（二手）。",
+      "why": "扇出从实验室研究（W37 约 1 万个 Agent）变成可调用的 API 参数；决策模型则给 Agent 路由、评判和守门提供了便宜的“系统一”组件。",
+      "links": [
+        {
+          "label": "ClaudeDevs on X",
+          "url": "https://x.com/ClaudeDevs/status/2108591328732856655",
+          "date": "2026-10-10",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-typesafejev-at-100m-arr-75b/",
+          "date": "2026-10-10",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-10-10",
+      "keywords": [
+        "多 Agent 扇出",
+        "Managed Agents",
+        "决策模型",
+        "Jev"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "模型发布",
+      "title": "Reflection Beam：501B 总参数、23B 激活的开源 MoE",
+      "summary": "从头训练，23.8T token，Apache 2.0 权重本月发布（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Reflection",
+          "url": "https://reflection.ai/blog/introducing-beam",
+          "date": "2026-10-06",
+          "note": "页面无日期，按官方推文日"
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-reflection-beam-501b-a23b/",
+          "date": "2026-10-06",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-10-06",
+      "keywords": [
+        "Beam",
+        "开源权重"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "模型发布",
+      "title": "Claude Haiku 5.5，Sonnet 5.5 降价",
+      "summary": "一年来首次更新 Haiku 档，定价对标 GPT-6 Luna（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-haiku-5-5",
+          "date": "2026-10-08",
+          "note": "页面无日期，按 AINews 报道日"
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-claude-haiku-55-better-than/",
+          "date": "2026-10-08",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-10-08",
+      "keywords": [
+        "Haiku 5.5"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "模型发布",
+      "title": "Mistral Large 4",
+      "summary": "在新的 GB300 集群上训练，评测结果有争议（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-quasi-riemann-hypothesis-openai/",
+          "date": "2026-10-07",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-10-07",
+      "keywords": [
+        "Mistral"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 框架",
+      "title": "OpenAI 与 Ironclad 推进 computer use",
+      "summary": "合同场景的 computer use 合作。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
+          "date": "2026-10-06",
+          "note": ""
+        }
+      ],
+      "date": "2026-10-06",
+      "keywords": [
+        "computer use"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "大厂 Super Agent",
+      "title": "GPT-6 与 Intelligent UI 向所有用户开放",
+      "summary": "ChatGPT 免费层也可用 GPT-6。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/gpt-6-for-everyone",
+          "date": "2026-10-07",
+          "note": ""
+        }
+      ],
+      "date": "2026-10-07",
+      "keywords": [
+        "ChatGPT"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 框架",
+      "title": "Hugging Face ml-intern 实践",
+      "summary": "用 Agent 自己训练出原本不存在的模型。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/building-with-ml-intern",
+          "date": "2026-10-08",
+          "note": ""
+        }
+      ],
+      "date": "2026-10-08",
+      "keywords": [
+        "ml-intern"
+      ],
+      "second_hand_parts": false
+    }
+  ]
+}

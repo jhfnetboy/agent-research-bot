@@ -1,0 +1,319 @@
+{
+  "week": "2026-W20",
+  "range": "2026-05-11 至 2026-05-17",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": true,
+  "theme": "Agent 开发从“调模型”转向“搭平台”：OpenAI 收缩微调 API，可观测性和自改进闭环成为基础设施；供应链攻击开始专门瞄准 AI 开发工具。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "前沿实验室研究",
+      "title": "Thinking Machines 发布 Interaction Models",
+      "summary": "05-11 Thinking Machines 发布 Interaction Models 研究，TML-Interaction-Small 为 276B 总参数、12B 激活的 MoE，从头训练用于实时交互：以 200ms 的时间对齐微轮次同时听、说、看、思考和调用工具，并自建 TimeSpeak、CueSpeak 等时间感知评测（参数与评测细节据 AINews 转述）。 这是对“回合制对话”这一默认接口的挑战。主动提醒、边看边做、后台调用工具这类能力如果成为模型原生能力，Agent 的交互层会从文本轮次变成连续流。",
+      "what": "05-11 Thinking Machines 发布 Interaction Models 研究，TML-Interaction-Small 为 276B 总参数、12B 激活的 MoE，从头训练用于实时交互：以 200ms 的时间对齐微轮次同时听、说、看、思考和调用工具，并自建 TimeSpeak、CueSpeak 等时间感知评测（参数与评测细节据 AINews 转述）。",
+      "why": "这是对“回合制对话”这一默认接口的挑战。主动提醒、边看边做、后台调用工具这类能力如果成为模型原生能力，Agent 的交互层会从文本轮次变成连续流。",
+      "links": [
+        {
+          "label": "Thinking Machines Blog",
+          "url": "https://thinkingmachines.ai/blog/interaction-models/",
+          "date": "2026-05-11",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-thinking-machines-native-interaction/",
+          "date": "2026-05-12",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-11",
+      "keywords": [
+        "Interaction Models",
+        "全双工",
+        "实时多模态",
+        "Thinking Machines"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "Agent 安全",
+      "title": "Mini Shai-Hulud 供应链攻击瞄准 AI 开发工具",
+      "summary": "从 TanStack 开始的 npm/PyPI 投毒扩散到 OpenSearch、Mistral AI、Guardrails AI、UiPath 等包，攻击会写入 .claude/settings.json 和 .vscode/tasks.json 实现持久化，删包后仍能在下次工具事件时重新执行（据 AINews 转述）。05-13 OpenAI 发布对 TanStack npm 供应链攻击的处置说明。 攻击者开始利用编码 Agent 的配置文件和钩子做持久化，Agent 的配置目录变成新的攻击面。依赖 Claude Code、Codex 等本地 Agent 的团队需要把这些文件纳入安全审计。",
+      "what": "从 TanStack 开始的 npm/PyPI 投毒扩散到 OpenSearch、Mistral AI、Guardrails AI、UiPath 等包，攻击会写入 .claude/settings.json 和 .vscode/tasks.json 实现持久化，删包后仍能在下次工具事件时重新执行（据 AINews 转述）。05-13 OpenAI 发布对 TanStack npm 供应链攻击的处置说明。",
+      "why": "攻击者开始利用编码 Agent 的配置文件和钩子做持久化，Agent 的配置目录变成新的攻击面。依赖 Claude Code、Codex 等本地 Agent 的团队需要把这些文件纳入安全审计。",
+      "links": [
+        {
+          "label": "OpenAI: TanStack 事件说明",
+          "url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack",
+          "date": "2026-05-13",
+          "note": ""
+        },
+        {
+          "label": "IntCyberDigest on X",
+          "url": "https://x.com/IntCyberDigest/status/2054166749998661659",
+          "date": "2026-05-12",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-the-end-of-finetuning/",
+          "date": "2026-05-13",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-12",
+      "keywords": [
+        "供应链攻击",
+        "npm",
+        "Claude Code 配置",
+        "持久化"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "后训练",
+      "title": "OpenAI 弃用微调 API，头部 Agent 公司反而加码开源模型 RL 微调",
+      "summary": "AINews 05-13 报道 OpenAI 弃用其微调 API，OpenAI 开发者文档已把 Fine-tuning 归入 Legacy APIs。同一期指出 Cursor、Cognition 等头部编码 Agent 公司增加了对开源模型做 RL 微调的投入（二手）。 后训练在分化：多数应用团队回到提示词和上下文工程，少数有数据和流量的 Agent 公司自己做 RL。闭源 API 的微调入口收缩，开源权重成为做定制后训练的主要底座。",
+      "what": "AINews 05-13 报道 OpenAI 弃用其微调 API，OpenAI 开发者文档已把 Fine-tuning 归入 Legacy APIs。同一期指出 Cursor、Cognition 等头部编码 Agent 公司增加了对开源模型做 RL 微调的投入（二手）。",
+      "why": "后训练在分化：多数应用团队回到提示词和上下文工程，少数有数据和流量的 Agent 公司自己做 RL。闭源 API 的微调入口收缩，开源权重成为做定制后训练的主要底座。",
+      "links": [
+        {
+          "label": "AINews: The End of Finetuning",
+          "url": "https://latent.space/p/ainews-the-end-of-finetuning/",
+          "date": "2026-05-13",
+          "note": "二手汇总"
+        },
+        {
+          "label": "OpenAI 开发者文档：模型弃用",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "date": "2026-05-13",
+          "note": "页面持续更新，日期按 AINews 报道日"
+        }
+      ],
+      "date": "2026-05-13",
+      "keywords": [
+        "微调 API",
+        "RL 微调",
+        "开源权重",
+        "后训练"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "RSI",
+      "title": "RSI 变成创业赛道：Recursive 与 AutoScientist",
+      "summary": "05-13 Recursive 公开亮相，目标是做能自动化科学研究并安全地自我改进的 AI，团队来自开放式学习、AI Scientist 和研究自动化方向（Richard Socher、Josh Tobin 等）。同期 Adaption 发布 AutoScientist，想在前沿实验室之外自动化整个训练研究循环（二手）。 自我改进和研究自动化从实验室内部议题变成独立公司的产品目标，后面几个月“AI 做 AI 研发”的讨论都可以追溯到这一批团队。",
+      "what": "05-13 Recursive 公开亮相，目标是做能自动化科学研究并安全地自我改进的 AI，团队来自开放式学习、AI Scientist 和研究自动化方向（Richard Socher、Josh Tobin 等）。同期 Adaption 发布 AutoScientist，想在前沿实验室之外自动化整个训练研究循环（二手）。",
+      "why": "自我改进和研究自动化从实验室内部议题变成独立公司的产品目标，后面几个月“AI 做 AI 研发”的讨论都可以追溯到这一批团队。",
+      "links": [
+        {
+          "label": "Tim Rocktäschel on X",
+          "url": "https://x.com/_rockt/status/2054491251345391852",
+          "date": "2026-05-13",
+          "note": ""
+        },
+        {
+          "label": "Adaption on X",
+          "url": "https://x.com/adaption_ai/status/2054532113316434061",
+          "date": "2026-05-13",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-codex-rises-claude-meters/",
+          "date": "2026-05-14",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-13",
+      "keywords": [
+        "Recursive",
+        "AutoScientist",
+        "研究自动化",
+        "RSI"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "Agent 框架",
+      "title": "Agent 基础设施化：LangSmith Engine、SmithDB 与 agent-first 的 GitHub App",
+      "summary": "LangChain 发布 SmithDB（专为 Agent trace 设计的数据库）和 LangSmith Engine（读取 trace、聚类失败、定位代码问题并提出修复和评测）。05-14 GitHub 发布面向“Agent 优先”工作流的新 GitHub App，同日 OpenAI 推出随处使用 Codex（含移动端）。 可观测性从被动查看变成自改进闭环；“同时管理多个编码 Agent”的界面被大平台复制，AINews 称之为 Everything is Conductor。",
+      "what": "LangChain 发布 SmithDB（专为 Agent trace 设计的数据库）和 LangSmith Engine（读取 trace、聚类失败、定位代码问题并提出修复和评测）。05-14 GitHub 发布面向“Agent 优先”工作流的新 GitHub App，同日 OpenAI 推出随处使用 Codex（含移动端）。",
+      "why": "可观测性从被动查看变成自改进闭环；“同时管理多个编码 Agent”的界面被大平台复制，AINews 称之为 Everything is Conductor。",
+      "links": [
+        {
+          "label": "LangChain: SmithDB",
+          "url": "https://x.com/LangChain/status/2054658661776244936",
+          "date": "2026-05-14",
+          "note": ""
+        },
+        {
+          "label": "GitHub on X",
+          "url": "https://x.com/github/status/2054959324485628120",
+          "date": "2026-05-14",
+          "note": ""
+        },
+        {
+          "label": "OpenAI: Work with Codex from anywhere",
+          "url": "https://openai.com/index/work-with-codex-from-anywhere",
+          "date": "2026-05-14",
+          "note": ""
+        },
+        {
+          "label": "AINews: Everything is Conductor",
+          "url": "https://latent.space/p/ainews-everything-is-conductor/",
+          "date": "2026-05-15",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-14",
+      "keywords": [
+        "LangSmith",
+        "SmithDB",
+        "GitHub App",
+        "Codex",
+        "可观测性"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 安全",
+      "title": "OpenAI Daybreak 首次亮相",
+      "summary": "面向防御性网络安全的计划，组合 GPT-5.5、Codex 与分级可信访问，含 GPT-5.5-Cyber（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "OpenAI on X",
+          "url": "https://x.com/OpenAI/status/2053939702110269822",
+          "date": "2026-05-12",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-thinking-machines-native-interaction/",
+          "date": "2026-05-12",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-12",
+      "keywords": [
+        "Daybreak",
+        "网络安全"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "评测与基准",
+      "title": "UK AISI：前沿模型可完成的网络任务长度每几个月翻倍",
+      "summary": "Logan Graham 称 Claude Mythos Preview 是首个打通 AISI 两个端到端网络靶场的模型（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "AISI on X",
+          "url": "https://x.com/AISecurityInst/status/2054589758043496567",
+          "date": "2026-05-13",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-codex-rises-claude-meters/",
+          "date": "2026-05-14",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-13",
+      "keywords": [
+        "AISI",
+        "网络能力评测"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "大厂 Super Agent",
+      "title": "Claude 订阅拆分交互式与程序化用量",
+      "summary": "每个订阅附带等额 API 额度用于第三方 harness，开发者视为变相涨价。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "ClaudeDevs on X",
+          "url": "https://x.com/ClaudeDevs/status/2054610152817619388",
+          "date": "2026-05-14",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-codex-rises-claude-meters/",
+          "date": "2026-05-14",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-05-14",
+      "keywords": [
+        "Claude Code",
+        "定价",
+        "harness"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "前沿实验室研究",
+      "title": "OpenAI 总结 Parameter Golf 对 AI 辅助研究的启示",
+      "summary": "复盘用 AI 参与小模型训练竞赛的经验。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/what-parameter-golf-taught-us",
+          "date": "2026-05-12",
+          "note": ""
+        }
+      ],
+      "date": "2026-05-12",
+      "keywords": [
+        "AI 辅助研究"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "RAG 与向量数据库",
+      "title": "jina-embeddings-v5-omni 与 Weaviate v1.37",
+      "summary": "Jina 发布覆盖文本、图像、音频、视频的通用嵌入模型（1.57B/0.95B，兼容 v5-text 索引）；Weaviate 加入按属性的重音折叠、停用词预设和 BM25 分词调试接口。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Jina AI on X",
+          "url": "https://x.com/JinaAI_/status/2054226262047301933",
+          "date": "2026-05-12",
+          "note": ""
+        },
+        {
+          "label": "Weaviate on X",
+          "url": "https://x.com/weaviate_io/status/2055276211681579242",
+          "date": "2026-05-15",
+          "note": ""
+        }
+      ],
+      "date": "2026-05-12",
+      "keywords": [
+        "嵌入模型",
+        "BM25",
+        "Weaviate"
+      ],
+      "second_hand_parts": false
+    }
+  ]
+}

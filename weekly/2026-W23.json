@@ -1,0 +1,235 @@
+{
+  "week": "2026-W23",
+  "range": "2026-06-01 至 2026-06-07",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": true,
+  "theme": "Anthropic 公开称看到 RSI 的早期迹象并给出内部数字；开源 Agent 模型密集发布，NVIDIA 连训练数据和奖励模型一起开放；OpenAI 收缩 Agent Builder 和 Evals 平台。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "RSI",
+      "title": "Anthropic：When AI builds itself，RSI 的早期迹象",
+      "summary": "06-04 Anthropic 发文称当前系统已显示递归自我改进的早期迹象：Anthropic 合并代码中 80% 以上由 Claude 编写，工程师每季度交付代码量约为以往的 8 倍，内部开放式工程任务成功率半年内从约 26% 升到 76%；在“加速小模型训练脚本”测试中 Claude Opus 4 平均约 3 倍加速，Mythos Preview 约 52 倍（数字据 Anthropic 推文与 AINews 转述）。 头部实验室第一次用具体内部指标描述“AI 加速 AI 研发”。这条线后来延续到 METR 量化 Anthropic 进步速度（W45）和 Fable 5.2 在训练中压低 RSI 相关能力（W46）。",
+      "what": "06-04 Anthropic 发文称当前系统已显示递归自我改进的早期迹象：Anthropic 合并代码中 80% 以上由 Claude 编写，工程师每季度交付代码量约为以往的 8 倍，内部开放式工程任务成功率半年内从约 26% 升到 76%；在“加速小模型训练脚本”测试中 Claude Opus 4 平均约 3 倍加速，Mythos Preview 约 52 倍（数字据 Anthropic 推文与 AINews 转述）。",
+      "why": "头部实验室第一次用具体内部指标描述“AI 加速 AI 研发”。这条线后来延续到 METR 量化 Anthropic 进步速度（W45）和 Fable 5.2 在训练中压低 RSI 相关能力（W46）。",
+      "links": [
+        {
+          "label": "Anthropic Institute: When AI builds itself",
+          "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+          "date": "2026-06-04",
+          "note": "页面无日期，按官方推文日"
+        },
+        {
+          "label": "Anthropic on X",
+          "url": "https://x.com/AnthropicAI/status/2062568862479208923",
+          "date": "2026-06-04",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-not-much-happened-today-7a8/",
+          "date": "2026-06-05",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-06-04",
+      "keywords": [
+        "RSI",
+        "AI 研发自动化",
+        "Mythos Preview",
+        "内部指标"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "模型发布与后训练",
+      "title": "NVIDIA Nemotron 3 Ultra：权重、合成数据、奖励检查点和训练配方全开放",
+      "summary": "06-04 NVIDIA 发布 Nemotron 3 Ultra，550B 总参数、55B 激活的混合 Mamba/注意力 MoE，1M 上下文，主打长时程 Agent 负载，称 Agent 任务最多快 5 倍、成本低 30%；权重、合成数据、奖励模型检查点、量化版本和训练配方以 OpenMDW 1.1 许可开放（二手）。同周 Computex 发布 Cosmos 3 世界模型。 开放的不只是权重，还有做后训练所需的数据和奖励模型，这让第三方复现和改进 Agent 后训练成为可能。",
+      "what": "06-04 NVIDIA 发布 Nemotron 3 Ultra，550B 总参数、55B 激活的混合 Mamba/注意力 MoE，1M 上下文，主打长时程 Agent 负载，称 Agent 任务最多快 5 倍、成本低 30%；权重、合成数据、奖励模型检查点、量化版本和训练配方以 OpenMDW 1.1 许可开放（二手）。同周 Computex 发布 Cosmos 3 世界模型。",
+      "why": "开放的不只是权重，还有做后训练所需的数据和奖励模型，这让第三方复现和改进 Agent 后训练成为可能。",
+      "links": [
+        {
+          "label": "NVIDIA on X",
+          "url": "https://x.com/nvidia/status/2062522316672667770",
+          "date": "2026-06-04",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-not-much-happened-today-7a8/",
+          "date": "2026-06-05",
+          "note": "二手汇总"
+        },
+        {
+          "label": "AINews: Cosmos 3",
+          "url": "https://latent.space/p/ainews-nvidia-cosmos-3-nemotron-3/",
+          "date": "2026-06-02",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-06-02",
+      "keywords": [
+        "Nemotron 3 Ultra",
+        "开放训练数据",
+        "奖励模型",
+        "Mamba"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "模型发布",
+      "title": "Microsoft Build：7 个自研 MAI 模型和 100 多页技术报告",
+      "summary": "06-02 Microsoft 在 Build 发布 7 个从头预训练的 MAI 模型，包括 MAI-Thinking-1 和 MAI-Code-1-Flash，并公开 100 多页技术报告。讨论最多的是 RL 直接从没有推理数据的检查点起步，AIME25 从不到 20% 提到 95% 以上（二手）。Build 同时把 Windows 定位为 Agent 运行时，推出 GitHub Copilot 应用。 又一家大厂具备自研前沿级模型的能力，并公开了完整的预训练、RL 和数据策展细节，是后训练研究难得的一手材料。",
+      "what": "06-02 Microsoft 在 Build 发布 7 个从头预训练的 MAI 模型，包括 MAI-Thinking-1 和 MAI-Code-1-Flash，并公开 100 多页技术报告。讨论最多的是 RL 直接从没有推理数据的检查点起步，AIME25 从不到 20% 提到 95% 以上（二手）。Build 同时把 Windows 定位为 Agent 运行时，推出 GitHub Copilot 应用。",
+      "why": "又一家大厂具备自研前沿级模型的能力，并公开了完整的预训练、RL 和数据策展细节，是后训练研究难得的一手材料。",
+      "links": [
+        {
+          "label": "MAI 技术报告（PDF）",
+          "url": "https://microsoft.ai/wp-content/uploads/2026/06/main_20260602_2.pdf",
+          "date": "2026-06-02",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-microsoft-build-mai-thinking/",
+          "date": "2026-06-03",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-06-02",
+      "keywords": [
+        "MAI-Thinking-1",
+        "技术报告",
+        "RL from scratch",
+        "Windows Agent"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "模型发布",
+      "title": "开源 Agent 模型扎堆：MiniMax M3、Qwen3.7-Plus、Mellum2",
+      "summary": "06-01 MiniMax 发布开放权重多模态 Agent 与编码模型 M3，1M 上下文，自报 SWE-Bench Pro 59.0%、Terminal Bench 2.1 66.0%、MCP Atlas 74.2%，多家推理服务商首日接入。同期 Qwen3.7-Plus 上线，JetBrains 开源 12B MoE 代码模型 Mellum2。 开源模型开始直接用 MCP Atlas、Terminal Bench 这类 Agent 基准做主卖点，开源侧的竞争焦点从聊天转向工具调用和长任务。",
+      "what": "06-01 MiniMax 发布开放权重多模态 Agent 与编码模型 M3，1M 上下文，自报 SWE-Bench Pro 59.0%、Terminal Bench 2.1 66.0%、MCP Atlas 74.2%，多家推理服务商首日接入。同期 Qwen3.7-Plus 上线，JetBrains 开源 12B MoE 代码模型 Mellum2。",
+      "why": "开源模型开始直接用 MCP Atlas、Terminal Bench 这类 Agent 基准做主卖点，开源侧的竞争焦点从聊天转向工具调用和长任务。",
+      "links": [
+        {
+          "label": "MiniMax on X",
+          "url": "https://x.com/MiniMax_AI/status/2061425142795034794",
+          "date": "2026-06-01",
+          "note": ""
+        },
+        {
+          "label": "Hugging Face: Mellum2",
+          "url": "https://huggingface.co/blog/JetBrains/mellum2-launch",
+          "date": "2026-06-01",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-nvidia-cosmos-3-nemotron-3/",
+          "date": "2026-06-02",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-06-01",
+      "keywords": [
+        "MiniMax M3",
+        "MCP Atlas",
+        "开源权重",
+        "Mellum2"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 框架",
+      "title": "OpenAI 宣布弃用 Agent Builder 和 Evals 平台",
+      "summary": "06-03 通知开发者，Agent Builder 11-30 关停，推荐改用 Agents SDK 或 ChatGPT Workspace Agents；Evals 平台同步弃用，迁移到 Promptfoo。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "OpenAI 开发者文档：弃用",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "date": "2026-06-03",
+          "note": ""
+        }
+      ],
+      "date": "2026-06-03",
+      "keywords": [
+        "Agent Builder",
+        "Evals",
+        "Agents SDK"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "RAG 与记忆",
+      "title": "ChatGPT 记忆功能 Dreaming",
+      "summary": "OpenAI 介绍更好的记忆机制。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/chatgpt-memory-dreaming",
+          "date": "2026-06-04",
+          "note": ""
+        }
+      ],
+      "date": "2026-06-04",
+      "keywords": [
+        "记忆"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 框架",
+      "title": "Holo3.1 本地 computer use Agent",
+      "summary": "H Company 发布快速、可本地运行的 computer use 模型。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/Hcompany/holo31",
+          "date": "2026-06-02",
+          "note": ""
+        }
+      ],
+      "date": "2026-06-02",
+      "keywords": [
+        "computer use",
+        "本地"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "Agent 框架",
+      "title": "hf CLI 按 Agent 使用习惯重新设计",
+      "summary": "Hugging Face 把命令行工具优化为便于 Agent 调用。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/hf-cli-for-agents",
+          "date": "2026-06-04",
+          "note": ""
+        }
+      ],
+      "date": "2026-06-04",
+      "keywords": [
+        "CLI",
+        "Agent 友好"
+      ],
+      "second_hand_parts": false
+    }
+  ]
+}

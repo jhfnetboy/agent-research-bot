@@ -1,0 +1,212 @@
+{
+  "week": "2026-W38",
+  "range": "2026-09-14 至 2026-09-20",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "complete": true,
+  "theme": "“为前沿定节奏”进入第二轮：Dario Amodei 提出嵌入式第三方评估员并由 Anthropic 先行承诺，AEF-1 为独立评测立标准；决策模型 Jev 走红，研究型多 Agent harness 走向模块化。",
+  "items": [
+    {
+      "kind": "major",
+      "topic": "Agent 安全",
+      "title": "Dario Amodei：We Must Pace the Frontier，嵌入式评估员",
+      "summary": "Dario Amodei 发表个人文章 We Must Pace the Frontier，提出三层方案：每家前沿公司给第三方评估团队（如 METR）类似员工的持续访问权，核查安全承诺、报告事件、评估训练流程的对齐；民主国家的前沿公司协调安全标准和进展速度上限；再与威权国家尝试全球协调。Anthropic 单方面先行承诺第一步，包括工位、门禁和公司电脑（据 AINews 引述，AINews 09-15 报道）。 这把 W31 联署声明落到了可执行的机制上。嵌入式评估员会直接审视训练管线和内部 Agent 部署，W45 METR 能拿到 Anthropic 内部数据做 AI 研发加速评估，正是这一机制的产物。",
+      "what": "Dario Amodei 发表个人文章 We Must Pace the Frontier，提出三层方案：每家前沿公司给第三方评估团队（如 METR）类似员工的持续访问权，核查安全承诺、报告事件、评估训练流程的对齐；民主国家的前沿公司协调安全标准和进展速度上限；再与威权国家尝试全球协调。Anthropic 单方面先行承诺第一步，包括工位、门禁和公司电脑（据 AINews 引述，AINews 09-15 报道）。",
+      "why": "这把 W31 联署声明落到了可执行的机制上。嵌入式评估员会直接审视训练管线和内部 Agent 部署，W45 METR 能拿到 Anthropic 内部数据做 AI 研发加速评估，正是这一机制的产物。",
+      "links": [
+        {
+          "label": "Dario Amodei: We Must Pace the Frontier",
+          "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+          "date": "2026-09-15",
+          "note": "页面只标 2026 年 9 月，按 AINews 报道日"
+        },
+        {
+          "label": "AINews: AEF-1 standard",
+          "url": "https://latent.space/p/ainews-aef-1-standard-emerges-for/",
+          "date": "2026-09-15",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-09-15",
+      "keywords": [
+        "Pace the Frontier",
+        "嵌入式评估员",
+        "METR",
+        "治理"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "评测与基准",
+      "title": "AEF-1：独立第三方 AI 评测的基线标准",
+      "summary": "09-14 AI Evaluator Forum 发布 AEF-1，为独立第三方 AI 评测规定访问权限、利益冲突、资金关系、回避和透明度等基线要求（二手）。09-16 OpenAI 发布模型失准报告框架。 评测方是否真正独立，是“为前沿定节奏”能否被验证的前提。对 Agent 开发者而言，第三方评测报告的可信度有了可对照的标准。",
+      "what": "09-14 AI Evaluator Forum 发布 AEF-1，为独立第三方 AI 评测规定访问权限、利益冲突、资金关系、回避和透明度等基线要求（二手）。09-16 OpenAI 发布模型失准报告框架。",
+      "why": "评测方是否真正独立，是“为前沿定节奏”能否被验证的前提。对 Agent 开发者而言，第三方评测报告的可信度有了可对照的标准。",
+      "links": [
+        {
+          "label": "AI Evaluator Forum on X",
+          "url": "https://x.com/aievalforum/status/2099531284963893668",
+          "date": "2026-09-14",
+          "note": ""
+        },
+        {
+          "label": "OpenAI: 失准报告框架",
+          "url": "https://openai.com/index/model-misalignment-reporting-framework",
+          "date": "2026-09-17",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-aef-1-standard-emerges-for/",
+          "date": "2026-09-15",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-09-14",
+      "keywords": [
+        "AEF-1",
+        "第三方评测",
+        "失准报告"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "模型发布",
+      "title": "Jev：为“决策”而非文本生成训练的模型",
+      "summary": "09-16 TypeSafe 发布 Jev，称是用 RLCD 训练、为决策优化而非生成文本的前沿模型，速度快 20 到 200 倍、成本低 40 到 400 倍，输出 token 免费；主要用途是替代 Agent 管线中做分类、路由、判断的 LLM 调用。发布视频两天内播放 3600 万次，随后出现多个复刻（二手）。 Agent 系统中大量调用其实是“选哪个”的决策，把这类调用交给专用的快速模型，可以显著降低多 Agent 系统的延迟和成本。",
+      "what": "09-16 TypeSafe 发布 Jev，称是用 RLCD 训练、为决策优化而非生成文本的前沿模型，速度快 20 到 200 倍、成本低 40 到 400 倍，输出 token 免费；主要用途是替代 Agent 管线中做分类、路由、判断的 LLM 调用。发布视频两天内播放 3600 万次，随后出现多个复刻（二手）。",
+      "why": "Agent 系统中大量调用其实是“选哪个”的决策，把这类调用交给专用的快速模型，可以显著降低多 Agent 系统的延迟和成本。",
+      "links": [
+        {
+          "label": "Jev 发布 on X",
+          "url": "https://x.com/CompleteSkeptic/status/2099925682726002904",
+          "date": "2026-09-16",
+          "note": ""
+        },
+        {
+          "label": "AINews: Jev",
+          "url": "https://latent.space/p/ainews-jev-a-system-one-model-that/",
+          "date": "2026-09-16",
+          "note": "二手汇总"
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-here-are-6-clones-of-jev-in/",
+          "date": "2026-09-19",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-09-16",
+      "keywords": [
+        "Jev",
+        "决策模型",
+        "路由",
+        "RLCD"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "major",
+      "topic": "前沿实验室研究",
+      "title": "研究型多 Agent harness 模块化：Stellar Colosseum 与 Agora",
+      "summary": "09-18 Google DeepMind 发布 Stellar Colosseum，一个与模型无关的多 Agent 数学与理论计算机 harness，把策略、拆解、子问题求解和验证分开，称 Codeforces 4263、TCS-Bench 71.0%。NVIDIA 相关的 Agora 用 Git 提交作为 13 个 worker 在 12 天内的共享记忆（二手）。同周 Periodic Labs 发布在实体实验室闭环中训练的材料科学模型 Neon。 多 Agent 科研系统的结构开始标准化：分工、共享记忆、独立验证。Git 作为共享记忆也与 Axiom 通过 GitHub 合并 Lean 证明（W44）的做法相同。",
+      "what": "09-18 Google DeepMind 发布 Stellar Colosseum，一个与模型无关的多 Agent 数学与理论计算机 harness，把策略、拆解、子问题求解和验证分开，称 Codeforces 4263、TCS-Bench 71.0%。NVIDIA 相关的 Agora 用 Git 提交作为 13 个 worker 在 12 天内的共享记忆（二手）。同周 Periodic Labs 发布在实体实验室闭环中训练的材料科学模型 Neon。",
+      "why": "多 Agent 科研系统的结构开始标准化：分工、共享记忆、独立验证。Git 作为共享记忆也与 Axiom 通过 GitHub 合并 Lean 证明（W44）的做法相同。",
+      "links": [
+        {
+          "label": "Stellar Colosseum on X",
+          "url": "https://x.com/mirrokni/status/2100660772393320476",
+          "date": "2026-09-18",
+          "note": ""
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-not-much-happened-today-612/",
+          "date": "2026-09-18",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-09-18",
+      "keywords": [
+        "Stellar Colosseum",
+        "多 Agent",
+        "共享记忆",
+        "AI for Science"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "评测与基准",
+      "title": "Agent 这次做对了，下次还能做对吗",
+      "summary": "IBM Research 讨论 Agent 结果的一致性评测。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+          "date": "2026-09-15",
+          "note": ""
+        }
+      ],
+      "date": "2026-09-15",
+      "keywords": [
+        "一致性",
+        "Agent 评测"
+      ],
+      "second_hand_parts": false
+    },
+    {
+      "kind": "other",
+      "topic": "大厂 Super Agent",
+      "title": "Gemini 3.8 Live 实时语音 Agent",
+      "summary": "Google 推进实时语音 Agent（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-jev-a-system-one-model-that/",
+          "date": "2026-09-16",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-09-16",
+      "keywords": [
+        "语音 Agent",
+        "Gemini"
+      ],
+      "second_hand_parts": true
+    },
+    {
+      "kind": "other",
+      "topic": "大厂 Super Agent",
+      "title": "Steve Yegge 关停 Gas Town，Agent 生产力的现实检验",
+      "summary": "重度使用编码 Agent 的开发者反思实际产出（二手）。",
+      "what": null,
+      "why": null,
+      "links": [
+        {
+          "label": "Steve Yegge",
+          "url": "https://yegge.ai/essays/the-shape-of-things-to-come/",
+          "date": "2026-09-17",
+          "note": "按 AINews 报道日"
+        },
+        {
+          "label": "AINews",
+          "url": "https://latent.space/p/ainews-reality-checks-on-ai-news/",
+          "date": "2026-09-17",
+          "note": "二手汇总"
+        }
+      ],
+      "date": "2026-09-17",
+      "keywords": [
+        "编码 Agent",
+        "现实检验"
+      ],
+      "second_hand_parts": true
+    }
+  ]
+}

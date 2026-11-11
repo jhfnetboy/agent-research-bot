@@ -508,10 +508,33 @@ def load_overviews(data_dir: Path) -> list[dict]:
     return overviews
 
 
+def range_dates(text: str) -> list[str]:
+    return re.findall(r"\d{4}-\d{2}-\d{2}", text or "")
+
+
 def range_end_date(text: str) -> str:
     """Last YYYY-MM-DD in a coverage string, used as the card's sort date."""
-    found = re.findall(r"\d{4}-\d{2}-\d{2}", text or "")
+    found = range_dates(text)
     return found[-1] if found else ""
+
+
+def range_start_date(text: str) -> str:
+    found = range_dates(text)
+    return found[0] if found else ""
+
+
+def overview_short_title(overview: dict) -> str:
+    title = overview.get("title") or ""
+    if "半年" in title:
+        return "半年总览"
+    if "四周" in title:
+        return "四周总览"
+    n = len(overview.get("weeks") or [])
+    if n >= 20:
+        return "半年总览"
+    if 3 <= n <= 6:
+        return "四周总览"
+    return "总览"
 
 
 def weekly_sort_date(week: dict) -> str:
@@ -533,21 +556,34 @@ def overview_sort_date(overview: dict) -> str:
 
 
 def stream_sort_key(entry: dict) -> tuple:
-    # Newest date first; on the same date, overview then weekly report then daily.
+    # Newest end date first. Same day: longer-span overview first, then weekly, then daily.
     rank = {"overview": 0, "weekly": 1, "daily": 2}
-    return (entry.get("date") or "", -rank.get(entry.get("kind") or "", 9))
+
+    def ordinal(value: str) -> int:
+        try:
+            return datetime.strptime(value, "%Y-%m-%d").toordinal()
+        except Exception:
+            return 0
+
+    return (
+        -ordinal(entry.get("date") or ""),
+        rank.get(entry.get("kind") or "", 9),
+        entry.get("start") or "9999-12-31",
+    )
 
 
 def sort_stream(entries: list[dict]) -> list[dict]:
-    return sorted(entries, key=stream_sort_key, reverse=True)
+    return sorted(entries, key=stream_sort_key)
 
 
 def weekly_stream_entries(weeklies: list[dict], overviews: list[dict]) -> list[dict]:
     entries: list[dict] = []
     for ov in overviews:
         date = overview_sort_date(ov)
+        start = range_start_date(ov.get("range") or "")
         slug = ov.get("_slug") or "overview"
-        title = ov.get("title") or "四周总览"
+        title = (ov.get("title") or "").strip()
+        short = overview_short_title(ov)
         summary_bits = []
         if ov.get("range"):
             summary_bits.append(f"覆盖 {ov['range']}")
@@ -560,14 +596,15 @@ def weekly_stream_entries(weeklies: list[dict], overviews: list[dict]) -> list[d
             {
                 "kind": "overview",
                 "date": date,
+                "start": start,
                 "week": week_key(date) if date else "",
                 "card": {
-                    "title": "四周总览",
+                    "title": short,
                     "slug_href": f"weekly/{slug}/",
-                    "summary": summary or title,
+                    "summary": summary or title or short,
                     "tags": [],
                     "badges": ["周报", "总览"],
-                    "placeholder": "四周总览",
+                    "placeholder": short,
                     "datetime_value": date,
                 },
             }
@@ -575,6 +612,7 @@ def weekly_stream_entries(weeklies: list[dict], overviews: list[dict]) -> list[d
     for week in weeklies:
         key = week["week"]
         date = weekly_sort_date(week)
+        start = range_start_date(week.get("range") or "")
         theme = (week.get("theme") or "").strip()
         coverage = (week.get("range") or "").strip()
         n = len(week.get("items") or [])
@@ -589,6 +627,7 @@ def weekly_stream_entries(weeklies: list[dict], overviews: list[dict]) -> list[d
             {
                 "kind": "weekly",
                 "date": date,
+                "start": start,
                 "week": key,
                 "card": {
                     "title": key,
@@ -606,7 +645,7 @@ def weekly_stream_entries(weeklies: list[dict], overviews: list[dict]) -> list[d
 
 def daily_stream_entries(days: list[dict]) -> list[dict]:
     return [
-        {"kind": "daily", "date": day["date"], "week": week_key(day["date"]), "day": day}
+        {"kind": "daily", "date": day["date"], "start": day["date"], "week": week_key(day["date"]), "day": day}
         for day in days
     ]
 
@@ -864,7 +903,8 @@ def overview_week_block(entry: dict, root: str) -> str:
 
 
 def render_overview(overview: dict, root: str) -> str:
-    title = (overview.get("title") or "四周总览").strip()
+    title = (overview.get("title") or overview_short_title(overview)).strip()
+    short = overview_short_title(overview)
     coverage = (overview.get("range") or "").strip()
     note = (overview.get("note") or "").strip()
     tz = (overview.get("timezone") or "Asia/Bangkok (UTC+7)").strip()
@@ -885,8 +925,9 @@ def render_overview(overview: dict, root: str) -> str:
             f'<article class="item"><h3>{i}. {esc(trend.get("title") or "")}</h3>'
             f'<p class="note">{esc(trend.get("text") or "")}</p></article>'
         )
+    trends_label = short[:-2] + "趋势" if short.endswith("总览") else "趋势"
     trends_html = (
-        f'<section class="topic"><h2>四周趋势</h2>{"".join(trends)}</section>' if trends else ""
+        f'<section class="topic"><h2>{esc(trends_label)}</h2>{"".join(trends)}</section>' if trends else ""
     )
     gaps = [f"<li>{esc(g)}</li>" for g in (overview.get("gaps") or []) if str(g).strip()]
     gaps_html = (
@@ -906,7 +947,7 @@ def render_overview(overview: dict, root: str) -> str:
     {nav_html(root, "weekly")}
     <a class="back" href="{esc(root)}weekly/">返回周报</a>
     <p class="eyebrow">Weekly Report</p>
-    <time{time_attr}>四周总览</time>
+    <time{time_attr}>{esc(short)}</time>
     <h1>{esc(title)}</h1>
     <p class="lede">{esc(lede)}</p>
   </header>

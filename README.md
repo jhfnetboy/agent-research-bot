@@ -11,7 +11,7 @@ AI Agent 开发每日研究日报，以及它的 Cloudflare Pages 卡片站。�
 - `preferences.md`：用户偏好（选题、长度、屏蔽话题等）
 - `digests/YYYY-MM-DD.md`：当天日报全文
 - `digests/YYYY-MM-DD.json`：当天结构化数据，站点从这里生成
-- `weekly/YYYY-Www.md` / `weekly/YYYY-Www.json`：按自然周汇总的周报；总览文件为 `weekly/2026-W43_W46-overview.md` 与对应 JSON
+- `weekly/YYYY-Www.md` / `weekly/YYYY-Www.json`：按自然周汇总的周报；总览文件如 `weekly/2026-W43_W46-overview`（四周）和 `weekly/2026-W20_W46-overview`（半年）及其对应 JSON
 - `scripts/weekly_data.py` 与 `scripts/build_weekly.py`：周报数据与生成脚本
 - `site/build.py`：读取 `digests/*.json` 和 `weekly/*.json`，生成 `site/dist/` 纯静态页面（零依赖，Python 3）
 - `site/assets/`：从真实新闻来源下载的配图，JSON 里记录出处
@@ -26,7 +26,7 @@ AI Agent 开发每日研究日报，以及它的 Cloudflare Pages 卡片站。�
 - 首页：最新一周的卡片流，周报和日报用同一卡片格式按时间倒序排列（周报按当周结束日或已覆盖的最后一天排序，同一天周报在日报前面，周报卡片标“周报”）；上一周 / 下一周导航
 - `weeks/YYYY-Www/`：首页按 ISO 周翻页（周一至周日），该周的周报卡片也出现在对应周页面
 - `days/YYYY-MM-DD/`：当天详情页，按 topic 分组列出每条的标题、概述、链接和日期
-- `weekly/`：周报栏目首页，最新一周在前；`weekly/YYYY-Www/` 为当周详情，条目含标题、概述和带来源日期的链接；`weekly/2026-W43_W46-overview/` 为四周总览
+- `weekly/`：周报栏目首页，最新一周在前；`weekly/YYYY-Www/` 为当周详情，条目含标题、概述和带来源日期的链接；`weekly/2026-W20_W46-overview/` 为半年总览，`weekly/2026-W43_W46-overview/` 为四周总览
 - `archive/`：按月归档；`about/`：关于与完整来源
 
 ## JSON 格式
