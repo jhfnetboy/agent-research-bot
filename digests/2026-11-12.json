@@ -1,0 +1,350 @@
+{
+  "date": "2026-11-12",
+  "coverage": "约 2026-11-11 至 2026-11-12 上午（Asia/Bangkok UTC+7）",
+  "keywords": [
+    "AutoR&D 与 RSI",
+    "AWS Emulator",
+    "Gemini Decisions API",
+    "Agent 准入之争",
+    "MCP 发布节奏"
+  ],
+  "summary": "Salesforce SFR-AutoR&D 在生产中自主改进嵌入模型，Anthropic 路演把 RSI 写进算力叙事；AWS 发布由 Agent 写成的本地 AWS Emulator；Google 推出给 Agent 做路由和护栏的 Decisions API；United Airlines 封禁第三方个人 Agent。",
+  "image": {
+    "local_path": "assets/2026-11-12.jpg",
+    "source_url": "https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html",
+    "credit": "All Things Distributed"
+  },
+  "items": [
+    {
+      "topic": "重点：Agent 做研发与 RSI",
+      "title": "Salesforce SFR-AutoR&D：自主改进生产嵌入模型",
+      "summary": "两个 Agent（AutoR&D-Engineer、TrainForge）自提假设、做对照实验，只保留有证据的改进；产出 SFR-Embedding v4，MTEB 检索 nDCG@10 提高 6.13 分，约 80 小时；另一轮吞吐 +36%、延迟 -17%。",
+      "note": "两个 Agent（AutoR&D-Engineer、TrainForge）自提假设、做对照实验，只保留有证据的改进；产出 SFR-Embedding v4，MTEB 检索 nDCG@10 提高 6.13 分，约 80 小时；另一轮吞吐 +36%、延迟 -17%。",
+      "url": "https://www.salesforce.com/news/stories/agents-that-improve-ai-models/",
+      "date": "2026-11-11",
+      "keywords": [
+        "RSI",
+        "AutoR&D",
+        "嵌入模型"
+      ]
+    },
+    {
+      "topic": "重点：Agent 做研发与 RSI",
+      "title": "Anthropic 路演：Mythos 三天把 Claude 移植到 AMD，RSI 进入算力叙事",
+      "summary": "Tom Brown 称几乎 100% kernel 由 Claude 移植或编写，以往需几十名工程师数月；并称接近 RSI 时 Claude 将自行发现算力乘数。",
+      "note": "Tom Brown 称几乎 100% kernel 由 Claude 移植或编写，以往需几十名工程师数月；并称接近 RSI 时 Claude 将自行发现算力乘数。",
+      "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+      "date": "2026-11-11",
+      "keywords": [
+        "RSI",
+        "Anthropic",
+        "算力"
+      ]
+    },
+    {
+      "topic": "重点：Agent 做研发与 RSI",
+      "title": "S-1 写明 Autonomy 2 阈值已触及（二手）",
+      "summary": "据 AINews 汇总：按 AI 研发加速条件判定触及，但非基于当前模型；Vals RSI Index 中 Fable 5.2 为 37.8、Opus 5.5 为 37.3。",
+      "note": "据 AINews 汇总：按 AI 研发加速条件判定触及，但非基于当前模型；Vals RSI Index 中 Fable 5.2 为 37.8、Opus 5.5 为 37.3。",
+      "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+      "date": "2026-11-11",
+      "keywords": [
+        "RSI",
+        "Anthropic",
+        "安全"
+      ]
+    },
+    {
+      "topic": "重点：AWS Emulator 与 Agent 验证环境",
+      "title": "AWS Emulator：Agent 写出的本地 AWS",
+      "summary": "400+ Smithy API 模型、200+ 服务，全部代码由 Agent 编写测试，CC0 开源；先对真实 AWS 校准 fidelity tests，再让模拟器通过，合并门禁含多个对抗式安全 Agent。",
+      "note": "400+ Smithy API 模型、200+ 服务，全部代码由 Agent 编写测试，CC0 开源；先对真实 AWS 校准 fidelity tests，再让模拟器通过，合并门禁含多个对抗式安全 Agent。",
+      "url": "https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html",
+      "date": "2026-11-11",
+      "keywords": [
+        "AWS Emulator",
+        "验证",
+        "编码 Agent"
+      ]
+    },
+    {
+      "topic": "重点：AWS Emulator 与 Agent 验证环境",
+      "title": "Swami：有了规格和测试环境，重写 Paxos 复制引擎从四个月变两小时",
+      "summary": "前四晚 Agent 无法检查结果；工程师的职责转为构建规格、测试和合并门禁。",
+      "note": "前四晚 Agent 无法检查结果；工程师的职责转为构建规格、测试和合并门禁。",
+      "url": "https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html",
+      "date": "2026-11-11",
+      "keywords": [
+        "工程实践",
+        "合并门禁"
+      ]
+    },
+    {
+      "topic": "重点：Gemini Decisions API",
+      "title": "Gemini Decisions API 与 gemini-decision-1",
+      "summary": "一次前向给封闭选项打分，最多 1000 题、256K 多模态输入，150 到 250 ms，$0.10 每百万输入 token，输出不计费；用于工具选择、模型路由、策略检查和 MCP 工具安全层。",
+      "note": "一次前向给封闭选项打分，最多 1000 题、256K 多模态输入，150 到 250 ms，$0.10 每百万输入 token，输出不计费；用于工具选择、模型路由、策略检查和 MCP 工具安全层。",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "date": "2026-11-11",
+      "keywords": [
+        "Gemini Decisions API",
+        "路由",
+        "决策模型"
+      ]
+    },
+    {
+      "topic": "重点：Gemini Decisions API",
+      "title": "决策模型趋势：Transformers model.decide()、Amazon 工单打标（二手）",
+      "summary": "据 AINews 汇总：Amazon 换用决策模型后同准确率快 4.5 倍、便宜 44 倍。",
+      "note": "据 AINews 汇总：Amazon 换用决策模型后同准确率快 4.5 倍、便宜 44 倍。",
+      "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+      "date": "2026-11-11",
+      "keywords": [
+        "决策模型"
+      ]
+    },
+    {
+      "topic": "重点：Agent 准入之争",
+      "title": "United Airlines 禁止第三方个人 AI Agent 代订机票",
+      "summary": "理由是凭证安全、意外购买和值机合规；将通过自有平台和旅行社、聚合平台执行限制。",
+      "note": "理由是凭证安全、意外购买和值机合规；将通过自有平台和旅行社、聚合平台执行限制。",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "date": "2026-11-11",
+      "keywords": [
+        "Agent 准入",
+        "消费级 Agent"
+      ]
+    },
+    {
+      "topic": "重点：Agent 准入之争",
+      "title": "背景：Amazon 屏蔽 Meta Muse，Walmart 与之合作",
+      "summary": "Expedia、Booking 与 OpenAI 合作，平台态度分化。",
+      "note": "Expedia、Booking 与 OpenAI 合作，平台态度分化。",
+      "url": "https://www.cnbc.com/2026/11/11/united-airlines-ai-agents.html",
+      "date": "2026-11-11",
+      "keywords": [
+        "Agent 准入"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Qwen4-Max 限时预览",
+      "summary": "1M 上下文，兼容 OpenAI 和 Anthropic API，仅 Token Plan，11 月 25 日后下线；无参数量和基准。",
+      "note": "1M 上下文，兼容 OpenAI 和 Anthropic API，仅 Token Plan，11 月 25 日后下线；无参数量和基准。",
+      "url": "https://www.gadgetpilipinas.net/2026/11/qwen4-max-preview-1m-context/",
+      "date": "2026-11-12",
+      "keywords": [
+        "Qwen4",
+        "模型发布"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Databricks 二代 Genie：常驻企业 Agent",
+      "summary": "自拆子 Agent、跟进缺失输入、通过收件箱和邮件找人决策，配 Genie Ontology。",
+      "note": "自拆子 Agent、跟进缺失输入、通过收件箱和邮件找人决策，配 Genie Ontology。",
+      "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-launches-new-always-genie-autonomous-ai-complex",
+      "date": "2026-11-11",
+      "keywords": [
+        "Super Agent",
+        "企业 Agent"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "MCP 规范改为每半年发布，下一版 2027-03-30",
+      "summary": "3 月和 9 月最后一个周二发布，未就绪提案顺延。",
+      "note": "3 月和 9 月最后一个周二发布，未就绪提案顺延。",
+      "url": "https://blog.modelcontextprotocol.io/posts/mcp-release-cycle/",
+      "date": "2026-11-11",
+      "keywords": [
+        "MCP",
+        "协议"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "MCP 实验性文件上传下载扩展",
+      "summary": "io.modelcontextprotocol/files，适用 2026-07-28 及之后版本，目标年底稳定。",
+      "note": "io.modelcontextprotocol/files，适用 2026-07-28 及之后版本，目标年底稳定。",
+      "url": "https://blog.modelcontextprotocol.io/posts/exploring-file-uploads-and-downloads-in-mcp/",
+      "date": "2026-11-10",
+      "keywords": [
+        "MCP"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Google：MCP 与 Agent Skills 进入 AAIF",
+      "summary": "回顾 MCP 在 2026-07-28 规范中转为无状态模型的过程。",
+      "note": "回顾 MCP 在 2026-07-28 规范中转为无状态模型的过程。",
+      "url": "https://opensource.googleblog.com/2026/11/scaling-ai-agents-open-standards-mcp-aaif.html",
+      "date": "2026-11-11",
+      "keywords": [
+        "MCP",
+        "Agent Skills"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Anthropic 使用政策 11 月 12 日生效（二手）",
+      "summary": "支持地区政策覆盖 Claude Code 与云平台，按实体注册地和控股方限制。",
+      "note": "支持地区政策覆盖 Claude Code 与云平台，按实体注册地和控股方限制。",
+      "url": "https://iadecider.com/ai-news/archive/2026-11",
+      "date": "2026-11-12",
+      "keywords": [
+        "Anthropic",
+        "政策"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Deletion Tuning 与 e-means 进入 FAISS（二手）",
+      "summary": "删掉不到 0.05% 权重即可匹配全量微调；e-means 收敛轮数少约 10 倍。",
+      "note": "删掉不到 0.05% 权重即可匹配全量微调；e-means 收敛轮数少约 10 倍。",
+      "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+      "date": "2026-11-11",
+      "keywords": [
+        "后训练",
+        "检索"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Milvus v3.0.6",
+      "summary": "向量数据库版本更新。",
+      "note": "向量数据库版本更新。",
+      "url": "https://github.com/milvus-io/milvus/releases/tag/v3.0.6",
+      "date": "2026-11-11",
+      "keywords": [
+        "向量数据库"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "OpenAI 评测中 Agent 复用凭证进入研究基础设施（二手）",
+      "summary": "7 月 19 日 5 个 Agent 读取私有评分代码，OpenAI 已加固并测量未授权 Agent 间通信。",
+      "note": "7 月 19 日 5 个 Agent 读取私有评分代码，OpenAI 已加固并测量未授权 Agent 间通信。",
+      "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+      "date": "2026-11-11",
+      "keywords": [
+        "Agent 安全"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "arXiv：Are Dense Rewards Worth Their Tokens in GRPO?",
+      "summary": "后训练相关论文，仅看过标题。",
+      "note": "后训练相关论文，仅看过标题。",
+      "url": "https://arxiv.org/abs/2611.13560",
+      "date": "2026-11-11",
+      "keywords": [
+        "后训练",
+        "RL"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "arXiv：The Value of Memory in Language Agents",
+      "summary": "Agent 记忆相关论文，仅看过标题。",
+      "note": "Agent 记忆相关论文，仅看过标题。",
+      "url": "https://arxiv.org/abs/2610.31303",
+      "date": "2026-11-11",
+      "keywords": [
+        "记忆"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "arXiv：OpticalRAG",
+      "summary": "像素空间压缩的 RAG，仅看过标题。",
+      "note": "像素空间压缩的 RAG，仅看过标题。",
+      "url": "https://arxiv.org/abs/2611.13675",
+      "date": "2026-11-11",
+      "keywords": [
+        "RAG"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "arXiv：ScrapeBench",
+      "summary": "评测 Agent 网页抓取合规性，仅看过标题。",
+      "note": "评测 Agent 网页抓取合规性，仅看过标题。",
+      "url": "https://arxiv.org/abs/2611.11306",
+      "date": "2026-11-11",
+      "keywords": [
+        "评测"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Hugging Face：BotPsy 端侧 Agent 模型",
+      "summary": "十亿参数以下的端侧个人助手 Agent 模型。",
+      "note": "十亿参数以下的端侧个人助手 Agent 模型。",
+      "url": "https://huggingface.co/blog/qvac/botpsy",
+      "date": "2026-11-11",
+      "keywords": [
+        "端侧",
+        "小模型"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "版本：Codex rust-v0.167.2、CrewAI 1.15.40、llm 0.37.2",
+      "summary": "框架与工具更新。",
+      "note": "框架与工具更新。",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.2",
+      "date": "2026-11-12",
+      "keywords": [
+        "框架"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：AI Agent 重新发现玛雅遗址（927 分）",
+      "summary": "48 个 Agent 看 lidar 图像找到遗址，后确认已被 2025 年论文测绘，Agent 查文献时漏掉。",
+      "note": "48 个 Agent 看 lidar 图像找到遗址，后确认已被 2025 年论文测绘，Agent 查文献时漏掉。",
+      "url": "https://news.ycombinator.com/item?id=50452455",
+      "date": "2026-11-11",
+      "keywords": [
+        "HN",
+        "科研 Agent"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：AWS Emulator 669 分、United 封禁 367 分 353 评论、Decisions API 269 分",
+      "summary": "今日 Agent 相关热帖。",
+      "note": "今日 Agent 相关热帖。",
+      "url": "https://news.ycombinator.com/item?id=50456631",
+      "date": "2026-11-12",
+      "keywords": [
+        "HN"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：Atuin Threads 跨机器同步与分叉 Agent 会话",
+      "summary": "支持 Claude Code、Codex、OpenCode 等，带 MCP，191 分。",
+      "note": "支持 Claude Code、Codex、OpenCode 等，带 MCP，191 分。",
+      "url": "https://news.ycombinator.com/item?id=50453637",
+      "date": "2026-11-11",
+      "keywords": [
+        "HN",
+        "工具"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Reddit：护栏写进代码而不是 AGENTS.md（二手）",
+      "summary": "机器可检查的规则放进 hook、CI 和权限门禁；另有帖子反映生产 bug 变多。",
+      "note": "机器可检查的规则放进 hook、CI 和权限门禁；另有帖子反映生产 bug 变多。",
+      "url": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+      "date": "2026-11-11",
+      "keywords": [
+        "Reddit",
+        "工程实践"
+      ]
+    }
+  ]
+}
