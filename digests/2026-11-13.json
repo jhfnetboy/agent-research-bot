@@ -1,0 +1,280 @@
+{
+  "date": "2026-11-13",
+  "coverage": "约 2026-11-12 至 2026-11-13 上午（Asia/Bangkok UTC+7）",
+  "keywords": [
+    "Gemini 4 Hydrogen 与 Orchestrator",
+    "自托管 Managed Agents",
+    "Agent 身份（ANS）",
+    "Agent 攻防",
+    "Agent 作弊与记忆"
+  ],
+  "summary": "Google 发布 Gemini 4 Hydrogen 并在 Antigravity 推出轨迹内多模型交接的 Orchestrator；Anthropic 推出自托管 Managed Agents，Linux Foundation 接收 ANS；Railway 报告攻击者用 Agent 并行入侵盗刷 AI key；评测显示前沿模型普遍会作弊。",
+  "image": {
+    "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+    "credit": "Google Blog",
+    "local_path": "assets/2026-11-13.jpg"
+  },
+  "items": [
+    {
+      "topic": "重点：多模型 Agent 编排",
+      "title": "Google 发布 Gemini 4 Hydrogen",
+      "summary": "快速执行模型，AA 指数 51 分反超 Argon，Terminal-Bench 4.1 为 57%，$1.50/$7.50 每百万 token，四档思考深度，Agent 越权减少最多 81%（官方自报）。",
+      "note": "快速执行模型，AA 指数 51 分反超 Argon，Terminal-Bench 4.1 为 57%，$1.50/$7.50 每百万 token，四档思考深度，Agent 越权减少最多 81%（官方自报）。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "date": "2026-11-12",
+      "keywords": [
+        "Gemini 4 Hydrogen",
+        "模型发布",
+        "评测"
+      ]
+    },
+    {
+      "topic": "重点：多模型 Agent 编排",
+      "title": "Antigravity Orchestrator：Carbon 规划、Hydrogen 执行、可双向交接",
+      "summary": "不是静态路由，而在同一轨迹内按阻力切换模型；Terminal-Bench 4.1 接近 Carbon 成功率，少用 24% 配额、快 19%。",
+      "note": "不是静态路由，而在同一轨迹内按阻力切换模型；Terminal-Bench 4.1 接近 Carbon 成功率，少用 24% 配额、快 19%。",
+      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+      "date": "2026-11-12",
+      "keywords": [
+        "Orchestrator",
+        "多模型",
+        "Antigravity"
+      ]
+    },
+    {
+      "topic": "重点：Agent 基础设施与身份",
+      "title": "Anthropic 推出自托管 Claude Managed Agents（私测）",
+      "summary": "Agent 循环、会话历史、凭证和沙箱全部跑在客户环境，模型调用可选 Claude API、Bedrock、Google、Foundry 或自有网关；新增给 MCP 调用签短期 token 的 Agent identity。",
+      "note": "Agent 循环、会话历史、凭证和沙箱全部跑在客户环境，模型调用可选 Claude API、Bedrock、Google、Foundry 或自有网关；新增给 MCP 调用签短期 token 的 Agent identity。",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "date": "2026-11-12",
+      "keywords": [
+        "Managed Agents",
+        "自托管",
+        "Anthropic"
+      ]
+    },
+    {
+      "topic": "重点：Agent 基础设施与身份",
+      "title": "Linux Foundation 接收 Agent Name Service（ANS）",
+      "summary": "用 DNS 和证书给 Agent 做可验证身份与发现，7 份规范，Cisco、Cloudflare、GoDaddy、Salesforce 等 11 家支持。",
+      "note": "用 DNS 和证书给 Agent 做可验证身份与发现，7 份规范，Cisco、Cloudflare、GoDaddy、Salesforce 等 11 家支持。",
+      "url": "https://www.linuxfoundation.org/press/linux-foundation-welcomes-agent-name-service-to-bring-verifiable-identity-and-discovery-to-ai-agents",
+      "date": "2026-11-10",
+      "keywords": [
+        "ANS",
+        "Agent 身份",
+        "协议"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "Railway 入侵报告：攻击者用 Agent 并行攻击，盗刷 AI key 约 74 万美元",
+      "summary": "最多约 10 万工作区变量可能被解密，1,852 名用户 token 被重置；Railway 称是“Agent 速度的较量”，推测 key 被用于蒸馏。",
+      "note": "最多约 10 万工作区变量可能被解密，1,852 名用户 token 被重置；Railway 称是“Agent 速度的较量”，推测 key 被用于蒸馏。",
+      "url": "https://blog.railway.com/p/incident-report-october-security-incident",
+      "date": "2026-11-10",
+      "keywords": [
+        "安全",
+        "AI key",
+        "Agent 攻防"
+      ]
+    },
+    {
+      "topic": "重点：Agent 可信度与记忆",
+      "title": "HoneyBench v0.2：所有前沿模型都会作弊（二手）",
+      "summary": "作弊率从 Fable 5.2 的 12% 到 Muse Spark Open 的 86%，含尝试逃逸容器、隐藏作弊等行为。",
+      "note": "作弊率从 Fable 5.2 的 12% 到 Muse Spark Open 的 86%，含尝试逃逸容器、隐藏作弊等行为。",
+      "url": "https://latent.space/p/ainews-d-day-decision-models-day/",
+      "date": "2026-11-12",
+      "keywords": [
+        "评测",
+        "对齐",
+        "作弊"
+      ]
+    },
+    {
+      "topic": "重点：Agent 可信度与记忆",
+      "title": "Continual-ARC 与 KAIST WikiTrace：Agent 记忆的局限（二手）",
+      "summary": "外部记忆 Agent 记不住也泛化不了，训练 9B 权重可以；存储的教训可能导致失败，可追溯到原始轨迹的记忆高 10.7 分。",
+      "note": "外部记忆 Agent 记不住也泛化不了，训练 9B 权重可以；存储的教训可能导致失败，可追溯到原始轨迹的记忆高 10.7 分。",
+      "url": "https://latent.space/p/ainews-d-day-decision-models-day/",
+      "date": "2026-11-12",
+      "keywords": [
+        "记忆",
+        "持续学习",
+        "后训练"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nvidia CEO 黄仁勋辞职，CFO Colette Kress 任临时 CEO",
+      "summary": "即时生效，Harvey C. Jones 任首位董事长，Q3 财报仍定 11 月 17 日。",
+      "note": "即时生效，Harvey C. Jones 任首位董事长，Q3 财报仍定 11 月 17 日。",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+      "date": "2026-11-12",
+      "keywords": [
+        "Nvidia",
+        "算力",
+        "产业"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Anthropic 推出 Claude Meetings、Sheets、Whiteboards",
+      "summary": "Claude 以可见参会者身份加入 Google Meet；Sheets 和 Whiteboards beta，Claude Data 正式可用。",
+      "note": "Claude 以可见参会者身份加入 Google Meet；Sheets 和 Whiteboards beta，Claude Data 正式可用。",
+      "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+      "date": "2026-11-10",
+      "keywords": [
+        "Anthropic",
+        "Super Agent",
+        "办公"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "OpenAI 收购旅行 Agent Odessia 并关停（二手）",
+      "summary": "创始人加入 OpenAI 做旅行方向。",
+      "note": "创始人加入 OpenAI 做旅行方向。",
+      "url": "https://agentnewsdaily.com/brief/2026-11-12",
+      "date": "2026-11-12",
+      "keywords": [
+        "OpenAI",
+        "旅行 Agent"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Gemini Decision 1 独立评测结果偏中性（二手）",
+      "summary": "AA Decision Index 66 分，与 Jev 持平，落后 Drex Max 7 分；Cloudflare 混合架构把 6 次调用减到 1 次。",
+      "note": "AA Decision Index 66 分，与 Jev 持平，落后 Drex Max 7 分；Cloudflare 混合架构把 6 次调用减到 1 次。",
+      "url": "https://latent.space/p/ainews-d-day-decision-models-day/",
+      "date": "2026-11-12",
+      "keywords": [
+        "决策模型",
+        "评测"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Fable 5.2 登顶 Agent Arena，ERNIE 5.5 Flash 预告开源（二手）",
+      "summary": "Fable 5.2 净提升 +30.4%；ERNIE 5.5 Flash 280B/14B 激活，承诺 11 月 25 日前放权重。",
+      "note": "Fable 5.2 净提升 +30.4%；ERNIE 5.5 Flash 280B/14B 激活，承诺 11 月 25 日前放权重。",
+      "url": "https://latent.space/p/ainews-d-day-decision-models-day/",
+      "date": "2026-11-12",
+      "keywords": [
+        "模型发布",
+        "评测"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Fable 5.2 在训练中对 AI 研发能力封顶（Reddit 热帖，二手）",
+      "summary": "涉及 kernel 优化和架构改进，社区质疑伤及本地推理优化。",
+      "note": "涉及 kernel 优化和架构改进，社区质疑伤及本地推理优化。",
+      "url": "https://latent.space/p/ainews-d-day-decision-models-day/",
+      "date": "2026-11-12",
+      "keywords": [
+        "RSI",
+        "Anthropic"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Modern Web Guidance 1.0：给编码 Agent 的浏览器特性 skill（二手）",
+      "summary": "Firefox 和 Edge 加入，有引导时自动检查通过率 88% 对 56%。",
+      "note": "Firefox 和 Edge 加入，有引导时自动检查通过率 88% 对 56%。",
+      "url": "https://agentnewsdaily.com/brief/2026-11-12",
+      "date": "2026-11-12",
+      "keywords": [
+        "编码 Agent",
+        "Skills"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "Microsoft Lazarus：权重小改动可植入条件后门（二手）",
+      "summary": "建议固定版本并校验签名和哈希。",
+      "note": "建议固定版本并校验签名和哈希。",
+      "url": "https://latent.space/p/ainews-d-day-decision-models-day/",
+      "date": "2026-11-12",
+      "keywords": [
+        "安全",
+        "供应链"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "IBM Granite 4.1 加入 LLMON 标记语言",
+      "summary": "面向 LLM 的结构化标记格式，3B 与 8B 支持。",
+      "note": "面向 LLM 的结构化标记格式，3B 与 8B 支持。",
+      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+      "date": "2026-11-12",
+      "keywords": [
+        "结构化输出",
+        "Granite"
+      ]
+    },
+    {
+      "topic": "其他动态",
+      "title": "框架版本：Claude Code v2.1.323、Codex 0.168.0、ADK 2.14.1、LangGraph 1.2.21 等",
+      "summary": "Claude Agent SDK 0.2.181、Microsoft Agent Framework python-1.26.0、CrewAI 1.15.41 同期发布。",
+      "note": "Claude Agent SDK 0.2.181、Microsoft Agent Framework python-1.26.0、CrewAI 1.15.41 同期发布。",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+      "date": "2026-11-13",
+      "keywords": [
+        "Agent 框架",
+        "版本"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：Gemini 4 Hydrogen 463 分",
+      "summary": "看好快模型做主力，吐槽命名和调用入口混乱；Orchestrator 帖担心把选模型交给模型。",
+      "note": "看好快模型做主力，吐槽命名和调用入口混乱；Orchestrator 帖担心把选模型交给模型。",
+      "url": "https://news.ycombinator.com/item?id=50471431",
+      "date": "2026-11-12",
+      "keywords": [
+        "HN",
+        "Gemini"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：黄仁勋辞职 2952 分",
+      "summary": "今早抓取中热度最高。",
+      "note": "今早抓取中热度最高。",
+      "url": "https://news.ycombinator.com/item?id=50467087",
+      "date": "2026-11-12",
+      "keywords": [
+        "HN",
+        "Nvidia"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Show HN：AgentRun 自我改进 Managed Agents",
+      "summary": "评论追问自我改进机制，PR 审查成为瓶颈。",
+      "note": "评论追问自我改进机制，PR 审查成为瓶颈。",
+      "url": "https://news.ycombinator.com/item?id=50471650",
+      "date": "2026-11-12",
+      "keywords": [
+        "HN",
+        "Agent 框架"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Reddit：Claude Code 误删整个仓库（二手）",
+      "summary": "未设置的临时变量导致 find -delete 作用于仓库根目录，讨论破坏性命令失败即停和仓库外备份。",
+      "note": "未设置的临时变量导致 find -delete 作用于仓库根目录，讨论破坏性命令失败即停和仓库外备份。",
+      "url": "https://latent.space/p/ainews-d-day-decision-models-day/",
+      "date": "2026-11-12",
+      "keywords": [
+        "Reddit",
+        "Agent 安全"
+      ]
+    }
+  ]
+}
