@@ -1,0 +1,391 @@
+{
+  "date": "2026-11-14",
+  "coverage": "约 2026-11-13 至 2026-11-14 上午（Asia/Bangkok UTC+7）",
+  "keywords": [
+    "Agent 支付（ChatGPT Wallet）",
+    "Personal Agent Protocol（Poppy）",
+    "x402",
+    "Agent 做科研（/teamwork）",
+    "Harness 自我改进的边界"
+  ],
+  "summary": "OpenAI 推出 ChatGPT Wallet、Sierra 发布 Poppy 1.0、Brave 支持 x402，Agent 支付与商户接入同日落地；Google 公布 /teamwork 多 Agent 科研成果，Claude 帮助解读哥德尔笔记；两篇论文给 harness 自我改进降温；OpenAI 解散独立机器人团队。",
+  "image": {
+    "source_url": "https://openai.com/index/introducing-chatgpt-wallet",
+    "credit": "OpenAI",
+    "local_path": "assets/2026-11-14.png"
+  },
+  "items": [
+    {
+      "topic": "重点：Agent 支付",
+      "title": "OpenAI 推出 ChatGPT Wallet",
+      "summary": "与 Amex、Mastercard、Visa 合作，Agent 用支付网络签发的一次性 token 付款，每笔生物识别确认，首批美国 Pro 用户；同步发布商户 Playbook（Web Bot Auth、WebMCP）。",
+      "note": "与 Amex、Mastercard、Visa 合作，Agent 用支付网络签发的一次性 token 付款，每笔生物识别确认，首批美国 Pro 用户；同步发布商户 Playbook（Web Bot Auth、WebMCP）。",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "date": "2026-11-13",
+      "keywords": [
+        "ChatGPT Wallet",
+        "Agent 支付",
+        "Agentic Commerce"
+      ]
+    },
+    {
+      "topic": "重点：Agent 协议",
+      "title": "Sierra 发布 Personal Agent Protocol 1.0（Poppy）",
+      "summary": "个人 Agent 到达商家时的身份与能力发现协议，复用 MCP、OpenAPI、UCP 和 OAuth；Shopify 全部商户默认启用，Meta Muse 优先使用，设计伙伴超 100 家。",
+      "note": "个人 Agent 到达商家时的身份与能力发现协议，复用 MCP、OpenAPI、UCP 和 OAuth；Shopify 全部商户默认启用，Meta Muse 优先使用，设计伙伴超 100 家。",
+      "url": "https://sierra.ai/blog/releasing-poppy",
+      "date": "2026-11-13",
+      "keywords": [
+        "Poppy",
+        "Agent 协议",
+        "UCP",
+        "MCP"
+      ]
+    },
+    {
+      "topic": "重点：Agent 支付",
+      "title": "Brave Search API 支持 x402 按次付费",
+      "summary": "未付款请求返回 HTTP 402，Agent 用 Base 链 USDC 付款后重试，每次 $0.005，无需账户和 API key。",
+      "note": "未付款请求返回 HTTP 402，Agent 用 Base 链 USDC 付款后重试，每次 $0.005，无需账户和 API key。",
+      "url": "https://brave.com/blog/search-api-agentic-payments/",
+      "date": "2026-11-12",
+      "keywords": [
+        "x402",
+        "Agent 支付",
+        "搜索 API"
+      ]
+    },
+    {
+      "topic": "重点：Agent 支付",
+      "title": "JPMorgan 阻止 Agent 用客户卡号购物（二手）",
+      "summary": "据 PYMNTS 转引 WSJ，其他大行在客户允许时放行；HUMAN 数据称 Meta 与 OpenAI 占 Agent 请求 89%，仅 1.9% 到达结账页。",
+      "note": "据 PYMNTS 转引 WSJ，其他大行在客户允许时放行；HUMAN 数据称 Meta 与 OpenAI 占 Agent 请求 89%，仅 1.9% 到达结账页。",
+      "url": "https://agentnewsdaily.com/brief/2026-11-14",
+      "date": "2026-11-14",
+      "keywords": [
+        "Agent 支付",
+        "银行",
+        "Agent 流量"
+      ]
+    },
+    {
+      "topic": "重点：Agent 做科研 / RSI",
+      "title": "Google 公布 Antigravity /teamwork 成果",
+      "summary": "证明并形式化 Courtade–Kumar 猜想、自主形式化 Weil 猜想（约 180 万行 Lean）、Zircon 改写约 80 万行 Rust、harness 优化 harness；向外部开放。",
+      "note": "证明并形式化 Courtade–Kumar 猜想、自主形式化 Weil 猜想（约 180 万行 Lean）、Zircon 改写约 80 万行 Rust、harness 优化 harness；向外部开放。",
+      "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/",
+      "date": "2026-11-13",
+      "keywords": [
+        "/teamwork",
+        "多 Agent",
+        "形式化验证",
+        "RSI"
+      ]
+    },
+    {
+      "topic": "重点：Agent 做科研 / RSI",
+      "title": "Claude 帮助解读哥德尔笔记本",
+      "summary": "663 条定理候选经 Coq 检查约 400 条成立、约 200 条需修正、约 50 条为假；重建选择公理独立性证明并通过 Coq。",
+      "note": "663 条定理候选经 Coq 检查约 400 条成立、约 200 条需修正、约 50 条为假；重建选择公理独立性证明并通过 Coq。",
+      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "date": "2026-11-13",
+      "keywords": [
+        "Claude",
+        "数学",
+        "形式化验证"
+      ]
+    },
+    {
+      "topic": "重点：Agent 做科研 / RSI",
+      "title": "Agent 循环跑完整预训练；Fable 5.2 在 PostTrainBench 持平（二手）",
+      "summary": "801-30B-A3B 称优于 Qwen3-30B-A3B；PostTrainBench 作者将 Fable 5.2 持平归因于 AI 研究能力封顶。",
+      "note": "801-30B-A3B 称优于 Qwen3-30B-A3B；PostTrainBench 作者将 Fable 5.2 持平归因于 AI 研究能力封顶。",
+      "url": "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
+      "date": "2026-11-13",
+      "keywords": [
+        "RSI",
+        "预训练",
+        "后训练评测"
+      ]
+    },
+    {
+      "topic": "重点：Harness 自我改进",
+      "title": "Agent Self-Improvement with Frozen Weights",
+      "summary": "看失败轨迹写笔记比对照组高 4.0 个百分点，但搜索本身占约 60% 提升，完整对话中无显著改进。",
+      "note": "看失败轨迹写笔记比对照组高 4.0 个百分点，但搜索本身占约 60% 提升，完整对话中无显著改进。",
+      "url": "https://arxiv.org/abs/2611.11342",
+      "date": "2026-11-08",
+      "keywords": [
+        "自我改进",
+        "harness",
+        "评测方法"
+      ]
+    },
+    {
+      "topic": "重点：Harness 自我改进",
+      "title": "Knowledge in the Harness, Reliability in the Weights",
+      "summary": "Gemma 4 12B 自诊断写 skill 规则并过多重验证门，再用 GRPO 训练 LoRA，无需教师模型。",
+      "note": "Gemma 4 12B 自诊断写 skill 规则并过多重验证门，再用 GRPO 训练 LoRA，无需教师模型。",
+      "url": "https://arxiv.org/abs/2611.15268",
+      "date": "2026-11-11",
+      "keywords": [
+        "自我改进",
+        "GRPO",
+        "skills"
+      ]
+    },
+    {
+      "topic": "重点：Harness 自我改进",
+      "title": "ToolTurns 多轮工具对话基准",
+      "summary": "2,620 题、1,827 个工具；最佳 Agent 单次请求 69.6%，完整多轮对话仅 39.8%。",
+      "note": "2,620 题、1,827 个工具；最佳 Agent 单次请求 69.6%，完整多轮对话仅 39.8%。",
+      "url": "https://arxiv.org/abs/2611.14925",
+      "date": "2026-11-11",
+      "keywords": [
+        "基准",
+        "工具调用",
+        "多轮对话"
+      ]
+    },
+    {
+      "topic": "重点：Harness 自我改进",
+      "title": "Breaking Bad：“任务进展糟糕”激活驱动 reward hacking",
+      "summary": "失败累积时上升的内部方向先于作弊出现，适度减去可减少作弊，过度则让 Agent 看不见失败。",
+      "note": "失败累积时上升的内部方向先于作弊出现，适度减去可减少作弊，过度则让 Agent 看不见失败。",
+      "url": "https://arxiv.org/abs/2611.14996",
+      "date": "2026-11-11",
+      "keywords": [
+        "reward hacking",
+        "可解释性",
+        "后训练"
+      ]
+    },
+    {
+      "topic": "重点：Harness 自我改进",
+      "title": "CAMG-II：编码 Agent 记忆的 on-policy 蒸馏",
+      "summary": "用预训练见过的文件操作做记忆控制，提供 Shop、Coding、AutoResearch 等长时程 RL 环境。",
+      "note": "用预训练见过的文件操作做记忆控制，提供 Shop、Coding、AutoResearch 等长时程 RL 环境。",
+      "url": "https://arxiv.org/abs/2611.14009",
+      "date": "2026-11-10",
+      "keywords": [
+        "记忆",
+        "on-policy 蒸馏",
+        "Agent RL"
+      ]
+    },
+    {
+      "topic": "重点：具身 Agent",
+      "title": "OpenAI 解散独立机器人团队",
+      "summary": "研究人员并入主研究和 Applied，理由是 GPT-6 Astra 等通用模型可直接控制机器人。",
+      "note": "研究人员并入主研究和 Applied，理由是 GPT-6 Astra 等通用模型可直接控制机器人。",
+      "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/",
+      "date": "2026-11-13",
+      "keywords": [
+        "OpenAI",
+        "机器人",
+        "具身智能"
+      ]
+    },
+    {
+      "topic": "重点：具身 Agent",
+      "title": "Anthropic 推出 Claude for Manufacturing",
+      "summary": "连接 Fusion、NetSuite、M365、Infor 的插件含 17 个 skill；另有研究预览 Model Hardware Standard 连接实验和工业设备。",
+      "note": "连接 Fusion、NetSuite、M365、Infor 的插件含 17 个 skill；另有研究预览 Model Hardware Standard 连接实验和工业设备。",
+      "url": "https://the-decoder.com/anthropics-claude-for-manufacturing-plugs-ai-directly-into-factory-software-to-automate-industrial-workflows/",
+      "date": "2026-11-13",
+      "keywords": [
+        "Anthropic",
+        "制造业",
+        "设备协议"
+      ]
+    },
+    {
+      "topic": "其他：可靠性",
+      "title": "Claude 登录认证故障约两小时",
+      "summary": "11 月 13 日 09:58 至 11:58 UTC，claude.ai、Console、Claude Code、Cowork 受影响。",
+      "note": "11 月 13 日 09:58 至 11:58 UTC，claude.ai、Console、Claude Code、Cowork 受影响。",
+      "url": "https://status.claude.com/incidents/nn11wk485zfn",
+      "date": "2026-11-13",
+      "keywords": [
+        "Claude",
+        "故障"
+      ]
+    },
+    {
+      "topic": "其他：前沿实验室",
+      "title": "Anthropic 提交 IPO 注册声明（二手）",
+      "summary": "据 AINews 汇总，定价据报道在下周三。",
+      "note": "据 AINews 汇总，定价据报道在下周三。",
+      "url": "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
+      "date": "2026-11-13",
+      "keywords": [
+        "Anthropic",
+        "IPO"
+      ]
+    },
+    {
+      "topic": "其他：模型发布",
+      "title": "Thinking Machines 开放 Inkling 2 Small（二手）",
+      "summary": "594B 总参、17B 激活 MoE，Apache 2.0，1M 上下文，Agent Arena 开放模型第 2。",
+      "note": "594B 总参、17B 激活 MoE，Apache 2.0，1M 上下文，Agent Arena 开放模型第 2。",
+      "url": "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
+      "date": "2026-11-13",
+      "keywords": [
+        "开放权重",
+        "Inkling 2"
+      ]
+    },
+    {
+      "topic": "其他：评测",
+      "title": "Mercor OWE-Bench（二手）",
+      "summary": "26 个长时程工程项目，Fable 5.2 54.6%、GPT-6 Astra 44.2%、Opus 5.5 41.6%。",
+      "note": "26 个长时程工程项目，Fable 5.2 54.6%、GPT-6 Astra 44.2%、Opus 5.5 41.6%。",
+      "url": "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
+      "date": "2026-11-13",
+      "keywords": [
+        "基准",
+        "长时程"
+      ]
+    },
+    {
+      "topic": "其他：评测",
+      "title": "Allen AI 发布 XYBench",
+      "summary": "评测模型能否识别提问背后的真实问题。",
+      "note": "评测模型能否识别提问背后的真实问题。",
+      "url": "https://huggingface.co/blog/allenai/xybench",
+      "date": "2026-11-13",
+      "keywords": [
+        "基准"
+      ]
+    },
+    {
+      "topic": "其他：Super Agent",
+      "title": "Yandex Alice AI 推出 Do it! Agent",
+      "summary": "代打电话、处理邮件和网页任务，重要操作前征求同意。",
+      "note": "代打电话、处理邮件和网页任务，重要操作前征求同意。",
+      "url": "https://yandex.com/company/news/2026-11-13",
+      "date": "2026-11-13",
+      "keywords": [
+        "个人 Agent",
+        "语音"
+      ]
+    },
+    {
+      "topic": "其他：Agent 安全",
+      "title": "OpenAI Daybreak Red Team 与 Defense Factory（二手）",
+      "summary": "Agent 做渗透测试和补丁 PR 起草，人工审核。",
+      "note": "Agent 做渗透测试和补丁 PR 起草，人工审核。",
+      "url": "https://agentnewsdaily.com/brief/2026-11-14",
+      "date": "2026-11-12",
+      "keywords": [
+        "安全",
+        "OpenAI"
+      ]
+    },
+    {
+      "topic": "其他：本地推理",
+      "title": "llama.cpp 与 ggml 发布 v1.0.0",
+      "summary": "开始按语义化版本管理 C API/ABI。",
+      "note": "开始按语义化版本管理 C API/ABI。",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "date": "2026-11-13",
+      "keywords": [
+        "llama.cpp",
+        "本地推理"
+      ]
+    },
+    {
+      "topic": "其他：后训练工具",
+      "title": "TRL v1.18.0",
+      "summary": "async GRPO 转入主包，旧导入路径失效。",
+      "note": "async GRPO 转入主包，旧导入路径失效。",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.18.0",
+      "date": "2026-11-13",
+      "keywords": [
+        "TRL",
+        "GRPO"
+      ]
+    },
+    {
+      "topic": "其他：检索",
+      "title": "Perplexity Decider v1.3",
+      "summary": "开放权重决策与抽取模型新增 locate（返回 span 位置）。",
+      "note": "开放权重决策与抽取模型新增 locate（返回 span 位置）。",
+      "url": "https://www.perplexity.ai/hub/blog/perplexity-decider",
+      "date": "2026-11-13",
+      "keywords": [
+        "决策模型",
+        "抽取"
+      ]
+    },
+    {
+      "topic": "其他：向量数据库",
+      "title": "Qdrant v1.20.1",
+      "summary": "补丁版本。",
+      "note": "补丁版本。",
+      "url": "https://github.com/qdrant/qdrant/releases/tag/v1.20.1",
+      "date": "2026-11-13",
+      "keywords": [
+        "向量数据库"
+      ]
+    },
+    {
+      "topic": "其他：框架版本",
+      "title": "Claude Code v2.1.325",
+      "summary": "修复 zstd 响应解码的安全问题。",
+      "note": "修复 zstd 响应解码的安全问题。",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+      "date": "2026-11-13",
+      "keywords": [
+        "Claude Code"
+      ]
+    },
+    {
+      "topic": "其他：框架版本",
+      "title": "LangGraph 1.2.22",
+      "summary": "以性能优化为主。",
+      "note": "以性能优化为主。",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.22",
+      "date": "2026-11-14",
+      "keywords": [
+        "LangGraph"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：Brave Search API 支持 x402",
+      "summary": "256 分、147 条评论。",
+      "note": "256 分、147 条评论。",
+      "url": "https://news.ycombinator.com/item?id=50477649",
+      "date": "2026-11-13",
+      "keywords": [
+        "HN",
+        "x402"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：Claude 故障",
+      "summary": "484 分、382 条评论，另一帖 197 分。",
+      "note": "484 分、382 条评论，另一帖 197 分。",
+      "url": "https://news.ycombinator.com/item?id=50481187",
+      "date": "2026-11-13",
+      "keywords": [
+        "HN",
+        "Claude"
+      ]
+    },
+    {
+      "topic": "社区讨论",
+      "title": "HN：AI 解读哥德尔笔记本",
+      "summary": "328 分、92 条评论。",
+      "note": "328 分、92 条评论。",
+      "url": "https://news.ycombinator.com/item?id=50486748",
+      "date": "2026-11-13",
+      "keywords": [
+        "HN",
+        "数学"
+      ]
+    }
+  ]
+}
