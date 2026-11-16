@@ -83,14 +83,14 @@
       "http_status_2026_11_11": "200"
     },
     {
-      "name": "Qwen Blog",
-      "url": "https://qwenlm.github.io/blog/index.xml",
-      "type": "官方博客",
+      "name": "Qwen（Hugging Face 组织页）",
+      "url": "https://huggingface.co/Qwen",
+      "type": "官方模型库",
       "area": "模型发布",
-      "purpose": "Qwen 开源模型发布与技术报告",
-      "priority": "P0",
-      "fetch": "RSS",
-      "http_status_2026_11_11": "200"
+      "purpose": "Qwen 开源权重发布；原博客 RSS 自 2025-09 停更，2026-11-16 替换",
+      "priority": "P1",
+      "fetch": "HTML 抓取 + X @Alibaba_Qwen",
+      "http_status_2026_11_11": "未检测"
     },
     {
       "name": "DeepSeek API News",
@@ -263,14 +263,14 @@
       "http_status_2026_11_11": "200"
     },
     {
-      "name": "AutoGen Releases",
-      "url": "https://github.com/microsoft/autogen/releases.atom",
-      "type": "GitHub",
-      "area": "Agent 框架",
-      "purpose": "AutoGen 版本更新",
-      "priority": "P2",
-      "fetch": "Atom",
-      "http_status_2026_11_11": "200"
+      "name": "ToolSift Daily Agent News",
+      "url": "https://toolsift.ai/agent-news/rss.xml",
+      "type": "聚合日报",
+      "area": "聚合源",
+      "purpose": "每日 Agent 新闻汇总（含背景和一手链接），二手，入选前需核对原文；2026-11-16 加入，替换已停更的 AutoGen",
+      "priority": "P1",
+      "fetch": "RSS",
+      "http_status_2026_11_11": "未检测"
     },
     {
       "name": "Microsoft Agent Framework Releases",

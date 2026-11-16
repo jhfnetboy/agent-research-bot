@@ -1,0 +1,206 @@
+{
+  "date": "2026-11-16",
+  "coverage": "约 2026-11-13 晚至 2026-11-16 上午（Asia/Bangkok UTC+7）",
+  "keywords": [
+    "Agent 化攻击（ARTEX）",
+    "Code Mode",
+    "购物 Agent 监管（EU DFA）",
+    "开放权重 Agent 模型（LongCat-2.5）",
+    "桌面 Agent 基础设施"
+  ],
+  "summary": "FBI 就开源多 Agent 渗透框架 ARTEX 发布 FLASH 警报；Claude Code 推出让模型写代码调工具的 Code Mode，AWS 给 Agent 桌面加 MCP OAuth 和 skill；EU DFA 第 26 条要求购物 Agent 提供分档授权；补报美团 LongCat-2.5 开放权重。",
+  "image": {
+    "source_url": "https://therecord.media/artex-ai-tool-fbi-flash-alert",
+    "credit": "The Record",
+    "local_path": "assets/2026-11-16.jpg"
+  },
+  "items": [
+    {
+      "topic": "重点：Agent 安全",
+      "title": "FBI FLASH 警报：开源多 Agent 渗透框架 ARTEX 被武器化",
+      "summary": "ARTEX 可接任意模型，自 8 月起被用于攻击多个行业，部分入侵不到 3 小时拿到特权；关联韩国金融机构约 6.7 万人数据泄露和 ConnectWise 2,250 多个下游租户。",
+      "note": "ARTEX 可接任意模型，自 8 月起被用于攻击多个行业，部分入侵不到 3 小时拿到特权；关联韩国金融机构约 6.7 万人数据泄露和 ConnectWise 2,250 多个下游租户。",
+      "url": "https://www.ic3.gov/CSA/2026/261113.pdf",
+      "date": "2026-11-13",
+      "keywords": [
+        "ARTEX",
+        "FBI",
+        "Agent 化攻击"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "The Record：ARTEX 开发者已删库，否认责任",
+      "summary": "工具由 GitHub 账号 Autumn-27 于 8 月发布，开发者 10 月 8 日声明被滥用后删除仓库。",
+      "note": "工具由 GitHub 账号 Autumn-27 于 8 月发布，开发者 10 月 8 日声明被滥用后删除仓库。",
+      "url": "https://therecord.media/artex-ai-tool-fbi-flash-alert",
+      "date": "2026-11-14",
+      "keywords": [
+        "ARTEX",
+        "The Record"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "FBI 给出的缓解措施和 IOC 使用提醒",
+      "summary": "盘点边缘系统、敏感服务限可信网络、多租户权限最小化，按 application ID 排查 ConnectWise 应用，短期 IP 先核对再封。",
+      "note": "盘点边缘系统、敏感服务限可信网络、多租户权限最小化，按 application ID 排查 ConnectWise 应用，短期 IP 先核对再封。",
+      "url": "https://tsnmedia.org/fbi-flash-artex/",
+      "date": "2026-11-14",
+      "keywords": [
+        "缓解措施",
+        "IOC"
+      ]
+    },
+    {
+      "topic": "重点：Agent 编排",
+      "title": "Claude Code 2.1.323 加入实验性 Code Mode",
+      "summary": "Claude 写 JavaScript 一次发起多个工具调用；权限规则和 hook 仍逐个生效，auto mode 分类器只审代码、看不到运行时值。",
+      "note": "Claude 写 JavaScript 一次发起多个工具调用；权限规则和 hook 仍逐个生效，auto mode 分类器只审代码、看不到运行时值。",
+      "url": "https://code.claude.com/docs/en/code-mode",
+      "date": "2026-11-12",
+      "keywords": [
+        "Claude Code",
+        "Code Mode",
+        "工具调用"
+      ]
+    },
+    {
+      "topic": "重点：Agent 编排",
+      "title": "AWS WorkSpaces for AI agents：Linux、Windows 11、MCP OAuth 和 Agent skill",
+      "summary": "Agent 桌面支持 Linux 和 Windows 11 BYOL；Agent Toolkit 新增 WorkSpaces skill，Agent 可经标准 MCP OAuth 登录，连接记入 CloudTrail。",
+      "note": "Agent 桌面支持 Linux 和 Windows 11 BYOL；Agent Toolkit 新增 WorkSpaces skill，Agent 可经标准 MCP OAuth 登录，连接记入 CloudTrail。",
+      "url": "https://aws.amazon.com/blogs/desktop-and-application-streaming/amazon-workspaces-for-ai-agents-adds-linux-windows-11-and-oauth-support/",
+      "date": "2026-11-13",
+      "keywords": [
+        "AWS",
+        "MCP OAuth",
+        "Skill",
+        "桌面 Agent"
+      ]
+    },
+    {
+      "topic": "重点：Agent 监管",
+      "title": "EU Digital Fairness Act 第 26 条：购物 Agent 必须给用户分档授权",
+      "summary": "首次使用时用户须选择全部确认、按价格上限和时限部分确认或不确认；收费推荐或利益冲突须披露并逐单确认。",
+      "note": "首次使用时用户须选择全部确认、按价格上限和时限部分确认或不确认；收费推荐或利益冲突须披露并逐单确认。",
+      "url": "https://eu-digitalfairnessact.com/article/26",
+      "date": "2026-11-11",
+      "keywords": [
+        "DFA",
+        "Agent 支付",
+        "自主权"
+      ]
+    },
+    {
+      "topic": "重点：Agent 监管",
+      "title": "Pinsent Masons 解读 DFA 对 AI Agent 的新义务",
+      "summary": "条款直接针对电商中基于动态推理、极少人工输入的 Agent，以条例形式直接适用。",
+      "note": "条款直接针对电商中基于动态推理、极少人工输入的 Agent，以条例形式直接适用。",
+      "url": "https://www.pinsentmasons.com/out-law/news/ai-agents-dark-patterns-digital-fairness-act",
+      "date": "2026-11-11",
+      "keywords": [
+        "DFA",
+        "欧盟"
+      ]
+    },
+    {
+      "topic": "开放模型",
+      "title": "美团 LongCat-2.5 以 MIT 许可开放权重（补报）",
+      "summary": "1.6T 总参、约 48B 激活的多模态 Agent 模型，国产芯片训练，示例部署用 194 张 Ascend；Terminal Bench v4.0 得分 38.5。",
+      "note": "1.6T 总参、约 48B 激活的多模态 Agent 模型，国产芯片训练，示例部署用 194 张 Ascend；Terminal Bench v4.0 得分 38.5。",
+      "url": "https://venturebeat.com/technology/meituan-releases-the-open-weights-of-its-longcat-2-5-llm-with-vision-under-a-permissive-mit-license",
+      "date": "2026-11-09",
+      "keywords": [
+        "LongCat-2.5",
+        "开放权重",
+        "Ascend"
+      ]
+    },
+    {
+      "topic": "Super Agent",
+      "title": "Meta Muse 向美国付费用户开放替打电话",
+      "summary": "可代用户给商家打电话做预订、预约和客服，套餐 $20 起。",
+      "note": "可代用户给商家打电话做预订、预约和客服，套餐 $20 起。",
+      "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
+      "date": "2026-11-12",
+      "keywords": [
+        "Meta Muse",
+        "语音 Agent"
+      ]
+    },
+    {
+      "topic": "前沿实验室",
+      "title": "OpenAI 开设科学博客",
+      "summary": "回顾 Navier–Stokes 相关证明、数学成果，以及数千个 GPT-Rosalind Agent 32 分钟分析小鼠脑细胞数据的案例。",
+      "note": "回顾 Navier–Stokes 相关证明、数学成果，以及数千个 GPT-Rosalind Agent 32 分钟分析小鼠脑细胞数据的案例。",
+      "url": "https://openai.com/index/our-new-blog-for-science",
+      "date": "2026-11-15",
+      "keywords": [
+        "OpenAI",
+        "AI for Science"
+      ]
+    },
+    {
+      "topic": "观点",
+      "title": "Your Agent Will Pick the Hackable One",
+      "summary": "作者认为 AI 降低固件编写成本后，Agent 会替主人偏向可刷机、可恢复的设备。",
+      "note": "作者认为 AI 降低固件编写成本后，Agent 会替主人偏向可刷机、可恢复的设备。",
+      "url": "https://geoffstearns.com/blog/your-agent-will-pick-the-hackable-one/",
+      "date": "2026-11-15",
+      "keywords": [
+        "硬件",
+        "固件",
+        "Agent 选购"
+      ]
+    },
+    {
+      "topic": "Agent 框架",
+      "title": "LangGraph 1.2.22 等版本发布",
+      "summary": "LangGraph 1.2.22、checkpoint 4.3.2、checkpoint-postgres 3.2.1、prebuilt 1.1.2。",
+      "note": "LangGraph 1.2.22、checkpoint 4.3.2、checkpoint-postgres 3.2.1、prebuilt 1.1.2。",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.22",
+      "date": "2026-11-14",
+      "keywords": [
+        "LangGraph"
+      ]
+    },
+    {
+      "topic": "Agent 框架",
+      "title": "datasette-agent 0.6a0",
+      "summary": "Simon Willison 发布 datasette-agent 新 alpha 版。",
+      "note": "Simon Willison 发布 datasette-agent 新 alpha 版。",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-agent/",
+      "date": "2026-11-15",
+      "keywords": [
+        "Datasette",
+        "Simon Willison"
+      ]
+    },
+    {
+      "topic": "学习资料",
+      "title": "Understanding Positional Embeddings in Modern LLMs",
+      "summary": "Sebastian Raschka 讲解现代 LLM 的位置编码，HN 203 分。",
+      "note": "Sebastian Raschka 讲解现代 LLM 的位置编码，HN 203 分。",
+      "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+      "date": "2026-11-15",
+      "keywords": [
+        "位置编码",
+        "Raschka"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：Claude Code 和 Codex 逆向 1994 年 Jeep ECU",
+      "summary": "338 分、170 条评论，用 3 美元 Arduino 完成逆向。",
+      "note": "338 分、170 条评论，用 3 美元 Arduino 完成逆向。",
+      "url": "https://news.ycombinator.com/item?id=50463399",
+      "date": "2026-11-12",
+      "keywords": [
+        "HN",
+        "Claude Code",
+        "Codex"
+      ]
+    }
+  ]
+}

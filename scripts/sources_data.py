@@ -9,7 +9,7 @@ S = [
 ("Meta AI / Meta Superintelligence Labs","https://ai.meta.com/blog/","官方博客","模型发布","Muse 系列模型、Llama、研究发布","P1","HTML 列表页抓取"),
 ("xAI News","https://x.ai/news","官方博客","模型发布","Grok 模型与产品更新","P1","HTML 列表页抓取"),
 ("Mistral AI News","https://mistral.ai/news","官方博客","模型发布","Mistral 模型、Agents API 与企业产品","P1","HTML 列表页抓取"),
-("Qwen Blog","https://qwenlm.github.io/blog/index.xml","官方博客","模型发布","Qwen 开源模型发布与技术报告","P0","RSS"),
+("Qwen（Hugging Face 组织页）","https://huggingface.co/Qwen","官方模型库","模型发布","Qwen 开源权重发布；原博客 RSS 自 2025-09 停更，2026-11-16 替换","P1","HTML 抓取 + X @Alibaba_Qwen"),
 ("DeepSeek API News","https://api-docs.deepseek.com/news/news","官方博客","模型发布","DeepSeek 模型与 API 更新","P0","HTML 列表页抓取"),
 ("Hugging Face Blog","https://huggingface.co/blog/feed.xml","官方博客","后训练","开源模型、微调、TRL、数据集","P1","RSS"),
 # 论文
@@ -30,7 +30,7 @@ S = [
 ("Claude Code Releases","https://github.com/anthropics/claude-code/releases.atom","GitHub","Agent 框架","Claude Code 版本与新能力","P1","Atom / gh api"),
 ("OpenAI Codex Releases","https://github.com/openai/codex/releases.atom","GitHub","Agent 框架","Codex CLI 版本更新","P1","Atom / gh api"),
 ("CrewAI Releases","https://github.com/crewAIInc/crewAI/releases.atom","GitHub","Agent 框架","CrewAI 版本更新","P2","Atom"),
-("AutoGen Releases","https://github.com/microsoft/autogen/releases.atom","GitHub","Agent 框架","AutoGen 版本更新","P2","Atom"),
+("ToolSift Daily Agent News","https://toolsift.ai/agent-news/rss.xml","聚合日报","聚合源","每日 Agent 新闻汇总（含背景和一手链接），二手，入选前需核对原文；2026-11-16 加入，替换已停更的 AutoGen","P1","RSS"),
 ("Microsoft Agent Framework Releases","https://github.com/microsoft/agent-framework/releases.atom","GitHub","Agent 框架","AutoGen 与 Semantic Kernel 的继任框架","P1","Atom"),
 ("Google ADK Releases","https://github.com/google/adk-python/releases.atom","GitHub","Agent 框架","Google Agent Development Kit 版本更新","P1","Atom"),
 ("Cursor Blog","https://cursor.com/blog","官方博客","大厂 Super Agent","编码 Agent 产品形态（Projects、多 Agent）","P1","HTML 列表页抓取"),

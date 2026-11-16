@@ -14,7 +14,7 @@
 | Meta AI / Meta Superintelligence Labs | https://ai.meta.com/blog/ | 官方博客 | Muse 系列模型、Llama、研究发布 | P1 | HTML 列表页抓取 | 200 |
 | xAI News | https://x.ai/news | 官方博客 | Grok 模型与产品更新 | P1 | HTML 列表页抓取 | 200 |
 | Mistral AI News | https://mistral.ai/news | 官方博客 | Mistral 模型、Agents API 与企业产品 | P1 | HTML 列表页抓取 | 200 |
-| Qwen Blog | https://qwenlm.github.io/blog/index.xml | 官方博客 | Qwen 开源模型发布与技术报告 | P0 | RSS | 200 |
+| Qwen（Hugging Face 组织页） | https://huggingface.co/Qwen | 官方模型库 | Qwen 开源权重发布；原博客 RSS 自 2025-09 停更，2026-11-16 替换 | P1 | HTML 抓取 + X @Alibaba_Qwen | 未检测 |
 | DeepSeek API News | https://api-docs.deepseek.com/news/news | 官方博客 | DeepSeek 模型与 API 更新 | P0 | HTML 列表页抓取 | 200 |
 | X：@OpenAI / @OpenAIDevs | https://x.com/OpenAIDevs | X 账号 | OpenAI 开发者发布 | P0 | X API 用户时间线 | X-API已核验 |
 | X：@AnthropicAI / @claudeai / @ClaudeDevs | https://x.com/ClaudeDevs | X 账号 | Claude 发布与开发者公告 | P0 | X API 用户时间线 | X-API已核验 |
@@ -66,7 +66,6 @@
 | Claude Code Releases | https://github.com/anthropics/claude-code/releases.atom | GitHub | Claude Code 版本与新能力 | P1 | Atom / gh api | 200 |
 | OpenAI Codex Releases | https://github.com/openai/codex/releases.atom | GitHub | Codex CLI 版本更新 | P1 | Atom / gh api | 200 |
 | CrewAI Releases | https://github.com/crewAIInc/crewAI/releases.atom | GitHub | CrewAI 版本更新 | P2 | Atom | 200 |
-| AutoGen Releases | https://github.com/microsoft/autogen/releases.atom | GitHub | AutoGen 版本更新 | P2 | Atom | 200 |
 | Microsoft Agent Framework Releases | https://github.com/microsoft/agent-framework/releases.atom | GitHub | AutoGen 与 Semantic Kernel 的继任框架 | P1 | Atom | 200 |
 | Google ADK Releases | https://github.com/google/adk-python/releases.atom | GitHub | Google Agent Development Kit 版本更新 | P1 | Atom | 200 |
 | Simon Willison | https://simonwillison.net/atom/everything/ | Newsletter | LLM 工具、Agent 实践、提示与安全 | P0 | Atom | 200 |
@@ -98,6 +97,7 @@
 
 | 名称 | URL / RSS / API | 类型 | 用途 | 优先级 | 抓取方式 | 检测 |
 | --- | --- | --- | --- | --- | --- | --- |
+| ToolSift Daily Agent News | https://toolsift.ai/agent-news/rss.xml | 聚合日报 | 每日 Agent 新闻汇总（含背景和一手链接），二手，入选前需核对原文；2026-11-16 加入，替换已停更的 AutoGen | P1 | RSS | 未检测 |
 | Latent Space + AINews | https://www.latent.space/feed | Newsletter | 每日 AINews（X、Reddit、Discord 汇总）与访谈 | P0 | RSS | 200 |
 
 ## 社区
