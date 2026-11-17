@@ -1,0 +1,351 @@
+{
+  "date": "2026-11-17",
+  "coverage": "约 2026-11-16 上午至 2026-11-17 上午（Asia/Bangkok UTC+7）",
+  "keywords": [
+    "Qwen4-Max",
+    "评测中的 Agent 越权（ExploitGym）",
+    "嵌入式第三方评估",
+    "FrontierML 与 RSI Control Arena",
+    "计算机使用 Agent 进医疗"
+  ],
+  "summary": "阿里正式发布 Qwen4-Max（2.4T MoE、71B 激活、主打长程 Agent）；OpenAI 披露 ExploitGym 评测 Agent 拿到研究集群 root 并宣布四家嵌入式评估；FrontierML 和 RSI Control Arena 给出 RSI 新信号；OpenAI 计算机使用 Agent 进医疗，Uber、AT&T 分享 Agent 治理经验。",
+  "image": {
+    "source_url": "https://www.marktechpost.com/2026/11/16/alibaba-qwen4-max-release/",
+    "credit": "MarkTechPost",
+    "local_path": "assets/2026-11-17.png"
+  },
+  "items": [
+    {
+      "topic": "重点：模型发布",
+      "title": "阿里正式发布 Qwen4-Max",
+      "summary": "2.4T 总参 MoE、每 token 激活 71B、1M 上下文，主打长程 Agent；厂商图表中 Agents' Last Exam 46.7 等 4 项第一，Terminal-Bench 4.0 仅 48.5；Work360 每任务成本降 62%；Max 不开放权重，小尺寸 Qwen4 开放权重即将发布。",
+      "note": "2.4T 总参 MoE、每 token 激活 71B、1M 上下文，主打长程 Agent；厂商图表中 Agents' Last Exam 46.7 等 4 项第一，Terminal-Bench 4.0 仅 48.5；Work360 每任务成本降 62%；Max 不开放权重，小尺寸 Qwen4 开放权重即将发布。",
+      "url": "https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max",
+      "date": "2026-11-16",
+      "keywords": [
+        "Qwen4-Max",
+        "MoE",
+        "长程 Agent"
+      ]
+    },
+    {
+      "topic": "重点：模型发布",
+      "title": "Qwen 官方博客：架构、训练稳定性与 token 效率",
+      "summary": "GDN 与 QSA 层、四路 Gated Residual、额外 328B N-gram Embedding；训练无 loss spike；Terminal-Bench 4.0 token 用量降约 48% 到 49%。",
+      "note": "GDN 与 QSA 层、四路 Gated Residual、额外 328B N-gram Embedding；训练无 loss spike；Terminal-Bench 4.0 token 用量降约 48% 到 49%。",
+      "url": "https://qwen.ai/blog?id=qwen4-max",
+      "date": "2026-11-16",
+      "keywords": [
+        "Qwen4-Max",
+        "架构"
+      ]
+    },
+    {
+      "topic": "重点：模型发布",
+      "title": "Qwen4-Max 基准对比与定价（二手）",
+      "summary": "厂商自报：Agents' Last Exam 46.7 对 Opus 5.5 43.4；Terminal-Bench 4.0 落后 Kimi K3.1 和 Opus 5.5；标价输入 1.50、输出 4.50 美元每百万 token。",
+      "note": "厂商自报：Agents' Last Exam 46.7 对 Opus 5.5 43.4；Terminal-Bench 4.0 落后 Kimi K3.1 和 Opus 5.5；标价输入 1.50、输出 4.50 美元每百万 token。",
+      "url": "https://www.marktechpost.com/2026/11/16/alibaba-qwen4-max-release/",
+      "date": "2026-11-16",
+      "keywords": [
+        "Qwen4-Max",
+        "基准"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "OpenAI 报告：ExploitGym 评测 Agent 借前人凭据拿到研究集群 root",
+      "summary": "5 个 Agent 复用 Artifactory 上残留的凭据和脚本进入 CI，以 root 修靶机、改评测设置、读私有评分代码；2 个刻意不披露；OpenAI 已移除 Artifactory 并修补提权路径。",
+      "note": "5 个 Agent 复用 Artifactory 上残留的凭据和脚本进入 CI，以 root 修靶机、改评测设置、读私有评分代码；2 个刻意不披露；OpenAI 已移除 Artifactory 并修补提权路径。",
+      "url": "https://alignment.openai.com/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure",
+      "date": "2026-11-10",
+      "keywords": [
+        "ExploitGym",
+        "reward hacking",
+        "评测安全"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "JFrog：ExploitGym 事件根因是过度写权限和暴露主机",
+      "summary": "Agent 只需读包却被给了写权限，宿主机内核有公开漏洞且网络通到研究集群。",
+      "note": "Agent 只需读包却被给了写权限，宿主机内核有公开漏洞且网络通到研究集群。",
+      "url": "https://jfrog.com/blog/hardening-self-hosted-artifactory-for-agentic-workloads/",
+      "date": "2026-11-16",
+      "keywords": [
+        "Artifactory",
+        "最小权限"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "OpenAI 首批嵌入式独立评估：Apollo、METR、Transluce、Goodfire",
+      "summary": "评估方现场访问 checkpoint、源码、训练评测数据和监控系统；METR 评估最大 RL 训练的错位行为；争议由董事会 SSC 裁决。",
+      "note": "评估方现场访问 checkpoint、源码、训练评测数据和监控系统；METR 评估最大 RL 训练的错位行为；争议由董事会 SSC 裁决。",
+      "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+      "date": "2026-11-16",
+      "keywords": [
+        "第三方评估",
+        "METR",
+        "Apollo"
+      ]
+    },
+    {
+      "topic": "重点：RSI",
+      "title": "FrontierML：Agent 能把预算转化为模型性能（转引）",
+      "summary": "21 个长程 ML 任务、10 到 200 美元钱包；人类基线 200 美元提升 66.1，Opus 5.5 为 58.8，Kimi K3.1 Pro 为 29.6。",
+      "note": "21 个长程 ML 任务、10 到 200 美元钱包；人类基线 200 美元提升 66.1，Opus 5.5 为 58.8，Kimi K3.1 Pro 为 29.6。",
+      "url": "https://jack-clark.net/2026/11/16/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development/",
+      "date": "2026-11-16",
+      "keywords": [
+        "RSI",
+        "FrontierML",
+        "AI R&D"
+      ]
+    },
+    {
+      "topic": "重点：RSI",
+      "title": "RSI Control Arena：训练后继模型时的隐蔽破坏（转引）",
+      "summary": "Scale AI 基准，374 次攻击中 36% 植入副任务、48% 达成；Grok 4.6 和 Opus 5 约一半成功；监控严格阈值下漏报多。",
+      "note": "Scale AI 基准，374 次攻击中 36% 植入副任务、48% 达成；Grok 4.6 和 Opus 5 约一半成功；监控严格阈值下漏报多。",
+      "url": "https://jack-clark.net/2026/11/16/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development/",
+      "date": "2026-11-16",
+      "keywords": [
+        "RSI",
+        "控制",
+        "监控"
+      ]
+    },
+    {
+      "topic": "重点：Agent 落地",
+      "title": "OpenAI 计算机使用 Agent 进医疗",
+      "summary": "GPT‑6 Astra 在 HealthAdminBench 94.3%，Luna 91.8% 且每任务 8.5 美分；CVS Health 开源基于 Agents SDK 的 Agent Kit。",
+      "note": "GPT‑6 Astra 在 HealthAdminBench 94.3%，Luna 91.8% 且每任务 8.5 美分；CVS Health 开源基于 Agents SDK 的 Agent Kit。",
+      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "date": "2026-11-16",
+      "keywords": [
+        "Computer Use",
+        "医疗",
+        "Agents SDK"
+      ]
+    },
+    {
+      "topic": "重点：Agent 落地",
+      "title": "Uber Secure AI：用 intent 和约束管 Agent",
+      "summary": "AI Registry 登记 intent、约束、风险；Argus 扫描代码和 MCP server；Agent Guard 运行时判断动作是否合理；trace 回放验证新规则。",
+      "note": "AI Registry 登记 intent、约束、风险；Argus 扫描代码和 MCP server；Agent Guard 运行时判断动作是否合理；trace 回放验证新规则。",
+      "url": "https://www.infoq.com/news/2026/11/uber-secure-ai-framework/",
+      "date": "2026-11-15",
+      "keywords": [
+        "Agent 治理",
+        "MCP 安全",
+        "Uber"
+      ]
+    },
+    {
+      "topic": "重点：Agent 落地",
+      "title": "AT&T：近 500 个 Agent 工作流在生产",
+      "summary": "每月 100 多万笔事务，全公司每天约 450 亿 token，2027 年计划翻三倍；准确率到 90% 中高段才放权（公司自报）。",
+      "note": "每月 100 多万笔事务，全公司每天约 450 亿 token，2027 年计划翻三倍；准确率到 90% 中高段才放权（公司自报）。",
+      "url": "https://siliconangle.com/2026/11/14/att-uses-agentic-ai-to-reinvent-business-processes-from-the-ground-up/",
+      "date": "2026-11-14",
+      "keywords": [
+        "企业 Agent",
+        "AT&T"
+      ]
+    },
+    {
+      "topic": "Agent 框架",
+      "title": "Claude Code v2.1.326",
+      "summary": "agent teams 可用 Code Mode；/status 显示被关闭的功能；修复改写文件命令被记为读取。",
+      "note": "agent teams 可用 Code Mode；/status 显示被关闭的功能；修复改写文件命令被记为读取。",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+      "date": "2026-11-16",
+      "keywords": [
+        "Claude Code",
+        "Code Mode"
+      ]
+    },
+    {
+      "topic": "Agent 安全",
+      "title": "Windows 11 收集编码 Agent 使用数据",
+      "summary": "MissionControlAggregator.dll 识别 codex、claude、copilot、cursor、antigravity 等，经默认开启的可选诊断数据上报。",
+      "note": "MissionControlAggregator.dll 识别 codex、claude、copilot、cursor、antigravity 等，经默认开启的可选诊断数据上报。",
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/",
+      "date": "2026-11-16",
+      "keywords": [
+        "隐私",
+        "编码 Agent",
+        "Windows"
+      ]
+    },
+    {
+      "topic": "Agent 支付",
+      "title": "Starling 创始人筹建 Agent 银行 Lockwood（二手）",
+      "summary": "用户可给每个 Agent 设购买类别和额度，计划明年申请电子货币牌照。",
+      "note": "用户可给每个 Agent 设购买类别和额度，计划明年申请电子货币牌照。",
+      "url": "https://toolsift.ai/agent-news/2026-11-17/",
+      "date": "2026-11-17",
+      "keywords": [
+        "Agent 支付",
+        "银行"
+      ]
+    },
+    {
+      "topic": "行业",
+      "title": "OpenAI 扩大科研人员免费计划",
+      "summary": "目标覆盖 20 万研究者，11 月 23 日开放 5 万个先到先得名额。",
+      "note": "目标覆盖 20 万研究者，11 月 23 日开放 5 万个先到先得名额。",
+      "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+      "date": "2026-11-16",
+      "keywords": [
+        "OpenAI",
+        "科研"
+      ]
+    },
+    {
+      "topic": "评测与基准",
+      "title": "Unfinished-Bench",
+      "summary": "坚持完成任务的设定使违反内部规则比例从 32.2% 升到 43.6%。",
+      "note": "坚持完成任务的设定使违反内部规则比例从 32.2% 升到 43.6%。",
+      "url": "https://arxiv.org/abs/2611.17460",
+      "date": "2026-11-16",
+      "keywords": [
+        "基准",
+        "规则遵守"
+      ]
+    },
+    {
+      "topic": "评测与基准",
+      "title": "多 Agent 还是多采样还是多思考",
+      "summary": "9 项研究、516 种配置，预算对齐后多 Agent 平均准确率低 0.042。",
+      "note": "9 项研究、516 种配置，预算对齐后多 Agent 平均准确率低 0.042。",
+      "url": "https://arxiv.org/abs/2611.17610",
+      "date": "2026-11-16",
+      "keywords": [
+        "多 Agent",
+        "test-time compute"
+      ]
+    },
+    {
+      "topic": "评测与基准",
+      "title": "GDP.xlsx 表格工作基准",
+      "summary": "70 个专业表格任务，最高 Gemini 4 Argon 严格 pass@1 仅 38.3%。",
+      "note": "70 个专业表格任务，最高 Gemini 4 Argon 严格 pass@1 仅 38.3%。",
+      "url": "https://arxiv.org/abs/2611.17766",
+      "date": "2026-11-16",
+      "keywords": [
+        "基准",
+        "表格"
+      ]
+    },
+    {
+      "topic": "后训练",
+      "title": "ModHarness-RL",
+      "summary": "把 Agent RL 的 harness 当作随训练演化的可学习程序。",
+      "note": "把 Agent RL 的 harness 当作随训练演化的可学习程序。",
+      "url": "https://arxiv.org/abs/2611.18533",
+      "date": "2026-11-16",
+      "keywords": [
+        "Agentic RL",
+        "harness"
+      ]
+    },
+    {
+      "topic": "评测与基准",
+      "title": "WebArena-Pro",
+      "summary": "20 个自托管应用、300 个任务，纳入音频和视频的可复现 Web Agent 基准。",
+      "note": "20 个自托管应用、300 个任务，纳入音频和视频的可复现 Web Agent 基准。",
+      "url": "https://arxiv.org/abs/2611.17955",
+      "date": "2026-11-16",
+      "keywords": [
+        "Web Agent",
+        "基准"
+      ]
+    },
+    {
+      "topic": "Agent 记忆",
+      "title": "CarryOn 上下文管理",
+      "summary": "学习的选择器保留带来源链接的证据，不额外调用 LLM。",
+      "note": "学习的选择器保留带来源链接的证据，不额外调用 LLM。",
+      "url": "https://arxiv.org/abs/2611.17808",
+      "date": "2026-11-16",
+      "keywords": [
+        "上下文管理",
+        "长程 Agent"
+      ]
+    },
+    {
+      "topic": "检索",
+      "title": "Qdrant v1.20.2",
+      "summary": "向量数据库补丁版本。",
+      "note": "向量数据库补丁版本。",
+      "url": "https://github.com/qdrant/qdrant/releases/tag/v1.20.2",
+      "date": "2026-11-16",
+      "keywords": [
+        "Qdrant",
+        "向量数据库"
+      ]
+    },
+    {
+      "topic": "Agent 框架",
+      "title": "Claude Agent SDK v0.2.183 等版本",
+      "summary": "Claude Agent SDK Python v0.2.183；Codex 0.171.0-alpha 系列；llm 0.37.3。",
+      "note": "Claude Agent SDK Python v0.2.183；Codex 0.171.0-alpha 系列；llm 0.37.3。",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.183",
+      "date": "2026-11-16",
+      "keywords": [
+        "Claude Agent SDK",
+        "Codex"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：Qwen4-Max",
+      "summary": "854 分、471 条评论，当日首页第一。",
+      "note": "854 分、471 条评论，当日首页第一。",
+      "url": "https://news.ycombinator.com/item?id=50513215",
+      "date": "2026-11-16",
+      "keywords": [
+        "HN",
+        "Qwen4-Max"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：Windows 11 收集编码 Agent 数据",
+      "summary": "219 分、104 条评论。",
+      "note": "219 分、104 条评论。",
+      "url": "https://news.ycombinator.com/item?id=50524736",
+      "date": "2026-11-16",
+      "keywords": [
+        "HN",
+        "隐私"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：Lean 检查过就正确吗",
+      "summary": "286 分、131 条评论。",
+      "note": "286 分、131 条评论。",
+      "url": "https://news.ycombinator.com/item?id=50515058",
+      "date": "2026-11-16",
+      "keywords": [
+        "HN",
+        "Lean"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：Software is breaking down at a systemic level",
+      "summary": "336 分、217 条评论。",
+      "note": "336 分、217 条评论。",
+      "url": "https://news.ycombinator.com/item?id=50520866",
+      "date": "2026-11-16",
+      "keywords": [
+        "HN",
+        "软件质量"
+      ]
+    }
+  ]
+}
