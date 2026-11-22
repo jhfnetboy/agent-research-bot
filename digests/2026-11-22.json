@@ -1,0 +1,370 @@
+{
+  "date": "2026-11-22",
+  "coverage": "约 2026-11-21 上午至 2026-11-22 上午（Asia/Bangkok UTC+7）；今天是周日，新发布不多，另补报 11 月 20 日发布、上期未覆盖的 Inkling 2 Mini、METR Q4 更新、MIT CSAIL harness 论文和腾讯 Hy4 开放权重",
+  "keywords": [
+    "RH Lean 证明通过社区验证",
+    "Inkling 2 Mini",
+    "METR Time Horizons 2.0",
+    "harness 组合泛化",
+    "AgentAlphaXiv",
+    "Dots 与 WorkBuddy"
+  ],
+  "summary": "Lean 与 Mathlib 社区声明 Alpöge 的黎曼猜想 Lean 证明通过四项验证标准；Thinking Machines 开源 looped transformer Inkling 2 Mini；METR 称时间跨度约每 3.6 个月翻倍且公开证据不足以排除剧烈 AI R&D 加速；MIT CSAIL 论文主张 harness 能做组合泛化和 surrogate training；另有 Hy4 开放权重、alphaXiv Agent 科研档案、LangChain knowledge factory，以及 Dots、WorkBuddy 的二手产品动态。",
+  "image": {
+    "source_url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+    "credit": "Thinking Machines",
+    "local_path": "assets/2026-11-22.png"
+  },
+  "items": [
+    {
+      "topic": "重点：RH 验证",
+      "title": "Lean 与 Mathlib 社区声明 RH 证明通过验证",
+      "summary": "联合声明经 Lean FRO 和 Mathlib Initiative 背书，称对 Alpöge 1,700 万行 Lean 证明有完全信心，四项标准全部满足。",
+      "note": "联合声明经 Lean FRO 和 Mathlib Initiative 背书，称对 Alpöge 1,700 万行 Lean 证明有完全信心，四项标准全部满足。",
+      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+      "date": "2026-11-21",
+      "keywords": [
+        "Lean",
+        "Riemann Hypothesis",
+        "Mathlib"
+      ]
+    },
+    {
+      "topic": "重点：RH 验证",
+      "title": "Andrew Sutherland 公开多内核验证记录",
+      "summary": "175,187 个模块全部编译通过，nanoda 和 con-leche 接受全部导出；已检查的 GRH 仅覆盖 Dirichlet L 函数，lake comparator 仍在运行。",
+      "note": "175,187 个模块全部编译通过，nanoda 和 con-leche 接受全部导出；已检查的 GRH 仅覆盖 Dirichlet L 函数，lake comparator 仍在运行。",
+      "url": "https://math.mit.edu/~drew/grh/",
+      "date": "2026-11-21",
+      "keywords": [
+        "Lean",
+        "GRH",
+        "nanoda"
+      ]
+    },
+    {
+      "topic": "重点：RH 验证",
+      "title": "AINews：Alpöge 未披露模型版本，ANT 股价跌约 10%（二手）",
+      "summary": "AINews 汇总称所用 Claude 模型和人工引导程度未披露，ANT 股票当天跌约 10%。",
+      "note": "AINews 汇总称所用 Claude 模型和人工引导程度未披露，ANT 股票当天跌约 10%。",
+      "url": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/",
+      "date": "2026-11-20",
+      "keywords": [
+        "Claude",
+        "Anthropic"
+      ]
+    },
+    {
+      "topic": "重点：开源模型",
+      "title": "Thinking Machines 发布 Inkling 2 Mini",
+      "summary": "26.4B MoE、中间 12 层循环 3 次，约 20GB 可在笔记本运行，厂商自报 DeepSWE v1.1 48.2%；同时放出可变循环研究模型。",
+      "note": "26.4B MoE、中间 12 层循环 3 次，约 20GB 可在笔记本运行，厂商自报 DeepSWE v1.1 48.2%；同时放出可变循环研究模型。",
+      "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+      "date": "2026-11-20",
+      "keywords": [
+        "Inkling 2 Mini",
+        "looped transformer",
+        "CoT"
+      ]
+    },
+    {
+      "topic": "重点：开源模型",
+      "title": "Inkling 2 Mini Hugging Face 模型卡",
+      "summary": "Apache 2.0，1M 上下文，文本加图像输入，3.4B 激活、计入循环后 5.4B 有效激活。",
+      "note": "Apache 2.0，1M 上下文，文本加图像输入，3.4B 激活、计入循环后 5.4B 有效激活。",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+      "date": "2026-11-20",
+      "keywords": [
+        "Hugging Face",
+        "Apache 2.0"
+      ]
+    },
+    {
+      "topic": "重点：评测",
+      "title": "METR Q4 能力更新：时间跨度约每 3.6 个月翻倍",
+      "summary": "模型在编码和优化上通常追平或超过熟练人类，缺少清晰反馈时判断力不如专家；METR 认为公开证据不足以排除剧烈 AI R&D 加速。",
+      "note": "模型在编码和优化上通常追平或超过熟练人类，缺少清晰反馈时判断力不如专家；METR 认为公开证据不足以排除剧烈 AI R&D 加速。",
+      "url": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/",
+      "date": "2026-11-20",
+      "keywords": [
+        "METR",
+        "Time Horizons",
+        "RSI"
+      ]
+    },
+    {
+      "topic": "重点：评测",
+      "title": "MIT Technology Review：Time Horizons 图的更新",
+      "summary": "报道 METR Time Horizons 2.0 更新及其预测困难。",
+      "note": "报道 METR Time Horizons 2.0 更新及其预测困难。",
+      "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+      "date": "2026-11-20",
+      "keywords": [
+        "METR",
+        "Time Horizons"
+      ]
+    },
+    {
+      "topic": "重点：harness",
+      "title": "MIT CSAIL：LM Harnesses are Compositional Generalizers",
+      "summary": "主张通过 LID 抽象做组合泛化，并提出用合成任务和假工具做 surrogate harness training，反对 harness 会被更强模型吸收。",
+      "note": "主张通过 LID 抽象做组合泛化，并提出用合成任务和假工具做 surrogate harness training，反对 harness 会被更强模型吸收。",
+      "url": "https://x.com/a1zhang/status/2123774098241147225",
+      "date": "2026-11-20",
+      "keywords": [
+        "harness",
+        "LID",
+        "MIT CSAIL"
+      ]
+    },
+    {
+      "topic": "模型与开源",
+      "title": "腾讯放出 Hy4 开放权重",
+      "summary": "770B / 49B 激活 MoE，1M 上下文，原生多模态，Tencent Hy License；模型卡承认与顶级闭源模型仍有差距。",
+      "note": "770B / 49B 激活 MoE，1M 上下文，原生多模态，Tencent Hy License；模型卡承认与顶级闭源模型仍有差距。",
+      "url": "https://huggingface.co/tencent/Hy4",
+      "date": "2026-11-20",
+      "keywords": [
+        "Hy4",
+        "Tencent",
+        "MoE"
+      ]
+    },
+    {
+      "topic": "Agent 科研",
+      "title": "alphaXiv：近千个 Agent 组成的科研社会",
+      "summary": "十二周内 936 个 Agent 发表 936 项研究并自办期刊；盲评中实验严谨性高于人类预印本，新颖性较低。",
+      "note": "十二周内 936 个 Agent 发表 936 项研究并自办期刊；盲评中实验严谨性高于人类预印本，新颖性较低。",
+      "url": "https://www.alphaxiv.org/abs/2611.society-ai-scientists",
+      "date": "2026-11-21",
+      "keywords": [
+        "alphaXiv",
+        "Agent 科研"
+      ]
+    },
+    {
+      "topic": "Agent 科研",
+      "title": "AgentAlphaXiv 档案发布到 Hugging Face",
+      "summary": "论文、代码、聊天记录以 CC BY 4.0 发布，但不含约 62GB 原始实验数据和 checkpoint。",
+      "note": "论文、代码、聊天记录以 CC BY 4.0 发布，但不含约 62GB 原始实验数据和 checkpoint。",
+      "url": "https://huggingface.co/datasets/alphaXiv/AgentAlphaXiv",
+      "date": "2026-11-21",
+      "keywords": [
+        "Hugging Face",
+        "数据集"
+      ]
+    },
+    {
+      "topic": "知识管理",
+      "title": "LangChain 提出 knowledge factory",
+      "summary": "Agent 标记知识缺口，后台 curator Agent 根据文档和 traces 更新 skills 与领域知识。",
+      "note": "Agent 标记知识缺口，后台 curator Agent 根据文档和 traces 更新 skills 与领域知识。",
+      "url": "https://www.langchain.com/blog/knowledge-factory",
+      "date": "2026-11-21",
+      "keywords": [
+        "LangChain",
+        "knowledge factory"
+      ]
+    },
+    {
+      "topic": "产品",
+      "title": "OpenAI 开始向 Plus 用户测试 Dots（二手）",
+      "summary": "Thibault Sottiaux 称开始向少量 ChatGPT Plus 用户测试常驻 Agent Dots，并向全部 Business Standard 用户推出。",
+      "note": "Thibault Sottiaux 称开始向少量 ChatGPT Plus 用户测试常驻 Agent Dots，并向全部 Business Standard 用户推出。",
+      "url": "https://toolsift.ai/agent-news/2026-11-22/",
+      "date": "2026-11-22",
+      "keywords": [
+        "Dots",
+        "OpenAI"
+      ]
+    },
+    {
+      "topic": "产品",
+      "title": "腾讯 WorkBuddy 公测 Computer Use（二手）",
+      "summary": "macOS 和 Windows 上无需 API 即可点击输入，提交操作需确认，需要屏幕录制权限。",
+      "note": "macOS 和 Windows 上无需 API 即可点击输入，提交操作需确认，需要屏幕录制权限。",
+      "url": "https://toolsift.ai/agent-news/2026-11-22/",
+      "date": "2026-11-22",
+      "keywords": [
+        "WorkBuddy",
+        "Computer Use"
+      ]
+    },
+    {
+      "topic": "版本",
+      "title": "Claude Agent SDK Python v0.2.187",
+      "summary": "11 月 20 日发布，release 说明仅列 PyPI 安装命令。",
+      "note": "11 月 20 日发布，release 说明仅列 PyPI 安装命令。",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.187",
+      "date": "2026-11-20",
+      "keywords": [
+        "Claude Agent SDK"
+      ]
+    },
+    {
+      "topic": "版本",
+      "title": "OpenAI Codex CLI 0.173.0-alpha.4",
+      "summary": "11 月 21 日连续发布 alpha.2 至 alpha.4，release 说明未列改动。",
+      "note": "11 月 21 日连续发布 alpha.2 至 alpha.4，release 说明未列改动。",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.4",
+      "date": "2026-11-21",
+      "keywords": [
+        "Codex"
+      ]
+    },
+    {
+      "topic": "工具",
+      "title": "Pandex：欧洲法律 API 与 MCP server",
+      "summary": "覆盖欧盟及七国约 280 万份官方立法和最高法院判决，可用于带引用的法律检索。",
+      "note": "覆盖欧盟及七国约 280 万份官方立法和最高法院判决，可用于带引用的法律检索。",
+      "url": "https://www.pandex.io",
+      "date": "2026-11-21",
+      "keywords": [
+        "MCP",
+        "法律"
+      ]
+    },
+    {
+      "topic": "观点",
+      "title": "Simon Willison 推荐 Muru",
+      "summary": "mod_wsgi 作者用 AI 辅助写 Rust Python 服务器，并连续三周公开开发日志；强调判断仍靠人。",
+      "note": "mod_wsgi 作者用 AI 辅助写 Rust Python 服务器，并连续三周公开开发日志；强调判断仍靠人。",
+      "url": "https://simonwillison.net/2026/Nov/21/muru/",
+      "date": "2026-11-21",
+      "keywords": [
+        "Muru",
+        "Simon Willison"
+      ]
+    },
+    {
+      "topic": "观点",
+      "title": "Latent Space：用形式化验证对抗 slop",
+      "summary": "讨论形式化验证作为对抗 AI slop 的工具。",
+      "note": "讨论形式化验证作为对抗 AI slop 的工具。",
+      "url": "https://latent.space/p/formal-verification/",
+      "date": "2026-11-20",
+      "keywords": [
+        "formal verification"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：Lean 社区验证声明",
+      "summary": "833 分、684 评论。",
+      "note": "833 分、684 评论。",
+      "url": "https://news.ycombinator.com/item?id=50589618",
+      "date": "2026-11-21",
+      "keywords": [
+        "HN",
+        "Lean"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：Sutherland 验证文件页",
+      "summary": "96 分。",
+      "note": "96 分。",
+      "url": "https://news.ycombinator.com/item?id=50590441",
+      "date": "2026-11-21",
+      "keywords": [
+        "HN"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：Masullo 纯人工 GRH 证明公告",
+      "summary": "2392 分、1160 评论，为本周最热。",
+      "note": "2392 分、1160 评论，为本周最热。",
+      "url": "https://news.ycombinator.com/item?id=50579568",
+      "date": "2026-11-20",
+      "keywords": [
+        "HN",
+        "Masullo",
+        "GRH"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：Inkling 2 Mini",
+      "summary": "1386 分。",
+      "note": "1386 分。",
+      "url": "https://news.ycombinator.com/item?id=50581260",
+      "date": "2026-11-20",
+      "keywords": [
+        "HN",
+        "Inkling 2 Mini"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：Inkling-2-Mini 5.4GB 量化",
+      "summary": "358 分，效果尚未独立验证。",
+      "note": "358 分，效果尚未独立验证。",
+      "url": "https://news.ycombinator.com/item?id=50591853",
+      "date": "2026-11-21",
+      "keywords": [
+        "HN",
+        "量化"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：开发者被默认升为架构师",
+      "summary": "581 分，讨论 Agent 写代码后开发者变成审查和架构角色。",
+      "note": "581 分，讨论 Agent 写代码后开发者变成审查和架构角色。",
+      "url": "https://news.ycombinator.com/item?id=50579331",
+      "date": "2026-11-20",
+      "keywords": [
+        "HN"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：ClawDOS，DOS 上的 AI 编码 Agent",
+      "summary": "159 分、51 评论。",
+      "note": "159 分、51 评论。",
+      "url": "https://news.ycombinator.com/item?id=50586292",
+      "date": "2026-11-21",
+      "keywords": [
+        "HN",
+        "ClawDOS"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：OpenComputer，开源 Devin 替代品",
+      "summary": "118 分、36 评论。",
+      "note": "118 分、36 评论。",
+      "url": "https://news.ycombinator.com/item?id=50581403",
+      "date": "2026-11-21",
+      "keywords": [
+        "HN",
+        "OpenComputer"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "X：工程师讨论 Agent swarm 自主开发（二手）",
+      "summary": "有人称一个 orchestrator 调度 203 个子 Agent 两晚消耗 48.4 亿 token，主要用便宜开源模型。",
+      "note": "有人称一个 orchestrator 调度 203 个子 Agent 两晚消耗 48.4 亿 token，主要用便宜开源模型。",
+      "url": "https://x.com/i/trending/2123961968822227091",
+      "date": "2026-11-21",
+      "keywords": [
+        "X",
+        "swarm"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "Reddit：Hy4 讨论集中在体积和安全限制（二手）",
+      "summary": "r/LocalLLaMA 上约 495 互动，评论认为它强但太大，并讨论网络安全能力是否受限。",
+      "note": "r/LocalLLaMA 上约 495 互动，评论认为它强但太大，并讨论网络安全能力是否受限。",
+      "url": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/",
+      "date": "2026-11-20",
+      "keywords": [
+        "Reddit",
+        "Hy4"
+      ]
+    }
+  ]
+}
