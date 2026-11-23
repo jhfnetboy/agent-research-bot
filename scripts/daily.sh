@@ -20,6 +20,7 @@ if git diff --cached --quiet; then echo "没有新改动可提交"; else git com
 if [ "${SKIP_DEPLOY:-0}" != 1 ]; then
   [ -n "${CLOUDFLARE_API_TOKEN:-}" ] || { echo "缺少 CLOUDFLARE_API_TOKEN，跳过部署"; exit 2; }
   cd site
+  export WRANGLER_CACHE_DIR="${WRANGLER_CACHE_DIR:-/tmp/wrangler-cache}"  # /node_modules 为 root 所有时避免缓存权限错误
   WR=$(command -v wrangler || echo "npx --yes wrangler")
   $WR pages deploy dist --project-name "$PROJECT" --branch main --commit-dirty=true
   echo "线上地址：https://$PROJECT.pages.dev/"
