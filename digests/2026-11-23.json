@@ -1,0 +1,232 @@
+{
+  "date": "2026-11-23",
+  "coverage": "约 2026-11-22 上午至 2026-11-23 上午（Asia/Bangkok UTC+7），周一 72 小时回看，补报 11 月 16 日至 20 日的 Agent 安全事件和 Perplexity Monitor API",
+  "keywords": [
+    "perplexity 发展上限",
+    "AI 参与预训练研究",
+    "Cairn 自主零日",
+    "agent-framework 投毒",
+    "self-rewriting",
+    "AutoMaster"
+  ],
+  "summary": "OpenAI 首席科学家 Pachocki 首次公开内部预训练 log-perplexity 曲线并提议跨实验室共同上限；AWS 披露 Cairn 多 Agent 框架自主发现并利用零日，Wiz 称 Microsoft agent-framework PyPI 包遭 Cairn 工具投毒，Bell Canada 称遭 agentic 攻击者入侵；论文显示 27B 模型可靠推理改写自身权重，AutoMaster 让 Agent 自主做后训练。",
+  "image": {
+    "source_url": "https://openai.com/index/perplexity-and-intelligence/",
+    "credit": "OpenAI",
+    "local_path": "assets/2026-11-23.png"
+  },
+  "items": [
+    {
+      "topic": "重点：RSI 与前沿实验室",
+      "title": "Pachocki 公开 OpenAI 预训练 log-perplexity 曲线",
+      "summary": "GPT-3.5 约 0.99、GPT-4 约 0.91，低于 0.8 后网络安全和数学能力质变，约 0.76 时开始产出数学突破；预计 0.68 到 0.7 区间出现新能力。",
+      "note": "GPT-3.5 约 0.99、GPT-4 约 0.91，低于 0.8 后网络安全和数学能力质变，约 0.76 时开始产出数学突破；预计 0.68 到 0.7 区间出现新能力。",
+      "url": "https://openai.com/index/perplexity-and-intelligence/",
+      "date": "2026-11-22",
+      "keywords": [
+        "OpenAI",
+        "perplexity",
+        "预训练"
+      ]
+    },
+    {
+      "topic": "重点：RSI 与前沿实验室",
+      "title": "提议按 perplexity 设跨实验室发展上限",
+      "summary": "在监控能力达到具体里程碑（如 CoT monitor 继任者）前共同不越过；认为 AI 参与预训练算法研究是比全自动 RSI 更早的阶跃点，最早 2027 年。",
+      "note": "在监控能力达到具体里程碑（如 CoT monitor 继任者）前共同不越过；认为 AI 参与预训练算法研究是比全自动 RSI 更早的阶跃点，最早 2027 年。",
+      "url": "https://openai.com/index/perplexity-and-intelligence/",
+      "date": "2026-11-22",
+      "keywords": [
+        "RSI",
+        "AI 安全",
+        "发展上限"
+      ]
+    },
+    {
+      "topic": "重点：RSI 与前沿实验室",
+      "title": "HN 讨论：数据集不透明、需独立审计",
+      "summary": "482 分、334 评论，质疑评测集为内部代码库且依赖分词器，也有人视为首个具体限速方案。",
+      "note": "482 分、334 评论，质疑评测集为内部代码库且依赖分词器，也有人视为首个具体限速方案。",
+      "url": "https://news.ycombinator.com/item?id=50601525",
+      "date": "2026-11-22",
+      "keywords": [
+        "HN",
+        "perplexity"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "AWS：Cairn 多 Agent 框架自主发现零日并拿到 root",
+      "summary": "攻击者只给 IP 清单和 obtain shell access 目标，Agent 在 MONAI Label 发现路径遍历漏洞，约 11 分钟到写文件，随后 root。",
+      "note": "攻击者只给 IP 清单和 obtain shell access 目标，Agent 在 MONAI Label 发现路径遍历漏洞，约 11 分钟到写文件，随后 root。",
+      "url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
+      "date": "2026-11-20",
+      "keywords": [
+        "Cairn",
+        "零日",
+        "Agent 化攻击"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "MONAI Label 0.8.6 修复路径遍历漏洞",
+      "summary": "GHSA-qc22-rmgc-vg94，datastore 上传端点可任意写文件。",
+      "note": "GHSA-qc22-rmgc-vg94，datastore 上传端点可任意写文件。",
+      "url": "https://github.com/Project-MONAI/MONAILabel/releases/tag/0.8.6",
+      "date": "2026-11-22",
+      "keywords": [
+        "MONAI Label",
+        "漏洞修复"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "Microsoft agent-framework PyPI 包被投毒",
+      "summary": "1.26.1 和 1.26.2 用 .pth 文件在 Python 启动时窃取凭据，疑似 ESRP 证书泄露，工具自称 Cairn；安全版本 1.26.0。",
+      "note": "1.26.1 和 1.26.2 用 .pth 文件在 Python 启动时窃取凭据，疑似 ESRP 证书泄露，工具自称 Cairn；安全版本 1.26.0。",
+      "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
+      "date": "2026-11-17",
+      "keywords": [
+        "供应链",
+        "agent-framework",
+        "Wiz"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "Bell Canada 称 agentic 攻击者窃取企业客户数据",
+      "summary": "11 月 17 日入侵 Maximo 预生产副本，泄露联系人、工单标题和部分网络 IP。",
+      "note": "11 月 17 日入侵 Maximo 预生产副本，泄露联系人、工单标题和部分网络 IP。",
+      "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
+      "date": "2026-11-20",
+      "keywords": [
+        "Bell Canada",
+        "数据泄露"
+      ]
+    },
+    {
+      "topic": "重点：RSI 与后训练",
+      "title": "Language Models Can Rewrite Their Own Weights",
+      "summary": "27B 开源模型不用梯度，靠推理改写自身权重，留出集准确率 +6.6 个百分点，8 轮连续提升，能力随规模出现。",
+      "note": "27B 开源模型不用梯度，靠推理改写自身权重，留出集准确率 +6.6 个百分点，8 轮连续提升，能力随规模出现。",
+      "url": "https://arxiv.org/abs/2611.21885",
+      "date": "2026-11-17",
+      "keywords": [
+        "self-rewriting",
+        "RSI",
+        "arXiv"
+      ]
+    },
+    {
+      "topic": "重点：RSI 与后训练",
+      "title": "AutoMaster：Agent 自主做后训练",
+      "summary": "Skill-FT 用自然语言 skills 引导 teacher rollout，Agent 自主设计 skill 和筛数据，4B、9B 模型比普通 SFT 高 1.42 到 8.99 点。",
+      "note": "Skill-FT 用自然语言 skills 引导 teacher rollout，Agent 自主设计 skill 和筛数据，4B、9B 模型比普通 SFT 高 1.42 到 8.99 点。",
+      "url": "https://arxiv.org/abs/2611.26510",
+      "date": "2026-11-23",
+      "keywords": [
+        "后训练",
+        "SFT",
+        "AutoMaster"
+      ]
+    },
+    {
+      "topic": "工具",
+      "title": "Perplexity Monitor API（补报）",
+      "summary": "按计划监控主题或页面，有相关更新时发签名 webhook；定价和对比数据为二手。",
+      "note": "按计划监控主题或页面，有相关更新时发签名 webhook；定价和对比数据为二手。",
+      "url": "https://www.perplexity.ai/hub/blog/introducing-perplexitys-monitor-api",
+      "date": "2026-11-16",
+      "keywords": [
+        "Perplexity",
+        "webhook",
+        "Agent 触发器"
+      ]
+    },
+    {
+      "topic": "Agent 科研",
+      "title": "Masullo GRH 草稿的 Lean 众包形式化",
+      "summary": "参与的数学家欢迎用 Agent 贡献，提醒勘误问题轻重不一，判断核心漏洞为时过早。",
+      "note": "参与的数学家欢迎用 Agent 贡献，提醒勘误问题轻重不一，判断核心漏洞为时过早。",
+      "url": "https://news.ycombinator.com/item?id=50605045",
+      "date": "2026-11-22",
+      "keywords": [
+        "Lean",
+        "GRH",
+        "众包"
+      ]
+    },
+    {
+      "topic": "Agent 科研",
+      "title": "Agent 舰队公开攻打 P vs NP",
+      "summary": "pequalnp.com 实时展示已检查引理和被驳倒方案，注明权重不是概率也不是证明。",
+      "note": "pequalnp.com 实时展示已检查引理和被驳倒方案，注明权重不是概率也不是证明。",
+      "url": "https://pequalnp.com/",
+      "date": "2026-11-22",
+      "keywords": [
+        "P vs NP",
+        "Agent swarm"
+      ]
+    },
+    {
+      "topic": "评测",
+      "title": "AltRA-Test：LLM judge 替代人工的统计检验",
+      "summary": "支持每题标注者不同，约 100 题常够用，约一半任务设置里 LLM 通过。",
+      "note": "支持每题标注者不同，约 100 题常够用，约一半任务设置里 LLM 通过。",
+      "url": "https://arxiv.org/abs/2611.26073",
+      "date": "2026-11-23",
+      "keywords": [
+        "LLM judge",
+        "评测方法"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "Show HN：扮演 LLM 子 Agent 的游戏 worker755",
+      "summary": "HN 272 分。",
+      "note": "HN 272 分。",
+      "url": "https://news.ycombinator.com/item?id=50599762",
+      "date": "2026-11-22",
+      "keywords": [
+        "HN",
+        "subagent"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "本地 AI 入门：Inkling、Qwen、Unsloth",
+      "summary": "HN 220 分。",
+      "note": "HN 220 分。",
+      "url": "https://news.ycombinator.com/item?id=50603845",
+      "date": "2026-11-22",
+      "keywords": [
+        "本地模型",
+        "HN"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：P vs NP Agent 舰队引发 token 经济讨论",
+      "summary": "110 分、102 评论，争论闲置订阅额度是否该捐给此类项目。",
+      "note": "110 分、102 评论，争论闲置订阅额度是否该捐给此类项目。",
+      "url": "https://news.ycombinator.com/item?id=50604314",
+      "date": "2026-11-22",
+      "keywords": [
+        "HN",
+        "token 经济"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "X：Pachocki 文章成周末最热话题（二手）",
+      "summary": "X 新闻摘要称图中标出未发布模型约 0.73、Altman 转发、Musk 主张改称 training，未逐一核实原帖。",
+      "note": "X 新闻摘要称图中标出未发布模型约 0.73、Altman 转发、Musk 主张改称 training，未逐一核实原帖。",
+      "url": "https://x.com/search?q=Pachocki%20perplexity",
+      "date": "2026-11-23",
+      "keywords": [
+        "X",
+        "perplexity"
+      ]
+    }
+  ]
+}

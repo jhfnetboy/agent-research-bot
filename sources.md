@@ -42,7 +42,6 @@
 | Hugging Face Blog | https://huggingface.co/blog/feed.xml | 官方博客 | 开源模型、微调、TRL、数据集 | P1 | RSS | 200 |
 | arXiv cs.CL RSS | https://rss.arxiv.org/rss/cs.CL | 论文源 | LLM、RL、RAG 方向每日新论文 | P2 | RSS，按关键词过滤 | 200 |
 | TRL Releases | https://github.com/huggingface/trl/releases.atom | GitHub | GRPO、DPO 等 RL 与微调实现 | P1 | Atom | 200 |
-| verl Releases | https://github.com/verl-project/verl/releases.atom | GitHub | 大规模 RL 训练框架 | P2 | Atom | 200 |
 | Interconnects（Nathan Lambert） | https://www.interconnects.ai/feed | Newsletter | RLHF、RLVR、开源模型后训练分析 | P0 | RSS | 200 |
 
 ## RAG 与向量数据库
@@ -66,7 +65,7 @@
 | Claude Code Releases | https://github.com/anthropics/claude-code/releases.atom | GitHub | Claude Code 版本与新能力 | P1 | Atom / gh api | 200 |
 | OpenAI Codex Releases | https://github.com/openai/codex/releases.atom | GitHub | Codex CLI 版本更新 | P1 | Atom / gh api | 200 |
 | CrewAI Releases | https://github.com/crewAIInc/crewAI/releases.atom | GitHub | CrewAI 版本更新 | P2 | Atom | 200 |
-| Microsoft Agent Framework Releases | https://github.com/microsoft/agent-framework/releases.atom | GitHub | AutoGen 与 Semantic Kernel 的继任框架 | P1 | Atom | 200 |
+| Microsoft Agent Framework（PyPI 发布） | https://pypi.org/rss/project/agent-framework/releases.xml | 包仓库 | AutoGen 与 Semantic Kernel 的继任框架；GitHub releases.atom 自 2026-11-23 返回 404，改跟 PyPI 发布流，也便于发现异常版本（11-17 曾被投毒） | P1 | RSS | 未检测 |
 | Google ADK Releases | https://github.com/google/adk-python/releases.atom | GitHub | Google Agent Development Kit 版本更新 | P1 | Atom | 200 |
 | Simon Willison | https://simonwillison.net/atom/everything/ | Newsletter | LLM 工具、Agent 实践、提示与安全 | P0 | Atom | 200 |
 
@@ -83,6 +82,7 @@
 | MCP Blog | https://blog.modelcontextprotocol.io/ | 官方博客 | MCP 规范与生态公告 | P0 | HTML 抓取 | 200 |
 | MCP 规范 Releases | https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom | GitHub | MCP 规范版本 | P0 | Atom | 200 |
 | A2A Releases | https://github.com/a2aproject/A2A/releases.atom | GitHub | Agent2Agent 协议版本 | P1 | Atom | 200 |
+| AWS Security Blog（Amazon Threat Intelligence） | https://aws.amazon.com/blogs/security/feed/ | 官方博客 | Agent 化攻击与防御的一手威胁情报（如 2026-11-20 Cairn 报告）；2026-11-23 替换近两周无产出的 verl Releases | P2 | RSS | 未检测 |
 
 ## 评测与基准
 

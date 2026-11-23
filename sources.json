@@ -273,14 +273,14 @@
       "http_status_2026_11_11": "未检测"
     },
     {
-      "name": "Microsoft Agent Framework Releases",
-      "url": "https://github.com/microsoft/agent-framework/releases.atom",
-      "type": "GitHub",
+      "name": "Microsoft Agent Framework（PyPI 发布）",
+      "url": "https://pypi.org/rss/project/agent-framework/releases.xml",
+      "type": "包仓库",
       "area": "Agent 框架",
-      "purpose": "AutoGen 与 Semantic Kernel 的继任框架",
+      "purpose": "AutoGen 与 Semantic Kernel 的继任框架；GitHub releases.atom 自 2026-11-23 返回 404，改跟 PyPI 发布流，也便于发现异常版本（11-17 曾被投毒）",
       "priority": "P1",
-      "fetch": "Atom",
-      "http_status_2026_11_11": "200"
+      "fetch": "RSS",
+      "http_status_2026_11_11": "未检测"
     },
     {
       "name": "Google ADK Releases",
@@ -383,14 +383,14 @@
       "http_status_2026_11_11": "200"
     },
     {
-      "name": "verl Releases",
-      "url": "https://github.com/verl-project/verl/releases.atom",
-      "type": "GitHub",
-      "area": "后训练",
-      "purpose": "大规模 RL 训练框架",
+      "name": "AWS Security Blog（Amazon Threat Intelligence）",
+      "url": "https://aws.amazon.com/blogs/security/feed/",
+      "type": "官方博客",
+      "area": "Agent 协议与工具",
+      "purpose": "Agent 化攻击与防御的一手威胁情报（如 2026-11-20 Cairn 报告）；2026-11-23 替换近两周无产出的 verl Releases",
       "priority": "P2",
-      "fetch": "Atom",
-      "http_status_2026_11_11": "200"
+      "fetch": "RSS",
+      "http_status_2026_11_11": "未检测"
     },
     {
       "name": "Interconnects（Nathan Lambert）",
