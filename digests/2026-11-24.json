@@ -1,0 +1,287 @@
+{
+  "date": "2026-11-24",
+  "coverage": "约 2026-11-23 上午至 2026-11-24 上午（Asia/Bangkok UTC+7）",
+  "keywords": [
+    "Claude Ship",
+    "Loop Transformer",
+    "VP ≠ VNP",
+    "Shirudo",
+    "MCP/A2A 端点安全",
+    "skills 隐私审计",
+    "Safe Personal RSI"
+  ],
+  "summary": "Anthropic 发布 Claude Ship，让 Agent 按仓库策略审查、修复并批准 PR；智谱 GLM-5.4 把 Loop Transformer 扩展到 750B 旗舰；Anthropic 发布由 Claude 发现、AI 撰写并 Lean 形式化、尚无人工检查的 VP ≠ VNP 证明；OpenAI 与 Cisco 开源 eBPF 防护运行时 Shirudo，AWS GA 面向 MCP、A2A 端点的 WAF 规则组。",
+  "image": {
+    "source_url": "https://claude.com/resources/articles/introducing-claude-ship",
+    "credit": "Anthropic",
+    "local_path": "assets/2026-11-24.png"
+  },
+  "items": [
+    {
+      "topic": "重点：Agent 工具",
+      "title": "Anthropic 发布 Claude Ship（beta）",
+      "summary": "Code Review、PR Steward、Claude Approvals 三个 Agent 串起 PR 审查、修复和批准；Claude Code 团队 6 月到 9 月合并 PR 翻倍以上、回滚占比降超 40%。",
+      "note": "Code Review、PR Steward、Claude Approvals 三个 Agent 串起 PR 审查、修复和批准；Claude Code 团队 6 月到 9 月合并 PR 翻倍以上、回滚占比降超 40%。",
+      "url": "https://claude.com/resources/articles/introducing-claude-ship",
+      "date": "2026-11-23",
+      "keywords": [
+        "Anthropic",
+        "Claude Ship",
+        "代码审查"
+      ]
+    },
+    {
+      "topic": "重点：Agent 工具",
+      "title": "Claude Approvals 文档列出无人审查即合并的情形",
+      "summary": "策略文件 .claude/approvals.yml 设置 seats 和 claude 批准权限；seats 为 0 或 Claude 批准计入分支保护时，PR 可能无人查看就合并。",
+      "note": "策略文件 .claude/approvals.yml 设置 seats 和 claude 批准权限；seats 为 0 或 Claude 批准计入分支保护时，PR 可能无人查看就合并。",
+      "url": "https://code.claude.com/docs/en/approvals",
+      "date": "2026-11-23",
+      "keywords": [
+        "Claude Approvals",
+        "策略文件",
+        "安全"
+      ]
+    },
+    {
+      "topic": "重点：模型发布",
+      "title": "GLM-5.4：首个 Loop Transformer 旗舰",
+      "summary": "GLM-5 基座 28 层循环两次，750B，官方称可比 2T 到 3T 参数模型；30B 等参数消融中输出长度降 10% 到 14%；未公布基准分数，权重待安全加固后开放。",
+      "note": "GLM-5 基座 28 层循环两次，750B，官方称可比 2T 到 3T 参数模型；30B 等参数消融中输出长度降 10% 到 14%；未公布基准分数，权重待安全加固后开放。",
+      "url": "https://z.ai/blog/glm-5.4",
+      "date": "2026-11-23",
+      "keywords": [
+        "GLM-5.4",
+        "Loop Transformer",
+        "Z.ai"
+      ]
+    },
+    {
+      "topic": "重点：模型发布",
+      "title": "Simon Willison 实测 GLM-5.4",
+      "summary": "Coding Plan 的 key 可在 Z.ai 的 OpenAI 兼容 Responses API 调用 GLM-5.4；一周内第二个 looped transformer。",
+      "note": "Coding Plan 的 key 可在 Z.ai 的 OpenAI 兼容 Responses API 调用 GLM-5.4；一周内第二个 looped transformer。",
+      "url": "https://simonwillison.net/2026/Nov/23/glm-54/",
+      "date": "2026-11-23",
+      "keywords": [
+        "GLM-5.4",
+        "looped transformer"
+      ]
+    },
+    {
+      "topic": "重点：AI 科研与 RSI",
+      "title": "Claude 发现并形式化 VP ≠ VNP",
+      "summary": "Anthropic formal-math 仓库发布论文与 Lean 4 证明，由内部研究用 Claude 模型发现，AI 撰写，尚无人类数学家检查；不解决 P vs NP。",
+      "note": "Anthropic formal-math 仓库发布论文与 Lean 4 证明，由内部研究用 Claude 模型发现，AI 撰写，尚无人类数学家检查；不解决 P vs NP。",
+      "url": "https://github.com/anthropics/formal-math/tree/main/vp-vnp",
+      "date": "2026-11-23",
+      "keywords": [
+        "Anthropic",
+        "Lean",
+        "复杂度理论"
+      ]
+    },
+    {
+      "topic": "重点：AI 科研与 RSI",
+      "title": "Import AI 482：AscendGYM 与 SciResearch-Eval",
+      "summary": "AscendGYM 评估 Agent 优化 Ascend NPU kernel，Opus 5 最好；SciResearch-Eval 中模拟器缺失物理时只有 GPT-6 Astra 和 Claude Fable 5.2 默认设置下可靠。",
+      "note": "AscendGYM 评估 Agent 优化 Ascend NPU kernel，Opus 5 最好；SciResearch-Eval 中模拟器缺失物理时只有 GPT-6 Astra 和 Claude Fable 5.2 默认设置下可靠。",
+      "url": "https://jack-clark.net/2026/11/23/import-ai-482-huawei-kernel-benchmarks-airborne-drone-detection-and-a-national-labs-ai-science-benchmark/",
+      "date": "2026-11-23",
+      "keywords": [
+        "RSI",
+        "kernel 优化",
+        "AI 科学"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "OpenAI 与 Cisco 开源 Shirudo",
+      "summary": "eBPF 运行时，Agent 生成签名 shield 在补丁前保护运行中的 Linux 服务；Codex 生成的 shield 在 Elasticsearch 上拦截 Java4Shell 且无需重启。",
+      "note": "eBPF 运行时，Agent 生成签名 shield 在补丁前保护运行中的 Linux 服务；Codex 生成的 shield 在 Elasticsearch 上拦截 Java4Shell 且无需重启。",
+      "url": "https://openai.com/index/introducing-shirudo",
+      "date": "2026-11-23",
+      "keywords": [
+        "OpenAI",
+        "Cisco",
+        "eBPF",
+        "Shirudo"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "AWS GA API Portal 与 WAF AI Security",
+      "summary": "发现并防护 LLM 推理端点、MCP 和 A2A 服务器，把 Agent 视为第三类 API 调用方。",
+      "note": "发现并防护 LLM 推理端点、MCP 和 A2A 服务器，把 Agent 视为第三类 API 调用方。",
+      "url": "https://aws.amazon.com/blogs/security/introducing-api-and-ai-security-on-aws-from-discovery-to-protection/",
+      "date": "2026-11-23",
+      "keywords": [
+        "AWS",
+        "MCP",
+        "A2A",
+        "WAF"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "SkillPrivus：Agent skills 隐私审计",
+      "summary": "726 个公开 skills 中 563 个处理个人数据，307 个（54.5%）被标出至少一处潜在违规。",
+      "note": "726 个公开 skills 中 563 个处理个人数据，307 个（54.5%）被标出至少一处潜在违规。",
+      "url": "https://arxiv.org/abs/2611.26747",
+      "date": "2026-11-19",
+      "keywords": [
+        "skills",
+        "隐私",
+        "审计"
+      ]
+    },
+    {
+      "topic": "重点：Agent 安全",
+      "title": "Safe Personal RSI",
+      "summary": "把个人助手自我改进限制在 prompt 更新，采纳前测安全与任务表现；21 次更新尝试拒绝 20 次。",
+      "note": "把个人助手自我改进限制在 prompt 更新，采纳前测安全与任务表现；21 次更新尝试拒绝 20 次。",
+      "url": "https://arxiv.org/abs/2611.23651",
+      "date": "2026-11-18",
+      "keywords": [
+        "RSI",
+        "个人 Agent",
+        "安全"
+      ]
+    },
+    {
+      "topic": "Agent 框架",
+      "title": "OpenAI Agents SDK v1.0.0-alpha.2",
+      "summary": "跨 worker 恢复对话和待审批操作，工具执行 hooks，新持久化格式需先升级读取端。",
+      "note": "跨 worker 恢复对话和待审批操作，工具执行 hooks，新持久化格式需先升级读取端。",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v1.0.0-alpha.2",
+      "date": "2026-11-23",
+      "keywords": [
+        "Agents SDK",
+        "OpenAI"
+      ]
+    },
+    {
+      "topic": "工具",
+      "title": "Claude Code v2.1.331",
+      "summary": "Code Mode 扩展到多云终端会话，trace span 增加 gen_ai.usage 字段，修复 MCP 调用最长挂起 30 分钟问题。",
+      "note": "Code Mode 扩展到多云终端会话，trace span 增加 gen_ai.usage 字段，修复 MCP 调用最长挂起 30 分钟问题。",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
+      "date": "2026-11-23",
+      "keywords": [
+        "Claude Code",
+        "MCP"
+      ]
+    },
+    {
+      "topic": "大厂产品",
+      "title": "Google Search Personal Intelligence 接入 Wallet",
+      "summary": "AI Mode 可只读连接 Google Wallet，Drive 和 Gemini app 数周内跟进。",
+      "note": "AI Mode 可只读连接 Google Wallet，Drive 和 Gemini app 数周内跟进。",
+      "url": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+      "date": "2026-11-23",
+      "keywords": [
+        "Google",
+        "AI Mode",
+        "个人上下文"
+      ]
+    },
+    {
+      "topic": "Agent 商业",
+      "title": "Walmart 向 Meta Muse 开放结账（二手）",
+      "summary": "据 ToolSift 转引 The Verge，Muse 经 Agent Gateway 下单，用户设消费上限并批准购买。",
+      "note": "据 ToolSift 转引 The Verge，Muse 经 Agent Gateway 下单，用户设消费上限并批准购买。",
+      "url": "https://toolsift.ai/agent-news/2026-11-24/",
+      "date": "2026-11-24",
+      "keywords": [
+        "Walmart",
+        "Muse",
+        "Agent 购物"
+      ]
+    },
+    {
+      "topic": "Agent 商业",
+      "title": "Sierra 估值 300 亿美元（二手）",
+      "summary": "据 ToolSift 转引 TechCrunch，F 轮 17.5 亿美元，估值不到半年翻倍。",
+      "note": "据 ToolSift 转引 TechCrunch，F 轮 17.5 亿美元，估值不到半年翻倍。",
+      "url": "https://toolsift.ai/agent-news/2026-11-24/",
+      "date": "2026-11-24",
+      "keywords": [
+        "Sierra",
+        "融资"
+      ]
+    },
+    {
+      "topic": "前沿实验室",
+      "title": "Noeri 成立（二手）",
+      "summary": "据 Import AI，Yejin Choi 与 Carlos Guestrin 创立，融资 1.1 亿美元，主张持续学习与多个专用模型。",
+      "note": "据 Import AI，Yejin Choi 与 Carlos Guestrin 创立，融资 1.1 亿美元，主张持续学习与多个专用模型。",
+      "url": "https://jack-clark.net/2026/11/23/import-ai-482-huawei-kernel-benchmarks-airborne-drone-detection-and-a-national-labs-ai-science-benchmark/",
+      "date": "2026-11-23",
+      "keywords": [
+        "Noeri",
+        "持续学习"
+      ]
+    },
+    {
+      "topic": "模型与开源",
+      "title": "NariQ：10 GB 的 Qwen3.8-27B 量化版",
+      "summary": "发布方称达到 BF16 水平，HN 124 分。",
+      "note": "发布方称达到 BF16 水平，HN 124 分。",
+      "url": "https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF",
+      "date": "2026-11-23",
+      "keywords": [
+        "Qwen",
+        "量化"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：LeCun 抨击 Amodei 开源立场",
+      "summary": "1161 分、650 评论；被转发的 Amodei 视频为 2023 年 7 月听证片段。",
+      "note": "1161 分、650 评论；被转发的 Amodei 视频为 2023 年 7 月听证片段。",
+      "url": "https://news.ycombinator.com/item?id=50615308",
+      "date": "2026-11-23",
+      "keywords": [
+        "HN",
+        "开源",
+        "LeCun"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：VP ≠ VNP 无人检查即发布引争议",
+      "summary": "234 分，讨论 AI 生成且未经人工检查的证明是否应发布。",
+      "note": "234 分，讨论 AI 生成且未经人工检查的证明是否应发布。",
+      "url": "https://news.ycombinator.com/item?id=50620102",
+      "date": "2026-11-23",
+      "keywords": [
+        "HN",
+        "Lean"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "X：Amodei 称 80% 入门岗位或被 Agent 取代（二手）",
+      "summary": "据 X 新闻摘要，出自 Fox News 采访，未核实原视频。",
+      "note": "据 X 新闻摘要，出自 Fox News 采访，未核实原视频。",
+      "url": "https://x.com/i/trending/2125017358809112832",
+      "date": "2026-11-24",
+      "keywords": [
+        "X",
+        "就业"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "X：Walmart Agent Gateway 讨论（二手）",
+      "summary": "据 X 新闻摘要，早期测试中 Agent 购物成功率仅 14%，未核实原始数据。",
+      "note": "据 X 新闻摘要，早期测试中 Agent 购物成功率仅 14%，未核实原始数据。",
+      "url": "https://x.com/i/trending/2124955885684625636",
+      "date": "2026-11-24",
+      "keywords": [
+        "X",
+        "Agent 购物"
+      ]
+    }
+  ]
+}
