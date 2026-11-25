@@ -1,0 +1,361 @@
+{
+  "date": "2026-11-25",
+  "coverage": "约 2026-11-24 上午至 2026-11-25 上午（Asia/Bangkok UTC+7）",
+  "keywords": [
+    "ω = 9/4",
+    "强多项式 LP",
+    "Lean 形式化",
+    "蛋白质设计",
+    "Skills over MCP",
+    "ShellBench",
+    "预训练 loss 加速",
+    "隐私 AI"
+  ],
+  "summary": "OpenAI 放出 9 篇 AI 产出的数学预印本，声称矩阵乘法指数为 9/4 并解决 Smale 第九问题；DeepMind 用 Gemini 4 Agent 团队在 Lean 中发现更快的量子算法，GPT-6 展现蛋白质设计能力；MCP 两周年，Claude 上线 Skills over MCP，Tasks 与 Elicitation GA；ShellBench 显示最强 Agent 日常任务仅过六成；METR 解读 OpenAI 预训练 loss 7 倍加速。",
+  "image": {
+    "source_url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+    "credit": "OpenAI",
+    "local_path": "assets/2026-11-25.png"
+  },
+  "items": [
+    {
+      "topic": "重点：AI 科研与 RSI",
+      "title": "OpenAI 新增 9 篇数学预印本：ω = 9/4、强多项式 LP",
+      "summary": "内部模型产出；声称方阵乘法指数为 9/4、回答 Smale 第九问题、否定多项式 Hirsch 猜想、证明固定花瓣 sunflower 猜想；部分有 Lean 形式化，未经同行评审。",
+      "note": "内部模型产出；声称方阵乘法指数为 9/4、回答 Smale 第九问题、否定多项式 Hirsch 猜想、证明固定花瓣 sunflower 猜想；部分有 Lean 形式化，未经同行评审。",
+      "url": "https://github.com/openai/math/blob/main/history.md",
+      "date": "2026-11-24",
+      "keywords": [
+        "OpenAI",
+        "AI 数学",
+        "Lean"
+      ]
+    },
+    {
+      "topic": "重点：AI 科研与 RSI",
+      "title": "OpenAI Lean 文档列出未形式化部分",
+      "summary": "矩阵乘法 9/4 指数与 Valiant 层级分离有 Comparator 陈述，但 n^(9/4)/2 门下界、网格族显式下界、sunflower 常数仍未形式化。",
+      "note": "矩阵乘法 9/4 指数与 Valiant 层级分离有 Comparator 陈述，但 n^(9/4)/2 门下界、网格族显式下界、sunflower 常数仍未形式化。",
+      "url": "https://github.com/openai/math/blob/main/lean/docs/379.md",
+      "date": "2026-11-24",
+      "keywords": [
+        "形式化验证",
+        "矩阵乘法"
+      ]
+    },
+    {
+      "topic": "重点：AI 科研与 RSI",
+      "title": "OpenAI 发布自己的 VP ≠ VNP 证明，称 11 月 6 日获得",
+      "summary": "提交于曼谷时间 11 月 24 日 08:20，晚于 Anthropic 的提交；history.md 称结果 11 月 6 日获得，README 称优先权听从数学界。",
+      "note": "提交于曼谷时间 11 月 24 日 08:20，晚于 Anthropic 的提交；history.md 称结果 11 月 6 日获得，README 称优先权听从数学界。",
+      "url": "https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026",
+      "date": "2026-11-23",
+      "keywords": [
+        "VP ≠ VNP",
+        "优先权"
+      ]
+    },
+    {
+      "topic": "重点：AI 科研与 RSI",
+      "title": "DeepMind：Gemini 4 Agent 团队发现并验证更快的量子算法",
+      "summary": "Lean 规格驱动多 Agent 合成量子程序；arcsin 例程 290 倍、Grover 实现 2.57 倍、聚变模拟 11.8 倍、P450 模拟 2.5 倍；库开源。",
+      "note": "Lean 规格驱动多 Agent 合成量子程序；arcsin 例程 290 倍、Grover 实现 2.57 倍、聚变模拟 11.8 倍、P450 模拟 2.5 倍；库开源。",
+      "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+      "date": "2026-11-23",
+      "keywords": [
+        "DeepMind",
+        "Gemini 4",
+        "量子算法",
+        "Lean"
+      ]
+    },
+    {
+      "topic": "重点：AI 科研与 RSI",
+      "title": "GPT-6 系列展现内生蛋白质设计能力",
+      "summary": "只靠推理和代码设计骨架与序列；湿实验 5 个靶点均有结合迹象，但序列与筛选仍用 SolubleMPNN、Boltz-2 等专门模型，非零样本端到端。",
+      "note": "只靠推理和代码设计骨架与序列；湿实验 5 个靶点均有结合迹象，但序列与筛选仍用 SolubleMPNN、Boltz-2 等专门模型，非零样本端到端。",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+      "date": "2026-11-24",
+      "keywords": [
+        "GPT-6",
+        "蛋白质设计",
+        "AI for Science"
+      ]
+    },
+    {
+      "topic": "重点：Agent 协议",
+      "title": "Skills over MCP 公测，Tasks 与 Elicitation GA",
+      "summary": "MCP 服务器可随工具下发按需加载的 skills；Tasks 支持后台长任务，Elicitation 支持付费或删除前向用户确认；File Uploads 即将上线。",
+      "note": "MCP 服务器可随工具下发按需加载的 skills；Tasks 支持后台长任务，Elicitation 支持付费或删除前向用户确认；File Uploads 即将上线。",
+      "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+      "date": "2026-11-24",
+      "keywords": [
+        "MCP",
+        "Skills over MCP",
+        "Tasks",
+        "Elicitation"
+      ]
+    },
+    {
+      "topic": "重点：Agent 协议",
+      "title": "The New Stack：MCP 第二年转向长时运行 Agent（二手）",
+      "summary": "Skills over MCP 9 月成为官方扩展，Tasks 10 月先在 Claude Code beta；维护者称 MCP 服务器常暴露完整 Agent。",
+      "note": "Skills over MCP 9 月成为官方扩展，Tasks 10 月先在 Claude Code beta；维护者称 MCP 服务器常暴露完整 Agent。",
+      "url": "https://thenewstack.io/mcp-skills-tasks-claude/",
+      "date": "2026-11-24",
+      "keywords": [
+        "MCP",
+        "两周年"
+      ]
+    },
+    {
+      "topic": "重点：Agent 协议",
+      "title": "Claude Code v2.1.332",
+      "summary": "支持来自 MCP 服务器的 skills（server:skill），新增 PreSkillShellCommand hook 可拒绝 skill 内联 shell 命令，修复 MCP 服务器刷屏导致冻结。",
+      "note": "支持来自 MCP 服务器的 skills（server:skill），新增 PreSkillShellCommand hook 可拒绝 skill 内联 shell 命令，修复 MCP 服务器刷屏导致冻结。",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "date": "2026-11-25",
+      "keywords": [
+        "Claude Code",
+        "MCP skills",
+        "hooks"
+      ]
+    },
+    {
+      "topic": "重点：评测与基准",
+      "title": "ShellBench：真实日常任务的 Agent 基准",
+      "summary": "100 个任务源自 1000 万条真实交互；GPT-6 Astra 62.5% 居首，三次全对仅 48.8%；15.7% 运行违反安全要求；换模型影响远大于换 harness。",
+      "note": "100 个任务源自 1000 万条真实交互；GPT-6 Astra 62.5% 居首，三次全对仅 48.8%；15.7% 运行违反安全要求；换模型影响远大于换 harness。",
+      "url": "https://openclaw.ai/blog/shellbench/",
+      "date": "2026-11-24",
+      "keywords": [
+        "ShellBench",
+        "Agent 评测",
+        "可靠性",
+        "安全"
+      ]
+    },
+    {
+      "topic": "重点：评测与基准",
+      "title": "ShellBench Kaggle 榜单",
+      "summary": "90 个 LLM judge 评分任务、10 个确定性测试；721 条标准中 381 条为安全；20 个公开、80 个留出。",
+      "note": "90 个 LLM judge 评分任务、10 个确定性测试；721 条标准中 381 条为安全；20 个公开、80 个留出。",
+      "url": "https://www.kaggle.com/benchmarks/openclaw-foundation/shellbench",
+      "date": "2026-11-24",
+      "keywords": [
+        "ShellBench",
+        "榜单"
+      ]
+    },
+    {
+      "topic": "重点：评测与基准",
+      "title": "TechCrunch：Agent 难以应付日常生活（二手）",
+      "summary": "据 ToolSift 转引，接孩子安排 79.5% 出错、40.3% 推荐重复或错误发票付款、18.6% 未保护银行上传 token。",
+      "note": "据 ToolSift 转引，接孩子安排 79.5% 出错、40.3% 推荐重复或错误发票付款、18.6% 未保护银行上传 token。",
+      "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+      "date": "2026-11-24",
+      "keywords": [
+        "ShellBench",
+        "安全失误"
+      ]
+    },
+    {
+      "topic": "重点：AI 科研与 RSI",
+      "title": "METR 解读 OpenAI 预训练 loss 加速",
+      "summary": "2026 年初以来 log-perplexity 下降速度约为此前 7 倍，但基准分数未同步；METR 无共识，呼吁公开其他留出集、训练结束日期和投入数据。",
+      "note": "2026 年初以来 log-perplexity 下降速度约为此前 7 倍，但基准分数未同步；METR 无共识，呼吁公开其他留出集、训练结束日期和投入数据。",
+      "url": "https://metr.org/blog/2026-11-24-interpreting-a-recent-acceleration-in-pretraining-loss/",
+      "date": "2026-11-24",
+      "keywords": [
+        "METR",
+        "预训练 loss",
+        "RSI",
+        "perplexity"
+      ]
+    },
+    {
+      "topic": "大厂产品",
+      "title": "Meta Muse 进入英国并进驻 Instagram 私信",
+      "summary": "英国 18 岁以上可用，执行购物等操作前需批准；Instagram 私信内 Muse 在美、加、墨、日、新上线。",
+      "note": "英国 18 岁以上可用，执行购物等操作前需批准；Instagram 私信内 Muse 在美、加、墨、日、新上线。",
+      "url": "https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control/",
+      "date": "2026-11-24",
+      "keywords": [
+        "Meta",
+        "Muse",
+        "Super Agent"
+      ]
+    },
+    {
+      "topic": "隐私 AI",
+      "title": "Maple 融资 530 万美元做 TEE 隐私 Agent",
+      "summary": "在 Nitro Enclaves 中运行开源模型，设备端加密；Maple Work 可操控电脑并通过 Agent Client Protocol 委派给 Claude、Codex。",
+      "note": "在 Nitro Enclaves 中运行开源模型，设备端加密；Maple Work 可操控电脑并通过 Agent Client Protocol 委派给 Claude、Codex。",
+      "url": "https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/",
+      "date": "2026-11-24",
+      "keywords": [
+        "Maple",
+        "TEE",
+        "隐私 AI"
+      ]
+    },
+    {
+      "topic": "Agent 工具",
+      "title": "Vercel：Agent 通过 MCP 管理 AI Gateway",
+      "summary": "自然语言创建 virtual model、设置改写或禁止模型的路由规则、设定团队、项目、成员预算。",
+      "note": "自然语言创建 virtual model、设置改写或禁止模型的路由规则、设定团队、项目、成员预算。",
+      "url": "https://vercel.com/changelog/agents-can-now-manage-ai-gateway-through-vercel-mcp",
+      "date": "2026-11-24",
+      "keywords": [
+        "Vercel",
+        "MCP",
+        "AI Gateway"
+      ]
+    },
+    {
+      "topic": "Agent 工具",
+      "title": "Versine（YC F26）：收付款的 MCP",
+      "summary": "钱包前置 MCP，付款需 passkey 批准，可对可信联系人免批准；评论关注付错后的撤销流程。",
+      "note": "钱包前置 MCP，付款需 passkey 批准，可对可信联系人免批准；评论关注付错后的撤销流程。",
+      "url": "https://news.ycombinator.com/item?id=50634426",
+      "date": "2026-11-25",
+      "keywords": [
+        "MCP",
+        "支付",
+        "Agent 商业"
+      ]
+    },
+    {
+      "topic": "模型与开源",
+      "title": "Ternary Bonsai 2.5 27B",
+      "summary": "基于 Qwen3.8 27B 的 5.9 GB 三值模型，SWE-bench Verified 75.6、AppWorld 90.5，Apache 2.0。",
+      "note": "基于 Qwen3.8 27B 的 5.9 GB 三值模型，SWE-bench Verified 75.6、AppWorld 90.5，Apache 2.0。",
+      "url": "https://prismml.com/news/bonsai-2-5-27b",
+      "date": "2026-11-24",
+      "keywords": [
+        "PrismML",
+        "量化",
+        "本地 Agent"
+      ]
+    },
+    {
+      "topic": "前沿实验室",
+      "title": "Astra 协助业余天文爱好者寻找系外行星",
+      "summary": "Codex 和 Astra 搭建多 Agent 搜索；两个 Kepler 信号被 SETI Institute 独立复现。",
+      "note": "Codex 和 Astra 搭建多 Agent 搜索；两个 Kepler 信号被 SETI Institute 独立复现。",
+      "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+      "date": "2026-11-24",
+      "keywords": [
+        "Astra",
+        "AI for Science"
+      ]
+    },
+    {
+      "topic": "前沿实验室",
+      "title": "GPT-6.2 Astra 解开 1808 年速写本作者之谜（转引）",
+      "summary": "历史学家 Mark Humphries 称其 22 分钟内自主找出作者并发现新史料。",
+      "note": "历史学家 Mark Humphries 称其 22 分钟内自主找出作者并发现新史料。",
+      "url": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/",
+      "date": "2026-11-24",
+      "keywords": [
+        "Astra",
+        "历史研究"
+      ]
+    },
+    {
+      "topic": "观点",
+      "title": "Simon Willison：十二个月里的三个 LLM 拐点",
+      "summary": "Opus 4.5 一周年，列出编码 Agent、Fable 级模型、3D 与游戏开发三个拐点。",
+      "note": "Opus 4.5 一周年，列出编码 Agent、Fable 级模型、3D 与游戏开发三个拐点。",
+      "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
+      "date": "2026-11-24",
+      "keywords": [
+        "Simon Willison",
+        "编码 Agent"
+      ]
+    },
+    {
+      "topic": "Agent 框架",
+      "title": "OpenAI Agents SDK v0.26.0",
+      "summary": "per-call MCP metadata 优先、codex_tool 本地图片需批准、限制 Docker 存储挂载权限。",
+      "note": "per-call MCP metadata 优先、codex_tool 本地图片需批准、限制 Docker 存储挂载权限。",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.26.0",
+      "date": "2026-11-24",
+      "keywords": [
+        "OpenAI Agents SDK"
+      ]
+    },
+    {
+      "topic": "Agent 框架",
+      "title": "Google ADK v2.15.1",
+      "summary": "修复 RemoteA2aAgent 流式输出持久化，兼容 Anthropic SDK 1.x 和 2.x。",
+      "note": "修复 RemoteA2aAgent 流式输出持久化，兼容 Anthropic SDK 1.x 和 2.x。",
+      "url": "https://github.com/google/adk-python/releases/tag/v2.15.1",
+      "date": "2026-11-25",
+      "keywords": [
+        "Google ADK",
+        "A2A"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：LLM agents work for their parent companies, not for you",
+      "summary": "909 分、383 评论，讨论商业 Agent 的利益冲突与本地开源模型。",
+      "note": "909 分、383 评论，讨论商业 Agent 的利益冲突与本地开源模型。",
+      "url": "https://news.ycombinator.com/item?id=50627340",
+      "date": "2026-11-24",
+      "keywords": [
+        "HN",
+        "Agent 利益冲突"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：2035 came early",
+      "summary": "969 分，AI 辅助把 Linux 编译成 WebAssembly 后在浏览器跑 GUI 程序。",
+      "note": "969 分，AI 辅助把 Linux 编译成 WebAssembly 后在浏览器跑 GUI 程序。",
+      "url": "https://news.ycombinator.com/item?id=50624497",
+      "date": "2026-11-24",
+      "keywords": [
+        "HN",
+        "WebAssembly"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "HN：OpenAI VP ≠ VNP 优先权之争",
+      "summary": "85 分、88 评论，有人建议实验室先公布结果哈希。",
+      "note": "85 分、88 评论，有人建议实验室先公布结果哈希。",
+      "url": "https://news.ycombinator.com/item?id=50632756",
+      "date": "2026-11-25",
+      "keywords": [
+        "HN",
+        "VP ≠ VNP"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "X：OpenAI ω = 9/4 讨论（二手）",
+      "summary": "据 X 新闻摘要，Ryan Williams 评论“Strassen 关于 2.25 是对的”，未核实原帖。",
+      "note": "据 X 新闻摘要，Ryan Williams 评论“Strassen 关于 2.25 是对的”，未核实原帖。",
+      "url": "https://x.com/i/trending/2125399639667196362",
+      "date": "2026-11-25",
+      "keywords": [
+        "X",
+        "矩阵乘法"
+      ]
+    },
+    {
+      "topic": "社区",
+      "title": "X：Accountable Agents Framework（二手）",
+      "summary": "据 X 新闻摘要，专家联盟提出用隐私保护 ID 验证 Agent 背后的责任主体。",
+      "note": "据 X 新闻摘要，专家联盟提出用隐私保护 ID 验证 Agent 背后的责任主体。",
+      "url": "https://x.com/i/trending/2125300994875490745",
+      "date": "2026-11-24",
+      "keywords": [
+        "X",
+        "Agent 身份"
+      ]
+    }
+  ]
+}
